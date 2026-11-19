@@ -1,0 +1,11 @@
+{
+ "bloco": "C",
+ "gravado_em": "2026-11-19 10:28:21 -0300",
+ "natureza": "exploratório; acrescentado depois de ver em dev, só no teto, r1_lr3e-4 e r1_pre_x0.1 completos (+0,4 em exact match cada, contra +1,1 da receita de sempre na rodada 1) e r1_aquec500 só com a semente 0; antes de qualquer resultado do bloco B. (Texto corrigido 1 minuto depois de gravado, antes de qualquer novo resultado: a primeira versão dizia 'nenhuma das 3 receitas', mas o aquecimento ainda não tinha as 3 sementes.)",
+ "o_que_roda": {
+  "aluno_a__r1_lr3e-4": "estende o bloco A ao aluno A com a receita de taxa 3e-4 (a que preservou a intenção no teto); controle = aluno A entregue",
+  "teto__vocabg_2p_pre_x0.1": "combinação: vocabulário grande + pré-treino do bloco B + taxa 0,1x nas partes pré-treinadas (a que mais subiu entidades no teto); controle = vocabg_controle (mesma rede e vocabulário, sem pré-treino, receita de sempre) e também o teto entregue"
+ },
+ "nota": "o bloco A não foi rodado no aluno A com r1_pre_x0.1 e r1_aquec500, por falta de tempo de GPU",
+ "medida": "a mesma das regras dos blocos A e B; dev decide; teste só para até 2 finalistas por sistema"
+}

@@ -1,0 +1,15 @@
+{
+ "etapa": "13_pretreino_piloto",
+ "natureza": "piloto exploratório, com prazo de uma manhã: uma configuração de pré-treino, sem busca; nenhuma decisão das etapas anteriores muda",
+ "pergunta": "Pré-treinar a rede do zero só com a perda de máscara, em texto de português sem rótulo, melhora o teto e o aluno A?",
+ "o_que_muda": "só o ponto de partida dos pesos da tabela de features, da projeção, do encoder e da cabeça de máscara; as cabeças de intenção e de entidades começam do zero",
+ "o_que_nao_muda": "a arquitetura, o vocabulário de features (o do treino do MASSIVE, 25.202 features), a receita da Etapa 4b, os dados e os rótulos de cada sistema, as 3 sementes",
+ "corpus": "Wikipédia em português (wikimedia/wikipedia, 20231101.pt): frases de 4 a 25 palavras, em minúsculas e sem pontuação, como os pedidos do MASSIVE; no máximo 6 frases por artigo",
+ "pretreino": "só a perda de máscara do DIET (15% das palavras; erradas = as outras escondidas do lote), Adam 1e-3 com aquecimento de 1.000 passos e decaimento linear até 10%, lotes de 256 frases de comprimento parecido, uma passada, limitada pelo tempo",
+ "controle": "os modelos já entregues: teto (entregas/04b_intencao/modelos) e aluno A (entregas/06_destilacao/modelos/aluno_a), 3 sementes cada",
+ "medida": "exact match; diferença pareada pré-treinado − controle, média de 3 sementes, bootstrap por enunciado com 2.000 reamostragens e semente 0 (qualidade.comparar_grupos), IC95; 'distinguível' = IC sem o zero",
+ "decisao_em": "dev (rótulos humanos)",
+ "leitura_no_teste": "uma por sistema (teto e aluno A), a mesma diferença, relatada qualquer que seja o resultado em dev",
+ "o_que_fica_de_fora": "poda, quantização, alunos do cenário B, outro corpus, outra taxa de ajuste, vocabulário de features maior",
+ "gravado_em": "2026-11-19 09:14:20 -0300"
+}

@@ -1,0 +1,7 @@
+{
+ "gravado_em": "2026-11-19 09:15:32 -0300",
+ "quando": "depois do teste de fumaça do pré-treino (1.563 passos em 400 mil frases, 23 segundos) e antes de qualquer pré-treino de verdade e de qualquer ajuste; nenhum resultado em dev ou no teste foi visto",
+ "motivo": "o pré-treino roda a cerca de 1 milhão de frases por minuto, muito mais rápido que o previsto; com 6 frases por artigo o corpus (4,5 milhões de frases) acabaria em 5 minutos",
+ "o_que_muda": "o corpus passa a ter até 20 frases por artigo, limitado a 12 milhões de frases; continua uma passada só",
+ "o_que_nao_muda": "todo o resto de regras.json"
+}

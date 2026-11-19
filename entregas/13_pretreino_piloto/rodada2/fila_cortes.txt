@@ -1,0 +1,1 @@
+2026-11-19 10:33:28 -0300 o orquestrador tirou da fila r1_lr3e-4 aluno_a 0-2 (bloco C) por prazo: a mesma receita não rendeu no teto e parou nas épocas 75-80 de 80; não rodou, não há resultado

@@ -1,0 +1,10 @@
+{
+ "features_massive": 25202,
+ "palavras_novas_da_wikipedia": 60000,
+ "ngramas_novos_da_wikipedia": 20000,
+ "total": 105202,
+ "palavras_distintas_no_corpus": 1643358,
+ "corpus": "/home/danie/project/residencia/data/execucoes/13_pretreino_piloto/frases.txt",
+ "regra": "MASSIVE primeiro (mesma ordem); depois as palavras mais frequentes do corpus (até 30 caracteres); depois os n-gramas (1 a 5 caracteres, com ^ e $) mais frequentes, contando ocorrências de palavras vistas >= 5 vezes",
+ "segundos": 23.513453469000524
+}

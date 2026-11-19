@@ -1,0 +1,19 @@
+{
+ "natureza": "rodada 2 do piloto, exploratória, com prazo (até 11:40); várias variantes testadas: ganho de uma entre muitas em dev pede cautela",
+ "medida": "exact match (também intenção e F1 de entidades); diferença pareada variante − controle, média de 3 sementes (0,1,2), bootstrap por enunciado com 2.000 reamostragens e semente 0 (qualidade.comparar_grupos), IC95; 'distinguível' = IC sem o zero",
+ "decisao_em": "dev (rótulos humanos)",
+ "teste": "lido uma vez, no fim, só para no máximo 2 finalistas por sistema escolhidas em dev; relatado qualquer que seja o resultado",
+ "sistemas": "teto (rótulos humanos, 11.514) e aluno A (etapa6.dados_da_variante('aluno_a'))",
+ "o_que_nao_muda": "arquitetura (DIET 2 blocos, config da Etapa 4b), dados e rótulos de cada sistema, 80 épocas, média móvel dos pesos 0,999, escolha da época em dev como sempre",
+ "bloco": "A",
+ "gravado_em": "2026-11-19 09:56:12 -0300",
+ "hipotese": "(1) o ajuste com taxa cheia (1e-3, 80 épocas) apaga o pré-treino",
+ "pretreino": "o da rodada 1 (data/execucoes/13_pretreino_piloto/pretreino), sem mudança",
+ "variantes": {
+  "r1_lr3e-4": "pré-treino da rodada 1; ajuste com taxa 3e-4 em tudo (em vez de 1e-3)",
+  "r1_pre_x0.1": "pré-treino da rodada 1; partes pré-treinadas com taxa 1e-4, cabeças novas com 1e-3",
+  "r1_aquec500": "pré-treino da rodada 1; taxa 1e-3 com aquecimento linear nos primeiros 500 passos (~4 épocas)"
+ },
+ "controle": "os modelos entregues (entregas/04b_intencao/modelos e entregas/06_destilacao/modelos/aluno_a), 3 sementes",
+ "nota": "o controle usa a receita de sempre (1e-3); não treino o controle sem pré-treino com taxa menor neste bloco: a pergunta é se a rede ajustada fica melhor do que a entregue"
+}

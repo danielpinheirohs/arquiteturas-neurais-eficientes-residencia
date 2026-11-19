@@ -1,0 +1,9 @@
+{
+ "gravado_em": "2026-11-19 10:57:22 -0300",
+ "quando": "depois de calcular dev de todas as variantes prontas (dev_bloco_A_teto_parcial.csv, dev_blocos_A_B.csv, dev_bloco_C.csv) e antes de qualquer leitura do teste da rodada 2",
+ "criterio": "maior exact match em dev contra o modelo entregue; no máximo 2 por sistema",
+ "teto": ["vocabg_2p", "vocabg_2p_pre_x0.1"],
+ "aluno_a": ["vocabg_2p"],
+ "variantes_testadas": {"teto": ["r1_lr3e-4", "r1_pre_x0.1", "r1_aquec500", "vocabg_controle", "vocabg_2p", "vocabg_2p_pre_x0.1"], "aluno_a": ["vocabg_controle", "vocabg_2p"]},
+ "nao_rodou": "r1_lr3e-4, r1_pre_x0.1 e r1_aquec500 no aluno A (prazo)"
+}

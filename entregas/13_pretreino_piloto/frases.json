@@ -1,0 +1,13 @@
+{
+ "frases_achadas": 8237823,
+ "frases_gravadas": 8237823,
+ "palavras_por_frase_media": 14.30719,
+ "arquivos": [
+  "train-00000-of-00006.parquet",
+  "train-00001-of-00006.parquet",
+  "train-00002-of-00006.parquet",
+  "train-00003-of-00006.parquet",
+  "train-00004-of-00006.parquet",
+  "train-00005-of-00006.parquet"
+ ]
+}

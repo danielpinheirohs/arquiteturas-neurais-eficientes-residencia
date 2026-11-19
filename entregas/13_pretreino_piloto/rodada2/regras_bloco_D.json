@@ -1,0 +1,11 @@
+{
+ "gravado_em": "2026-11-19 10:59:06 -0300",
+ "quem": "o orquestrador, depois de fechar os blocos A a C (dev de todas as variantes e teste das finalistas já lidos e relatados em entregas/13_pretreino_piloto/RESUMO_rodada2.md)",
+ "natureza": "exploratório; mais uma variante numa rodada que já testou 6 no teto e 2 no aluno A",
+ "pergunta": "Mais pré-treino, sem aumentar a rede, muda o resultado? É a hipótese 3, que os blocos A a C não testaram: o pré-treino da rodada 1 teve 1 passada e o do bloco B, 0,89.",
+ "variante": "massive_3p: vocabulário do MASSIVE (25.202 features, rede de 4,9 M como a entregue), pré-treino só com a máscara nas mesmas 8.237.823 frases, até 3 passadas ou 27 minutos (o que acabar antes), com a placa só para ele; ajuste com a receita de sempre; teto e aluno A, 3 sementes",
+ "controle": "os modelos entregues (Etapas 4b e 6); comparação secundária: a rodada 1 (mesma coisa com 1 passada)",
+ "medida": "a mesma da rodada: diferença pareada de exact match, média de 3 sementes, IC95",
+ "teste": "desvio declarado da regra de 'no máximo 2 finalistas por sistema': como não haverá tempo para outra rodada, o teste desta variante é lido uma vez, para teto e aluno A, qualquer que seja o resultado em dev, e relatado ao lado das finalistas. No teto passa a haver 3 leituras do teste nesta rodada.",
+ "prazo": "tudo calculado até 11:45; se o pré-treino ou os ajustes não terminarem, o bloco é relatado como não concluído"
+}

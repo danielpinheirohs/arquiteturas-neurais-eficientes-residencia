@@ -6,7 +6,9 @@ O plano completo, com o artigo-âncora de cada técnica, está em [PLANO.md](PLA
 
 ## O que está neste repositório
 
+- **Para uma visão geral:** [SINTESE.md](SINTESE.md) resume o estudo inteiro e [TABELA.md](TABELA.md) traz os modelos e os valores lado a lado.
 - **Para ler:** a tabela de etapas, mais abaixo, leva ao `RESUMO.md` de cada entrega. O notebook executado de cada etapa está em HTML na pasta da entrega.
+- **Fora da tabela de etapas:** o piloto exploratório de pré-treino (Etapa 13) está em [entregas/13_pretreino_piloto/](entregas/13_pretreino_piloto/RESUMO.md).
 - **Para conferir os números:** as tabelas em CSV e as respostas de cada sistema em `dev` e no teste (`previsoes/`) estão nas pastas das entregas.
 - **O que não está:** os pesos dos modelos e os tokenizadores (mais de 50 GB) e a pasta `data/` (downloads e caches de treino). Os comandos de cada etapa refazem tudo. A exceção são os sistemas da rede do zero em ONNX, da Etapa 8, que são pequenos e estão em `entregas/08_quantizacao/modelos/`.
 - Os caminhos que começam com `/home/...` nos manifestos e nos notebooks são da máquina em que o projeto foi executado.

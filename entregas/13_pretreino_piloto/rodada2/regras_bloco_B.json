@@ -1,0 +1,19 @@
+{
+ "natureza": "rodada 2 do piloto, exploratória, com prazo (até 11:40); várias variantes testadas: ganho de uma entre muitas em dev pede cautela",
+ "medida": "exact match (também intenção e F1 de entidades); diferença pareada variante − controle, média de 3 sementes (0,1,2), bootstrap por enunciado com 2.000 reamostragens e semente 0 (qualidade.comparar_grupos), IC95; 'distinguível' = IC sem o zero",
+ "decisao_em": "dev (rótulos humanos)",
+ "teste": "lido uma vez, no fim, só para no máximo 2 finalistas por sistema escolhidas em dev; relatado qualquer que seja o resultado",
+ "sistemas": "teto (rótulos humanos, 11.514) e aluno A (etapa6.dados_da_variante('aluno_a'))",
+ "o_que_nao_muda": "arquitetura (DIET 2 blocos, config da Etapa 4b), dados e rótulos de cada sistema, 80 épocas, média móvel dos pesos 0,999, escolha da época em dev como sempre",
+ "bloco": "B",
+ "gravado_em": "2026-11-19 09:56:12 -0300",
+ "hipotese": "(2) vocabulário de features só do MASSIVE impede o pré-treino de ensinar palavras novas; (3) pouco pré-treino",
+ "vocabulario": "MASSIVE (25.202, mesma ordem) + 60.000 palavras mais frequentes da Wikipédia + 20.000 n-gramas mais frequentes ainda ausentes (~105 mil features); muda o tamanho do modelo (relatado)",
+ "pretreino": "só máscara, mesmo corpus da rodada 1 (8,2 M frases), 2 passadas (limite de 35 min), Adam 1e-3, aquecimento 1.000 passos, decaimento linear até 10%, lote 256",
+ "variantes": {
+  "vocabg_controle": "vocabulário grande (MASSIVE + Wikipédia), SEM pré-treino: o controle justo do bloco B",
+  "vocabg_2p": "vocabulário grande, pré-treino de 2 passadas; receita de sempre"
+ },
+ "controle": "vocabg_controle: a mesma rede com o mesmo vocabulário grande SEM pré-treino, 3 sementes; vocabg_controle também é comparado com o modelo entregue (efeito só do vocabulário)",
+ "limite": "(2) e (3) mudam juntas: não dá para separar o efeito do vocabulário do efeito das 2 passadas"
+}
