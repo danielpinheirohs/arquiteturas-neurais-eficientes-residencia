@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 2,
+  "nome": "calibracao_entropy",
+  "descricao": "calibração Entropy",
+  "metodo": "Entropy",
+  "operacoes": 76,
+  "bytes_da_rede": 90225901,
+  "slot_f1_dev": 62.93236964377904,
+  "segundos": 27.704001305013662
+}

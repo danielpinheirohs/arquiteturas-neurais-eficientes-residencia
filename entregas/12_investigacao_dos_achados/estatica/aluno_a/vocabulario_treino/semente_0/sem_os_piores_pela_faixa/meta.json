@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 0,
+  "nome": "sem_os_piores_pela_faixa",
+  "descricao": "1 multiplicações em 32 bits: encoder.encoder.layer.7.output.dense.produto",
+  "metodo": "MinMax",
+  "operacoes": 75,
+  "bytes_da_rede": 97301745,
+  "slot_f1_dev": 66.34592254029347,
+  "segundos": 18.93233854099526
+}

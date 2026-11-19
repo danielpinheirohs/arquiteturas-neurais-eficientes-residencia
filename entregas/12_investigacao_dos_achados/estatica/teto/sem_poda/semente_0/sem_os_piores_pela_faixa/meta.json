@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "sem_os_piores_pela_faixa",
+  "descricao": "1 multiplicações em 32 bits: encoder.encoder.layer.7.output.dense.produto",
+  "metodo": "MinMax",
+  "operacoes": 75,
+  "bytes_da_rede": 285312753,
+  "slot_f1_dev": 74.55741021750126,
+  "segundos": 38.155789231997915
+}

@@ -1,0 +1,267 @@
+{
+  "o_que_e": "o teste de fumaça da cadeia da Etapa 11c, numa pasta descartável fora do projeto: semente 0: a rede do zero e o representante do XLM-R passam pelos três passos; o outro aluno do XLM-R, só pela poda",
+  "receita_curta": {
+    "epocas": {
+      "zero": 2,
+      "xlmr": 1
+    },
+    "receita": {
+      "zero": {
+        "avaliar_a_cada": 1
+      },
+      "xlmr": {}
+    },
+    "pedidos": 64,
+    "latencia": {
+      "rodadas": 1,
+      "consultas": 32
+    }
+  },
+  "conferido_em": "2026-11-19 00:47:16 -0300",
+  "cadeia": {
+    "pid": 827622,
+    "iniciada_em": "2026-11-19 00:40:22 -0300",
+    "terminada_em": "2026-11-19 00:44:46 -0300",
+    "minutos": 4.4,
+    "prontas": 11,
+    "erros": [],
+    "codigo_igual_do_inicio_ao_fim": true,
+    "conferido": {
+      "faltam": [],
+      "podas_que_nao_leram_do_professor": [],
+      "onnx_de_32_bits": {
+        "pedidos": 512,
+        "iguais_ao_pytorch": 512,
+        "diferentes_em": []
+      },
+      "compactado_que_responde_diferente": [],
+      "outros_processos_na_latencia": {
+        "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90": 0.029463407603353756,
+        "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda": 0.040016287490729704,
+        "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino": 0.032268107702902296,
+        "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda": 0.04432440360822631
+      },
+      "latencias_com_a_maquina_ocupada": []
+    }
+  },
+  "podas": [
+    {
+      "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "etapa_no_meta": "11c_cenario_b_ate_o_fim/poda",
+      "variante": "linhas_90",
+      "epocas": 2,
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+      "origem": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "exemplos_de_treino": 11514,
+      "melhor_epoca": 2,
+      "segundos": 17.1,
+      "respostas_iguais_ao_reler_o_modelo": "200 de 200",
+      "features": 2520,
+      "parametros": 1992538
+    },
+    {
+      "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "etapa_no_meta": "11c_cenario_b_ate_o_fim/poda",
+      "variante": "vocabulario_treino",
+      "epocas": 1,
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+      "origem": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "exemplos_de_treino": 11514,
+      "melhor_epoca": 0,
+      "segundos": 17.4,
+      "respostas_iguais_ao_reler_o_modelo": "200 de 200",
+      "linhas_da_tabela": 5196,
+      "linhas_antes": 250002,
+      "bytes_em_disco": 358975066
+    },
+    {
+      "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "etapa_no_meta": "11c_cenario_b_ate_o_fim/poda",
+      "variante": "vocabulario_treino",
+      "epocas": 1,
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+      "origem": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "exemplos_de_treino": 11514,
+      "melhor_epoca": 0,
+      "segundos": 18.1,
+      "respostas_iguais_ao_reler_o_modelo": "200 de 200",
+      "linhas_da_tabela": 5196,
+      "linhas_antes": 250002,
+      "bytes_em_disco": 358975066
+    }
+  ],
+  "quantizacoes": [
+    {
+      "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "variante": "sem_poda",
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+      "pedidos": {
+        "dev": 64,
+        "test": 64
+      },
+      "sistemas_gravados": [
+        "dinamica",
+        "estatica",
+        "fp32"
+      ],
+      "onnx_igual_ao_pytorch": {
+        "dev": 64,
+        "test": 64
+      },
+      "bytes": {
+        "pytorch": 1127466166,
+        "fp32": 1119524892,
+        "dinamica": 287275442,
+        "estatica": 287322835
+      },
+      "latencia": {
+        "rodadas": 1,
+        "consultas_por_rodada": 32,
+        "p50_ms": {
+          "pytorch": 35.203,
+          "fp32": 26.506,
+          "dinamica": 8.223,
+          "estatica": 8.328
+        },
+        "nucleos_de_outros": 0.044
+      }
+    },
+    {
+      "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "variante": "vocabulario_treino",
+      "de_partida": "/tmp/claude-1000/-home-danie-project-residencia/c1dbcf82-9fd9-4bd9-8334-38545bedeb18/scratchpad/fumaca/execucoes/11c_cenario_b_ate_o_fim/poda/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/modelo",
+      "pedidos": {
+        "dev": 64,
+        "test": 64
+      },
+      "sistemas_gravados": [
+        "dinamica",
+        "estatica",
+        "fp32"
+      ],
+      "onnx_igual_ao_pytorch": {
+        "dev": 64,
+        "test": 64
+      },
+      "bytes": {
+        "pytorch": 358975066,
+        "fp32": 358883209,
+        "dinamica": 90666784,
+        "estatica": 90714177
+      },
+      "latencia": {
+        "rodadas": 1,
+        "consultas_por_rodada": 32,
+        "p50_ms": {
+          "pytorch": 36.331,
+          "fp32": 26.117,
+          "dinamica": 8.31,
+          "estatica": 8.409
+        },
+        "nucleos_de_outros": 0.032
+      }
+    },
+    {
+      "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "variante": "linhas_90",
+      "de_partida": "/tmp/claude-1000/-home-danie-project-residencia/c1dbcf82-9fd9-4bd9-8334-38545bedeb18/scratchpad/fumaca/execucoes/11c_cenario_b_ate_o_fim/poda/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/modelo",
+      "pedidos": {
+        "dev": 64,
+        "test": 64
+      },
+      "sistemas_gravados": [
+        "dinamica",
+        "dinamica_compactado",
+        "estatica",
+        "estatica_compactado",
+        "fp32"
+      ],
+      "onnx_igual_ao_pytorch": {
+        "dev": 64,
+        "test": 64
+      },
+      "bytes": {
+        "pytorch": 8064314,
+        "fp32": 7983403,
+        "dinamica": 2113150,
+        "estatica": 2121422
+      },
+      "latencia": {
+        "rodadas": 1,
+        "consultas_por_rodada": 1024,
+        "p50_ms": {
+          "pytorch": 1.123,
+          "fp32": 0.44,
+          "dinamica": 0.278,
+          "estatica": 0.3
+        },
+        "nucleos_de_outros": 0.029
+      }
+    },
+    {
+      "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "variante": "sem_poda",
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+      "pedidos": {
+        "dev": 64,
+        "test": 64
+      },
+      "sistemas_gravados": [
+        "dinamica",
+        "dinamica_compactado",
+        "estatica",
+        "estatica_compactado",
+        "fp32"
+      ],
+      "onnx_igual_ao_pytorch": {
+        "dev": 64,
+        "test": 64
+      },
+      "bytes": {
+        "pytorch": 19921914,
+        "fp32": 19840926,
+        "dinamica": 5260786,
+        "estatica": 5269057
+      },
+      "latencia": {
+        "rodadas": 1,
+        "consultas_por_rodada": 1024,
+        "p50_ms": {
+          "pytorch": 1.147,
+          "fp32": 0.447,
+          "dinamica": 0.284,
+          "estatica": 0.307
+        },
+        "nucleos_de_outros": 0.04
+      }
+    }
+  ],
+  "nada_antigo_mudou": "comparacao_antes_e_depois.txt: 6.598 arquivos de data/execucoes/ e entregas/ (fora a pasta desta etapa) com tamanho, data e sha256 (os de até 64 MB) iguais antes (00:29) e depois (00:45) do teste de fumaça, da suíte de testes e da prova da 10d; as únicas 12 diferenças são arquivos do condutor do Colab na pasta do Qwen3-32B da Etapa 11a, que outro processo estava gravando"
+}

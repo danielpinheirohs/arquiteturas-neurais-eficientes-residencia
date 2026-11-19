@@ -1,0 +1,13 @@
+versao,particao,pedidos,sem_registro,sem_resposta,json_invalido,intencao_fora_da_lista,entidades,tipo_fora_da_lista,texto_nao_encontrado,cortadas_no_limite_de_tokens,sem_rotulo_aproveitavel
+qwen3_8b__nf4__local_3080,dev,2033,0,0,0,0,2489,92,52,0,0
+qwen3_8b__nf4__local_3080,test,2974,0,0,7,0,3515,119,86,0,7
+qwen3_8b__nf4__local_3080,train,11514,0,0,11,0,14046,532,259,0,11
+qwen3_8b__fp16__colab_l4,dev,2033,0,0,0,0,2492,67,36,0,0
+qwen3_8b__fp16__colab_l4,test,2974,0,0,0,0,3563,116,63,0,0
+qwen3_8b__fp16__colab_l4,train,11514,0,0,1,0,14070,412,206,0,1
+qwen3_14b__fp16__colab_a100,dev,2033,0,0,0,0,2346,21,22,0,0
+qwen3_14b__fp16__colab_a100,test,2974,0,0,0,0,3299,36,17,0,0
+qwen3_14b__fp16__colab_a100,train,11514,0,0,0,0,13151,112,104,0,0
+qwen3_32b__fp16__colab_g4,dev,2033,0,0,1,0,2358,20,9,0,1
+qwen3_32b__fp16__colab_g4,test,2974,0,0,0,0,3319,19,11,0,0
+qwen3_32b__fp16__colab_g4,train,11514,0,0,1,0,13274,103,77,0,1

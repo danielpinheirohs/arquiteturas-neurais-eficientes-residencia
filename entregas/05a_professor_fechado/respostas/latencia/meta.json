@@ -1,0 +1,14 @@
+{
+  "ajuste": "com_exemplos",
+  "consultas": 1024,
+  "quando": "2026-11-17 21:33:41 -0300",
+  "de_onde": "rede do usuário, Brasil",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "python": "3.12.13",
+  "prazo_por_chamada_s": 60.0,
+  "novas_tentativas": 2,
+  "chamadas_com_aquecimento": 1074,
+  "dolares_com_aquecimento": 0.12275466
+}

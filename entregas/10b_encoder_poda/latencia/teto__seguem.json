@@ -1,0 +1,64 @@
+{
+  "modelo": "teto",
+  "grupo": "seguem",
+  "execucao": "comum",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "de_partida": [
+      38.309892000000005,
+      37.4427395,
+      37.854245500000005,
+      37.381958,
+      37.924816
+    ],
+    "vocabulario_treino": [
+      37.7587745,
+      38.0090595,
+      37.9846005,
+      37.479799,
+      37.859541
+    ],
+    "magnitude_50": [
+      36.9732725,
+      37.072052,
+      37.243861,
+      36.824163,
+      37.530971
+    ]
+  },
+  "resumo": {
+    "de_partida": {
+      "latencia_p50_ms": 37.8018325,
+      "latencia_p90_ms": 45.9824769,
+      "latencia_p95_ms": 49.37001950000002,
+      "latencia_p99_ms": 55.41285327000003,
+      "latencia_media_ms": 38.83096990292969
+    },
+    "vocabulario_treino": {
+      "latencia_p50_ms": 37.803514,
+      "latencia_p90_ms": 46.41436680000001,
+      "latencia_p95_ms": 50.154248300000006,
+      "latencia_p99_ms": 55.90644827000002,
+      "latencia_media_ms": 38.98303691679688
+    },
+    "magnitude_50": {
+      "latencia_p50_ms": 37.116037500000004,
+      "latencia_p90_ms": 45.47441980000001,
+      "latencia_p95_ms": 48.7394346,
+      "latencia_p99_ms": 53.72448292000001,
+      "latencia_media_ms": 38.15938510292969
+    }
+  },
+  "nucleos_de_outros": 0.1382658140747866,
+  "carga_antes": 1.08203125,
+  "carga_depois": 1.18408203125,
+  "medido_em": "2026-11-18T17:28:56",
+  "torch": "2.15.0+cu132",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "python": "3.12.13"
+}

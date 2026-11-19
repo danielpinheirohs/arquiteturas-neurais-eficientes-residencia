@@ -1,0 +1,100 @@
+{
+  "regras": {
+    "achado_1": "Uma só, fixada aqui: se a variante de T4 (corte + reajuste com taxa 10× menor) passar em dev na regra da 10b (exact match não distinguivelmente menor que o modelo sem poda, média de 3 sementes) nos dois alunos novos, lê-se no teste 'T4 − sem poda' em exact match para B1 e B2. Se não passar, lê-se no teste 'T1 (reajuste sem corte) − sem poda' em exact match para B1 e B2, para confirmar o mecanismo.",
+    "achado_2": "Uma só: a alternativa estática com menor perda média de F1 em dev nos dois modelos (empate: menor arquivo) é medida no teste: F1 de entidades − fp32, teto sem poda e Aluno A sem poda, 3 sementes.",
+    "achado_3": "Uma só: entre as alternativas de T4 que resolvem em dev, a de menor arquivo (empate: a de maior acurácia de intenção em dev) é medida no teste: acurácia de intenção − fp32, Aluno A vocabulário do treino, 3 sementes. Se nenhuma resolver, nada vai ao teste."
+  },
+  "achado_1": {
+    "regra_em_dev": {
+      "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": {
+        "dev": {
+          "a": 50.41810132808657,
+          "b": 49.84423676012461,
+          "diferenca": -0.5738645679619625,
+          "ic_min": -1.1153467781603617,
+          "ic_max": -0.06558452205279161,
+          "distinguivel": true
+        },
+        "passa": 0.0
+      },
+      "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+        "dev": {
+          "a": 50.82800459091654,
+          "b": 50.43449745859977,
+          "diferenca": -0.3935071323167727,
+          "ic_min": -0.9345794392523366,
+          "ic_max": 0.18035743564518425,
+          "distinguivel": false
+        },
+        "passa": 1.0
+      }
+    },
+    "lido": "sem_corte − partida (sem poda)",
+    "teste": {
+      "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": {
+        "a": 49.73100201748487,
+        "b": 49.12575655682582,
+        "diferenca": -0.6052454606590429,
+        "ic_min": -1.1880744227751652,
+        "ic_max": -0.03362474781439778,
+        "distinguivel": true
+      },
+      "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+        "a": 50.549204214301724,
+        "b": 49.38354629006949,
+        "diferenca": -1.165657924232233,
+        "ic_min": -1.6588208921766434,
+        "ic_max": -0.6500784577448957,
+        "distinguivel": true
+      }
+    }
+  },
+  "achado_3": {
+    "resolvem_em_dev": [],
+    "teste": null,
+    "nota": "nenhuma alternativa resolve em dev pelo critério do plano: nada vai ao teste"
+  },
+  "achado_2": {
+    "escolhida_em_dev": "sem_a_saida_da_rede_densa",
+    "media_em_dev": [
+      {
+        "alternativa": "sem_a_saida_da_rede_densa",
+        "queda": -0.4180895455624667,
+        "bytes": 269141117.0
+      },
+      {
+        "alternativa": "sem_os_piores_pela_faixa",
+        "queda": -5.392594116177063,
+        "bytes": 191307249.0
+      },
+      {
+        "alternativa": "calibracao_percentile",
+        "queda": -7.681718965768364,
+        "bytes": 184231447.5
+      },
+      {
+        "alternativa": "calibracao_entropy",
+        "queda": -8.128633042311323,
+        "bytes": 184231405.5
+      }
+    ],
+    "teste": {
+      "teto/sem_poda": {
+        "a": 75.49819250422955,
+        "b": 74.6417423419956,
+        "diferenca": -0.8564501622339571,
+        "ic_min": -1.3522898754403276,
+        "ic_max": -0.4097531123400733,
+        "distinguivel": true
+      },
+      "aluno_a/vocabulario_treino": {
+        "a": 65.10231240333466,
+        "b": 64.99065036942952,
+        "diferenca": -0.11166203390514662,
+        "ic_min": -0.5004030449871564,
+        "ic_max": 0.2701851060153698,
+        "distinguivel": false
+      }
+    }
+  }
+}

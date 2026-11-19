@@ -1,0 +1,464 @@
+{
+  "etapa": "11a_professor_aberto_maior",
+  "gerado_em": "2026-11-18T21:42:53",
+  "o_que_e": "O que a Etapa 11a leu (com a impressão digital de cada arquivo), as regras, as versões de professor, o custo e o que ela entrega.",
+  "nada_foi_treinado": true,
+  "regras": {
+    "arquivo": "entregas/11a_professor_aberto_maior/regra.json",
+    "escritas_em": "2026-11-18 17:16:11 -0300"
+  },
+  "escolhido": "qwen3_14b__fp16__colab_a100",
+  "para_os_alunos": {
+    "nome": "Qwen3-14B",
+    "etapa": "11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100",
+    "previsoes": "qwen3_14b__fp16__colab_a100"
+  },
+  "versoes": {
+    "qwen3_8b__nf4__local_3080": "entregas/11a_professor_aberto_maior/professores/qwen3_8b__nf4__local_3080/versao.json",
+    "qwen3_8b__nf4__colab_l4": "entregas/11a_professor_aberto_maior/professores/qwen3_8b__nf4__colab_l4/versao.json",
+    "qwen3_8b__fp16__colab_l4": "entregas/11a_professor_aberto_maior/professores/qwen3_8b__fp16__colab_l4/versao.json",
+    "qwen3_14b__fp16__colab_a100": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/versao.json"
+  },
+  "custo": {
+    "como": "`unidades` = tempo de sessão ligada (horários dos registros dos condutores, de 18/11) vezes a taxa da placa; `unidades_fechadas_na_conta` = a mesma repartição multiplicada por gasto da conta ÷ soma, para as partes somarem o que a conta cobrou",
+    "taxas_por_hora": {
+      "L4": 1.94,
+      "A100": 6.73,
+      "G4": 10.05
+    },
+    "partes": [
+      {
+        "o_que": "conferência de ambiente (4 bits na L4), do começo da sessão até o candidato 1 assumi-la",
+        "versao": "qwen3_8b__nf4__colab_l4",
+        "gpu": "L4",
+        "de": "17:19:09",
+        "ate": "17:26:24",
+        "horas": 0.1208,
+        "taxa_por_hora": 1.94,
+        "unidades": 0.23,
+        "unidades_fechadas_na_conta": 0.23
+      },
+      {
+        "o_que": "candidato 1: precisão, dev, teste e treino",
+        "versao": "qwen3_8b__fp16__colab_l4",
+        "gpu": "L4",
+        "de": "17:26:24",
+        "ate": "21:03:40",
+        "horas": 3.6211,
+        "taxa_por_hora": 1.94,
+        "unidades": 7.02,
+        "unidades_fechadas_na_conta": 6.87
+      },
+      {
+        "o_que": "candidato 2: precisão, dev, teste e treino",
+        "versao": "qwen3_14b__fp16__colab_a100",
+        "gpu": "A100",
+        "de": "17:23:29",
+        "ate": "19:40:41",
+        "horas": 2.2867,
+        "taxa_por_hora": 6.73,
+        "unidades": 15.39,
+        "unidades_fechadas_na_conta": 15.06
+      },
+      {
+        "o_que": "sonda da A100, até o condutor do candidato 2 assumir a sessão",
+        "versao": null,
+        "gpu": "A100",
+        "de": "17:19:01",
+        "ate": "17:23:29",
+        "horas": 0.0744,
+        "taxa_por_hora": 6.73,
+        "unidades": 0.5,
+        "unidades_fechadas_na_conta": 0.49
+      },
+      {
+        "o_que": "sonda da L4 (máquina, kernel que segue sem a ligação local, desligamento pela própria VM)",
+        "gpu": "L4",
+        "de": "17:08:43",
+        "ate": "17:10:35",
+        "versao": null,
+        "horas": 0.0311,
+        "taxa_por_hora": 1.94,
+        "unidades": 0.06,
+        "unidades_fechadas_na_conta": 0.06
+      },
+      {
+        "o_que": "sonda da G4 (placa e taxa)",
+        "gpu": "G4",
+        "de": "17:23:40",
+        "ate": "17:24:28",
+        "versao": null,
+        "horas": 0.0133,
+        "taxa_por_hora": 10.05,
+        "unidades": 0.13,
+        "unidades_fechadas_na_conta": 0.13
+      }
+    ],
+    "soma_por_taxa_e_tempo": 23.33,
+    "conta": {
+      "saldo_antes": 600.0,
+      "saldo_depois": 577.17,
+      "de_onde": "`colab usage`: 600,00 antes da etapa; 577,17 lido pelo orquestrador depois do fim das duas rodadas, com taxa 0 e nenhuma sessão ativa",
+      "gasto": 22.83
+    },
+    "diferenca_entre_a_soma_e_a_conta": 0.5,
+    "por_que_diferem": "a taxa tem duas casas, o saldo é cobrado em passos e os horários das sondas são de relógio de comando; a conta é o número que vale",
+    "o_que_os_condutores_mediram_pelo_saldo": {
+      "qwen3_8b__nf4__colab_l4": 0.71,
+      "qwen3_8b__fp16__colab_l4": 22.09,
+      "qwen3_14b__fp16__colab_a100": 20.22
+    },
+    "por_que_nao_servem": "o saldo é da conta inteira; com duas sessões ao mesmo tempo, cada condutor contou também o gasto da outra",
+    "teto_da_etapa": 150
+  },
+  "entradas": {
+    "entregas/01_dados/train.parquet": "d574d1117722716800042c1320ab400551ec6cedc87dad517e1858c5e16336e5",
+    "entregas/01_dados/dev.parquet": "c3077b6273348cb00eed722c132987a9ca9c148242b2f1137b43816d36e0fb8e",
+    "entregas/01_dados/test.parquet": "d0d3d7e2300e8811937be7db4fb6b5cfee5849662af59c468ca6c747d28238ed",
+    "entregas/01_dados/rotulos.json": "974851bdf5bce38026c16f144779a1775012bff8b1266ff35f45e8bfa69508c3",
+    "entregas/05b_professor_aberto/escolha.json": "22e46b2490d9dd26ca6871153424153199594163c393b6cc71aac62ab87b1873",
+    "entregas/05b_professor_aberto/rotulos_treino.parquet": "c71aa703b18d6cc27adbd00d2d68d01de8b0dacf70a469911132d75b377a63f3",
+    "entregas/05b_professor_aberto/logits_treino.npy": "47ec09ca29cf3d727eb3763aeb89a28f8bbc9dc45d87f20a256ef84c30ebd0d2",
+    "entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet": "b2dd59532219e002b307a8dbdcd2c4eda8562ff359448745e81d83984ad02948",
+    "entregas/05b_professor_aberto/previsoes/qwen3_8b_test.parquet": "fb6681aa8baa03941f7372bb30a1d81118f671edc78a164767ca86659c1f5a9b",
+    "data/execucoes/05b_professor_aberto/qwen3_8b/dev/respostas.jsonl": "8ffdb7e9d245c2fa9f4b6a25f43a0f6d409abbc8b39130d30cadda3f5c120a2e",
+    "data/execucoes/05b_professor_aberto/qwen3_8b/test/respostas.jsonl": "182dbb43c833c1b3dde0985356a5f1cef7e99c2406cc5e85e8756918bbbe32bc",
+    "data/execucoes/05b_professor_aberto/qwen3_8b/train/respostas.jsonl": "14f6e7a95162b4e0ec9ac1a275a192499f1cabb671b9bcf561e74b5f7b57d6f7",
+    "entregas/05a_professor_fechado/previsoes/claude_dev.parquet": "f1496c33586b8f4d6e9f98dcbc9f1c558cc99cda8d662c7602310017c8014090",
+    "entregas/05a_professor_fechado/previsoes/claude_test.parquet": "d1487a22fb9f2e66d807ea86e85813c944ab7394a83bc3e0f2535b7ba2ab06c5",
+    "entregas/05a_professor_fechado/rotulos_treino.parquet": "03fa1720ed3234010d7a15a612846634dcdc14cfc1f94c9132b18cc21b6df953"
+  },
+  "saidas": {
+    "11a_professor_aberto_maior.html": {
+      "sha256": "a99cd07a5a1b9ccc7fb1e4882e36b03c6a3473fea8fb2100805092fcf51de41d",
+      "bytes": 546719,
+      "link_fisico": false
+    },
+    "RESUMO.md": {
+      "sha256": "9aab279216e946dff1edf529c955c0c440b35b95845d82bf13783496542ca153",
+      "bytes": 8882,
+      "link_fisico": false
+    },
+    "codigo/build_nb11a.py": {
+      "sha256": "ab353ca41933e7d46ee7d68ddc40ce290b640302e2c91f63b0d4976c83c2adae",
+      "bytes": 34537,
+      "link_fisico": false
+    },
+    "codigo/etapa11a.py": {
+      "sha256": "90be9a057290c7779ba62af7b629034deb294e1773aaf911d7838990a60848c6",
+      "bytes": 61254,
+      "link_fisico": false
+    },
+    "codigo/etapa11a_colab.py": {
+      "sha256": "39d2475e81a96cb8184dc8f473af606adc7e55a48e5e6666c470b4353fbbba52",
+      "bytes": 26682,
+      "link_fisico": false
+    },
+    "codigo/etapa11a_colab_506bad4134c4.py": {
+      "sha256": "506bad4134c48ec621091d472e3e62b11954858b09a160660a6514764438d3f7",
+      "bytes": 25625,
+      "link_fisico": false
+    },
+    "codigo/pacote_5968bf3c0f8b.tar.gz": {
+      "sha256": "5968bf3c0f8b5a7db44e887238c2c569dce7ae85a47d2857dee7ae50f4c50b3e",
+      "bytes": 1233841,
+      "link_fisico": true
+    },
+    "comparacoes.csv": {
+      "sha256": "158b8fcd9b385b7c4a12015bb3fa21a75b3095391216a5e73939639b56ae2e63",
+      "bytes": 9543,
+      "link_fisico": false
+    },
+    "conferencia_de_ambiente.json": {
+      "sha256": "32e236a4a130945e8f428d9eca0960420daba18c415335fea3ddf8cad771c538",
+      "bytes": 1514,
+      "link_fisico": false
+    },
+    "custo.json": {
+      "sha256": "8d46c0190db0dd39df940660b6361c06240575861b08fa9df000e5d84fa31ea4",
+      "bytes": 3035,
+      "link_fisico": false
+    },
+    "diagnosticos.csv": {
+      "sha256": "67644b1a64345c95666cd996e88f06990da8b81efbcc1b5648aa106e859eac5e",
+      "bytes": 740,
+      "link_fisico": false
+    },
+    "escolha.json": {
+      "sha256": "f4e268bdb13f57db572b78a36282111be4257069b6108d010d4af2d47b7618e4",
+      "bytes": 3070,
+      "link_fisico": false
+    },
+    "figuras/escada_em_dev.png": {
+      "sha256": "2a7a789664f078a79b0eb13b06ae46f992cb3ebccbf03c6e6eafa6a096b1b51e",
+      "bytes": 32231,
+      "link_fisico": false
+    },
+    "figuras/professor_aberto_no_teste.png": {
+      "sha256": "788e50ee77f154fa9e8402d65f487b5013773f2b32ac28fc489f0aebf6c36217",
+      "bytes": 50257,
+      "link_fisico": false
+    },
+    "mudancas_entre_professores.csv": {
+      "sha256": "0abb7a97604d6a68c2eda5c6c5f77349a25036c66c91dc74bd6796e8512a179a",
+      "bytes": 1602,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/FIM_REMOTO.json": {
+      "sha256": "a04ba6fb70c72def86d8916a1c48656e595daca434321b39a726a58f6e575dd0",
+      "bytes": 106,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/ambiente.json": {
+      "sha256": "8f855013b53e8396298c894280f44e4212ec5305d47e245ad009accd0e70376d",
+      "bytes": 2226,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/condutor.log": {
+      "sha256": "53b6ddb39403bebdecad1ad862eb1f346d52969f59124d63b5e79210aa459de0",
+      "bytes": 5637,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/intencoes.json": {
+      "sha256": "327c584dd0e142b53f25075e6aca5c45f2d3f522df7108d486c9cf1d2f1b40e1",
+      "bytes": 1129,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/logits_dev.npy": {
+      "sha256": "4e25b866278e35260e489ca9553f65dba2e458a960c6ebf6c75a023145b8a105",
+      "bytes": 488048,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/logits_test.npy": {
+      "sha256": "da748fe458f990743075d593c1de9b24a825e1dfe98a5ba92fbfb84e116011a0",
+      "bytes": 713888,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/logits_treino.npy": {
+      "sha256": "7b3aa7cbad59a44f49493628223c8e3aa0a8d9cfc9c8e1d6fafc0e6cb6647072",
+      "bytes": 2763488,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/pacotes_instalados.txt": {
+      "sha256": "718a1249e7493051815eb9f4d8a4ea636d2d564f337f187dd3c5050d7c7f505b",
+      "bytes": 1670,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/precisao.json": {
+      "sha256": "ee5f284bb9a9d8dd7a158d0d4d1bdf6865633ffce8d798abfa2b0c1ee9031e41",
+      "bytes": 203,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet": {
+      "sha256": "927b0362d1274fb5f966f0c1fcb5ba30b1113136018940b0aa26d8706273af3d",
+      "bytes": 24267,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_test.parquet": {
+      "sha256": "ff95747ef9d89918a65957948a74871e675a3f96ba8034e190a810cba264a644",
+      "bytes": 33696,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/dev/meta.json": {
+      "sha256": "a47773d274fa380805deb74975ede0f5106db4db5e656eeb66461c5050e773d6",
+      "bytes": 222,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/dev/respostas.jsonl": {
+      "sha256": "f04455720651115e165ac62ecbf313ccae4f0064e3044ceef91d1e67445cec60",
+      "bytes": 1703001,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/test/meta.json": {
+      "sha256": "20318b99615493354e7eea8f2b184fa46942a1695f86a6a86e21e01fd42c7e37",
+      "bytes": 223,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/test/respostas.jsonl": {
+      "sha256": "896e51befdab7005b24f6ae14a6bd3b1b22c2f1d3e5850c5f7a869d134f08916",
+      "bytes": 2487890,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/train/meta.json": {
+      "sha256": "e3b34520d8861b11fa147a08066f1f8a826ebfa2de8852d1687a2b9685630123",
+      "bytes": 224,
+      "link_fisico": false
+    },
+    "professores/qwen3_14b__fp16__colab_a100/respostas/train/respostas.jsonl": {
+      "sha256": "5016dc8e98853da6357694a5421a1a5dea3416d22a4547954f953b3df8558e52",
+      "bytes": 9666290,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet": {
+      "sha256": "1789cebefc258471dadfeb63fc5c9da8bad63d12a63827476fd4e0586f4a31bb",
+      "bytes": 585156,
+      "link_fisico": true
+    },
+    "professores/qwen3_14b__fp16__colab_a100/versao.json": {
+      "sha256": "08e222068ea9a7bbe17646e6c4ce595c1dd10201c97ea3d9e0eb9677421ff599",
+      "bytes": 10607,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/FIM_REMOTO.json": {
+      "sha256": "3f1ff783c53d8434adf9381b6a32ebb7591545050173acf5caed7b8c1c5c8441",
+      "bytes": 107,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/ambiente.json": {
+      "sha256": "a2e9c9354cacb0b14948cc1337807ab073a770adc5680d9c54346869f8f5fa6d",
+      "bytes": 2202,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/condutor.log": {
+      "sha256": "f28655f5060db4cdf795d20c3a8443108a8154ccf5dcaa262a71a06ef199443c",
+      "bytes": 8598,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/intencoes.json": {
+      "sha256": "327c584dd0e142b53f25075e6aca5c45f2d3f522df7108d486c9cf1d2f1b40e1",
+      "bytes": 1129,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/logits_dev.npy": {
+      "sha256": "65a202d55de960a88e6bc7833ac7156c765c257ade79f441b4ecb76fd728f82d",
+      "bytes": 488048,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/logits_test.npy": {
+      "sha256": "cca574284b6c193358e5699f4960f03a7d776556291c8f335ad0937fafedec43",
+      "bytes": 713888,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/logits_treino.npy": {
+      "sha256": "c82f0ac014e791eb4eddcc1d76d66b0f372bfe70f78c84ce58f4d6ecf070c7ab",
+      "bytes": 2763488,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/pacotes_instalados.txt": {
+      "sha256": "718a1249e7493051815eb9f4d8a4ea636d2d564f337f187dd3c5050d7c7f505b",
+      "bytes": 1670,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/precisao.json": {
+      "sha256": "27d168a1963dce688b7fc9fc0b5aef29b06261661894e7226fb1f9b0b6ad59ba",
+      "bytes": 200,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/previsoes/qwen3_8b__fp16__colab_l4_dev.parquet": {
+      "sha256": "e54c64068d95c2eeb44aa96b4c01a6dd10232db7fbd36f9d9a4476d23f0513ef",
+      "bytes": 24087,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/previsoes/qwen3_8b__fp16__colab_l4_test.parquet": {
+      "sha256": "7bc44d7adb91c74bcd0e734195cb56e7ebf8e2f5bb8163127730fd3901bc828c",
+      "bytes": 34182,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/dev/meta.json": {
+      "sha256": "13c313aad930f8c216282c37933dd154a0bc112049485a96c8e425fb332e59d7",
+      "bytes": 208,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/dev/respostas.jsonl": {
+      "sha256": "3ef3ab8775b54b952d37a3a86d8fc18f4ecab4d0d496249a6ab5271501fbbbf6",
+      "bytes": 1711177,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/test/meta.json": {
+      "sha256": "d4605e1b3143d8468d4e0ab2c2e130abff0ff7b6c08d7130bfb2b4ff28d96b89",
+      "bytes": 208,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/test/respostas.jsonl": {
+      "sha256": "3fd3188e14388d2975d7eff3b74c506c77804733072a33cfc98c405772a8da9e",
+      "bytes": 2502303,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/train/meta.json": {
+      "sha256": "2661842752d198e7f6df9041529f9ccbc86a2acabad9d23931e9446272b29a93",
+      "bytes": 209,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__fp16__colab_l4/respostas/train/respostas.jsonl": {
+      "sha256": "c6e2cded6b7d3ade506105a4859d6ff92e3264eaece95cd202b4db48f04feba3",
+      "bytes": 9716085,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/rotulos_treino.parquet": {
+      "sha256": "e01979d1d3ed4660b1b1ba0aaa6e6d9af88b95402e33db163d3ba5d834a90577",
+      "bytes": 586546,
+      "link_fisico": true
+    },
+    "professores/qwen3_8b__fp16__colab_l4/versao.json": {
+      "sha256": "5ec9d2d79cc3f091d2af4a530208c9ec7d73968f1d188e0f30703b444916ff7c",
+      "bytes": 10526,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/ambiente.json": {
+      "sha256": "2a2b458592f482c0d38e8aeb3682fae65242ca368ab467daf7af191259ae4e81",
+      "bytes": 2227,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/condutor.log": {
+      "sha256": "0134c740361f07122f335db076fc815009d862db73a31ec98e7206c4a42acaec",
+      "bytes": 556,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/conferencia/lotes_da_conferencia.json": {
+      "sha256": "790d602fa1f94eed8e3a76574ae81606f861488516f0e05072a8fbb4fa720572",
+      "bytes": 3798,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/conferencia/meta.json": {
+      "sha256": "2a7e91468ff1fd102333dfc0fe4f0e5edd72152192e369472c0d134ded1bea53",
+      "bytes": 204,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/conferencia/respostas.jsonl": {
+      "sha256": "98d8abf8f02626d2f3aaacaf7111a0ba5db9d58344c6d08f7f2dea47ef81ccc9",
+      "bytes": 249860,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/conferencia_de_ambiente.json": {
+      "sha256": "32e236a4a130945e8f428d9eca0960420daba18c415335fea3ddf8cad771c538",
+      "bytes": 1514,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/pacotes_instalados.txt": {
+      "sha256": "718a1249e7493051815eb9f4d8a4ea636d2d564f337f187dd3c5050d7c7f505b",
+      "bytes": 1670,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__colab_l4/versao.json": {
+      "sha256": "baa4284a12e00df4c6e1b6bc5f320ec7db1fd9bdc6d300a6d34b34dee3bcdc47",
+      "bytes": 8976,
+      "link_fisico": false
+    },
+    "professores/qwen3_8b__nf4__local_3080/versao.json": {
+      "sha256": "850ade8566d2316e906981ee1cbf195a9f4083861cbad830f777ea1aa14b9cc3",
+      "bytes": 6641,
+      "link_fisico": false
+    },
+    "qualidade.csv": {
+      "sha256": "d1ec0fbe20be6d9924e2a08d9a8a38eb70e56fb85aab43bc3377bc4089c22492",
+      "bytes": 6996,
+      "link_fisico": false
+    },
+    "regra.json": {
+      "sha256": "c14f59972124354a405d054fa5bbe1f27c8498105609f120ab2b7802431280ff",
+      "bytes": 2370,
+      "link_fisico": false
+    },
+    "resultados.csv": {
+      "sha256": "9335b3b3b84c3222a685a72a36537840c092dc9c11c580f0c861321d46ba2e4a",
+      "bytes": 4251,
+      "link_fisico": false
+    },
+    "sistemas.json": {
+      "sha256": "517ecf6e3ee68f7b54ab6c882f5b34726b32ab88a84e831a3f217740f09c47a8",
+      "bytes": 2526,
+      "link_fisico": false
+    }
+  },
+  "cache": "data/execucoes/11a_professor_aberto_maior/ (as pastas das versões; os arquivos grandes da entrega são links físicos para lá)"
+}

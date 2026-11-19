@@ -1,0 +1,622 @@
+{
+  "etapa": "08_quantizacao",
+  "gerado_em": "2026-11-18",
+  "regra_do_qat": "treino ciente de quantização só se o F1 de entidades cair mais de 1 ponto em dev com a quantização pós-treino (PLANO.md)",
+  "regra_da_forma": "em dev, com rótulos humanos, média de 3 sementes, contra o mesmo modelo em 32 bits: passa a forma cuja queda de F1 de entidades é de no máximo 1 ponto; se as duas passam, sai a distinguivelmente pior em exact match; senão fica a estática só se for mais rápida em todas as rodadas de latência; senão a dinâmica",
+  "precisa_de_qat": [],
+  "final": {
+    "nome": "Aluno A (rótulos do Claude Haiku 5.5), sem 90% das linhas da tabela de features",
+    "modelo": "aluno_a",
+    "variante": "linhas_90",
+    "papel": "principal",
+    "forma": "dinamica",
+    "nome_da_forma": "INT8, quantização dinâmica",
+    "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+    "precisa_de_qat": false,
+    "sistemas": "entregas/08_quantizacao/modelos/aluno_a/linhas_90",
+    "sementes": [
+      0,
+      1,
+      2
+    ],
+    "pastas_por_semente": {
+      "0": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_0",
+      "1": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_1",
+      "2": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_2"
+    },
+    "compactado": false,
+    "arquivo_da_rede": "rede.onnx",
+    "em_32_bits": "entregas/07_poda/modelos/aluno_a/linhas_90",
+    "parametros": 1992538,
+    "bytes": {
+      "pytorch_32_bits": 8064482,
+      "onnx_32_bits": 7983439,
+      "dinamica": 2113186,
+      "estatica": 2121450,
+      "dinamica_compactado": 1703638,
+      "estatica_compactado": 1705691
+    },
+    "latencia_p50_ms": {
+      "pytorch": 1.100955,
+      "fp32": 0.4256395,
+      "dinamica": 0.2610945,
+      "estatica": 0.284548
+    },
+    "queda_de_f1_de_entidades_em_dev": {
+      "dinamica": {
+        "diferenca": -0.000267089403276799,
+        "ic_min": -0.0015384164934314048,
+        "ic_max": 0.0009538913308261783,
+        "passa": true
+      },
+      "estatica": {
+        "diferenca": 0.00032246601083019133,
+        "ic_min": -0.0014328887277423375,
+        "ic_max": 0.0020372052725555157,
+        "passa": true
+      }
+    },
+    "no_teste": {
+      "intent_acc": 0.80183815288052,
+      "intent_macro_f1": 0.7757246574131057,
+      "slot_f1": 0.648808848830449,
+      "exact_match": 0.5122169917058955
+    }
+  },
+  "modelos": {
+    "aluno_a/sem_poda": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), sem poda",
+      "modelo": "aluno_a",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_a/sem_poda",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/06_destilacao/modelos/aluno_a",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921914,
+        "onnx_32_bits": 19840871,
+        "dinamica": 5260731,
+        "estatica": 5268997,
+        "dinamica_compactado": 4351946,
+        "estatica_compactado": 4353818
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.105486,
+        "fp32": 0.424288,
+        "dinamica": 0.25931800000000005,
+        "estatica": 0.28338399999999997
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.0003754411150591608,
+          "ic_min": -0.001404508039036248,
+          "ic_max": 0.0006715736842610407,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.00037724334947986105,
+          "ic_min": -0.0019438920149498773,
+          "ic_max": 0.0011707052956493737,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8067697825599641,
+        "intent_macro_f1": 0.7834586139513712,
+        "slot_f1": 0.6480912994787895,
+        "exact_match": 0.5127774041694687
+      }
+    },
+    "aluno_a/linhas_90": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), sem 90% das linhas da tabela de features",
+      "modelo": "aluno_a",
+      "variante": "linhas_90",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_a/linhas_90",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/07_poda/modelos/aluno_a/linhas_90",
+      "parametros": 1992538,
+      "bytes": {
+        "pytorch_32_bits": 8064482,
+        "onnx_32_bits": 7983439,
+        "dinamica": 2113186,
+        "estatica": 2121450,
+        "dinamica_compactado": 1703638,
+        "estatica_compactado": 1705691
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.100955,
+        "fp32": 0.4256395,
+        "dinamica": 0.2610945,
+        "estatica": 0.284548
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.000267089403276799,
+          "ic_min": -0.0015384164934314048,
+          "ic_max": 0.0009538913308261783,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": 0.00032246601083019133,
+          "ic_min": -0.0014328887277423375,
+          "ic_max": 0.0020372052725555157,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.80183815288052,
+        "intent_macro_f1": 0.7757246574131057,
+        "slot_f1": 0.648808848830449,
+        "exact_match": 0.5122169917058955
+      }
+    },
+    "aluno_a/magnitude_95": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), magnitude, 95% de uma vez",
+      "modelo": "aluno_a",
+      "variante": "magnitude_95",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_a/magnitude_95",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_2"
+      },
+      "compactado": true,
+      "arquivo_da_rede": "rede.onnx.gz",
+      "em_32_bits": "entregas/07_poda/modelos/aluno_a/magnitude_95",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921914,
+        "onnx_32_bits": 19840878,
+        "dinamica": 5260739,
+        "estatica": 5269006,
+        "dinamica_compactado": 917653,
+        "estatica_compactado": 919242
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.0996584999999999,
+        "fp32": 0.4369015,
+        "dinamica": 0.2667165,
+        "estatica": 0.290319
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": 0.0005810487546388243,
+          "ic_min": -0.0003207850501929399,
+          "ic_max": 0.0015277059292503193,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0005325003256564376,
+          "ic_min": -0.002287678718324526,
+          "ic_max": 0.0011473398117241205,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7984756780990808,
+        "intent_macro_f1": 0.7711717061750815,
+        "slot_f1": 0.64328631931233,
+        "exact_match": 0.5025778973324366
+      }
+    },
+    "teto/sem_poda": {
+      "nome": "Teto (rótulos humanos), sem poda",
+      "modelo": "teto",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/teto/sem_poda",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/teto/sem_poda/semente_0",
+        "1": "entregas/08_quantizacao/modelos/teto/sem_poda/semente_1",
+        "2": "entregas/08_quantizacao/modelos/teto/sem_poda/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/04b_intencao/modelos",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921866,
+        "onnx_32_bits": 19840862,
+        "dinamica": 5260723,
+        "estatica": 5268991,
+        "dinamica_compactado": 4401465,
+        "estatica_compactado": 4403135
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.1001285,
+        "fp32": 0.43405550000000004,
+        "dinamica": 0.26603350000000003,
+        "estatica": 0.2873645
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -5.8314987419483266e-05,
+          "ic_min": -0.0012637665651921398,
+          "ic_max": 0.0011473140924486353,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0009842093101715133,
+          "ic_min": -0.002653412115379486,
+          "ic_max": 0.0006708928416361136,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.843308675184936,
+        "intent_macro_f1": 0.8282495841995136,
+        "slot_f1": 0.7365657003903124,
+        "exact_match": 0.6247478143913922
+      }
+    },
+    "teto/linhas_90": {
+      "nome": "Teto (rótulos humanos), sem 90% das linhas da tabela de features",
+      "modelo": "teto",
+      "variante": "linhas_90",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/teto/linhas_90",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/teto/linhas_90/semente_0",
+        "1": "entregas/08_quantizacao/modelos/teto/linhas_90/semente_1",
+        "2": "entregas/08_quantizacao/modelos/teto/linhas_90/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/07_poda/modelos/teto/linhas_90",
+      "parametros": 1992538,
+      "bytes": {
+        "pytorch_32_bits": 8064363,
+        "onnx_32_bits": 7983317,
+        "dinamica": 2113064,
+        "estatica": 2121335,
+        "dinamica_compactado": 1734229,
+        "estatica_compactado": 1736115
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.1002049999999999,
+        "fp32": 0.42518599999999995,
+        "dinamica": 0.26081,
+        "estatica": 0.280308
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.00010187728438904031,
+          "ic_min": -0.0013065297005154075,
+          "ic_max": 0.0011479970186763888,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0011381227935067795,
+          "ic_min": -0.0030443586913968005,
+          "ic_max": 0.0006827842663253729,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8335574983187626,
+        "intent_macro_f1": 0.8133573446071279,
+        "slot_f1": 0.7348084475737969,
+        "exact_match": 0.6128670701636404
+      }
+    },
+    "teto/magnitude_90": {
+      "nome": "Teto (rótulos humanos), magnitude, 90% de uma vez",
+      "modelo": "teto",
+      "variante": "magnitude_90",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/teto/magnitude_90",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_0",
+        "1": "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_1",
+        "2": "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_2"
+      },
+      "compactado": true,
+      "arquivo_da_rede": "rede.onnx.gz",
+      "em_32_bits": "entregas/07_poda/modelos/teto/magnitude_90",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921914,
+        "onnx_32_bits": 19840875,
+        "dinamica": 5260735,
+        "estatica": 5269001,
+        "dinamica_compactado": 1309536,
+        "estatica_compactado": 1311221
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.1033335,
+        "fp32": 0.430058,
+        "dinamica": 0.26861999999999997,
+        "estatica": 0.2892875
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": 0.0006166105944998002,
+          "ic_min": -0.0009689902576052317,
+          "ic_max": 0.002185401589606455,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0014319261528000782,
+          "ic_min": -0.003649097284119082,
+          "ic_max": 0.0007822099198009856,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8389374579690653,
+        "intent_macro_f1": 0.8213396032472092,
+        "slot_f1": 0.7342987286603396,
+        "exact_match": 0.6166778749159382
+      }
+    },
+    "aluno_b2_t8/sem_poda": {
+      "nome": "Aluno B2 (logits do Qwen3-8B, T = 8), sem poda",
+      "modelo": "aluno_b2_t8",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/06_destilacao/modelos/aluno_b2_t8",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921914,
+        "onnx_32_bits": 19840875,
+        "dinamica": 5260736,
+        "estatica": 5269001,
+        "dinamica_compactado": 4385066,
+        "estatica_compactado": 4387055
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.1098789999999998,
+        "fp32": 0.4368075,
+        "dinamica": 0.268718,
+        "estatica": 0.291012
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.0002644145950034815,
+          "ic_min": -0.0016780653320777662,
+          "ic_max": 0.001106189072718144,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0001770718007442218,
+          "ic_min": -0.0023609701386477304,
+          "ic_max": 0.0019031542378236893,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7787491593813046,
+        "intent_macro_f1": 0.7653131434585664,
+        "slot_f1": 0.5810129541742963,
+        "exact_match": 0.45920197265187174
+      }
+    },
+    "aluno_b2_t8/linhas_90": {
+      "nome": "Aluno B2 (logits do Qwen3-8B, T = 8), sem 90% das linhas da tabela de features",
+      "modelo": "aluno_b2_t8",
+      "variante": "linhas_90",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_2"
+      },
+      "compactado": false,
+      "arquivo_da_rede": "rede.onnx",
+      "em_32_bits": "entregas/07_poda/modelos/aluno_b2_t8/linhas_90",
+      "parametros": 1992538,
+      "bytes": {
+        "pytorch_32_bits": 8064298,
+        "onnx_32_bits": 7983259,
+        "dinamica": 2113007,
+        "estatica": 2121276,
+        "dinamica_compactado": 1724063,
+        "estatica_compactado": 1726130
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.0994765000000002,
+        "fp32": 0.4249075,
+        "dinamica": 0.2606395,
+        "estatica": 0.2839435
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.00023409702254750808,
+          "ic_min": -0.0019552093006871855,
+          "ic_max": 0.0014772435823509672,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0026130919750136927,
+          "ic_min": -0.005152183707443437,
+          "ic_max": -0.00022131180508121,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7778524994395876,
+        "intent_macro_f1": 0.7620052199970698,
+        "slot_f1": 0.57975850693101,
+        "exact_match": 0.46211611746245235
+      }
+    },
+    "aluno_b2_t8/gradual_90": {
+      "nome": "Aluno B2 (logits do Qwen3-8B, T = 8), magnitude, 90% gradual",
+      "modelo": "aluno_b2_t8",
+      "variante": "gradual_90",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "as duas passam, sem diferença distinguível de qualidade, e a estática não é mais rápida em todas as rodadas: fica a mais simples",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_0",
+        "1": "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_1",
+        "2": "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_2"
+      },
+      "compactado": true,
+      "arquivo_da_rede": "rede.onnx.gz",
+      "em_32_bits": "entregas/07_poda/modelos/aluno_b2_t8/gradual_90",
+      "parametros": 4895834,
+      "bytes": {
+        "pytorch_32_bits": 19921914,
+        "onnx_32_bits": 19840880,
+        "dinamica": 5260741,
+        "estatica": 5269006,
+        "dinamica_compactado": 1263782,
+        "estatica_compactado": 1265641
+      },
+      "latencia_p50_ms": {
+        "pytorch": 1.1123555,
+        "fp32": 0.4326485,
+        "dinamica": 0.270848,
+        "estatica": 0.2946975
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.0007049545458821527,
+          "ic_min": -0.0019651860672784517,
+          "ic_max": 0.0004462617630373861,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.0022219768924029992,
+          "ic_min": -0.004490413913490102,
+          "ic_max": 3.7966632725672937e-06,
+          "passa": true
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.77549876709258,
+        "intent_macro_f1": 0.7605949643550135,
+        "slot_f1": 0.586023291359829,
+        "exact_match": 0.4613315400134499
+      }
+    }
+  },
+  "como_carregar": "especialista.compressao.exportacao.SistemaOnnx.carregar(pasta / 'semente_0'): roda no ONNX Runtime, sem PyTorch, e cumpre o contrato da régua",
+  "o_que_e_quantizado": "a tabela de features (uint8) e as matrizes de pesos (int8, simétrico), um degrau por tensor; vieses, normalizações e CRF em 32 bits",
+  "calibracao_da_estatica": {
+    "pedidos": 512,
+    "de_onde": "pedidos do treino, sem rótulo",
+    "semente_do_sorteio": 0
+  },
+  "latencia": {
+    "protocolo": "uma consulta por vez, 1 thread, do texto à resposta; 5 rodadas de 1.024 consultas, sistemas alternados; semente 0",
+    "maquina_quieta": true,
+    "nucleos_de_cpu_dos_outros_processos_durante_a_medida": 0.04548773658945594
+  },
+  "ambiente": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13",
+    "instrucoes_da_cpu": "avx2 avx_vnni",
+    "tem_vnni": true,
+    "onnxruntime": "1.32.0",
+    "onnx": "1.23.2",
+    "torch": "2.15.0+cu132"
+  }
+}

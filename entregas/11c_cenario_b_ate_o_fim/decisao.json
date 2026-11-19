@@ -1,0 +1,616 @@
+{
+  "etapa": "11c_cenario_b_ate_o_fim",
+  "gerado_em": "2026-11-19 03:05:51 -0300",
+  "pergunta": "As receitas de poda e de quantização já escolhidas valem para os alunos do professor novo, e onde o cenário B fica na tabela final com ele?",
+  "como_ler": "Esta etapa não toma decisão: `alunos` diz, para cada aluno novo, se a poda e a forma de 8 bits que as etapas de origem escolheram passam na conferência (em dev), a qualidade, o tamanho e a latência de cada linha, e onde estão os modelos. As pastas `podado` são lidas por `SistemaDiet.carregar` (zero) ou `SistemaEncoder.carregar` (xlmr); as `int8`, `int8_sem_poda` e `onnx_de_32_bits`, por `SistemaOnnx.carregar` (zero) ou `SistemaEncoderOnnx.carregar` (xlmr), sem PyTorch. Os modelos finais do projeto continuam os das Etapas 8 e 10c",
+  "decisoes_nesta_etapa": "nenhuma",
+  "professor": {
+    "versao": "qwen3_14b__fp16__colab_a100",
+    "nome": "Qwen3-14B",
+    "de_onde": "entregas/11b_alunos_do_professor_maior/decisao.json"
+  },
+  "regras": {
+    "arquivo": "entregas/11c_cenario_b_ate_o_fim/regras.json",
+    "escritas_em": "2026-11-19 00:40:09 -0300"
+  },
+  "receitas": {
+    "zero": {
+      "poda": "linhas_90",
+      "nome_da_poda": "Sem 90% das linhas da tabela de features",
+      "reajuste": {
+        "epocas": 30,
+        "epocas_de_rampa_da_poda_gradual": 15,
+        "passos_entre_cortes": 100,
+        "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+      },
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "de": {
+        "poda": "entregas/07_poda/decisao.json (principal.variante)",
+        "forma": "entregas/08_quantizacao/decisao.json (final.forma)"
+      }
+    },
+    "xlmr": {
+      "poda": "vocabulario_treino",
+      "nome_da_poda": "Vocabulário do treino",
+      "reajuste": {
+        "epocas": 10,
+        "epocas_de_rampa_da_poda_gradual": 5,
+        "passos_entre_cortes": 100,
+        "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+      },
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "de": {
+        "poda": "entregas/10b_encoder_poda/decisao.json (principal.variante)",
+        "forma": "entregas/10c_encoder_quantizacao/decisao.json (final.forma)"
+      }
+    }
+  },
+  "todas_as_receitas_passam": false,
+  "alunos": {
+    "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "caminho": "zero",
+      "sigla": "B2",
+      "representa_o_cenario_b": true,
+      "papel": "representa o cenário B neste caminho",
+      "chave_no_registro": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "poda": {
+        "variante": "linhas_90",
+        "nome": "Sem 90% das linhas da tabela de features",
+        "epocas_de_reajuste": 30,
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "exact_match",
+          "referencia": 0.48450565666502704,
+          "com_a_receita": 0.48007870142646336,
+          "diferenca": -0.004426955238563679,
+          "ic_min": -0.01475651746187895,
+          "ic_max": 0.006886374815543496,
+          "criterio": "o intervalo de 95% da diferença não fica todo abaixo de zero",
+          "passa": true
+        }
+      },
+      "oito_bits": {
+        "forma": "dinamica",
+        "nome_da_forma": "INT8, quantização dinâmica",
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.619794860204565,
+          "com_a_receita": 0.6191820065883652,
+          "diferenca": -0.0006128536161997822,
+          "ic_min": -0.002425473189958316,
+          "ic_max": 0.0011041879995092338,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "no_modelo_sem_poda_registro": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.6215525218543991,
+          "com_a_receita": 0.6223053404124008,
+          "diferenca": 0.0007528185580016888,
+          "ic_min": -0.00042234620765895236,
+          "ic_max": 0.002025725200844646,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "onnx_de_32_bits_igual_ao_pytorch": {
+          "particao": "dev e teste",
+          "metrica": "respostas iguais às do PyTorch",
+          "referencia": 15021.0,
+          "com_a_receita": 15021.0,
+          "diferenca": 0.0,
+          "ic_min": null,
+          "ic_max": null,
+          "criterio": "todas as respostas iguais, nas 3 sementes",
+          "passa": true
+        }
+      },
+      "passa_em_tudo": true,
+      "linhas": {
+        "sem_poda": {
+          "variante": "sem_poda",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.8048860468929333,
+            "slot_f1": 0.6215525218543991,
+            "exact_match": 0.48450565666502704
+          },
+          "no_teste": {
+            "intent_acc": 0.7864828513786146,
+            "slot_f1": 0.6041465398663912,
+            "exact_match": 0.4875588433086752
+          },
+          "parametros": 4895834.0,
+          "bytes": 19921914.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 1.098172,
+          "latencia_p95_ms": 1.4853251500000002
+        },
+        "podado": {
+          "variante": "linhas_90",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.7948844072798819,
+            "slot_f1": 0.619794860204565,
+            "exact_match": 0.48007870142646336
+          },
+          "no_teste": {
+            "intent_acc": 0.7914144810580588,
+            "slot_f1": 0.6031056520443862,
+            "exact_match": 0.48598968841067025
+          },
+          "parametros": 1992538.0,
+          "bytes": 8064314.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 1.0744725,
+          "latencia_p95_ms": 1.4636229500000002
+        },
+        "onnx": {
+          "variante": "linhas_90",
+          "forma": "fp32",
+          "em_dev": {
+            "intent_acc": 0.7948844072798819,
+            "slot_f1": 0.619794860204565,
+            "exact_match": 0.48007870142646336
+          },
+          "no_teste": {
+            "intent_acc": 0.7914144810580588,
+            "slot_f1": 0.6031056520443862,
+            "exact_match": 0.48598968841067025
+          },
+          "parametros": 1992538.0,
+          "bytes": 7983336.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 0.40872549999999996,
+          "latencia_p95_ms": 0.6700836
+        },
+        "int8": {
+          "variante": "linhas_90",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.7950483685850139,
+            "slot_f1": 0.6191820065883652,
+            "exact_match": 0.47958681751106735
+          },
+          "no_teste": {
+            "intent_acc": 0.791974893521632,
+            "slot_f1": 0.6028728641276767,
+            "exact_match": 0.48666218336695805
+          },
+          "parametros": 1992538.0,
+          "bytes": 2113083.0,
+          "bytes_compactado": 1732441.0,
+          "latencia_p50_ms": 0.248976,
+          "latencia_p95_ms": 0.4308920500000001
+        },
+        "int8_sem_poda": {
+          "variante": "sem_poda",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.8052139695031973,
+            "slot_f1": 0.6223053404124008,
+            "exact_match": 0.485325463190687
+          },
+          "no_teste": {
+            "intent_acc": 0.7867070163640438,
+            "slot_f1": 0.6058352044754455,
+            "exact_match": 0.4887917507285362
+          },
+          "parametros": 4895834.0,
+          "bytes": 5260786.0,
+          "bytes_compactado": 4379632.0,
+          "latencia_p50_ms": 0.2614535,
+          "latencia_p95_ms": 0.44504445
+        }
+      },
+      "pastas_por_semente": {
+        "podado": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_2"
+        },
+        "int8": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_2"
+        },
+        "int8_sem_poda": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2"
+        },
+        "onnx_de_32_bits": {
+          "linhas_90": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0",
+          "sem_poda": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0"
+        }
+      }
+    },
+    "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Aluno B1 (rótulos do Qwen3-14B)",
+      "curto": "Aluno B1 · Qwen3-14B",
+      "caminho": "xlmr",
+      "sigla": "B1",
+      "representa_o_cenario_b": true,
+      "papel": "representa o cenário B neste caminho",
+      "chave_no_registro": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "poda": {
+        "variante": "vocabulario_treino",
+        "nome": "Vocabulário do treino",
+        "epocas_de_reajuste": 10,
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "exact_match",
+          "referencia": 0.5041810132808657,
+          "com_a_receita": 0.4938514510575504,
+          "diferenca": -0.010329562223315325,
+          "ic_min": -0.017871782259386848,
+          "ic_max": -0.003111165764879459,
+          "criterio": "o intervalo de 95% da diferença não fica todo abaixo de zero",
+          "passa": false
+        }
+      },
+      "oito_bits": {
+        "forma": "dinamica",
+        "nome_da_forma": "INT8, quantização dinâmica",
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.6276786389826183,
+          "com_a_receita": 0.6275423330389481,
+          "diferenca": -0.00013630594367020077,
+          "ic_min": -0.005217687138118554,
+          "ic_max": 0.004915551332388429,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "no_modelo_sem_poda_registro": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.6325151458275854,
+          "com_a_receita": 0.6290384402298206,
+          "diferenca": -0.0034767055977648065,
+          "ic_min": -0.008902243602861088,
+          "ic_max": 0.0020606902377320875,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "onnx_de_32_bits_igual_ao_pytorch": {
+          "particao": "dev e teste",
+          "metrica": "respostas iguais às do PyTorch",
+          "referencia": 15021.0,
+          "com_a_receita": 15021.0,
+          "diferenca": 0.0,
+          "ic_min": null,
+          "ic_max": null,
+          "criterio": "todas as respostas iguais, nas 3 sementes",
+          "passa": true
+        }
+      },
+      "passa_em_tudo": false,
+      "linhas": {
+        "sem_poda": {
+          "variante": "sem_poda",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.809968847352025,
+            "slot_f1": 0.6325151458275854,
+            "exact_match": 0.5041810132808657
+          },
+          "no_teste": {
+            "intent_acc": 0.7976911006500785,
+            "slot_f1": 0.6167891500202037,
+            "exact_match": 0.49731002017484865
+          },
+          "parametros": 277584555.0,
+          "bytes": 1127466166.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 34.4211315,
+          "latencia_p95_ms": 46.1550734
+        },
+        "podado": {
+          "variante": "vocabulario_treino",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.8042302016724053,
+            "slot_f1": 0.6276786389826183,
+            "exact_match": 0.4938514510575504
+          },
+          "no_teste": {
+            "intent_acc": 0.7939923783904955,
+            "slot_f1": 0.6090831096333335,
+            "exact_match": 0.48957632817753866
+          },
+          "parametros": 89573547.0,
+          "bytes": 358975066.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 34.3681555,
+          "latencia_p95_ms": 47.1611728
+        },
+        "onnx": {
+          "variante": "vocabulario_treino",
+          "forma": "fp32",
+          "em_dev": {
+            "intent_acc": 0.8042302016724053,
+            "slot_f1": 0.6276786389826183,
+            "exact_match": 0.4938514510575504
+          },
+          "no_teste": {
+            "intent_acc": 0.7939923783904955,
+            "slot_f1": 0.6090831096333335,
+            "exact_match": 0.48957632817753866
+          },
+          "parametros": 89573547.0,
+          "bytes": 358883142.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 23.649480500000003,
+          "latencia_p95_ms": 35.70481345
+        },
+        "int8": {
+          "variante": "vocabulario_treino",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.8002951303492375,
+            "slot_f1": 0.6275423330389481,
+            "exact_match": 0.49319560583702254
+          },
+          "no_teste": {
+            "intent_acc": 0.7906299036090564,
+            "slot_f1": 0.6091887771434468,
+            "exact_match": 0.49271463797354853
+          },
+          "parametros": 89573547.0,
+          "bytes": 90666717.0,
+          "bytes_compactado": 60526141.0,
+          "latencia_p50_ms": 7.6898305,
+          "latencia_p95_ms": 11.504727350000003
+        },
+        "int8_sem_poda": {
+          "variante": "sem_poda",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.8048860468929332,
+            "slot_f1": 0.6290384402298206,
+            "exact_match": 0.5025414002295457
+          },
+          "no_teste": {
+            "intent_acc": 0.7972427706792199,
+            "slot_f1": 0.6185352106231498,
+            "exact_match": 0.4995516700291415
+          },
+          "parametros": 277584555.0,
+          "bytes": 287275442.0,
+          "bytes_compactado": 215492282.0,
+          "latencia_p50_ms": 7.6809795,
+          "latencia_p95_ms": 11.1997482
+        }
+      },
+      "pastas_por_semente": {
+        "podado": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2"
+        },
+        "int8": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2"
+        },
+        "int8_sem_poda": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2"
+        },
+        "onnx_de_32_bits": {
+          "vocabulario_treino": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0",
+          "sem_poda": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/semente_0"
+        }
+      }
+    },
+    "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "caminho": "xlmr",
+      "sigla": "B2",
+      "representa_o_cenario_b": false,
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2",
+      "chave_no_registro": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "poda": {
+        "variante": "vocabulario_treino",
+        "nome": "Vocabulário do treino",
+        "epocas_de_reajuste": 10,
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "exact_match",
+          "referencia": 0.5082800459091654,
+          "com_a_receita": 0.4989342515166421,
+          "diferenca": -0.00934579439252331,
+          "ic_min": -0.0165641908509592,
+          "ic_max": -0.0022954582718479042,
+          "criterio": "o intervalo de 95% da diferença não fica todo abaixo de zero",
+          "passa": false
+        }
+      },
+      "oito_bits": {
+        "forma": "dinamica",
+        "nome_da_forma": "INT8, quantização dinâmica",
+        "conferencia": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.6291919885026646,
+          "com_a_receita": 0.6260065604277529,
+          "diferenca": -0.0031854280749116226,
+          "ic_min": -0.008502369969169638,
+          "ic_max": 0.00235012566202311,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "no_modelo_sem_poda_registro": {
+          "particao": "dev",
+          "metrica": "slot_f1",
+          "referencia": 0.6368028369696703,
+          "com_a_receita": 0.6338859229245298,
+          "diferenca": -0.002916914045140495,
+          "ic_min": -0.008536657327672425,
+          "ic_max": 0.0026522805411280386,
+          "criterio": "a queda é de no máximo 1 ponto",
+          "passa": true
+        },
+        "onnx_de_32_bits_igual_ao_pytorch": {
+          "particao": "dev e teste",
+          "metrica": "respostas iguais às do PyTorch",
+          "referencia": 15021.0,
+          "com_a_receita": 15021.0,
+          "diferenca": 0.0,
+          "ic_min": null,
+          "ic_max": null,
+          "criterio": "todas as respostas iguais, nas 3 sementes",
+          "passa": true
+        }
+      },
+      "passa_em_tudo": false,
+      "linhas": {
+        "sem_poda": {
+          "variante": "sem_poda",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.8143958025905885,
+            "slot_f1": 0.6368028369696703,
+            "exact_match": 0.5082800459091654
+          },
+          "no_teste": {
+            "intent_acc": 0.8055368751401031,
+            "slot_f1": 0.6182313105241475,
+            "exact_match": 0.5054920421430172
+          },
+          "parametros": 277584555.0,
+          "bytes": 1127466166.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 36.848479,
+          "latencia_p95_ms": 48.2157223
+        },
+        "podado": {
+          "variante": "vocabulario_treino",
+          "forma": "pytorch",
+          "em_dev": {
+            "intent_acc": 0.8157074930316446,
+            "slot_f1": 0.6291919885026646,
+            "exact_match": 0.4989342515166421
+          },
+          "no_teste": {
+            "intent_acc": 0.799708585518942,
+            "slot_f1": 0.6074718843136314,
+            "exact_match": 0.4913696480609729
+          },
+          "parametros": 89573547.0,
+          "bytes": 358975066.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 34.5073745,
+          "latencia_p95_ms": 46.9902933
+        },
+        "onnx": {
+          "variante": "vocabulario_treino",
+          "forma": "fp32",
+          "em_dev": {
+            "intent_acc": 0.8157074930316446,
+            "slot_f1": 0.6291919885026646,
+            "exact_match": 0.4989342515166421
+          },
+          "no_teste": {
+            "intent_acc": 0.799708585518942,
+            "slot_f1": 0.6074718843136314,
+            "exact_match": 0.4913696480609729
+          },
+          "parametros": 89573547.0,
+          "bytes": 358883145.0,
+          "bytes_compactado": null,
+          "latencia_p50_ms": 23.7271985,
+          "latencia_p95_ms": 35.681614100000004
+        },
+        "int8": {
+          "variante": "vocabulario_treino",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.810132808657157,
+            "slot_f1": 0.6260065604277529,
+            "exact_match": 0.49778652238071813
+          },
+          "no_teste": {
+            "intent_acc": 0.796906523201076,
+            "slot_f1": 0.6026048039986599,
+            "exact_match": 0.49215422550997534
+          },
+          "parametros": 89573547.0,
+          "bytes": 90666720.0,
+          "bytes_compactado": 60525781.0,
+          "latencia_p50_ms": 7.6540099999999995,
+          "latencia_p95_ms": 11.485674750000001
+        },
+        "int8_sem_poda": {
+          "variante": "sem_poda",
+          "forma": "dinamica",
+          "em_dev": {
+            "intent_acc": 0.8071815051647812,
+            "slot_f1": 0.6338859229245298,
+            "exact_match": 0.5059845876373176
+          },
+          "no_teste": {
+            "intent_acc": 0.802174400358664,
+            "slot_f1": 0.6157403168197583,
+            "exact_match": 0.5062766195920197
+          },
+          "parametros": 277584555.0,
+          "bytes": 287275445.0,
+          "bytes_compactado": 215478197.0,
+          "latencia_p50_ms": 7.6868965,
+          "latencia_p95_ms": 11.242543750000006
+        }
+      },
+      "pastas_por_semente": {
+        "podado": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2"
+        },
+        "int8": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2"
+        },
+        "int8_sem_poda": {
+          "0": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0",
+          "1": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1",
+          "2": "entregas/11c_cenario_b_ate_o_fim/modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2"
+        },
+        "onnx_de_32_bits": {
+          "vocabulario_treino": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0",
+          "sem_poda": "entregas/11c_cenario_b_ate_o_fim/modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0"
+        }
+      }
+    }
+  },
+  "latencia": {
+    "protocolo": "o protocolo das Etapas 8 e 10c: semente 0, 1 thread, uma consulta por vez, do texto à resposta, pedidos de dev, 5 rodadas de 1.024 consultas, sistemas alternados em cada rodada (PyTorch, ONNX de 32 bits, dinâmica e estática), por último na cadeia, com a placa e o resto parados",
+    "limite_de_outros_processos": 0.25,
+    "maior_valor_medido": 0.033634766100411016,
+    "maquina_quieta": true,
+    "medidas_recusadas": 0
+  },
+  "comparativo": {
+    "regras": "entregas/11c_cenario_b_ate_o_fim/comparativo/regras_v4.json",
+    "versao": 4,
+    "resultados": "entregas/11c_cenario_b_ate_o_fim/comparativo/",
+    "sistemas_declarados": "entregas/11c_cenario_b_ate_o_fim/sistemas.json"
+  },
+  "modelos_finais_do_projeto": {
+    "zero": "entregas/08_quantizacao/decisao.json",
+    "xlmr": "entregas/10c_encoder_quantizacao/decisao.json"
+  }
+}

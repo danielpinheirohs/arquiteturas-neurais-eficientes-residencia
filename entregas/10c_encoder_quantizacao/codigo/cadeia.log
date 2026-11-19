@@ -1,0 +1,46 @@
+[18/11 17:47:06] INÍCIO da cadeia da Etapa 10c (PID 712848). Carga da máquina: 0.20 1.00 1.10
+[18/11 17:47:06] (a) quantização: um processo por modelo (aluno_a teto aluno_b2_t2), 4 threads cada
+[teto] teto vocabulario_treino 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1765 iguais; estatica: 90.7 MB, 1469 iguais (359.0 MB em 32 bits); 377s
+[aluno_b2_t2] aluno_b2_t2 vocabulario_treino 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1650 iguais; estatica: 90.7 MB, 1222 iguais (359.0 MB em 32 bits); 379s
+[aluno_a] aluno_a vocabulario_treino 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1773 iguais; estatica: 90.7 MB, 1438 iguais (359.0 MB em 32 bits); 379s
+[aluno_a] aluno_a sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1758 iguais; estatica: 287.3 MB, 789 iguais (1127.5 MB em 32 bits); 440s
+[aluno_b2_t2] aluno_b2_t2 sem_poda 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1653 iguais; estatica: 287.3 MB, 1225 iguais (1127.5 MB em 32 bits); 447s
+[teto] teto sem_poda 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1775 iguais; estatica: 287.3 MB, 1464 iguais (1127.5 MB em 32 bits); 448s
+[aluno_a] aluno_a sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1749 iguais; estatica: 287.3 MB, 1065 iguais (1127.5 MB em 32 bits); 423s
+[aluno_b2_t2] aluno_b2_t2 sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1650 iguais; estatica: 287.3 MB, 606 iguais (1127.5 MB em 32 bits); 439s
+[teto] teto sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1754 iguais; estatica: 287.3 MB, 658 iguais (1127.5 MB em 32 bits); 439s
+[aluno_a] aluno_a vocabulario_treino 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1755 iguais; estatica: 90.7 MB, 776 iguais (359.0 MB em 32 bits); 360s
+[aluno_b2_t2] aluno_b2_t2 sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1634 iguais; estatica: 287.3 MB, 1224 iguais (1127.5 MB em 32 bits); 440s
+[teto] teto sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1748 iguais; estatica: 287.3 MB, 1423 iguais (1127.5 MB em 32 bits); 443s
+[aluno_a] aluno_a vocabulario_treino 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1782 iguais; estatica: 90.7 MB, 1092 iguais (359.0 MB em 32 bits); 348s
+[aluno_b2_t2] aluno_b2_t2 vocabulario_treino 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1649 iguais; estatica: 90.7 MB, 597 iguais (359.0 MB em 32 bits); 367s
+[teto] teto vocabulario_treino 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1767 iguais; estatica: 90.7 MB, 766 iguais (359.0 MB em 32 bits); 372s
+[aluno_b2_t2] aluno_b2_t2 vocabulario_treino 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1668 iguais; estatica: 90.7 MB, 1220 iguais (359.0 MB em 32 bits); 334s
+[teto] teto vocabulario_treino 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.7 MB, 1742 iguais; estatica: 90.7 MB, 1415 iguais (359.0 MB em 32 bits); 336s
+[aluno_a] aluno_a gradual_70 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1794 iguais; estatica: 287.3 MB, 1386 iguais (1127.5 MB em 32 bits); 556s
+[teto] teto magnitude_50 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1770 iguais; estatica: 287.3 MB, 1480 iguais (1127.5 MB em 32 bits); 480s
+[aluno_b2_t2] aluno_b2_t2 gradual_70 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1689 iguais; estatica: 287.3 MB, 1269 iguais (1127.5 MB em 32 bits); 529s
+[aluno_a] aluno_a gradual_70 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1774 iguais; estatica: 287.3 MB, 1392 iguais (1127.5 MB em 32 bits); 506s
+[teto] teto magnitude_50 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1750 iguais; estatica: 287.3 MB, 787 iguais (1127.5 MB em 32 bits); 472s
+[aluno_b2_t2] aluno_b2_t2 gradual_70 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1692 iguais; estatica: 287.3 MB, 1265 iguais (1127.5 MB em 32 bits); 515s
+[aluno_a] aluno_a gradual_70 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1769 iguais; estatica: 287.3 MB, 1037 iguais (1127.5 MB em 32 bits); 518s
+[18/11 18:46:08] [aluno_a] quantização do modelo terminou; comandos com erro: 0
+[teto] teto magnitude_50 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1802 iguais; estatica: 287.3 MB, 1479 iguais (1127.5 MB em 32 bits); 435s
+[18/11 18:50:37] [teto] quantização do modelo terminou; comandos com erro: 0
+[aluno_b2_t2] aluno_b2_t2 gradual_70 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.3 MB, 1689 iguais; estatica: 287.3 MB, 1270 iguais (1127.5 MB em 32 bits); 459s
+[18/11 18:52:24] [aluno_b2_t2] quantização do modelo terminou; comandos com erro: 0
+[18/11 18:52:24] (a) os três processos terminaram; comandos com erro: 0. Repescagem em sequência do que faltar:
+[18/11 18:52:28] (a) terminou. O que ainda falta (vazio = nada):
+[18/11 18:53:31] (b) latência oficial, sozinha. Carga da máquina: 0.86 4.11 6.94
+[latencia] Carga da máquina antes de medir: 0.86 (perto de zero = quieta)
+[latencia] aluno_a sem_poda p50 (ms): pytorch 35.82, fp32 25.03, dinamica 8.33, estatica 8.65 | outros processos: 0.08 núcleo(s) de CPU
+[latencia] aluno_a vocabulario_treino p50 (ms): pytorch 36.10, fp32 25.08, dinamica 8.35, estatica 8.61 | outros processos: 0.07 núcleo(s) de CPU
+[latencia] aluno_a gradual_70 p50 (ms): pytorch 36.14, fp32 25.14, dinamica 8.37, estatica 8.74 | outros processos: 0.07 núcleo(s) de CPU
+[latencia] teto sem_poda p50 (ms): pytorch 37.06, fp32 25.19, dinamica 8.39, estatica 8.85 | outros processos: 0.07 núcleo(s) de CPU
+[latencia] teto vocabulario_treino p50 (ms): pytorch 37.54, fp32 25.35, dinamica 8.50, estatica 8.75 | outros processos: 0.08 núcleo(s) de CPU
+[latencia] teto magnitude_50 p50 (ms): pytorch 37.01, fp32 25.45, dinamica 8.37, estatica 8.78 | outros processos: 0.08 núcleo(s) de CPU
+[latencia] aluno_b2_t2 sem_poda p50 (ms): pytorch 37.58, fp32 25.23, dinamica 8.26, estatica 8.67 | outros processos: 0.05 núcleo(s) de CPU
+[latencia] aluno_b2_t2 vocabulario_treino p50 (ms): pytorch 36.80, fp32 24.33, dinamica 7.94, estatica 8.24 | outros processos: 0.05 núcleo(s) de CPU
+[latencia] aluno_b2_t2 gradual_70 p50 (ms): pytorch 36.87, fp32 24.23, dinamica 8.01, estatica 8.30 | outros processos: 0.05 núcleo(s) de CPU
+[18/11 20:07:09] (b) terminou; código de saída: 0
+FIM: 27 de 27 execuções gravadas; ONNX de 32 bits igual ao PyTorch em 135189 de 135189 respostas; zeros conservados: sim; latência medida em 9 de 9 modelos; outros processos durante a latência: no máximo 0.08 núcleo de CPU; comandos com erro na parte (a), antes da repescagem: 0; terminou em 18/11 20:07

@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "so_entrada_da_rede_densa",
+  "descricao": "só entrada_da_rede_densa em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 12,
+  "bytes_da_rede": 1025570654,
+  "slot_f1_dev": 76.96042728817675,
+  "segundos": 37.45987374999095
+}

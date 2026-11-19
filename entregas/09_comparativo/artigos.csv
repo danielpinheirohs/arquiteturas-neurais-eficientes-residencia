@@ -1,0 +1,26 @@
+passo,tecnica,quem,apelido,ano,onde,endereco,conferido_nesta_etapa
+O caminho inteiro,"Trocar a LLM por um modelo pequeno, feito para a tarefa",Belcak et al.,,2025,arXiv 2506.02153,https://arxiv.org/abs/2506.02153,False
+O caminho inteiro,"LLM professora, destilação, poda e quantização em sequência",Ni et al.,From Large to Super-Tiny,2025,arXiv 2504.13471,https://arxiv.org/abs/2504.13471,False
+O caminho inteiro,"A ordem: destilar, podar, quantizar",Han et al.,Deep Compression,2015,arXiv 1510.00149,https://arxiv.org/abs/1510.00149,False
+O caminho inteiro,"A ordem: destilar, podar, quantizar",Harma et al.,,2024,arXiv 2405.20935,https://arxiv.org/abs/2405.20935,False
+O caminho inteiro,Poda e quantização juntas podem interagir (discussão da ordem),Nema et al. (preprint; só o resumo foi lido),Compression Technique Interactions in Small Language Models,2026,arXiv 2611.00464,https://arxiv.org/abs/2611.00464,False
+Etapas 1 e 2 · Dados e régua,"MASSIVE pt-PT; acurácia de intenção, F1 de entidades e exact match",FitzGerald et al.,MASSIVE,2022,arXiv 2204.08582,https://arxiv.org/abs/2204.08582,False
+Etapa 2 · Régua,"Intervalo de 95% e comparação pareada por bootstrap, por enunciado",Koehn,Statistical Significance Tests for Machine Translation Evaluation,2004,EMNLP 2004,https://aclanthology.org/W04-3250/,True
+Etapa 2 · Régua,"Intervalo de 95% e comparação pareada por bootstrap, por enunciado",Berg-Kirkpatrick et al.,An Empirical Investigation of Statistical Significance in NLP,2012,EMNLP-CoNLL 2012,https://aclanthology.org/D12-1091/,True
+Etapa 2 · Régua,"Latência: uma consulta por vez, percentis, máquina registrada",Reddi et al.,MLPerf Inference,2019,arXiv 1911.02549,https://arxiv.org/abs/1911.02549,False
+Etapas 2 e 9 · Régua e comparativo,"Custo reportado em várias medidas, com a condição de cada uma",Dehghani et al.,,2021,arXiv 2110.12894,https://arxiv.org/abs/2110.12894,False
+Etapas 3 e 4 · Arquitetura,"Rede conjunta de intenção e entidades, do zero: features esparsas, Transformer de 2 camadas, CRF",Bunk et al.,DIET,2020,arXiv 2004.09936,https://arxiv.org/abs/2004.09936,False
+Etapa 4 · Treino,Três sementes por modelo treinado; o resultado é a média,Reimers & Gurevych,Reporting Score Distributions Makes a Difference,2017,arXiv 1707.09861,https://arxiv.org/abs/1707.09861,True
+Etapa 5a · Professor fechado,"LLM com poucos exemplos no prompt: intenção perto do supervisionado, entidades atrás",He & Garner,,2023,arXiv 2305.13512,https://arxiv.org/abs/2305.13512,False
+Etapa 6 · Destilação,Destilação caixa-preta: o aluno aprende só com os rótulos da LLM,Xu et al.,survey,2024,arXiv 2402.13116,https://arxiv.org/abs/2402.13116,False
+Etapa 6 · Destilação,Destilação caixa-preta: o aluno aprende só com os rótulos da LLM,Di Palo et al.,,2024,arXiv 2411.05045,https://arxiv.org/abs/2411.05045,False
+Etapa 6 · Destilação,Destilação com logits e temperatura,Hinton et al.,,2015,arXiv 1503.02531,https://arxiv.org/abs/1503.02531,False
+Etapa 6 · Destilação,Destilação com logits e temperatura,Jiao et al.,TinyBERT,2019,arXiv 1909.10351,https://arxiv.org/abs/1909.10351,False
+Etapa 7 · Poda,"Poda por magnitude: treinar, podar, retreinar",Han et al.,,2015,arXiv 1506.02626,https://arxiv.org/abs/1506.02626,False
+Etapa 7 · Poda,"Poda gradual, com a esparsidade subindo durante o treino",Zhu & Gupta,,2017,arXiv 1710.01878,https://arxiv.org/abs/1710.01878,False
+Etapa 7 · Poda,Poda de peças inteiras (estruturada),Xia et al.,CoFi,2022,arXiv 2204.00408,https://arxiv.org/abs/2204.00408,False
+Etapa 7 · Reajuste,"Fine-tuning de recuperação com a máscara travada, com o sinal do professor",Zafrir et al.,Prune Once for All,2021,arXiv 2111.05754,https://arxiv.org/abs/2111.05754,False
+Etapa 7 · Reajuste,"Fine-tuning de recuperação com a máscara travada, com o sinal do professor",Sanh et al.,,2020,arXiv 2005.07683,https://arxiv.org/abs/2005.07683,False
+Etapa 8 · Quantização,Inteiros de 8 bits: escala e ponto zero,Jacob et al.,,2017,arXiv 1712.05877,https://arxiv.org/abs/1712.05877,False
+Etapa 8 · Quantização,Um Transformer em 8 bits: o que quantizar e o que deixar em 32 bits,Zafrir et al.,Q8BERT,2019,arXiv 1910.06188,https://arxiv.org/abs/1910.06188,False
+Etapa 10 · Em aberto,Encoder pré-treinado com cabeça conjunta de intenção e entidades,Chen et al.,JointBERT,2019,arXiv 1902.10909,https://arxiv.org/abs/1902.10909,False

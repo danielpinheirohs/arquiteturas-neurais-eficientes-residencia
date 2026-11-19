@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "so_cabecas",
+  "descricao": "só cabecas em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 2,
+  "bytes_da_rede": 1110085795,
+  "slot_f1_dev": 77.3365617433414,
+  "segundos": 43.9961971900193
+}

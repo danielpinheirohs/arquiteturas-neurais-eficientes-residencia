@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "so_saida_da_rede_densa_camadas_0_a_5",
+  "descricao": "só a entrada da saída da rede densa das camadas 0 a 5 em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 6,
+  "bytes_da_rede": 1068022505,
+  "slot_f1_dev": 77.31256085686465,
+  "segundos": 52.89179368899204
+}

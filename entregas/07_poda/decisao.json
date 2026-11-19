@@ -1,0 +1,430 @@
+{
+  "etapa": "07_poda",
+  "gerado_em": "2026-11-18",
+  "regra": "em dev, com rótulos humanos: passa a variante cujo exact match depois do reajuste não é distinguivelmente menor que o do modelo sem poda (IC95 da diferença pareada, média de 3 sementes). A principal é a que passa com o menor arquivo comum (denso); se nenhuma peça inteira passa, é o modelo sem poda. A secundária é a de pesos soltos que passa com a maior esparsidade.",
+  "como_ler": "Em cada modelo de partida: `principal` e `secundaria` trazem o nome da variante (null na principal quer dizer: o modelo sem poda; null na secundária: nenhuma de pesos soltos passou). `seguem` traz a ficha de cada variante podada que segue, e `sem_poda`, a do modelo de partida. Toda pasta em `pastas_por_semente` é lida por SistemaDiet.carregar.",
+  "reajuste": {
+    "epocas": 30,
+    "epocas_de_rampa_da_poda_gradual": 15,
+    "passos_entre_cortes": 100,
+    "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+  },
+  "principal": {
+    "modelo": "aluno_a",
+    "variante": "linhas_90",
+    "pastas_por_semente": {
+      "0": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_0",
+      "1": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_1",
+      "2": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_2"
+    }
+  },
+  "modelos": {
+    "aluno_a": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5)",
+      "variante_da_etapa_6": "aluno_a",
+      "sinal_do_reajuste": {
+        "treino": "rótulos do professor fechado: entregas/05a_professor_fechado/rotulos_treino.parquet",
+        "dev": "rótulos do professor fechado: entregas/05a_professor_fechado/previsoes/claude_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        }
+      },
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.1,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 30,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sem_poda": {
+        "modelos": "entregas/06_destilacao/modelos/aluno_a",
+        "pastas_por_semente": {
+          "0": "entregas/06_destilacao/modelos/aluno_a/semente_0",
+          "1": "entregas/06_destilacao/modelos/aluno_a/semente_1",
+          "2": "entregas/06_destilacao/modelos/aluno_a/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 4895834,
+        "nao_nulos": 4889784,
+        "bytes": {
+          "arquivo_comum": 19921914,
+          "arquivo_comum_com_zip": 18234279,
+          "arquivo_esparso": 19877244
+        },
+        "latencia_p50_ms": 1.1019285,
+        "exact_match_em_dev": 0.5204131824889325
+      },
+      "principal": "linhas_90",
+      "secundaria": "magnitude_95",
+      "seguem": [
+        {
+          "variante": "linhas_90",
+          "papel": "principal",
+          "nome": "Sem 90% das linhas da tabela de features",
+          "familia": "linhas",
+          "nivel": 90,
+          "modelos": "entregas/07_poda/modelos/aluno_a/linhas_90",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_0",
+            "1": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_1",
+            "2": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 1992538,
+          "nao_nulos": 1986488,
+          "bytes": {
+            "arquivo_comum": 8064482,
+            "arquivo_comum_com_zip": 7391728,
+            "arquivo_esparso": 8019812
+          },
+          "latencia_p50_ms": 1.1293104999999999,
+          "exact_match_em_dev": 0.5163141498606328,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.0040990326282996925,
+            "ic_min": -0.013940809968847468,
+            "ic_max": 0.005742744712248065
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). É uma rede comum, menor."
+        },
+        {
+          "variante": "magnitude_95",
+          "papel": "secundaria",
+          "nome": "Magnitude, 95% de uma vez",
+          "familia": "magnitude",
+          "nivel": 95,
+          "modelos": "entregas/07_poda/modelos/aluno_a/magnitude_95",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/aluno_a/magnitude_95/semente_0",
+            "1": "entregas/07_poda/modelos/aluno_a/magnitude_95/semente_1",
+            "2": "entregas/07_poda/modelos/aluno_a/magnitude_95/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "modelos_esparsos": "entregas/07_poda/modelos_esparsos/aluno_a/magnitude_95",
+          "parametros": 4895834,
+          "nao_nulos": 299871,
+          "bytes": {
+            "arquivo_comum": 19921914,
+            "arquivo_comum_com_zip": 1698199,
+            "arquivo_esparso": 2130212
+          },
+          "latencia_p50_ms": 1.127102,
+          "exact_match_em_dev": 0.5125430398425971,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.007870142646335454,
+            "ic_min": -0.015908345630431284,
+            "ic_max": 0.000327922610264042
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). Os pesos podados estão gravados como zeros em pesos.pt; a máscara é lida deles (poda.mascaras_dos_zeros). A cópia em modelos_esparsos é lida por poda.carregar_esparso."
+        }
+      ]
+    },
+    "teto": {
+      "nome": "Teto (rótulos humanos)",
+      "variante_da_etapa_6": null,
+      "sinal_do_reajuste": {
+        "treino": "rótulos humanos de treino",
+        "dev": "rótulos humanos de dev"
+      },
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.1,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 30,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sem_poda": {
+        "modelos": "entregas/04b_intencao/modelos",
+        "pastas_por_semente": {
+          "0": "entregas/04b_intencao/modelos/semente_0",
+          "1": "entregas/04b_intencao/modelos/semente_1",
+          "2": "entregas/04b_intencao/modelos/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 4895834,
+        "nao_nulos": 4889784,
+        "bytes": {
+          "arquivo_comum": 19921866,
+          "arquivo_comum_com_zip": 18230097,
+          "arquivo_esparso": 19877196
+        },
+        "latencia_p50_ms": 1.117598,
+        "exact_match_em_dev": 0.6260042629939334
+      },
+      "principal": "linhas_90",
+      "secundaria": "magnitude_90",
+      "seguem": [
+        {
+          "variante": "linhas_90",
+          "papel": "principal",
+          "nome": "Sem 90% das linhas da tabela de features",
+          "familia": "linhas",
+          "nivel": 90,
+          "modelos": "entregas/07_poda/modelos/teto/linhas_90",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/teto/linhas_90/semente_0",
+            "1": "entregas/07_poda/modelos/teto/linhas_90/semente_1",
+            "2": "entregas/07_poda/modelos/teto/linhas_90/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 1992538,
+          "nao_nulos": 1986488,
+          "bytes": {
+            "arquivo_comum": 8064363,
+            "arquivo_comum_com_zip": 7386388,
+            "arquivo_esparso": 8019693
+          },
+          "latencia_p50_ms": 1.1142265,
+          "exact_match_em_dev": 0.617642236432202,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.008362026561731462,
+            "ic_min": -0.01967945564846694,
+            "ic_max": 0.00229545827184785
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). É uma rede comum, menor."
+        },
+        {
+          "variante": "magnitude_90",
+          "papel": "secundaria",
+          "nome": "Magnitude, 90% de uma vez",
+          "familia": "magnitude",
+          "nivel": 90,
+          "modelos": "entregas/07_poda/modelos/teto/magnitude_90",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/teto/magnitude_90/semente_0",
+            "1": "entregas/07_poda/modelos/teto/magnitude_90/semente_1",
+            "2": "entregas/07_poda/modelos/teto/magnitude_90/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "modelos_esparsos": "entregas/07_poda/modelos_esparsos/teto/magnitude_90",
+          "parametros": 4895834,
+          "nao_nulos": 541447,
+          "bytes": {
+            "arquivo_comum": 19921914,
+            "arquivo_comum_com_zip": 2907887,
+            "arquivo_esparso": 3096516
+          },
+          "latencia_p50_ms": 1.1134585000000001,
+          "exact_match_em_dev": 0.6204295786194458,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.005574684374487604,
+            "ic_min": -0.013280865715691096,
+            "ic_max": 0.0021314969667157735
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). Os pesos podados estão gravados como zeros em pesos.pt; a máscara é lida deles (poda.mascaras_dos_zeros). A cópia em modelos_esparsos é lida por poda.carregar_esparso."
+        }
+      ]
+    },
+    "aluno_b2_t8": {
+      "nome": "Aluno B2 (logits do Qwen3-8B, T = 8)",
+      "variante_da_etapa_6": "aluno_b2_t8",
+      "sinal_do_reajuste": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        },
+        "logits": "entregas/05b_professor_aberto/logits_treino.npy"
+      },
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 30,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sem_poda": {
+        "modelos": "entregas/06_destilacao/modelos/aluno_b2_t8",
+        "pastas_por_semente": {
+          "0": "entregas/06_destilacao/modelos/aluno_b2_t8/semente_0",
+          "1": "entregas/06_destilacao/modelos/aluno_b2_t8/semente_1",
+          "2": "entregas/06_destilacao/modelos/aluno_b2_t8/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 4895834,
+        "nao_nulos": 4889784,
+        "bytes": {
+          "arquivo_comum": 19921914,
+          "arquivo_comum_com_zip": 18234163,
+          "arquivo_esparso": 19877244
+        },
+        "latencia_p50_ms": 1.1204595,
+        "exact_match_em_dev": 0.4689293326774881
+      },
+      "principal": "linhas_90",
+      "secundaria": "gradual_90",
+      "seguem": [
+        {
+          "variante": "linhas_90",
+          "papel": "principal",
+          "nome": "Sem 90% das linhas da tabela de features",
+          "familia": "linhas",
+          "nivel": 90,
+          "modelos": "entregas/07_poda/modelos/aluno_b2_t8/linhas_90",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/aluno_b2_t8/linhas_90/semente_0",
+            "1": "entregas/07_poda/modelos/aluno_b2_t8/linhas_90/semente_1",
+            "2": "entregas/07_poda/modelos/aluno_b2_t8/linhas_90/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 1992538,
+          "nao_nulos": 1986488,
+          "bytes": {
+            "arquivo_comum": 8064298,
+            "arquivo_comum_com_zip": 7398815,
+            "arquivo_esparso": 8019628
+          },
+          "latencia_p50_ms": 1.1126795,
+          "exact_match_em_dev": 0.46860141006722417,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.000327922610263931,
+            "ic_min": -0.011313330054107177,
+            "ic_max": 0.01049352352844729
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). É uma rede comum, menor."
+        },
+        {
+          "variante": "gradual_90",
+          "papel": "secundaria",
+          "nome": "Magnitude, 90% gradual",
+          "familia": "gradual",
+          "nivel": 90,
+          "modelos": "entregas/07_poda/modelos/aluno_b2_t8/gradual_90",
+          "pastas_por_semente": {
+            "0": "entregas/07_poda/modelos/aluno_b2_t8/gradual_90/semente_0",
+            "1": "entregas/07_poda/modelos/aluno_b2_t8/gradual_90/semente_1",
+            "2": "entregas/07_poda/modelos/aluno_b2_t8/gradual_90/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "modelos_esparsos": "entregas/07_poda/modelos_esparsos/aluno_b2_t8/gradual_90",
+          "parametros": 4895834,
+          "nao_nulos": 541447,
+          "bytes": {
+            "arquivo_comum": 19921914,
+            "arquivo_comum_com_zip": 2845761,
+            "arquivo_esparso": 3096516
+          },
+          "latencia_p50_ms": 1.109705,
+          "exact_match_em_dev": 0.46958517789801607,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": 0.000655845220527973,
+            "ic_min": -0.006558452205279619,
+            "ic_max": 0.007706181341203433
+          },
+          "como_ler": "SistemaDiet.carregar(pasta da semente). Os pesos podados estão gravados como zeros em pesos.pt; a máscara é lida deles (poda.mascaras_dos_zeros). A cópia em modelos_esparsos é lida por poda.carregar_esparso."
+        }
+      ]
+    }
+  }
+}

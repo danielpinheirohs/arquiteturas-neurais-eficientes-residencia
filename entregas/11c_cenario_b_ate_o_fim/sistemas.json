@@ -1,0 +1,762 @@
+{
+  "sistemas": {
+    "aluno_b2@qwen3_14b__fp16__colab_a100/podado": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "zero",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, sem 90% das linhas da tabela de features, PyTorch, 32 bits",
+      "curto": "Aluno B2 · Qwen3-14B, podado",
+      "ponto": "podado",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 7, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "forma": "pytorch"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+            "variante": "linhas_90",
+            "forma": "poda_depois_do_reajuste"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "comparacao": "depois − sem poda",
+          "particao": "test"
+        }
+      ]
+    },
+    "aluno_b2@qwen3_14b__fp16__colab_a100/onnx": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "zero",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, sem 90% das linhas da tabela de features, ONNX, 32 bits",
+      "curto": "Aluno B2 · Qwen3-14B, ONNX 32 bits",
+      "ponto": "onnx",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 7, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "forma": "fp32"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "comparacao": "fp32 − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "zero",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, sem 90% das linhas da tabela de features, INT8, quantização dinâmica",
+      "curto": "Aluno B2 · Qwen3-14B, INT8",
+      "ponto": "int8",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 7, sem nova escolha; forma de 8 bits da Etapa 8, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false,
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "linhas_90",
+          "comparacao": "dinamica − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda": {
+      "bloco": "Quantizado sem poda",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "zero",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, sem poda, INT8, quantização dinâmica",
+      "curto": "Aluno B2 · Qwen3-14B, INT8 sem poda",
+      "ponto": "int8_sem_poda",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); forma de 8 bits da Etapa 8, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/podado": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B1 · Qwen3-14B, vocabulário do treino, PyTorch, 32 bits",
+      "curto": "Aluno B1 · Qwen3-14B, podado",
+      "ponto": "podado",
+      "dev_humano": "nenhuma no treino; poda da Etapa 10b, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "pytorch"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+            "variante": "vocabulario_treino",
+            "forma": "poda_depois_do_reajuste"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "depois − sem poda",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/onnx": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B1 · Qwen3-14B, vocabulário do treino, ONNX, 32 bits",
+      "curto": "Aluno B1 · Qwen3-14B, ONNX 32 bits",
+      "ponto": "onnx",
+      "dev_humano": "nenhuma no treino; poda da Etapa 10b, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "fp32"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "fp32 − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B1 · Qwen3-14B, vocabulário do treino, INT8, quantização dinâmica",
+      "curto": "Aluno B1 · Qwen3-14B, INT8",
+      "ponto": "int8",
+      "dev_humano": "nenhuma no treino; poda da Etapa 10b, sem nova escolha; forma de 8 bits da Etapa 10c, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false,
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "dinamica − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8_sem_poda": {
+      "bloco": "Quantizado sem poda",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "papel": "representa o cenário B neste caminho; Etapa 11c",
+      "nome": "Aluno B1 · Qwen3-14B, sem poda, INT8, quantização dinâmica",
+      "curto": "Aluno B1 · Qwen3-14B, INT8 sem poda",
+      "ponto": "int8_sem_poda",
+      "dev_humano": "nenhuma no treino (parada no dev rotulado pelo professor); forma de 8 bits da Etapa 10c, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, vocabulário do treino, PyTorch, 32 bits",
+      "curto": "Aluno B2 · Qwen3-14B, podado",
+      "ponto": "podado",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 10b, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "pytorch"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+            "variante": "vocabulario_treino",
+            "forma": "poda_depois_do_reajuste"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "depois − sem poda",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/onnx": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, vocabulário do treino, ONNX, 32 bits",
+      "curto": "Aluno B2 · Qwen3-14B, ONNX 32 bits",
+      "ponto": "onnx",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 10b, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "fp32"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "fp32 − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8": {
+      "bloco": "Cenário B com o Qwen3-14B",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, vocabulário do treino, INT8, quantização dinâmica",
+      "curto": "Aluno B2 · Qwen3-14B, INT8",
+      "ponto": "int8",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); poda da Etapa 10b, sem nova escolha; forma de 8 bits da Etapa 10c, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false,
+      "degrau_gravado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "vocabulario_treino",
+          "comparacao": "dinamica − pytorch",
+          "particao": "test"
+        }
+      ]
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda": {
+      "bloco": "Quantizado sem poda",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "condicao": "CPU local",
+      "de_partida": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "sementes": 3,
+      "caminho": "xlmr",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "variante_da_11b": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2; Etapa 11c",
+      "nome": "Aluno B2 · Qwen3-14B, sem poda, INT8, quantização dinâmica",
+      "curto": "Aluno B2 · Qwen3-14B, INT8 sem poda",
+      "ponto": "int8_sem_poda",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b); forma de 8 bits da Etapa 10c, sem nova escolha",
+      "resultado": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "dinamica"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet",
+          "entregas/11c_cenario_b_ate_o_fim/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet"
+        ]
+      },
+      "onde": "1 thread, ONNX Runtime",
+      "compactado": false
+    }
+  },
+  "cadeias": {
+    "zero/B2@qwen3_14b__fp16__colab_a100": {
+      "nome": "Do zero · Cenário B com o Qwen3-14B (aluno B2)",
+      "caminho": "zero",
+      "cenario": "B",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "representa": true,
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "aluno_b2@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    },
+    "xlmr/B1@qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Cenário B com o Qwen3-14B (aluno B1)",
+      "caminho": "xlmr",
+      "cenario": "B",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "representa": true,
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    },
+    "xlmr/B2@qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Cenário B com o Qwen3-14B (aluno B2)",
+      "caminho": "xlmr",
+      "cenario": "B",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "representa": false,
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    }
+  },
+  "complementos": {
+    "aluno_b2@qwen3_14b__fp16__colab_a100": {
+      "eficiencia": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "pytorch"
+        }
+      ],
+      "condicao": "CPU local",
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+            "variante": "sem_poda",
+            "forma": "pytorch"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "id": "aluno_menos_professor|zero:B2:novo|prof:novo",
+          "particao": "test"
+        }
+      ],
+      "por_que": "a Etapa 11b não mediu latência; a deste aluno, sem poda, é medida aqui, no PyTorch, na mesma sessão das formas comprimidas. O degrau 'aluno − professor' foi gravado pela Etapa 11b, e a qualidade do aluno respondendo na CPU, por esta"
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100": {
+      "eficiencia": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "pytorch"
+        }
+      ],
+      "condicao": "CPU local",
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+            "variante": "sem_poda",
+            "forma": "pytorch"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "id": "aluno_menos_professor|xlmr:B1:novo|prof:novo",
+          "particao": "test"
+        }
+      ],
+      "por_que": "a Etapa 11b não mediu latência; a deste aluno, sem poda, é medida aqui, no PyTorch, na mesma sessão das formas comprimidas. O degrau 'aluno − professor' foi gravado pela Etapa 11b, e a qualidade do aluno respondendo na CPU, por esta"
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100": {
+      "eficiencia": [
+        "11c_cenario_b_ate_o_fim",
+        {
+          "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+          "variante": "sem_poda",
+          "forma": "pytorch"
+        }
+      ],
+      "condicao": "CPU local",
+      "onde": "1 thread, PyTorch",
+      "outras_fontes": [
+        [
+          "11c_cenario_b_ate_o_fim",
+          {
+            "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+            "variante": "sem_poda",
+            "forma": "pytorch"
+          }
+        ]
+      ],
+      "degrau_gravado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "id": "aluno_menos_professor|xlmr:B2:novo|prof:novo",
+          "particao": "test"
+        }
+      ],
+      "por_que": "a Etapa 11b não mediu latência; a deste aluno, sem poda, é medida aqui, no PyTorch, na mesma sessão das formas comprimidas. O degrau 'aluno − professor' foi gravado pela Etapa 11b, e a qualidade do aluno respondendo na CPU, por esta"
+    }
+  },
+  "fora_do_formato": {
+    "a forma estática e as formas de diagnóstico": "subproduto das funções das Etapas 8 e 10c: não são sistemas do comparativo",
+    "o aluno B1 da rede do zero": "não é o representante do cenário B nesse caminho (a regra aponta o B2): não foi comprimido"
+  }
+}

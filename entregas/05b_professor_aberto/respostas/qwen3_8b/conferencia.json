@@ -1,0 +1,20 @@
+{
+  "pedidos": 32,
+  "lote": 6,
+  "pontuacao_rapida_contra_direta": {
+    "pedidos": 8,
+    "maior_diferenca_de_probabilidade": 0.001132667064666748,
+    "mesma_intencao": 8
+  },
+  "geracao_propria_contra_a_da_biblioteca": {
+    "mesmo_texto": 32,
+    "mesma_resposta_depois_de_lida": 32
+  },
+  "em_lote_contra_um_a_um": {
+    "maior_diferenca_de_probabilidade": 0.09846866130828857,
+    "mesma_intencao": 32,
+    "mesmo_texto": 31,
+    "mesma_resposta_depois_de_lida": 31
+  },
+  "quando": "2026-11-18 01:25:02 -0300"
+}

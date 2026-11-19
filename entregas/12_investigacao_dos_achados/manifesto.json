@@ -1,0 +1,2550 @@
+{
+  "etapa": "12_investigacao_dos_achados",
+  "gerado_em": "2026-11-19 09:19:14 -0300",
+  "o_que_e": "Investigação depois dos resultados (diagnóstico e exploração). Nenhuma decisão das etapas anteriores muda.",
+  "plano": {
+    "arquivo": "plano.json",
+    "sha256": "577821a434da9a1a0f7f216f8761369405255fb03bea68a100aa2c6d9a3abeb2"
+  },
+  "leu": [
+    "entregas/10a_encoder/previsoes",
+    "entregas/10b_encoder_poda/modelos e data/execucoes/10b_encoder_poda (respostas do controle sem poda e antes do reajuste)",
+    "entregas/10c_encoder_quantizacao/previsoes",
+    "entregas/11b_alunos_do_professor_maior/modelos",
+    "entregas/11c_cenario_b_ate_o_fim/previsoes",
+    "data/execucoes/11c_cenario_b_ate_o_fim/poda (modelos podados e reajustados)",
+    "entregas/05a_professor_fechado e entregas/11a_professor_aberto_maior (rótulos dos professores)",
+    "entregas/10a_encoder/modelos (modelos de partida)"
+  ],
+  "saidas": {
+    "12_investigacao_dos_achados.html": {
+      "sha256": "21e30c0228ef70bf979a885724c00ca57fe61b66815383d44153aaddb437b649",
+      "bytes": 1390582
+    },
+    "RESUMO.md": {
+      "sha256": "ec9b85982a40b7db637a66ed7cf8e16e8c61616b5e54f8662432bcef37a3f606",
+      "bytes": 30023
+    },
+    "achado1_comparacoes.csv": {
+      "sha256": "d9ba531ad216ba76a076a6c31991ba3faf97cc1eadd229606dac196c3cc8ae75",
+      "bytes": 19855
+    },
+    "achado1_corte.json": {
+      "sha256": "f25dda8ca984911759f8795fde40945c7bb9aa44895052ae42e733d37cb48884",
+      "bytes": 1273
+    },
+    "achado1_curvas.csv": {
+      "sha256": "862c70063497a200179647b66037a869c04dd163ccb5150b5ac41298e9729b7e",
+      "bytes": 50341
+    },
+    "achado1_diferenca_das_diferencas.csv": {
+      "sha256": "b647cf2ca3f31a6a6b12a32e826ec8ffa0262ece0da436f322ff5b67a35d5573",
+      "bytes": 1846
+    },
+    "achado1_professor.csv": {
+      "sha256": "7095cbf154ea1f4dbb0093c5f92f2e7629e4a9caa508296e5a93725fcdfb6aab",
+      "bytes": 3938
+    },
+    "achado1_treino.csv": {
+      "sha256": "36c69f2136fad3779a18fb3bbc6c21b5e080da8aae8de64b178a7b8aa7934647",
+      "bytes": 3132
+    },
+    "achado2_alternativas.csv": {
+      "sha256": "796d6c00f1294981336c97fb5ddba70dc60a512578bbd32b1931895de22c4fbd",
+      "bytes": 3700
+    },
+    "achado2_faixas.csv": {
+      "sha256": "726e3185af15de7468c26c48d96b0ec6908fad87ea1f1145ac8f256c4af8feb1",
+      "bytes": 281708
+    },
+    "achado2_medidas.csv": {
+      "sha256": "f9375662ec3d0f3cd4b3f4f757179f216aa2f633939f56ac5f37127e57d64a79",
+      "bytes": 23056
+    },
+    "achado3_alternativas.csv": {
+      "sha256": "f0390b966758464dca0ce01ebd98fa2132948e8553584673ff90b83efa6c3c90",
+      "bytes": 2418
+    },
+    "achado3_nove_modelos.csv": {
+      "sha256": "814c629e798f26a315470ec718423224cc6fdbd6cc5104313fe1c29f58aea1a9",
+      "bytes": 1149
+    },
+    "achado3_partes.csv": {
+      "sha256": "b3a23a59b34b6dc073d9142d5f4a2e6b2c9754f0d4bd57c0c1b10a3876ef1b64",
+      "bytes": 1250
+    },
+    "achado3_resumo.json": {
+      "sha256": "6104be57b836db7cce17ed686e5a39d985845ce670b52c1fcbf6e38b2c6c1afd",
+      "bytes": 1365
+    },
+    "achado3_trocas.csv": {
+      "sha256": "5ae36cc1fb1e1e2cf3ccc60f42691908d684db1017df84264f0c2a8e8fc2e582",
+      "bytes": 24374
+    },
+    "artigos/arxiv_20261119-082501.json": {
+      "sha256": "99efff0d5a977226e8152217702887ea00e44c2eba8d9bfb37361e54a26e0ed4",
+      "bytes": 19435
+    },
+    "artigos.csv": {
+      "sha256": "1ef846c1ff900966114df86a6be87e23a93597fd8386eaf04221f60a68d80e60",
+      "bytes": 9019
+    },
+    "codigo/build_nb12.py": {
+      "sha256": "f1a220fe32c3ca51432e67edf550f6762a0a81b074e473cd7daddfff90b55d77",
+      "bytes": 64308
+    },
+    "codigo/etapa12.py": {
+      "sha256": "1edd797ca497f14953a003b5ad1e1a97ac086534a3dddfbeedaf12d67e727db8",
+      "bytes": 80440
+    },
+    "codigo/test_etapa12.py": {
+      "sha256": "1f4ea5b48a7b52c8bf4e60251375a9dbabd6fee7b6993b1c11bc6f5b23ae54c6",
+      "bytes": 5351
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/cabeca_de_intencao_em_32_bits/meta.json": {
+      "sha256": "b7353fdee8ff981399e44467dc609a9e060c51de6ade363af4eb4cf9c125a669",
+      "bytes": 228
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/cabeca_de_intencao_em_32_bits/previsoes_dev.parquet": {
+      "sha256": "1d298356dee0c0e8aa0fa2c441814be1914c4f22895a11ce3212c91642cf9998",
+      "bytes": 24090
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/degrau_por_canal/meta.json": {
+      "sha256": "318b6a67ff6fd76a3d31f79dec48796d631b76ec4199038c20571a84f2e76a72",
+      "bytes": 207
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/degrau_por_canal/previsoes_dev.parquet": {
+      "sha256": "883de68c1fdb05b9e665adc091107f61180e2b2876d5e467e441ef63bf1e4a9a",
+      "bytes": 23903
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/dinamica/meta.json": {
+      "sha256": "52e8cc1829a078f2c0e5934e7fd64e09ff4438a36fec5bca68b2fc56963f6ca6",
+      "bytes": 195
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/dinamica/previsoes_dev.parquet": {
+      "sha256": "2868b8cc8c1e4bc3a55ea45d3f9c8145a18e689e64f6f74884739c75a5d6909e",
+      "bytes": 24090
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/fp32/previsoes_dev.parquet": {
+      "sha256": "9b8b37f67122e8a7e9e3625889ff89e5f9f03312ee36a285965e8e820aa44b69",
+      "bytes": 24166
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/tabela_por_linha/meta.json": {
+      "sha256": "cdc1078a267b37bc04fedd10e361a4bf267b26e78f9d9c3abd2045b5e90bbaf0",
+      "bytes": 240
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_0/tabela_por_linha/previsoes_dev.parquet": {
+      "sha256": "bdbb75b8aa6661795af8a062c58dce3df615896300f36dd79d7a2623ba0f72a7",
+      "bytes": 24135
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/cabeca_de_intencao_em_32_bits/meta.json": {
+      "sha256": "48c28dca542afafad698cdaf7767b556d3c007e5d20fdd8ce6b9ee38805e5af5",
+      "bytes": 229
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/cabeca_de_intencao_em_32_bits/previsoes_dev.parquet": {
+      "sha256": "10b61273018648ac00f9020cdc8cc88d1d6a2f4c0f4862e97e33c9b56db8ca8e",
+      "bytes": 23930
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/degrau_por_canal/meta.json": {
+      "sha256": "7f44316b6f5f924a59eefdd775b616e8f91b1229632ec114627195d106dc3acf",
+      "bytes": 207
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/degrau_por_canal/previsoes_dev.parquet": {
+      "sha256": "969c984d0fcac8723e6a7def965158b3c2b0cec2a07fb351815d55b8854ff7af",
+      "bytes": 24049
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/dinamica/meta.json": {
+      "sha256": "6b08e8890264f54a9850d109c9ec76dce617641f6ce9433a2cd12aa763d44aae",
+      "bytes": 194
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/dinamica/previsoes_dev.parquet": {
+      "sha256": "10b61273018648ac00f9020cdc8cc88d1d6a2f4c0f4862e97e33c9b56db8ca8e",
+      "bytes": 23930
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/fp32/previsoes_dev.parquet": {
+      "sha256": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+      "bytes": 23955
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/tabela_por_linha/meta.json": {
+      "sha256": "8e013743b59f3c1e57b208b219b59e8398d9478fdef49e261857aecd8fb6bf60",
+      "bytes": 239
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_1/tabela_por_linha/previsoes_dev.parquet": {
+      "sha256": "44110eaff4166627ed273c2612ab3bc6380bf38c10975f226b68d4ed0168112a",
+      "bytes": 23911
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/cabeca_de_intencao_em_32_bits/meta.json": {
+      "sha256": "7d676c6c740aac3ef8d155044b2a91ea5cf31cea23183ddf4dce2708193218b8",
+      "bytes": 229
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/cabeca_de_intencao_em_32_bits/previsoes_dev.parquet": {
+      "sha256": "f63858577c5770421c64e34b0d1629271d99822f65a1348af8b918ebb9157782",
+      "bytes": 23999
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/degrau_por_canal/meta.json": {
+      "sha256": "39ead86549081c41b406726083b2d6476b804b376f632d051b16f430ebecb5a1",
+      "bytes": 206
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/degrau_por_canal/previsoes_dev.parquet": {
+      "sha256": "5b9342f248f0f07161130f3123c1ae4c045ac0ebaaea20611e1e416afad8ec3e",
+      "bytes": 24083
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/dinamica/meta.json": {
+      "sha256": "222b4a3394458588a531a4150a25d91e7d131f525317bcc21c8e098205f007fb",
+      "bytes": 195
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/dinamica/previsoes_dev.parquet": {
+      "sha256": "7ec679d0755ab32883ece890ce46822ab8a32150da10af29ee9ee8e7bfbf5035",
+      "bytes": 23999
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/fp32/previsoes_dev.parquet": {
+      "sha256": "7bb1b01d6ddd962882e1c017af8c17daa4f668f309530ae1055c69569a060b8b",
+      "bytes": 24238
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/tabela_por_linha/meta.json": {
+      "sha256": "d9ad042a2224221ab4534035f16cc6ccd1150516133f1bd116c3809126c8d091",
+      "bytes": 240
+    },
+    "dinamica/aluno_a/vocabulario_treino/semente_2/tabela_por_linha/previsoes_dev.parquet": {
+      "sha256": "33542e068e77fba65b10b988c42615764ce344554a6b59aeb583f8e8ffe5aa8c",
+      "bytes": 24111
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/calibracao_entropy/meta.json": {
+      "sha256": "409221412da09f70c8ce4f6f69ed09a74958a3df53a88a7073066a750eb1d3a7",
+      "bytes": 288
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "0287743ebcff29594955319785a7f71abbcb35bd2ad99d656a77c1f9bd8c4947",
+      "bytes": 23901
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/calibracao_percentile/meta.json": {
+      "sha256": "3eda41f1587444a28a9513425eea9c0480352275387772693f4a158ee0691ea2",
+      "bytes": 299
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "0d2f05e92a1e8f3fedfe8376b28490ef870b84b5c8730db8c315672c6618f526",
+      "bytes": 23698
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "ffdcbbbe69527ab7966565855d759cb5802c118756746754d317a41fe33b5fb0",
+      "bytes": 334
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "052b27cab2734aef4d9875d5c4e08723b83e5bf3f6394428e938d27c28007fe4",
+      "bytes": 24115
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "c02d421140a191d80d6860cd5dfc69003515091cc8699d0edf4af8e07f813953",
+      "bytes": 33989
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "46e570e444333965410cb33d5607ba57e211618f84e89f5c7ffa04123b49d0ff",
+      "bytes": 349
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "2933738eb80ffbdcd1ed05b14c40920d369108ed6b707f7fa453d5164828642f",
+      "bytes": 24004
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/todas/meta.json": {
+      "sha256": "9843c2e965db8a029fc7fd4be69880af8ea279a6bea7e7c1a3bcb59f1c44af9d",
+      "bytes": 283
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_0/todas/previsoes_dev.parquet": {
+      "sha256": "fd367f5e7bd2ffa4f0ccde918520502d01d5ac721553de93b1f84ce021b935c5",
+      "bytes": 23858
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/calibracao_entropy/meta.json": {
+      "sha256": "9534bcb536340272d96c0164c7c9770811d9bd06b8b06a7e5b838bcf0b7bfada",
+      "bytes": 290
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "9a3105f2878348a86699dc702ea0553eb990861d4410b53e1c70f2a7e1c82ba8",
+      "bytes": 23461
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/calibracao_percentile/meta.json": {
+      "sha256": "fa18eb22ee03d20362dabe1d72a179ca0bb1c0a755f84d8898b65d1309a36faf",
+      "bytes": 299
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "2239ad82397b7a0e0565b731e0e49a2f0612b2279e9cd7c82b0acc27ac1d731a",
+      "bytes": 23564
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "80d44c71a0da181a2965b19d661fea73febce2384a6c8f05fc582b80df52999d",
+      "bytes": 333
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "be5c11dc922fc25170f9a56f9befac27f84685382853e40c4b3b7147baf0142e",
+      "bytes": 23757
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "5d97bab7d1708a2a4b719a745e28fda70121c701e80b1dea277dbbfd948e50d1",
+      "bytes": 33942
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "f04bcd4832d66b68c7ce2278ab52300cdbc56d02fe119bff1f899b8fe9989669",
+      "bytes": 350
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "f5b374c07055761de262268c1214907d068d93e40c872dfa8dae2f5a27f488d1",
+      "bytes": 22954
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_0/meta.json": {
+      "sha256": "67cc76c6fe24fccd2322471854c4ce34351a3687b82d2ee7fffb5d56a06a16f6",
+      "bytes": 339
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_0/previsoes_dev.parquet": {
+      "sha256": "fcfdcf443bdc2af9c98ee4625a5304ea75a0fff28b19c15f7622db9f0210b071",
+      "bytes": 24100
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_1/meta.json": {
+      "sha256": "30ef0630bbea11b779fbc96e2d4107e16af9a58637eb5fcc4ee61afc3a064cbe",
+      "bytes": 341
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_1/previsoes_dev.parquet": {
+      "sha256": "ba1393804aa5d35628e0f27742ab69f79c1c683f8c356340a5be3ce9f8fdde19",
+      "bytes": 24026
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_10/meta.json": {
+      "sha256": "f8e54f35e7b1cd1e00fe09ae93e094799e8d1da76d57796f125d45f603a7e505",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_10/previsoes_dev.parquet": {
+      "sha256": "0e7c25b33a01070a3b44893e7621c047df2f0143389392755d7aff0fbd6b2744",
+      "bytes": 23937
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_11/meta.json": {
+      "sha256": "ebdd801f258d58a1432719c1ca8e550135191d79bf0449a6327326a3f4a567c4",
+      "bytes": 342
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_11/previsoes_dev.parquet": {
+      "sha256": "bee5dc3968cda6e809879a889b6e23639b0c4665bef005f31e7abf3f91b95f0b",
+      "bytes": 24123
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_2/meta.json": {
+      "sha256": "591428d687c23b3bba31f97867ecb932e60b138ce6b0ccebd8a37267a366553f",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_2/previsoes_dev.parquet": {
+      "sha256": "92279910bb19ee5f7f11dd1a7a463145b2a0fe54bf39422f5cd809ced5da999a",
+      "bytes": 24108
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_3/meta.json": {
+      "sha256": "3137b9d15603a9663e341db25f93a8132d5dff4b9a627b051e890b5e2030744c",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_3/previsoes_dev.parquet": {
+      "sha256": "eb1c7b5e6a34bd2d91105540c73f3efa1210c4be96168418072ee65c089e0932",
+      "bytes": 24100
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_4/meta.json": {
+      "sha256": "c1f2fcaf43e4b399c8b74afa3f93fec3d31b8fe215316ca462a2d172fd292509",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_4/previsoes_dev.parquet": {
+      "sha256": "89f611dc6e9a53a4144b50af19d6ba717d391ca9bf2dc8ee00563d5861327e30",
+      "bytes": 24097
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_5/meta.json": {
+      "sha256": "ea6880ef49421ed10e0cc51220dd7c559cc4f82077190d8b14fbdecba752c2bc",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_5/previsoes_dev.parquet": {
+      "sha256": "61eee6ac61fccd136dff4d3e29f41577ef6b13b3710f903c05632866885ec6ff",
+      "bytes": 23955
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_6/meta.json": {
+      "sha256": "3947823b30b59869b2be91426bb7272f2dade70496304df1a8a6ccae79424d5d",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_6/previsoes_dev.parquet": {
+      "sha256": "dd71f3c87e2d33b42ef84530657616603c5bde82fc0db1a275ad7904596ce8f7",
+      "bytes": 24022
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_7/meta.json": {
+      "sha256": "af66a6d82a45e12abf24a92e8eb17f8ff5daeace9dfa223f940b58132c37dd13",
+      "bytes": 341
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_7/previsoes_dev.parquet": {
+      "sha256": "592e87e3a2bf6e1310e96a2b6c6aa68e235c6392643a9a6b8696c69af3789b92",
+      "bytes": 24010
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_8/meta.json": {
+      "sha256": "ea75401776c805e1e9497f78283f4acd1de6f2cbe9dac35da4f433244dd94458",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_8/previsoes_dev.parquet": {
+      "sha256": "ee9462f9dac3a59aeae62cab975ee7b3c92f40ce6018340cc7c3736e23085090",
+      "bytes": 23982
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_9/meta.json": {
+      "sha256": "c0040fde154b7d26287490dba2763db3d7f41c6880146b0694384afe3a01e05a",
+      "bytes": 340
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/so_saida_da_rede_densa_camada_9/previsoes_dev.parquet": {
+      "sha256": "66c3d017884bd4573e1fcf3edaa68563a9eca60b1cd6af7f42333ffdc12419d7",
+      "bytes": 23852
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas/meta.json": {
+      "sha256": "1ed35032aa05b30995888811fec76869eba8f9cd8f2bb90b6e4da0b97c792c43",
+      "bytes": 282
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas/previsoes_dev.parquet": {
+      "sha256": "be9137ecac70dbac4224915fb46cbadb3b35bea3bb9d6763e3c9d761e7d931e7",
+      "bytes": 21390
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_0/meta.json": {
+      "sha256": "c2156dc8fd9f64aeeed657529077af347da1f50da8cc9fa4765ceed20ff91aa1",
+      "bytes": 360
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_0/previsoes_dev.parquet": {
+      "sha256": "4d099e406517c9144bd198b5b75678ccc1bc963219e95ffd33a5f3d1ba33f0c5",
+      "bytes": 21570
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_1/meta.json": {
+      "sha256": "16204fe46660451d7eb28cbbd1556f1586367145062fc2f800c9c1fee465a1f9",
+      "bytes": 361
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_1/previsoes_dev.parquet": {
+      "sha256": "6a03f5a542c3ebbd7c10893150cdf8f7cb8025e5eb01fe86b6369b8c9e2c4564",
+      "bytes": 21472
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_10/meta.json": {
+      "sha256": "2584f063a04e18ec7cd2e9ca54a4af569914cccf0b34253aafb9a46447519b58",
+      "bytes": 362
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_10/previsoes_dev.parquet": {
+      "sha256": "848c87dd2f9e6c0636b3dff9269829c9a1347960eafb5efb271654173d2dac52",
+      "bytes": 21685
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_11/meta.json": {
+      "sha256": "2f12837670c209816140c778d4c2e528ccbfdfaead31b89c6b3f0769e708d425",
+      "bytes": 364
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_11/previsoes_dev.parquet": {
+      "sha256": "02dd3cf36a14216e0b45dc8d854bebf99a8290df9d1c5fb776108c1af59c8178",
+      "bytes": 21227
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_2/meta.json": {
+      "sha256": "1296b982613542635c3232e0d24e1a629117c2cf4b13b25276ba3ff99632ca75",
+      "bytes": 362
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_2/previsoes_dev.parquet": {
+      "sha256": "ffa00852e441e3aa2d17c4579bfa54640871a05d39446e48d470853632c63df2",
+      "bytes": 21450
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_3/meta.json": {
+      "sha256": "ba7543af2c7ffb080ccd255d47a1819a2ee2121f92d602b60d328aa4dd4f1937",
+      "bytes": 362
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_3/previsoes_dev.parquet": {
+      "sha256": "4eeb638d5cbb629fd1d0802183f47c529eeb5469aff76fc9317be1ca9e09a0dc",
+      "bytes": 21492
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_4/meta.json": {
+      "sha256": "bce64f82e70640cc3916d3ac6ae82a08255185099985ed436862943f0b154716",
+      "bytes": 361
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_4/previsoes_dev.parquet": {
+      "sha256": "b6925bc8cad5f98f21cc665ab5aa9ba74308b02bf5ec0a2a49cc820756e1a576",
+      "bytes": 21497
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_5/meta.json": {
+      "sha256": "574a68f07c66bfe6fd9117951f55d09ba06404b87c565d68225d3bc6532d6528",
+      "bytes": 362
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_5/previsoes_dev.parquet": {
+      "sha256": "cc848873e1f8f1cfdc5d5a411830216493494252bf1451ee67cd2d0c1aabdcc1",
+      "bytes": 21719
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_6/meta.json": {
+      "sha256": "0d2b0e0e4efc348567435944f33c690c7bd237565eff5b5c009f47bf1dafb633",
+      "bytes": 361
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_6/previsoes_dev.parquet": {
+      "sha256": "23c51c965654e5c831309a142adf6033ab0c2e45e7e755c41929bb4cd3c095e3",
+      "bytes": 22705
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_7/meta.json": {
+      "sha256": "9789231623c0d52ca92377c1f9bbbacda8b55da5811bd4073fc798f7ad0eada7",
+      "bytes": 361
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_7/previsoes_dev.parquet": {
+      "sha256": "f5b374c07055761de262268c1214907d068d93e40c872dfa8dae2f5a27f488d1",
+      "bytes": 22954
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_8/meta.json": {
+      "sha256": "04d169f8a1b51b1b4f2905a3be3d80142e99c82fa974aa1a4f0ed5aade7f26e0",
+      "bytes": 359
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_8/previsoes_dev.parquet": {
+      "sha256": "d0ffe36ed8ebd2e36d5fcce0db5e9b0b28efb1a41b5d63b436075f69f5c94cfb",
+      "bytes": 22923
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_9/meta.json": {
+      "sha256": "3b6fec92b18a80f9a1575ea3cd508e263120f558130da57faac0e5a0587e448b",
+      "bytes": 361
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_1/todas_menos_saida_da_rede_densa_camada_9/previsoes_dev.parquet": {
+      "sha256": "cdce760275797ccd37370977b47572ae42c7daa20d9b90dd48071f63711404da",
+      "bytes": 23250
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/calibracao_entropy/meta.json": {
+      "sha256": "5b791e294b13f0671b283c38f4915a910603a5e8f0b37974e618fa985785e014",
+      "bytes": 290
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "2c5251f8bdf7d4cd2c621681588bb841d6aca14a087dfb37593573c5b345fbef",
+      "bytes": 23339
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/calibracao_percentile/meta.json": {
+      "sha256": "90d7747c4d1c30839fed18dcfd37ed4135e2e283cc5f284ab853c6abe65da849",
+      "bytes": 299
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "6a6e1666ea6389dafa3850a52e67053f8b7ec8ced586fa237fe47ac8e29e4870",
+      "bytes": 23439
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "48c762a14ca7571e1b6579700f6fe5914407d7f78e7806fed034c688381641ef",
+      "bytes": 333
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "5efa31b87a1299552ad1be61f5009a82656eb9f6acae63d0dbac6b177abacead",
+      "bytes": 24181
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "4c85dad9768e929d02c65962f3271ab3b10157634a69679922f076e8e192f82f",
+      "bytes": 34048
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "88329c374c118ca01851b74db23bd9b3a59b35024b23fd50f2ff3f60b294ea8b",
+      "bytes": 582
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "2b80a18fb4580314816e5e90dd2dec0b3db36347a6effe1b7a28aaf8366dbc56",
+      "bytes": 23477
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/todas/meta.json": {
+      "sha256": "540aa4478ec9aeed968835c11571bf916e21abf8d12f4db27683ac9c1b0f1c1e",
+      "bytes": 284
+    },
+    "estatica/aluno_a/vocabulario_treino/semente_2/todas/previsoes_dev.parquet": {
+      "sha256": "85eefe1ae9ecf32e0cb5efcd021f81516a72124be8ed4664655f49d9d301a86d",
+      "bytes": 23208
+    },
+    "estatica/teto/sem_poda/semente_0/calibracao_entropy/meta.json": {
+      "sha256": "fa42f5dcd5f915d4a2f6ad408689bc1543f00998d6c898a9d6a964bf9baedd2e",
+      "bytes": 277
+    },
+    "estatica/teto/sem_poda/semente_0/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "1cc8628077bac2b6515fccaf655ea8b17267843b3050946a6a23da19d883329b",
+      "bytes": 23157
+    },
+    "estatica/teto/sem_poda/semente_0/calibracao_percentile/meta.json": {
+      "sha256": "356a4f90d9eb00467cd06c0ad3e0ef6227931316aef84d1325853e11bcfbd021",
+      "bytes": 286
+    },
+    "estatica/teto/sem_poda/semente_0/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "1f05bdda39a8e646f4468b39c50d011984b6a96161723917060637de1201118e",
+      "bytes": 23296
+    },
+    "estatica/teto/sem_poda/semente_0/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "8d04748af78dded56725af2d06aca51445f0323a24c6c03e534e00d73a89688f",
+      "bytes": 321
+    },
+    "estatica/teto/sem_poda/semente_0/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "2e5fabf43ff0442065188014c88f848aa8b8d02f1a2c99f6a05fa46622a6bacd",
+      "bytes": 23726
+    },
+    "estatica/teto/sem_poda/semente_0/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "30bcff94705c43f1aeff875656595570279a4cfb5788a874275c2e9a627d03ba",
+      "bytes": 33303
+    },
+    "estatica/teto/sem_poda/semente_0/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "9c60661876656351131bec0ed78091ee9e2ed8fbf33f013f370249cb57a67890",
+      "bytes": 338
+    },
+    "estatica/teto/sem_poda/semente_0/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "e63d26ef730f52e05f197620df5f74612cc0a7bac15ae88f3831174ba0553d62",
+      "bytes": 23436
+    },
+    "estatica/teto/sem_poda/semente_0/so_cabecas/meta.json": {
+      "sha256": "c4277eea411c5bc9bbf1b85a99eb642616f274f35239d8c0aec9ad9cc7e8d869",
+      "bytes": 267
+    },
+    "estatica/teto/sem_poda/semente_0/so_cabecas/previsoes_dev.parquet": {
+      "sha256": "6723ee7756e75c4d3c4eff323c662b2f287285ad25dab7e25f13505d05c24841",
+      "bytes": 23691
+    },
+    "estatica/teto/sem_poda/semente_0/so_consulta_chave_valor/meta.json": {
+      "sha256": "26c91a712bcec7970dd10566fe36d54cdd44a7557c71cfdffa70e0056c3d124a",
+      "bytes": 296
+    },
+    "estatica/teto/sem_poda/semente_0/so_consulta_chave_valor/previsoes_dev.parquet": {
+      "sha256": "52e6634bf6e3b29e9a662908f6890d8eef3a1a6889c5ae6d3a557dd8ce26e866",
+      "bytes": 23755
+    },
+    "estatica/teto/sem_poda/semente_0/so_entrada_da_rede_densa/meta.json": {
+      "sha256": "dea592dc17f3c59284e0355a6813bcbead6bd4138cd6ede58dc7f3fc77c898de",
+      "bytes": 298
+    },
+    "estatica/teto/sem_poda/semente_0/so_entrada_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "16c102c0a6ef79f5fdec6f24a6827a55851e39cf89a56af670bef4fa2eeeb5bf",
+      "bytes": 23634
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_atencao/meta.json": {
+      "sha256": "7722162790f4ba511704cdefa78996bc0b1330ff6447412a3ed71691f8b1edb2",
+      "bytes": 288
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_atencao/previsoes_dev.parquet": {
+      "sha256": "a4e8f11e547f614d433659c43a22f9051be61775c2c910ab4023cd78c8e12dc6",
+      "bytes": 23728
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa/meta.json": {
+      "sha256": "de9f5f4040906edde90bf55cb6c3e6016d89a917aa5fcf5d4782befd924a4be0",
+      "bytes": 293
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "1c3a56f727085a7a9655bbbdfe88b14870c13bfad45b9635cef1f1bdbb6dcfbc",
+      "bytes": 23466
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_0/meta.json": {
+      "sha256": "93f9d7e606e2d5bb4fb902facb5836bfc07c527d5f7f59ad1e6286ccc0f636ab",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_0/previsoes_dev.parquet": {
+      "sha256": "e4b51f19a39582253461648dd85ae280f895ba044e418be0c5c407f6f2dddfd3",
+      "bytes": 23606
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_1/meta.json": {
+      "sha256": "f54e8a6814e1fce783fdd075ec578ccdd645319f7202d2bb9d84f12c3d2bef0c",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_1/previsoes_dev.parquet": {
+      "sha256": "c2fa897481c4b877b2895ca2a3f7ef3017d0d1f826d6d76d591e0c3039e63a5c",
+      "bytes": 23878
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_10/meta.json": {
+      "sha256": "4db2c9ab8db37bb8120066d968c9d2ba32792826a14ba7d77e0d06b692e7d292",
+      "bytes": 330
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_10/previsoes_dev.parquet": {
+      "sha256": "a303ef2b48e4b045bdf91a17f17ed0911f30234899b84c02fd9f4e21508942f2",
+      "bytes": 23903
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_11/meta.json": {
+      "sha256": "106e3571b3b0f26607f3a698baa327083ee05d8b4e18a4e272c8cd0060ba3cf0",
+      "bytes": 330
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_11/previsoes_dev.parquet": {
+      "sha256": "8a7aa91b971d9dde1c9924fd80e910b1b642c334af704ca43bc3d9c14b72072d",
+      "bytes": 23828
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_2/meta.json": {
+      "sha256": "7c1ae6bdba2864249035ea41adb2cade3e39463500aff8c5be4fb8aeb2652d50",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_2/previsoes_dev.parquet": {
+      "sha256": "52a2e5f7f7b8312aa849be2d6b9145eecb89b9bfee73818841286f3fb770883e",
+      "bytes": 23635
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_3/meta.json": {
+      "sha256": "8155d5447897c3013943df9ff76e34c36b9e27ca13ba2639ebd1d30bb02230ca",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_3/previsoes_dev.parquet": {
+      "sha256": "a9811866d7ceddd4de584f5bcc8086131325e838e40d81fd18f94ca3708f2ff8",
+      "bytes": 23902
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_4/meta.json": {
+      "sha256": "b630569cfe02827c95e3ff51da2decd56157aff88ec8cebd5aa46b5f63fc7b16",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_4/previsoes_dev.parquet": {
+      "sha256": "d51b8660a99855cfab337b1c078130724968c1faacab34e62673d1fbe4010e5a",
+      "bytes": 23586
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_5/meta.json": {
+      "sha256": "8e08d33ffcb188409a8e4fd9c30fe96c0cdba41b12ef05224262ae9fbc012171",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_5/previsoes_dev.parquet": {
+      "sha256": "ff4df01dd48b9b893c8e5bfc889e278f1abe91d2588fb6257d43ea9a23dac9a5",
+      "bytes": 23800
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_6/meta.json": {
+      "sha256": "530a84276faecd9cf4b26689e4a305e9ab559819fd7637c842fd0b56fddeea4d",
+      "bytes": 327
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_6/previsoes_dev.parquet": {
+      "sha256": "bbb92e552f5ab70e9af9084972b7706e3f8c0dec9ca167a2a30502a254d1a05e",
+      "bytes": 23762
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_7/meta.json": {
+      "sha256": "a8d364908c46f0da66e3d1754fe8b6c15b95d6cdcd970ef17d811c932ffb9aea",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_7/previsoes_dev.parquet": {
+      "sha256": "c88592324cc16659f9ee890629df4ae3c0ead1dc7da5c8f856e3ed8c9c6e8211",
+      "bytes": 23828
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_8/meta.json": {
+      "sha256": "dc160a81ea20527839ced77c4def2be96f4e4254faca0fe1cfcf2e4f677af33e",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_8/previsoes_dev.parquet": {
+      "sha256": "b35338ba02ca49ef1ef87f79fa2ea2272fa3d7feae3a329368493e334b10653e",
+      "bytes": 23633
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_9/meta.json": {
+      "sha256": "d2d86e88ed6c4d0668c5e72fc1d4380fb607cb8e25f13e1caa756729db080dc7",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camada_9/previsoes_dev.parquet": {
+      "sha256": "241e7a42004526ff0c214c3ae5eb4ecb90f9077ed1910a3576607215daaec2bc",
+      "bytes": 23650
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_1/meta.json": {
+      "sha256": "72e29a1b6bcbdde35c13c1359978939272ece300cbac0d805013dc6dca46df76",
+      "bytes": 340
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_1/previsoes_dev.parquet": {
+      "sha256": "2819cef74ae635ac8db9808f751853cc91eaa1e5f23a9d2a357db12f50c83b6b",
+      "bytes": 23685
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_3/meta.json": {
+      "sha256": "1314bed50cd69f2188814ae55077a1233eb62b919feaf8bc9683eec04f940a0e",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_3/previsoes_dev.parquet": {
+      "sha256": "f19dbf341863ad98feb47b4d5ff11424ad95736070ff7a9d00f8f2efe15a30b1",
+      "bytes": 23793
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_5/meta.json": {
+      "sha256": "d2fa8cf8df7db1b2667fa72049dcdb2cb8a69d1c3e5a2911a8a520f1e10aa3ad",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_5/previsoes_dev.parquet": {
+      "sha256": "225def167a585c5f890828253f3fe02dfb633243d70fe2ca775f6f1379f83287",
+      "bytes": 23800
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_7/meta.json": {
+      "sha256": "f3e9093ee09d1fc065e7dbffa1c3c7eda3201052e1c6a82db61137d574e1f478",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_7/previsoes_dev.parquet": {
+      "sha256": "ba52c2743c47e1071eae46916ff663f58c403a73676bb55c56bab6e38d799820",
+      "bytes": 23527
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_9/meta.json": {
+      "sha256": "165fc4fe841d6af54664e4482906e0464e7892d70437c864129ae4e835a3cba9",
+      "bytes": 340
+    },
+    "estatica/teto/sem_poda/semente_0/so_saida_da_rede_densa_camadas_0_a_9/previsoes_dev.parquet": {
+      "sha256": "c8baab197d0f93470ba3929ad6a7f70ae699805b1956f20f910be86874d77848",
+      "bytes": 23544
+    },
+    "estatica/teto/sem_poda/semente_0/so_tabelas/meta.json": {
+      "sha256": "02a71cff276b3b66f2e710a674c4ac1e294e9867a1725cb3af870ab1f99d1ea9",
+      "bytes": 268
+    },
+    "estatica/teto/sem_poda/semente_0/so_tabelas/previsoes_dev.parquet": {
+      "sha256": "7bd9addda9ac170d61ce43c4979c553e012dcf31d0e7a6601f1df69c75b5e847",
+      "bytes": 23863
+    },
+    "estatica/teto/sem_poda/semente_0/todas/meta.json": {
+      "sha256": "d566531fef0b1c563443e6c4cafd7b7a1bb379551f8db061afdf5d6ea90601ff",
+      "bytes": 269
+    },
+    "estatica/teto/sem_poda/semente_0/todas/previsoes_dev.parquet": {
+      "sha256": "9502949927f09af6bf3e753a500deea5b2ff319067bb56a72ebb4b62311e6f10",
+      "bytes": 23494
+    },
+    "estatica/teto/sem_poda/semente_1/calibracao_entropy/meta.json": {
+      "sha256": "fb3fcd70740c2470f345c1f4f311c788f993d32dfe47951a6d60419b03ca9444",
+      "bytes": 277
+    },
+    "estatica/teto/sem_poda/semente_1/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "e2a2439b75f1e048108bc13e5e88d5b0a9ab768add97a1cb002e3bda8bd3921a",
+      "bytes": 21246
+    },
+    "estatica/teto/sem_poda/semente_1/calibracao_percentile/meta.json": {
+      "sha256": "0877950ca883674102ffb28c012da1ccfd250f1a336ad393db2641d1f9deba50",
+      "bytes": 285
+    },
+    "estatica/teto/sem_poda/semente_1/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "4dfbe78cf83ad9698e8350d5487ba2fd66234686681d764e46e73540374a5d12",
+      "bytes": 21102
+    },
+    "estatica/teto/sem_poda/semente_1/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "af30ac167d37ebfc3db9f2db607566f50960f3a536bec3db52813518895d15c8",
+      "bytes": 320
+    },
+    "estatica/teto/sem_poda/semente_1/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "a04c9fc324352c0160550b9855469fc6d9bae29af6d6a632379a3c8afe5d87db",
+      "bytes": 23576
+    },
+    "estatica/teto/sem_poda/semente_1/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "34c69c287f1be8d040fe4b0810eaa0e088649463efaa22bcbddf5ba5e81f7e5b",
+      "bytes": 33393
+    },
+    "estatica/teto/sem_poda/semente_1/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "864de03eafc38b27d9a3f89dc8c8e041e343333d26c23f400d35ea767320fd92",
+      "bytes": 660
+    },
+    "estatica/teto/sem_poda/semente_1/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "d6d5a595fb2babcbaee9549194d7809fff18cdfe19a0a96cc9bb58162884277f",
+      "bytes": 22819
+    },
+    "estatica/teto/sem_poda/semente_1/so_cabecas/meta.json": {
+      "sha256": "8ff5db5359ff52669c29257e48a4fc83c579cbbfaa90c1d481f43801662cf8f8",
+      "bytes": 269
+    },
+    "estatica/teto/sem_poda/semente_1/so_cabecas/previsoes_dev.parquet": {
+      "sha256": "cf61e9225425b674e0576785a21dd1148835634a7d0dccbb781f06271f8b50fb",
+      "bytes": 23667
+    },
+    "estatica/teto/sem_poda/semente_1/so_consulta_chave_valor/meta.json": {
+      "sha256": "d006a986727793f7402b50ca645243154f082a7abdf5288e3b1ec0f7f79a5229",
+      "bytes": 296
+    },
+    "estatica/teto/sem_poda/semente_1/so_consulta_chave_valor/previsoes_dev.parquet": {
+      "sha256": "94f364d91258baaf3d30253aaf674e617cc354c63648ae200fe3486919b7e301",
+      "bytes": 23768
+    },
+    "estatica/teto/sem_poda/semente_1/so_entrada_da_rede_densa/meta.json": {
+      "sha256": "1ae53f6b1b2bee2d1a08bf5bd6f22647ae1542502c7ecaa29706cf8a9864de8e",
+      "bytes": 299
+    },
+    "estatica/teto/sem_poda/semente_1/so_entrada_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "fb7d58153ed91527d44dbd35933c7f0fd8c0b82c89b06a7fa5619e1e9548702b",
+      "bytes": 23865
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_atencao/meta.json": {
+      "sha256": "f21984f89a9aa71a412aad94c5b6f9374ef2ecf198bb2dde7ba122ea2568738a",
+      "bytes": 289
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_atencao/previsoes_dev.parquet": {
+      "sha256": "6211fb4cc70b1db13e4234772c777ac2e5d31e3eaab8b70ed724b4a7a78d9fb5",
+      "bytes": 23609
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa/meta.json": {
+      "sha256": "0d783edd8ce9ff0db147edd567e006b18b74e17a0dd59a75429cb4e64067c74f",
+      "bytes": 295
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "52a80b7f9b8ca5f9071857e0ad05fc7bf2d665af22136d46aff7d4a7a6fe7dda",
+      "bytes": 18901
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_0/meta.json": {
+      "sha256": "d749bda4b97eabf73833781ff6203508225ef71d6445d0d5e59ac93f12c083f5",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_0/previsoes_dev.parquet": {
+      "sha256": "4d1c9302ac0bc8fbc4d888d03242fba5848d7499f3b73bd2f9fe762ab8614248",
+      "bytes": 23804
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_1/meta.json": {
+      "sha256": "4a7871dcac664a242f3bd7e4ecc776639382b24ba49686fd41dc2e73fb87f76f",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_1/previsoes_dev.parquet": {
+      "sha256": "7d18cae01662a349bdb21c869b2228ce494b647d703e91ddd43b99896b8d91c1",
+      "bytes": 23608
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_10/meta.json": {
+      "sha256": "068939fbf2bcfd2aba5f40c3205843f41f500c8575993f6f4d0f55fa97feb013",
+      "bytes": 330
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_10/previsoes_dev.parquet": {
+      "sha256": "5aac9da7f2bd5dcfb1283405bef86ed560765ab9c22453cf5a3bc53060e0de3c",
+      "bytes": 23770
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_11/meta.json": {
+      "sha256": "fc85367e5164c8485ff4219a9de1b4ba5523529f54ac795e20354926c1f06d97",
+      "bytes": 331
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_11/previsoes_dev.parquet": {
+      "sha256": "ee4029cf14d9c594e8566526387b4f59325584ce1e7215a11ab6756a6558c26a",
+      "bytes": 23664
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_2/meta.json": {
+      "sha256": "3956d92d8dbe185ba9ab9c23f8c83ae1d01f46ad356eda200fd70211b721bfff",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_2/previsoes_dev.parquet": {
+      "sha256": "5ea09bdab2b7107fcebee4501191808b677bd756a836c90e15381c6a7bc4d380",
+      "bytes": 23811
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_3/meta.json": {
+      "sha256": "393bab12e18374c8f1a6abca5e7f88b984eb31142ec331cc6d855b880e480b09",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_3/previsoes_dev.parquet": {
+      "sha256": "c07ad7feb5048063147d8847668c2b95da2939205bee78f8f79851287a21f70f",
+      "bytes": 23817
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_4/meta.json": {
+      "sha256": "b0eb3ad2a2bbe4a9c0626047ed941713c209945b2084bed75b9d005b37e29e76",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_4/previsoes_dev.parquet": {
+      "sha256": "71b085f938f7881c8224bda1e7ccca610d546b417dfe5b39beeb617dd6a6b7f6",
+      "bytes": 23829
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_5/meta.json": {
+      "sha256": "098f3bf939d65c8b80ca029ab2464986e4b60de24ea25db742df94d14ee58bb4",
+      "bytes": 328
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_5/previsoes_dev.parquet": {
+      "sha256": "89c003fdb173e0fc433172cdb8b21ca6b1ae2e0d2f5d93676910c36352289c69",
+      "bytes": 23824
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_6/meta.json": {
+      "sha256": "33f6e979b3d512aba82d92f5dc8d3917172c1979eaf1496d9447580e37671c3f",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_6/previsoes_dev.parquet": {
+      "sha256": "e76bbf83e36baeeea962b7fd9380dc2cbe346c90c034a80bafe7752bea64585a",
+      "bytes": 23706
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_7/meta.json": {
+      "sha256": "fb71c668d895ae6c46eb500f44a2f7ecf4d291220b335739e31d6c0849b9674c",
+      "bytes": 327
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_7/previsoes_dev.parquet": {
+      "sha256": "0af67d7f53d4aad23863e56f4f82d7eaec4e57cb52ff4bff1effb68d4c701b8b",
+      "bytes": 23779
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_8/meta.json": {
+      "sha256": "102e3d85c20e78e8ac1a88e7f53593dbcf610774b1a6f32db2af4ec2fa9d7b80",
+      "bytes": 326
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_8/previsoes_dev.parquet": {
+      "sha256": "ac15cc9307b5dbbedaf8dd03fc81a88f217c961a5515c1479b8a45edf99a5f89",
+      "bytes": 23602
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_9/meta.json": {
+      "sha256": "1a1fb0b467dd014d65f1485edf38615e0052726e5ff31f74f9be4c9da3d0cac2",
+      "bytes": 329
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camada_9/previsoes_dev.parquet": {
+      "sha256": "6611db81850c46e778f8a12d727c234f47fb9a5914e6c9d2851f158300afcb9e",
+      "bytes": 23652
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_1/meta.json": {
+      "sha256": "8ba5817843714dde5e6553df996ccfd26d351b561deff129170e8f98a1f355da",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_1/previsoes_dev.parquet": {
+      "sha256": "038f8156b0da910fdb9226be4ed6d21b439ede7b99363972c27d29a7dca0d65b",
+      "bytes": 23834
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_3/meta.json": {
+      "sha256": "5a7f2fe83486a77854297d40d380c8c91251e133370b9ac194848d56ed8bc787",
+      "bytes": 338
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_3/previsoes_dev.parquet": {
+      "sha256": "910b4bb09545d97b01504cec38126c2414b1e6db38c2bf359ceb3903de9586a1",
+      "bytes": 23690
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_5/meta.json": {
+      "sha256": "1f12f77f6f73e6de437a056945d52ff11e66d344e030c497ede9002bd2081e93",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_5/previsoes_dev.parquet": {
+      "sha256": "c0a734de9cc52b5709948426aecbb95a8c37808882d051488d66b7e0a6ce9676",
+      "bytes": 23848
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_7/meta.json": {
+      "sha256": "43927a6789a04a9093ceec08cc14cf78cdb86f1270b0a9f1d809403aceb9a730",
+      "bytes": 339
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_7/previsoes_dev.parquet": {
+      "sha256": "972b81032e7f43d3ee18153058b06c04a445625088541b29e5b409b3e26bec89",
+      "bytes": 23426
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_9/meta.json": {
+      "sha256": "8cc458633207acdec17fafae33a4a16e6d42a0d2e49d8df2bf0bc4ecf3d69135",
+      "bytes": 342
+    },
+    "estatica/teto/sem_poda/semente_1/so_saida_da_rede_densa_camadas_0_a_9/previsoes_dev.parquet": {
+      "sha256": "c9bb8669daa7983b8709b54fb0788ac46d10a903c705095912e1c91e692f81fc",
+      "bytes": 18837
+    },
+    "estatica/teto/sem_poda/semente_1/so_tabelas/meta.json": {
+      "sha256": "6403034692c26ae97979797efd5843b5b5e7a908e2cc33bac950db38943e0166",
+      "bytes": 268
+    },
+    "estatica/teto/sem_poda/semente_1/so_tabelas/previsoes_dev.parquet": {
+      "sha256": "b7430bd128a66e37e786d124e53c80421f0db4efbb4ebd8de76c47e14d955eb2",
+      "bytes": 23651
+    },
+    "estatica/teto/sem_poda/semente_1/todas/meta.json": {
+      "sha256": "e5ef0a25ee54febe9df27e183b9fbd1c4ddfb444b4369799aeb1bd49b3ba6c2b",
+      "bytes": 270
+    },
+    "estatica/teto/sem_poda/semente_1/todas/previsoes_dev.parquet": {
+      "sha256": "4f015614fc6c31e806b3c110d680be18e04fc354bdf180b61cae21e226394f1f",
+      "bytes": 20308
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_0/meta.json": {
+      "sha256": "e1bfadc0cd5200fd1c53b71eff2e908b55ddf41ed0e5a6ca84c3e65b87f2191c",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_0/previsoes_dev.parquet": {
+      "sha256": "a27a98b180f707eb4dcb416c1394b4de81672f0f207c2553e5d594b4ab7cfab0",
+      "bytes": 20374
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_1/meta.json": {
+      "sha256": "73cbc062ce0c9ed41204f2e604ece07665750bd99c7d992ce517b52d3a5ff99a",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_1/previsoes_dev.parquet": {
+      "sha256": "84bac7b6cb94e66a7a031679d16871cc0ecbd55f033433daf12a296cddc59801",
+      "bytes": 20608
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_10/meta.json": {
+      "sha256": "1896f4d6556a75b14f75241b191ff7bfe2eaecb8666e9f40f97cb23dd4698b86",
+      "bytes": 351
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_10/previsoes_dev.parquet": {
+      "sha256": "e15237d690299127a15011634e017964d5e2f9a4c1f3d6e7a8ce597762a3cc30",
+      "bytes": 20634
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_11/meta.json": {
+      "sha256": "650dffbd50ea724ea5248b1586d26cfdc085cda57270a9cdebd17b32e90d6157",
+      "bytes": 351
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_11/previsoes_dev.parquet": {
+      "sha256": "7f548dfe2885702c0580ba2c57f35392b88671aa7df979837a33c5a430c22707",
+      "bytes": 20060
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_2/meta.json": {
+      "sha256": "cbc9dbcb2116b36c010c59c1aae45c0fe517c0b71141ae9876f842da17aa1962",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_2/previsoes_dev.parquet": {
+      "sha256": "5837d4f200eff36ec0fb78d8e67ef24a7c1b22ece178c1a2d616f32d4cb28809",
+      "bytes": 20557
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_3/meta.json": {
+      "sha256": "1dc55bda325f3602e26a1821b33857a40901d02ded0133b1cd3adc000cb1da4e",
+      "bytes": 348
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_3/previsoes_dev.parquet": {
+      "sha256": "3d9a2e9b0c9c82737d573872c643d33ee3c63a484fff5392edc86c20d50b3dcc",
+      "bytes": 20540
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_4/meta.json": {
+      "sha256": "83667dba7b5c6dd261c7ee0d68b6944774855248430964f852dcc87958f648ce",
+      "bytes": 348
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_4/previsoes_dev.parquet": {
+      "sha256": "73a75a01f7136e17d7f8424521f1275a7eb297cdb6393626c0676792273b89e4",
+      "bytes": 20191
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_5/meta.json": {
+      "sha256": "f3f2d96eb4e807db1e1a69166815ea3012a1996d41c1cc530cfba0aaa58bfa55",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_5/previsoes_dev.parquet": {
+      "sha256": "96e93ad6d661491f9479f572dedcc492a6b98dd5a926591fbfe3e32c5ccebc59",
+      "bytes": 20567
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_6/meta.json": {
+      "sha256": "0cfa7ef6f79017d70c2b41a5c9526239b8dc113791ad7ccf5321ce53ccdbcf82",
+      "bytes": 348
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_6/previsoes_dev.parquet": {
+      "sha256": "13fb989825beb0c9f59566af90809bf261906a7581273b845b1c6b7425d6f7ad",
+      "bytes": 21546
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_7/meta.json": {
+      "sha256": "fbaa6837ac18686cf6604e83070fa235413e1f605c7eacf6241c5d63bc0539eb",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_7/previsoes_dev.parquet": {
+      "sha256": "28398c590f14b2c67f0259d1c8decc7250cc3ce2294d959a6115d417eb6ef37a",
+      "bytes": 21748
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_8/meta.json": {
+      "sha256": "f6f4d80b2ba0cabb928c5904a3550bcbeccd43452468b917a91880f3cb86e31a",
+      "bytes": 348
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_8/previsoes_dev.parquet": {
+      "sha256": "d5960987da311f32c0673c0dbba3d0b1db97bcf5196cb2814ea22cd662bc5195",
+      "bytes": 22831
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_9/meta.json": {
+      "sha256": "218f11ad0b06c79c473e14a3cfdff25ac0df29c487baec3cc4bc91f82cc8d411",
+      "bytes": 349
+    },
+    "estatica/teto/sem_poda/semente_1/todas_menos_saida_da_rede_densa_camada_9/previsoes_dev.parquet": {
+      "sha256": "5bbe4171281db21a9e864b5476cfab67ba846ef6fe5119a463d08eeb3382661a",
+      "bytes": 22206
+    },
+    "estatica/teto/sem_poda/semente_2/calibracao_entropy/meta.json": {
+      "sha256": "274dc585529783ff3bc392dd5ca0c92bc165efeb53b5ecaa05fe2f391f490e71",
+      "bytes": 277
+    },
+    "estatica/teto/sem_poda/semente_2/calibracao_entropy/previsoes_dev.parquet": {
+      "sha256": "5d94dc968b77bdef5b7fa12b0bf293d66ed293625189c4a25fad4d6c3e3c46fe",
+      "bytes": 23304
+    },
+    "estatica/teto/sem_poda/semente_2/calibracao_percentile/meta.json": {
+      "sha256": "2122d14a4dcb8282a33fbffad1742d265fd54a450d98674f37b68074d8ec1aa3",
+      "bytes": 286
+    },
+    "estatica/teto/sem_poda/semente_2/calibracao_percentile/previsoes_dev.parquet": {
+      "sha256": "5593e24791b35b9b0324ccf6a457b4123bf79b681c344b5ee8932d1bff7cabc1",
+      "bytes": 23317
+    },
+    "estatica/teto/sem_poda/semente_2/sem_a_saida_da_rede_densa/meta.json": {
+      "sha256": "eae88a8b950c7b460a385815ee6b2334542ccda82bed9b4668d80d11744085bd",
+      "bytes": 320
+    },
+    "estatica/teto/sem_poda/semente_2/sem_a_saida_da_rede_densa/previsoes_dev.parquet": {
+      "sha256": "e99d8759a3ffeb8f7267f764f3a921e65d71e5dd0698c645ae283df6b44ff002",
+      "bytes": 23795
+    },
+    "estatica/teto/sem_poda/semente_2/sem_a_saida_da_rede_densa/teste/previsoes_test.parquet": {
+      "sha256": "48fc18b98b429798e892154915315c64e62a31f8915ceb578259ef5621e8f7c3",
+      "bytes": 33602
+    },
+    "estatica/teto/sem_poda/semente_2/sem_os_piores_pela_faixa/meta.json": {
+      "sha256": "3a60473894ebaa2fb8c928f9bd77bb69fbedf43b0db45c10b0f5b0fe544f2a2f",
+      "bytes": 337
+    },
+    "estatica/teto/sem_poda/semente_2/sem_os_piores_pela_faixa/previsoes_dev.parquet": {
+      "sha256": "7e261734aaa2246d965341d5da97ff0ddb99dd69cf85e495a4952401f55b9eaf",
+      "bytes": 23630
+    },
+    "estatica/teto/sem_poda/semente_2/todas/meta.json": {
+      "sha256": "5a30fea951b8c150e52d8ec23b136ebbc9aaebbdb83c77803598e5d3531c65e7",
+      "bytes": 270
+    },
+    "estatica/teto/sem_poda/semente_2/todas/previsoes_dev.parquet": {
+      "sha256": "305e67f30f927db19732ada87447c106b1bbcf90ce9b5d0523d120e08bdf0d72",
+      "bytes": 23477
+    },
+    "figuras/achado1_controle.png": {
+      "sha256": "c906db8519c4f7f8e9d4fedd4a4b2425dea5ae87f4eb48946cd6ae7eb156b851",
+      "bytes": 88278
+    },
+    "figuras/achado1_curva_aluno_a.png": {
+      "sha256": "e37803de7e2f2c357193cd7e2945b544c6499b0a83dc62a61b48a893be8d7e5e",
+      "bytes": 72533
+    },
+    "figuras/achado1_curva_b1.png": {
+      "sha256": "77596207dcf3a751600e0eeab11ef51fff855e709854c2af775b480bab0fdb79",
+      "bytes": 75583
+    },
+    "figuras/achado1_curva_b1_taxa_menor.png": {
+      "sha256": "3d22258c1951316bacbdcff328d8e17efaebb4a44f4fe1b455f9db85ad47209e",
+      "bytes": 84468
+    },
+    "figuras/achado2_acumulado.png": {
+      "sha256": "61f6994e3a4bed9579405fb6d3ad5148fe07129bbde451917f34906f9b027594",
+      "bytes": 54661
+    },
+    "figuras/achado2_alternativas.png": {
+      "sha256": "e08ec7a13ac8ab9b6a8db66613b9a92434bcfa5e0d4ec4f5c73809ffc563694a",
+      "bytes": 121363
+    },
+    "figuras/achado2_um_de_fora.png": {
+      "sha256": "f0f15c7af22becd64f9002b70e1a77d4c7f8693a0b762d3bb5aa8877256bfaa6",
+      "bytes": 252445
+    },
+    "figuras/achado3_margem.png": {
+      "sha256": "50cf6589eb14f9590c7a2706a32cd50c85fc51564231c1fdc62712231339f4de",
+      "bytes": 36704
+    },
+    "figuras/achado3_nove_modelos.png": {
+      "sha256": "64fb44311dfe17d11a04da2be7c043bc8eb0baa42bca4cd635322d2510ef2264",
+      "bytes": 98422
+    },
+    "impressoes/comparacao.txt": {
+      "sha256": "83c4390290320f508b8737609ea6031a1f75f5a3be3451aef2129907c6cbd821",
+      "bytes": 4090
+    },
+    "impressoes/comparacao_final.txt": {
+      "sha256": "c54923bc1d33606c23ed5cd642cfa06b3ed637deb1479a65253bddce41fed82c",
+      "bytes": 5536
+    },
+    "impressoes/impressoes.py": {
+      "sha256": "f06deccaa03cbb3ce7a57658366f0ce01d05816d808914c4ab3512bf558e1cea",
+      "bytes": 3607
+    },
+    "impressoes/impressoes_antes.json": {
+      "sha256": "4ed9af3c3f5c798084095450a7388cdc26cbb6e92af99aadd7883efc032f46a4",
+      "bytes": 1783883
+    },
+    "impressoes/impressoes_antes_do_notebook.json": {
+      "sha256": "6c9a5501d568e751730ed4f383898dd08dc87575458fe1cd85532c52041e0e74",
+      "bytes": 1784627
+    },
+    "impressoes/impressoes_depois.json": {
+      "sha256": "ae0da3142758e7fe255b7bd4496d87c2e8541dc913f400851f42daa2332494f5",
+      "bytes": 1955352
+    },
+    "plano.json": {
+      "sha256": "577821a434da9a1a0f7f216f8761369405255fb03bea68a100aa2c6d9a3abeb2",
+      "bytes": 12889
+    },
+    "plano.sha256": {
+      "sha256": "95440ca0bc35181f81e16bf54ac488c1dc3f023200a2fac55d27f1929bfcea26",
+      "bytes": 120
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "ace01a693fd5ba267543f09e50bf4405007ff0e2d6194d611e99b5dea2f4ca2d",
+      "bytes": 24028
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "e3e5954c0787a362d6d75b634b685f677eea920452ed45963d2f76ac142a3bad",
+      "bytes": 23891
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "080e63bee1966076f6fcb99b1a48c48280a7c554f7d3401de3240424514f85d1",
+      "bytes": 24385
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "0a84ea8600b907cbf359b363263861e56ef56f16019e9a2111cbf58b95cd68a3",
+      "bytes": 24227
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "78d29d6e9c6fe95a8b976578ead81a5710836a7697b757e935b7cfb28dde5451",
+      "bytes": 24350
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "c1ec8a07cff5a82f9b6ba4e097d7b7973e6210f074861c016447d421a6faa405",
+      "bytes": 24276
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "c3234f35acb5b04baaad351c42221c91f9c50ded959f6eb8b989d322bb43ad78",
+      "bytes": 24018
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "f58ed135707c80f71dbe7099cc6e0ddc92734be7fae3be3ac5904f15896817b4",
+      "bytes": 24287
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "e5094cbf2fd123a9585302a5f136c6d77817c61318507f03401ebfaf92ad218f",
+      "bytes": 24167
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "8d4efe52f60e00a0da53ab7665cc98ebed8cd936c106d4b6f2e558d84900560c",
+      "bytes": 24157
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "9b8b37f67122e8a7e9e3625889ff89e5f9f03312ee36a285965e8e820aa44b69",
+      "bytes": 24166
+    },
+    "reajustes/refeito/aluno_a/semente_0/epocas/pronto.json": {
+      "sha256": "4cec237067f4d94547c07d8c2d7128375deb0e4a5f7c91e7d5d8d23a3fb93bd1",
+      "bytes": 466
+    },
+    "reajustes/refeito/aluno_a/semente_0/historico.csv": {
+      "sha256": "7f53f9ef6026c225f14d772441710038b8d6b3227add4d1fb1a62ff5b1dfa1a5",
+      "bytes": 2641
+    },
+    "reajustes/refeito/aluno_a/semente_0/meta.json": {
+      "sha256": "e08232f94fde5a59da1e19f057418bae673982380e0ae16f5c5385b88c57c69c",
+      "bytes": 3886
+    },
+    "reajustes/refeito/aluno_a/semente_0/previsoes_dev.parquet": {
+      "sha256": "9b8b37f67122e8a7e9e3625889ff89e5f9f03312ee36a285965e8e820aa44b69",
+      "bytes": 24166
+    },
+    "reajustes/refeito/aluno_a/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "ace01a693fd5ba267543f09e50bf4405007ff0e2d6194d611e99b5dea2f4ca2d",
+      "bytes": 24028
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+      "bytes": 23955
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "e2b4daec0031e32f71bab8405551abf0ea9c779d310f6dc3d8506f06e688bad7",
+      "bytes": 24025
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "871df25783e83ff5b02bb05f3ca5253eeb376469013026e2ceab3efa65baa9dd",
+      "bytes": 23733
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "aa3d7feac17221c5e335d8d6f925f13cb22255b156fc3f9a73e1a9c78eeec977",
+      "bytes": 24087
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "6d1265ad04b81e963f69466e491b73e575b6c2e5a5a5070c1830891aeb74ac37",
+      "bytes": 24272
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "d367a8fb7e6d5a3aaea00aa0529a90e3b2e1b0b63484dcb596bbe25097e277e7",
+      "bytes": 24203
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "b0a4023cefeb177b5d8c0a02b8c6680794b7140f779cd7628f0f1bfea7c2d3e6",
+      "bytes": 24230
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "c27668d0371b6b05e5317ad7a74baedcfeee33d29ae8c5e92a8b5245a826c8e9",
+      "bytes": 24168
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "bb0744f26d663a98a5171b0bde4b46c18bcb941b0e9d62c678b58b9f3610eac5",
+      "bytes": 24112
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "d8a58810f2a3782be00ded821b4215ece3c24cb51af0e22c9d4246e7389c7c89",
+      "bytes": 24087
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "f75af46f0d9878f82a95dd59a9f980bd28cfecffd5fe5f930b2ffbfd166d4e4e",
+      "bytes": 24159
+    },
+    "reajustes/refeito/aluno_a/semente_1/epocas/pronto.json": {
+      "sha256": "34fdbb16f59f605b0955ebf6d711eb0423e5fac31061fab8761e6e5310787751",
+      "bytes": 466
+    },
+    "reajustes/refeito/aluno_a/semente_1/historico.csv": {
+      "sha256": "d4ee57084c139b7dbeef4a40bfa22c7d07f24e6ccdcd67ae9039a799982849c8",
+      "bytes": 2641
+    },
+    "reajustes/refeito/aluno_a/semente_1/meta.json": {
+      "sha256": "43c685811074c372074c93afa065ce84d72a617a6e22a8ba236bf2f160bf3e62",
+      "bytes": 3888
+    },
+    "reajustes/refeito/aluno_a/semente_1/previsoes_dev.parquet": {
+      "sha256": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+      "bytes": 23955
+    },
+    "reajustes/refeito/aluno_a/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+      "bytes": 23955
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "4129349edcb50929413b2bdb923d7036d65798c19658adde37216a6cd2c81d92",
+      "bytes": 23918
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "7c0a76bedbafb887012736a97eb5276552e2434fbd8fd0901837337b3451b9c0",
+      "bytes": 24424
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "13d986149d51e49e7cbe37a8c4d757a8f8bd2401f57a7a166760311702d81db1",
+      "bytes": 24202
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "ecf45f2035b9f3ea7be37a4963548bf55f8aabb846459f47bab9c7e56318f735",
+      "bytes": 24150
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "abe5cd80d6dd505ec87a2d9c9fc091636ff94e4cd4c20cbbfaab5406f9c802c6",
+      "bytes": 24231
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "db9e9772a4458f99b80d4f46569b498237e9073f417f5fdc2245bf1bc49b9915",
+      "bytes": 24191
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "4eb28bf59eb46d24afb1d5aad1c05c1fcf5204ba2c972e474b122e9d664e38fa",
+      "bytes": 24238
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "f2e2bc6a554926a3f08ac182674b508c94c1aab5fc9763ca832045d0c03c0874",
+      "bytes": 24071
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "750c741635adceee516d6f27db389e67bcb0e644419aa6f6cea276b93e6b5030",
+      "bytes": 24356
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "29b2e3f8c08f432e24bba199328cf2462bde05a302273642a91af8571eab3f8a",
+      "bytes": 24246
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "7bb1b01d6ddd962882e1c017af8c17daa4f668f309530ae1055c69569a060b8b",
+      "bytes": 24238
+    },
+    "reajustes/refeito/aluno_a/semente_2/epocas/pronto.json": {
+      "sha256": "1c879b42e7e04880824cab2465e56acce1a7a0369a265628c193b5b28181ea2c",
+      "bytes": 466
+    },
+    "reajustes/refeito/aluno_a/semente_2/historico.csv": {
+      "sha256": "6c838c902773b3d2e6af07bf7be41aaa8eda2b0cbfc6f24cb051e788d7016b6d",
+      "bytes": 2636
+    },
+    "reajustes/refeito/aluno_a/semente_2/meta.json": {
+      "sha256": "1485465f65ece97a04b3fd66bf1d105d5dc83e77c3ce26c40ff8a0a6fcd4c1b5",
+      "bytes": 3887
+    },
+    "reajustes/refeito/aluno_a/semente_2/previsoes_dev.parquet": {
+      "sha256": "7bb1b01d6ddd962882e1c017af8c17daa4f668f309530ae1055c69569a060b8b",
+      "bytes": 24238
+    },
+    "reajustes/refeito/aluno_a/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "4129349edcb50929413b2bdb923d7036d65798c19658adde37216a6cd2c81d92",
+      "bytes": 23918
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "8badf5fec56f67ac80e1d1d19e4b1fb89f70f7488faddd817fc8267b7498b2d0",
+      "bytes": 24336
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "2fd5c11ea94ccac62f266ec8fbb6ffdbeaf55f94977ff4219c06654243473cc5",
+      "bytes": 24658
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "6d7f17e3ddbdd0446884718b0fe0fd5061cc388bc9124e317259235220a7e7ab",
+      "bytes": 24429
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "dd2c5191f2b18f3369327df0b898dfcec4e9cb2e0e81f62573d82cbe10edf5f4",
+      "bytes": 24629
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "87ea233b2b24c2b14fa61c3313b4d7dc5caf4538eb176e49eb646d8c1dbd0b07",
+      "bytes": 24445
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "ed3f09b393e38ecfc631dab9ea8c23db98080e8924d674a006296ef02b2f6596",
+      "bytes": 24199
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "46dad3cd7625fdc70d65ca16b05453964e2b97f588be7ae8dc95948c665eb256",
+      "bytes": 24447
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "adb850650b8506f762d0eec3245579e69853e17fea3756acefc8d02c48de7258",
+      "bytes": 24305
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "722f9fccf113ab37d650ed84fc369303cdac776c490e65e0dce69a7c76e87d87",
+      "bytes": 24424
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "67b85f90c6393a697e310c0d64f2d4c07bb6bf92413ca85041bbb64fcd9afd56",
+      "bytes": 24174
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "5fdebfe8a9ff15361aeebbd598986d461165dd0a9423b6049053361e5f510d94",
+      "bytes": 24197
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "022217273badccf7449ecb9e8066966371f4861420a19a77e1508bf5f35b44e2",
+      "bytes": 502
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "035b45e65fb003a130ac79bcbadf7d2823c9b17a9050949babe0229f5475ed7c",
+      "bytes": 2644
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "3446289f925afb94dd5a9b5382bf92e353394129d7555c53217d7252459f91cb",
+      "bytes": 4136
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "5fdebfe8a9ff15361aeebbd598986d461165dd0a9423b6049053361e5f510d94",
+      "bytes": 24197
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "8badf5fec56f67ac80e1d1d19e4b1fb89f70f7488faddd817fc8267b7498b2d0",
+      "bytes": 24336
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "a9e44e5312169628e217be7feaaa7cb8ff73d6b80d6a7218fafb48e4850fc8bd",
+      "bytes": 24473
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "500976af4e9519f1f05974489873217eea76e12febe800ac8452da1e0987a871",
+      "bytes": 24327
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "f7e35e6c3fbec90bed2015af62ed317b04c734a27bef3d181038cea220a9d8b3",
+      "bytes": 24577
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "8bce056483eccca35e6321b8eb2d2a8d6a97144f0363fbe9e765d32e1c5b58d9",
+      "bytes": 24267
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "b73bec28a6202eb4ac529a2297513878c73a04f3cc6ee01a9c9e9d275d354766",
+      "bytes": 24326
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "af74772ebfa867b2c99759b94391f6c047cfe2324089fd80406b61ed5e84b411",
+      "bytes": 24462
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "7ee7e1a3e701df6d71733b340ffba24d077cef5ad2351456aab5af78313b2f66",
+      "bytes": 24241
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "a17942dcca43785f6587691b6e6bb34d53f61e6359452a53aef2a489eb1dad06",
+      "bytes": 24656
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "bc1d731c86d2226e3704564e34c84d7ca3d96c5fb229dd9fdcc70053b1443c56",
+      "bytes": 24193
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "954dfa0ac52371a36f09a9f8415c8e9c12c07fdf3c5e17215f4422bc3bfb079f",
+      "bytes": 24216
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "d01e0c39a43dabf16a37c10de9c246bae2b8fcdf400838918d2e80fa452acc94",
+      "bytes": 24476
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "574cbd74496bbdf289ddb955a7c3244ce03acc0da6ac7b03ec5b12e523a87de4",
+      "bytes": 502
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "d3668b5358fe7e8f1f77a4d9aa8dbc06c690da1e55d64988381ca82f6851d7af",
+      "bytes": 2632
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "812a31afea907652bf61485858d0ffcebb896d9469d99e39201493982eedb2b5",
+      "bytes": 4135
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "d01e0c39a43dabf16a37c10de9c246bae2b8fcdf400838918d2e80fa452acc94",
+      "bytes": 24476
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "a9e44e5312169628e217be7feaaa7cb8ff73d6b80d6a7218fafb48e4850fc8bd",
+      "bytes": 24473
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "b942c7b779f0d0cd0fdd02d738c7e681f1584ee03c4f4d4d88cc6877bfb67d8b",
+      "bytes": 24303
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "e7e0898ca502f89033329a2daca3d34e54ec69170b87d5a1c1ff59d40364d88a",
+      "bytes": 24710
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "d3b27af6b575af62251c770b98af46bf6e8c16b62f0ef90e7ed43e6f5b6ece36",
+      "bytes": 24534
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "07ce1acf1af42973ec40a8853c1bc9e6c4657117463d9f2154dbca17d20e28fd",
+      "bytes": 24187
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "cb3a9f44b4067e0f3476910e8e50b8276813d95aa67148899649f2448de1d94c",
+      "bytes": 24345
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "ea631421985e24bdcb8456410f7ac012a888c4e1199c5b3309deb71022120c93",
+      "bytes": 24352
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "b981a66063db8612dcbe09726faad301df9e2ec2b7341d1b27dee2262aa5e1d5",
+      "bytes": 24386
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "e2b68698c97fb5268922906865a89b920caf6b288188ddf0328d3b1d0833a893",
+      "bytes": 24407
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "ab0eefbd41e35945aaca1e7feb9957078c1a16cc499c23d0aa4b5300067bcdeb",
+      "bytes": 24473
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "98de58b41bb34684745609dcb29528f9180b990e6aa35f04cb6d938e099d0351",
+      "bytes": 24295
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "8c0489dc05f924a6b90b9c69c8e8975df6cbe54ac9e46e9368c0892741f1b2e4",
+      "bytes": 24392
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "791ee782adbffeb18fbf5f172d52a47a1e7873b79c7a7a8fababac8157d3dc4c",
+      "bytes": 502
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "5997f366493f62920c767e49f13808c1b3711324b229aab06a7c02fee26d2003",
+      "bytes": 2642
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "8df62646c6eddf7964fa54989372a2ae23b436d41d905f9ccf19adf8a32bd1ec",
+      "bytes": 4137
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "8c0489dc05f924a6b90b9c69c8e8975df6cbe54ac9e46e9368c0892741f1b2e4",
+      "bytes": 24392
+    },
+    "reajustes/refeito/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "b942c7b779f0d0cd0fdd02d738c7e681f1584ee03c4f4d4d88cc6877bfb67d8b",
+      "bytes": 24303
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "5fb9b468b6ac3171f3b1152c1044de22ae98864a13de9ace452c985f028de1e4",
+      "bytes": 24209
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "5d59caf8b636e4b2033f0bc3be2503cfecdd2f9ee7b6b0416a09c6457d6f3e0e",
+      "bytes": 24231
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "3433cc3aa7ed0f1c264b5a41f584372c75d63ef3a4e0f11083c546c7fd475742",
+      "bytes": 24260
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "3ce93d1a1d40078268bb4c93a40dc4cbf75c9243c59982af9cf537f43df846d3",
+      "bytes": 24322
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "da17f36cee5b03a795d65a8bdb61eb36401f208d44300dd6df378e057f86a8d8",
+      "bytes": 24543
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "a5388cd303826a7704dc6a1396aa142532071b935e122e98933685895ba1624b",
+      "bytes": 24313
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "2873e169f171ab0500465fb193cd073ebebb2ca08ce7b31a1ad8ccafa9517a7f",
+      "bytes": 24262
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "0c5e1896b8d1ce4045a4d2a940c5f8bfdaf6cf2081fb62873befb46536eef00b",
+      "bytes": 24329
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "0e1414c04c07778663de15ef41f469cb7f2e7ec9ca2825d0043d0883aeabc42f",
+      "bytes": 24375
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "909ab1676d0496fe4081d3dea627433c8ed3f652325aed04ada8d347f0eb49a6",
+      "bytes": 24465
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "c8219191cea1769b84b29581ee6ebdb2fc6a344c1637eea369054092c1c4180d",
+      "bytes": 24430
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "dc5e3a6c4b1defb54ea1b84db380287c9ee5066f5c2b47669db864072c81e822",
+      "bytes": 505
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "ad1f342de16a7fda1aa95845867d8e2bf65904cde90a8021f5c3d13fbaefbf7f",
+      "bytes": 2610
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "96cd7a5edd5609724a4ef0a6162302e78fe4e47f0ebc0676d5cafe7814c35bbc",
+      "bytes": 4253
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "909ab1676d0496fe4081d3dea627433c8ed3f652325aed04ada8d347f0eb49a6",
+      "bytes": 24465
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "5fb9b468b6ac3171f3b1152c1044de22ae98864a13de9ace452c985f028de1e4",
+      "bytes": 24209
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "dc46691e0a0ec02185e26c936c977e33f905ef916205709daa48a09639ef118c",
+      "bytes": 24603
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "a0e1128e01242ee0816607d5ac1d5dcce05777549b02e9915662c3b64acac395",
+      "bytes": 24530
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "324f7ae3d506e801924d8c829c5168c47d5d0a58041fe12275b8f22fcaeb29d0",
+      "bytes": 24477
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "d6535b79e80eddeb69185bec1ec94af2d656e6b7b9f7674e52f5b5b3fd425cce",
+      "bytes": 24409
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "f0a39bc7fc51e8f17cbdf25e3d36d9a9db01b59a2175c5716d84017f6da4f5ba",
+      "bytes": 24603
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "ff83129b15e0708570f7b936d9c8784a35c9d6756b685aa54967b3f3fcb8fcca",
+      "bytes": 24469
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "fc4256b0ca06da6bd7941795fb790e4215e8e158f3735ad3da6eaa1f933b36a8",
+      "bytes": 24619
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "1cd90d00d088abf5baac9da8d7bc8bec54ffb688f0eb83d8be0cd56668c45092",
+      "bytes": 24269
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "663ae841a6a0f88972776ce79f88114430c7f550fa74a34a173513af5638e7c2",
+      "bytes": 24329
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "c0a0a23472eb4a28f6b783fd3400a2f339fe54ec77f97abf4e78a4f1303f9673",
+      "bytes": 24330
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "2e969f67412485a9fc05ccbadf7ad3b866d1db69563537205f14106b80a80374",
+      "bytes": 505
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "ddc7e7d474fcdfdb97320c0aeae6eb252db02ab2989b07fb737b5dc49526b68c",
+      "bytes": 2611
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "fc929ef7d9ecd4f47ebb33504fa777886fb4bf3f1c38e690a9093b16224724ec",
+      "bytes": 4249
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "63071561382b6a1c601d4fa75a8474f85ed1894eafc8af76e88cd2dfab81c22d",
+      "bytes": 24232
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "cd912bce6cad09d777a22edfeaf7476e606f3766317de281083eac9c73fe8548",
+      "bytes": 24797
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "8aca89557d05497040bed3e5d301b88598e24bb4504186ffe6283bf877748af0",
+      "bytes": 24301
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "306d2ca44f1bf1390187ecb55536f8e17b5db2b5dc4cdb1301bcf1ed265274d8",
+      "bytes": 24417
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "5e1b932110dd7bdf6cb4828643faae9a9350646392c16ed5eb3fe6569a776a94",
+      "bytes": 24339
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "b7293135339f5d066b10551b180f4a781c4dc2a98567f107b2ae2977184e416b",
+      "bytes": 24275
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "cf7a24753b25aa6fa6b6d7a61aa28e5c840bbee9afe09850994d2d44c00d685c",
+      "bytes": 24637
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "ce6d9b18bc57fa6bfab01b76b099fee06f07e70d5bf26115aaa47805dc2e99c9",
+      "bytes": 24596
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "d2d3eff57a53c3e0318b7edf736f382d28e42d02bd17d1bb2a5e6606325f7cad",
+      "bytes": 24476
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "c1d9bbc39f6aabe823dfee1a91b612c98804f78b6b6173b491dc368540229861",
+      "bytes": 24469
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "def8515a99ab1a22204878742712b98daa2f3262704c00217714593df6ec9560",
+      "bytes": 24155
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "7ebf0eac96c57960c5263ea5d71447299fcb539263db70393fcfeae3f5ac1e70",
+      "bytes": 505
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "dccac56c5e7336cec651bfd799a830cd4e5d6afe56c0de804612fc4d5d0a10d2",
+      "bytes": 2616
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "c30857c6758c4304d6babd8706a5a90d12bff67275e97ea353d2ef922699d98a",
+      "bytes": 4252
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "b7293135339f5d066b10551b180f4a781c4dc2a98567f107b2ae2977184e416b",
+      "bytes": 24275
+    },
+    "reajustes/refeito/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "63071561382b6a1c601d4fa75a8474f85ed1894eafc8af76e88cd2dfab81c22d",
+      "bytes": 24232
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "4a0a9f393a93d043e194f5576d0fa1396555f6701178beb76571f3207a14b884",
+      "bytes": 24366
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "013f8027655cf9f01ef1d049bdc06a3678b750c4ef88bef250b994d345a3206b",
+      "bytes": 24451
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "d3e969f0ff7511d2f062b13f8bf057090828f2878f6ed19703905293febb425a",
+      "bytes": 24216
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "c72772a1570e488a1a033b666ad5064c365c186094b76e65872ff3b7965dd882",
+      "bytes": 24326
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "dfcae91458f0e38755a07a8c4e2e5241b1683efbb502033af6a927883bbd5ffa",
+      "bytes": 24416
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "5d8342e2867d96b4cc1d3026640e48f6d3c306a8de039bb0879b8099b8463fcf",
+      "bytes": 24126
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "3ba763455bd0baf6ea29c84711582b2023f6f0815927826fdd5d66eb13b7f445",
+      "bytes": 24586
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "593b7ed1132fa261571f3452c2a6f387f040834861a3999f866d02a21d4b649d",
+      "bytes": 24424
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "00912dfd407227861991a2b27076be07355d5ea07db5bd1bfbb68420729fdadc",
+      "bytes": 24169
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "d4ea667ab80542ed73924156757dc6c90b5d74deae6327719bf02f9c03d2e90d",
+      "bytes": 24400
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "24e318fe5de28b383243b3915e9a29dc51328d7434c3efb923d661ea225c54dc",
+      "bytes": 24312
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "ae399ef07eb8d9fef5b73b5e72a9a8d5482510e1e639a98ba8ed247251c9318d",
+      "bytes": 484
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "7e5b89fc531131ac59392d6a29ede3d218eb8992940436d87e506b6a7eb0c91a",
+      "bytes": 2645
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "d79d263bf0a3ede2f6c003cec3a4fc7b859a2c2aee3073af70e736c61dd08e92",
+      "bytes": 2957
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "24e318fe5de28b383243b3915e9a29dc51328d7434c3efb923d661ea225c54dc",
+      "bytes": 24312
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "4a0a9f393a93d043e194f5576d0fa1396555f6701178beb76571f3207a14b884",
+      "bytes": 24366
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "45c23bde802b3598b6f295e05b693c13733d4ba92bbad50c17a408538bdc5ffd",
+      "bytes": 24378
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "f339c4a1537376f1c1c2ebfe14095e325ea00eec8c82a243743c6805811ded75",
+      "bytes": 24564
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "71768dd7feb73e37f2c6e04affecb6ec67f02af5ffe19821e4fcfface8609750",
+      "bytes": 24489
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "4a3b563a6f67de7b1dea0ff6e8cab4eb492b9ceadc93add1c4638bb3d20b7492",
+      "bytes": 24449
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "09053a862c56237d2df094ed79ffb8f39099ed8919a0452a3c6993fedad864ac",
+      "bytes": 24082
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "4856a6fc315367391b1a66f4012068ec2e545b6255efa8a6dc6a1b34bfdcd03b",
+      "bytes": 24414
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "c0db12ef3944d295f20585199ae1fd79dddd3c8682f49997eeb8fd3f02a848d5",
+      "bytes": 24476
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "32d7b235ef25ad94400dfa5b94d0c79867d19a7d4b7b707bc6eadb6fbbe687fe",
+      "bytes": 24529
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "0c92066d0930dacd50879649320653e6bf57fb0279ea973cbf0cdc593736dfc2",
+      "bytes": 24472
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "d5c3d3c80843e576b2582d6d2688f4a6decb055b6c0312679666e8603fac99d1",
+      "bytes": 24418
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "2b0c0b3f5ab359fc558859db4ce82637372286635ed34b848e58d752aecf3e52",
+      "bytes": 24260
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "623ef6ba88ba44d49328a0c934a435d922c4e9d5e7d8f76ee96ffac16bd62f36",
+      "bytes": 484
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "3dd981e9b9ee9b8bf0e623b3a16eaaf96decc0f9616763cfe246157ed4812b6a",
+      "bytes": 2642
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "5d85b885525aed9ed134036e223cc9e7e3f6bd1420baefa1fd8ccc3a65ffd55a",
+      "bytes": 2957
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "2b0c0b3f5ab359fc558859db4ce82637372286635ed34b848e58d752aecf3e52",
+      "bytes": 24260
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "45c23bde802b3598b6f295e05b693c13733d4ba92bbad50c17a408538bdc5ffd",
+      "bytes": 24378
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "da0dbd0b3722767e2ec0d94e04384110f135f2122cd6a285c566526eb69f51f8",
+      "bytes": 24284
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "ea2649fa62fec7ab6f4ba19d30348d57f8d1843fce0ee19c26c71f7ffdb99687",
+      "bytes": 24609
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "4ff39adb5feb332104590499fbd888f8e542f108d62bf7530c8b101607be6395",
+      "bytes": 24493
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "f92bab522a5eb4d70924278bf9b59d92ec841528d8a437074f28678efd2f52f4",
+      "bytes": 24336
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "ca96b9aadb7d6d32c252623fec0fa77609e94430a8fee081c2cc06795d5d94a3",
+      "bytes": 24385
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "ed0d8b11bfe9be91a77d036f612cbc5d11185b16d2b58831fe17e7372a457be4",
+      "bytes": 24471
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "5ccba50fccb8696e5c33b6745e2b941a89d30eb4e32167bda45dd212f530064e",
+      "bytes": 24449
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "72115153d9833d51d462279832a690486b1ad4054972f34ca534a682612926d1",
+      "bytes": 24272
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "7b949374db9d53e841bec50d03f3aba392781f8cae004a908118c43d9f805697",
+      "bytes": 24384
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "365197cd444b9849d88639f418e3e0e48fdabda34ea2d800e5d5006cc1766e0d",
+      "bytes": 24342
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "674193df2b24ec55b8dab0f459b75ddb2f263cfda24ed706d7ed48889d9f3962",
+      "bytes": 24354
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "275ee6a828b9ea064cef9e13656c4b8ab9da27df5e81ecfb2c76ee8da0974997",
+      "bytes": 484
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "706f389e935c366e1cd9dc1cc6113b8f3dea94235789bca871e17f649f51110e",
+      "bytes": 2627
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "95392f9a0e8b1e6237f5c149f29e88d4194dd3b041501f90658ae36f7c7dc452",
+      "bytes": 2958
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "674193df2b24ec55b8dab0f459b75ddb2f263cfda24ed706d7ed48889d9f3962",
+      "bytes": 24354
+    },
+    "reajustes/sem_corte/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "da0dbd0b3722767e2ec0d94e04384110f135f2122cd6a285c566526eb69f51f8",
+      "bytes": 24284
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "c381be6ca79b2fcccabf7ed54e9b90b33305a7fbb1510c295e52f6eca7c66f2c",
+      "bytes": 24167
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "5f58212277197757ae95f0b76d4166dfd9e54c2278a4bdd60f24a6f95a7463b7",
+      "bytes": 24085
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "a6170c758154df256e083a4f915621dbf700cce885e4bf544ce525fd3f55de12",
+      "bytes": 24278
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "a1e12056cf01d8969820dd8b1c9d32c4501a78e04faf6709851e1f3319b53319",
+      "bytes": 24241
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "3a66fbaf001757a71b45792ebe1662d5614772d606157663d3d832a718a4d412",
+      "bytes": 24347
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "85e5ed45679283cb16cc7fc789a7ef7730a9a4a166aefadf3ba77a64f57700d6",
+      "bytes": 24291
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "10b9afac8f63a506def122f78f2921cf00ce0e3b3ca242913ca6e53a7f0aa5ee",
+      "bytes": 24503
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "a6d81769573fb9658a040cd7cf986fb41d05119d5bc5d56cb5e78a1954f7bdd7",
+      "bytes": 24322
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "1a272cae13f5cdb0210908832b74780889e96ed408e8809315258c7006ee5ffd",
+      "bytes": 24391
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "e28c40423e9aaa0211b70cd1627d889daacbd8f406eac1f2232546c2cd2862f9",
+      "bytes": 24460
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "265d0a65146456d7b454b12afd27db0d805a27a0f974cf3f3dd708fcb2b601f0",
+      "bytes": 24357
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "8c13f3db92d9db6fd08d6ca1046126625392dfe9504f7e16cd921b4c9efb5aa8",
+      "bytes": 487
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "e2e48d82ab9e9c6687eb596cc98fe8511b9cf7d11055ae4cd9d72fa3e569c04e",
+      "bytes": 2603
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "066ce59d7e5cb3af56f241ae55a66ec9eba0c6711c710837eb0666c019b49e04",
+      "bytes": 3074
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "e28c40423e9aaa0211b70cd1627d889daacbd8f406eac1f2232546c2cd2862f9",
+      "bytes": 24460
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "c381be6ca79b2fcccabf7ed54e9b90b33305a7fbb1510c295e52f6eca7c66f2c",
+      "bytes": 24167
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "bf446af5bb9c767ec863b33355476ad6c50d72bdcbf3ffba53d7a3d58302a683",
+      "bytes": 24326
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "afcb8ef294572760b157ac913b9ab36bdb7f818a40676f77c5aeaecb91c0183d",
+      "bytes": 24587
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "e175f9e5c6a7e10725cbd472525b4100ba3d985d1111e218fb17441f6a90f9c9",
+      "bytes": 24503
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "4e0c5dc8c856934817d65f2685b0667eba5033097c4b6906f59d0da7ae1d474f",
+      "bytes": 24447
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "dac27f29ddfa5d7dd85219c4f083b481a1aa8f8bcf6c6c2fed6038d80a55a28e",
+      "bytes": 24306
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "e506dafc4e05012661d167206e1411333f674d12a5df2014e5aafcf6bac94359",
+      "bytes": 24448
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "3a651333a4dfa8e453cd3e8b8a26fd02f53ecafb4f4c212cb5208e59ffea63e1",
+      "bytes": 24512
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "f9c3520f73a2892a7385c41fabb2fc2a07f62fa575dc3ec071868e36571ba5c5",
+      "bytes": 24432
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "74e1cf20023ab35c0b1a2c0b4b28bd7098821769601a42542866f1739e984676",
+      "bytes": 24329
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "ad041ebca91224e83bbc32ce99705dc50467a6d6ae4c28d87aeb99a48431424f",
+      "bytes": 24401
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "b0a48b9af4b2a273749fd706d932f9b34b85161e192a76a1ba965003f29f054b",
+      "bytes": 24228
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "ebe5a87ea1d23fc67d93c3a0966c23979bed8aaa54d16129684eb7e5187769a9",
+      "bytes": 487
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "033052f80e519a2d579d1e5b0fefa4c178dafcbb1e3e380b85c81af55190abb4",
+      "bytes": 2611
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "a92290f25170fa47785e39858873c475cf52cd63ae129d777ec2cea574ca0775",
+      "bytes": 3073
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "bf446af5bb9c767ec863b33355476ad6c50d72bdcbf3ffba53d7a3d58302a683",
+      "bytes": 24326
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "bf446af5bb9c767ec863b33355476ad6c50d72bdcbf3ffba53d7a3d58302a683",
+      "bytes": 24326
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "21108fb3299afcb0562e7e5d43702b8698b89f9cfcb82610affaeaf84c64460d",
+      "bytes": 24233
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "ac1533aaca87424c9c65c1a53939c7045e78b37822eb8136b8927b5babc36d12",
+      "bytes": 24592
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "b4de43a3744753eaad42620c68c58340cea157d143da09ff6fd06a368b05159b",
+      "bytes": 24482
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "fd230b1310f5cfe146e2130d454e5ce6a43890b306522c39a6055fd36284d28a",
+      "bytes": 24374
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "442c8b808c78d3e19cc84e9213808c6b636a55348bca263d3271d6e531f57856",
+      "bytes": 24358
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "5325bf56f1a1c0f55c92b16fc41c5afa8b21c48ee854cf5954c465558ffbc0ff",
+      "bytes": 24109
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "43e49f077dde2f9776bc2688576dd4094a649e0889c613fc3a00d3a4d8098d75",
+      "bytes": 24615
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "b5ab6f7283bfd304b9ada739bda45d7fbf3e91da6cf8fb1d2b80e7ff26988fa5",
+      "bytes": 24621
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "57d87cc600eaa67c7d407809d592b76f3eafeb5b8d9b820d97eae5ace737d96a",
+      "bytes": 24468
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "7d71d2f11bd5e86d6dd627103922d37d7a1674a97b80d4c20c4b1e36961d4b03",
+      "bytes": 24266
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "938ac35de3e4fe0a6ce87156b660211c8b1e4dd9e7bda6794c22d2aa460c9349",
+      "bytes": 24173
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "d1b5589053a227f16319dd88f6409730479b533ddb8dad6e4cb97e50e9f8d0dc",
+      "bytes": 487
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "42ee21f4e0d76ec899be1b6fdaa2a81dd432120a8c77e6bafc0c2acdcdb71bfc",
+      "bytes": 2614
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "545285337d654cdf7165d8e44d3468730ce3513ee8d59efa201f43b8f13edb95",
+      "bytes": 3075
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "5325bf56f1a1c0f55c92b16fc41c5afa8b21c48ee854cf5954c465558ffbc0ff",
+      "bytes": 24109
+    },
+    "reajustes/sem_corte/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "21108fb3299afcb0562e7e5d43702b8698b89f9cfcb82610affaeaf84c64460d",
+      "bytes": 24233
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "8badf5fec56f67ac80e1d1d19e4b1fb89f70f7488faddd817fc8267b7498b2d0",
+      "bytes": 24336
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "46179e4a247ab61a6fbfc3cd411ae129741fe7048d01650acc2aa55ce9f344af",
+      "bytes": 24308
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "ce4db0a60a766b018b9d548b5a4a0ea9d6041b3d68133d256104e57d91656609",
+      "bytes": 24364
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "24a5d4d09927c119132fffe05e4c8f8b19e4043142fcf3969ae9105190a2417d",
+      "bytes": 24332
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "22a786dbbb7f53f7ef9f83bbb78a3ffa63156662cedaf3194c95c8db0f2117da",
+      "bytes": 24485
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "d61b5ae42173d0224adf169dd3ac01532fa8eeb6afce66d21b903b78a7a713f9",
+      "bytes": 24358
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "55844fbc04fd64b541be38b8e639fbb3a946e92913a6e36cce29df3e1b144a2d",
+      "bytes": 24370
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "e2be714b81dc33fefa25b2ddb2414e0b7363c867298a851d45bf949b5786bfb9",
+      "bytes": 24360
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "29bd4fcbc4b8edf582f7af5ecc59880cd3fc75419d50fcfd2eafabe8482829f5",
+      "bytes": 24423
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "5513440809fe66f9602174803a638e5686a09b4b4725b58ada0a2596453ed150",
+      "bytes": 24382
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "b28714c04d0f6132c801b8ab9c01e57b22aa10b4af2263b57d32857d1dd47b89",
+      "bytes": 24429
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "cb1a54d98a958d098f5a6c4011acafa12dab5574fd8257b7e91cedc770d50ee1",
+      "bytes": 488
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "07a5a1d921f4db923daf3d4fac9edcc14d25d5e94b1a68abc926c0edc433f213",
+      "bytes": 2649
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "c34da32f0738bf36496e4822d94c7d781e9380b5b5ef8384e5b305781cf74cb7",
+      "bytes": 4139
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "55844fbc04fd64b541be38b8e639fbb3a946e92913a6e36cce29df3e1b144a2d",
+      "bytes": 24370
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "8badf5fec56f67ac80e1d1d19e4b1fb89f70f7488faddd817fc8267b7498b2d0",
+      "bytes": 24336
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "a9e44e5312169628e217be7feaaa7cb8ff73d6b80d6a7218fafb48e4850fc8bd",
+      "bytes": 24473
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "3f35ec15eb4facafdc53063bc387f813880b687772db38ef3ba6f13fc72bd7a3",
+      "bytes": 24160
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "9e6b7ca98d8734de491de58a1b194da53f5eafcc609592f7272d25d6b5f538e7",
+      "bytes": 24295
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "78aaa533494f4248e022b943d91b6ac9faa3a70f51d9e461ecca4fe1b3a25ddc",
+      "bytes": 24563
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "0bb77dd4763781f09dec7ef2717b5233e36e314b1179e2569dfe56a5d1014468",
+      "bytes": 24488
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "cb2cd7a7b5aa22562f5ed44fd0aeb7d52c265952e25c92f1324633da145be121",
+      "bytes": 24547
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "b160b191d015c83614d7aa96219accb66802516100fd090040a9e9ac38b8c81d",
+      "bytes": 24542
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "c4988014093862bf6ae7519091253da6412b58a26d9ea10c8a4ce4c7f93845e4",
+      "bytes": 24429
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "ff8371a945e7f04fad62528c6ae91bc1a690e07d34f803f6a7ad7db51567ef7c",
+      "bytes": 24512
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "a39fbbe5a5bfd38ec87058563997d4b8e88ad81a3e677dd52eef5ce2467e0e63",
+      "bytes": 24446
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "8fef2b1ef0e463245305e39b90c72da64508c646c304fa85df0d4a211f6f6c72",
+      "bytes": 24438
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "4cbf512b29cd30b7eae15100abb9f969f38766747a58d7ad035b7996d1a4c1fc",
+      "bytes": 488
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "747c3c617d560620a67948f1ea7398397e075eb22748afb99ab2d07e8c083f25",
+      "bytes": 2640
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "af95f4124891a791b0af0b4f451b65d729e3b95eeafcbb26ebe4917276c3cafd",
+      "bytes": 4136
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "0bb77dd4763781f09dec7ef2717b5233e36e314b1179e2569dfe56a5d1014468",
+      "bytes": 24488
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "a9e44e5312169628e217be7feaaa7cb8ff73d6b80d6a7218fafb48e4850fc8bd",
+      "bytes": 24473
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "b942c7b779f0d0cd0fdd02d738c7e681f1584ee03c4f4d4d88cc6877bfb67d8b",
+      "bytes": 24303
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "f8e271ceec64137a44c2099e182105290d781ff99f58488b4962796a06ffda4e",
+      "bytes": 24354
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "0e32c29650c8a00b2cfa2c52ed455770a8425bdf8fded0e36ebf9a556e9571f7",
+      "bytes": 24434
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "b4d3c753789063b953dea756028f3bd6479acf2cd4e2ba0fcd38f2417cc9c255",
+      "bytes": 24246
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "90291601a325c3cf0a6171e4bf1f97bcada7116c69cb3c1cbc7cbb0a5cc127ca",
+      "bytes": 24335
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "4b512c43b54d62600339a7642f655668e1e64ab9f2441738e8f57d5bea27a92f",
+      "bytes": 24401
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "5746d94df845fb815389ccfb9c779b950a5dbc9a5802ebf6037c0338c86393ed",
+      "bytes": 24343
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "03fcb56cd636a994987020abae46877949c8785abb3f9be17b38ca1d542f47e9",
+      "bytes": 24277
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "d56fe19e1df7b6589be103140af33aeec50b4f6bbe7fd5288a65132b81da53b5",
+      "bytes": 24381
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "7d9cf93e16e93ee71cca73f991a36d9d67071e70152b68f51a474fc6d4f1be98",
+      "bytes": 24338
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "04782ce1bd17f42e81108beee7ad56c21c8a4ec2037577e34cef7c12a26f25cf",
+      "bytes": 24350
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "6edae3de00e95fc0222ecdcd9213ba36d474539f7c9a49cf4ad0b0258227c24d",
+      "bytes": 488
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "930e69a3f3de184086af8b53f00aaa08b4bd5a19853cfdaed665135259ae2510",
+      "bytes": 2641
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "4172ff2e86805be32caf2526269fb564f0a664ca437f6c8d8ed6369b41e2d2fd",
+      "bytes": 4138
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "03fcb56cd636a994987020abae46877949c8785abb3f9be17b38ca1d542f47e9",
+      "bytes": 24277
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "b942c7b779f0d0cd0fdd02d738c7e681f1584ee03c4f4d4d88cc6877bfb67d8b",
+      "bytes": 24303
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_00.parquet": {
+      "sha256": "5fb9b468b6ac3171f3b1152c1044de22ae98864a13de9ace452c985f028de1e4",
+      "bytes": 24209
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_01.parquet": {
+      "sha256": "4586136c9b970bc7f93b8ae9d1497ea8e0b111f6923a672df8f8d5ae785fcfbd",
+      "bytes": 24283
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_02.parquet": {
+      "sha256": "9cf66c4ed03f6f99210a07254b10a1e7e7c950733492cdfbdb7cd37a1c0362c9",
+      "bytes": 24299
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_03.parquet": {
+      "sha256": "69d81483ed6cbcf414e28726f949df2e8c480bc237be95d004cc7dc8feca0412",
+      "bytes": 24125
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_04.parquet": {
+      "sha256": "e4a6b3bd8b27f67d935f4f441bdb88f13ff261b7bc50d5ce819bdac299923eb2",
+      "bytes": 24258
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_05.parquet": {
+      "sha256": "aa15e246fdfca84199a840a49a16a1f7d4d23b9154c2ace1d391430b5962e6f0",
+      "bytes": 24342
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_06.parquet": {
+      "sha256": "d10ae328d20723f73e057de94204e7fea6cc261fb8bf31ae86aee29e0ce2703a",
+      "bytes": 24157
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_07.parquet": {
+      "sha256": "2c7de5eed49db8290d5049dd9ee747b6de317ce374726366a5b42cb0fb793e97",
+      "bytes": 24306
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_08.parquet": {
+      "sha256": "07d2bdd93a9748e7f74bdd14086a6f134d66d4f6e64d4d70453e304642d3a846",
+      "bytes": 24212
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_09.parquet": {
+      "sha256": "d833089f2bc5d5c547cc48f71615721857d2f0e165ce31644364cca6d42dbdbb",
+      "bytes": 24197
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/dev_epoca_10.parquet": {
+      "sha256": "f69fe7dd8d63efb23dbfd3ebd7d5fb432f861ba2e8251957e0118fe75ca089fe",
+      "bytes": 24326
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/epocas/pronto.json": {
+      "sha256": "8e5cd763f4b6ca670b7d43f50a964a21726b8d6987699dd327d011d809f7d50c",
+      "bytes": 491
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/historico.csv": {
+      "sha256": "33e8da9d6c438c780172ae62df6489eeb1a51d7e72be34b983e8f9134a8a725e",
+      "bytes": 2608
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/meta.json": {
+      "sha256": "0dd0cf122ca1977e99c7887d5474b099c52c307c42b0e7fdc842200ab4c6829f",
+      "bytes": 4256
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev.parquet": {
+      "sha256": "aa15e246fdfca84199a840a49a16a1f7d4d23b9154c2ace1d391430b5962e6f0",
+      "bytes": 24342
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/previsoes_dev_antes.parquet": {
+      "sha256": "5fb9b468b6ac3171f3b1152c1044de22ae98864a13de9ace452c985f028de1e4",
+      "bytes": 24209
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_00.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_01.parquet": {
+      "sha256": "5d7da2da367138c38e0dc25a3bc3559ce1897877a6124a60de914b34d0a467d7",
+      "bytes": 24399
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_02.parquet": {
+      "sha256": "9eab848b4799d17c12ac883c639ee02870bf005239d420c307f3686070f0702c",
+      "bytes": 24385
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_03.parquet": {
+      "sha256": "2f1708e56970ea54787149cae25f288b630f609124fa3646b3c3dca12d97ec66",
+      "bytes": 24397
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_04.parquet": {
+      "sha256": "3ef59b58063fe9231f7bba6a18c511240e21299a68b35eeca9d13d25434b63c9",
+      "bytes": 24096
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_05.parquet": {
+      "sha256": "983e3f8174200f6d7067943908633db4a8bdc7570d986797449e8a9a49fbef71",
+      "bytes": 24344
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_06.parquet": {
+      "sha256": "a3982b8dd1fe883011e6d9e2fb7192e7170e05614c86a970d78b242afe08add6",
+      "bytes": 24303
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_07.parquet": {
+      "sha256": "e76eb2afa4fffb30459127c0d0f28e2cc3a10110d12f75356a6004b1f2b655a9",
+      "bytes": 24475
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_08.parquet": {
+      "sha256": "5a37209815b6c26e5ff0b784e4af75d9de0e220054ecdeecdb9913f53918e3dd",
+      "bytes": 24476
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_09.parquet": {
+      "sha256": "616adb1ef7ab9579f3e5ce1921a78246e419c45d42169dc9074d9467600a304b",
+      "bytes": 24204
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/dev_epoca_10.parquet": {
+      "sha256": "83ba5d655024b6a3fe9111c9115b44d99463b0a92968d018c83857e5d90c603f",
+      "bytes": 24228
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/epocas/pronto.json": {
+      "sha256": "2147b86d5426856c7a9e134781b92f4d511474446c56011d7fea4631445a24e7",
+      "bytes": 491
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/historico.csv": {
+      "sha256": "6222a7c01b6fc17a314bf1e68ae0bdcfafd547490936d4cdf08bf465ebc653e1",
+      "bytes": 2610
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/meta.json": {
+      "sha256": "d6466ac7c44f8dd398d67feb6f748f91b54b9c245d659bb72b06b1521b7386b8",
+      "bytes": 4251
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev.parquet": {
+      "sha256": "5d7da2da367138c38e0dc25a3bc3559ce1897877a6124a60de914b34d0a467d7",
+      "bytes": 24399
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/previsoes_dev_antes.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_00.parquet": {
+      "sha256": "63071561382b6a1c601d4fa75a8474f85ed1894eafc8af76e88cd2dfab81c22d",
+      "bytes": 24232
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_01.parquet": {
+      "sha256": "a8f5d748529146b64cb94f5d28b679b0a2aa12af9454c7187700776fc910e6e5",
+      "bytes": 24219
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_02.parquet": {
+      "sha256": "e8c3c9aaef3c7d065844326dd696fa88229beb6456ca82328a778c7516b12f19",
+      "bytes": 24435
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_03.parquet": {
+      "sha256": "cc8e92a84e67c3a8df4a2a9776e19dbc377d62c10cbdce7a1ad05a5da11096e0",
+      "bytes": 24378
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_04.parquet": {
+      "sha256": "b2f8c0631bc0f5b4ff9847bcc556489c448c9d31e4a8e53d7f2963a563ddf4fa",
+      "bytes": 24393
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_05.parquet": {
+      "sha256": "059ac3eb56859f435ccf35f3a06a22423698b26ef65e0c32475da60069dfe99d",
+      "bytes": 24417
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_06.parquet": {
+      "sha256": "a215c104bc53f8829e242b9163d230d7e480b32ef73b843fbd02b38141012028",
+      "bytes": 24188
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_07.parquet": {
+      "sha256": "2ffc251412e5cc1ba1e913b7ca6215b0a5bc89d3e7b6df1582bb50c5924997aa",
+      "bytes": 24495
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_08.parquet": {
+      "sha256": "c0387546ae05544bf931ceaad4c4baf8649402a89d7067bb552ba027baa02fc3",
+      "bytes": 24507
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_09.parquet": {
+      "sha256": "fc3eac77cebf82428fd4ad17e065e7f42e54c4f22fa4067bac7c4e9ea638005d",
+      "bytes": 24490
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/dev_epoca_10.parquet": {
+      "sha256": "17f090854e64724ec988fbfd368027bcafd8e5af807de1f71c3a55bc7ccc3b18",
+      "bytes": 24478
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/epocas/pronto.json": {
+      "sha256": "d20fe5e97f98b1af42d25c31f54c0b325a41154943719aa66bbf07c64af0d64e",
+      "bytes": 491
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/historico.csv": {
+      "sha256": "3e94e9b1307a0a3a19aa9dc229e201788e0971752e6c8c539a0809246c95280a",
+      "bytes": 2610
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/meta.json": {
+      "sha256": "3deeb6e9e95791eb5fabd49601be67d07f1dd41495688b8da5e44cbbe198ae41",
+      "bytes": 4255
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev.parquet": {
+      "sha256": "a215c104bc53f8829e242b9163d230d7e480b32ef73b843fbd02b38141012028",
+      "bytes": 24188
+    },
+    "reajustes/taxa_menor/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/previsoes_dev_antes.parquet": {
+      "sha256": "63071561382b6a1c601d4fa75a8474f85ed1894eafc8af76e88cd2dfab81c22d",
+      "bytes": 24232
+    },
+    "teste.json": {
+      "sha256": "5010f127efe793ad3c14da5aa4f996f5d441cd3e1273226f95c1b62e3ab218ba",
+      "bytes": 3632
+    }
+  },
+  "cache": "data/execucoes/12_investigacao_dos_achados/ (os reajustes com os modelos, os ONNX de 32 bits refeitos, as quantizações de diagnóstico, as contas e os logs)"
+}

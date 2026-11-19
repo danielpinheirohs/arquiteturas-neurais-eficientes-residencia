@@ -1,0 +1,58 @@
+{
+  "etapa": "04_treino",
+  "gerado_em": "2026-11-16",
+  "entrada": [
+    "entregas/01_dados",
+    "entregas/02_avaliacao",
+    "entregas/03_arquitetura"
+  ],
+  "configuracao_final": {
+    "variante": "padrao",
+    "config": {
+      "d_modelo": 256,
+      "n_camadas": 2,
+      "d_rotulo": 20,
+      "p_mascara": 0.15,
+      "n_cabecas": 4,
+      "d_features": 128,
+      "distancia_max": 5,
+      "dropout": 0.2,
+      "dropout_features": 0.2,
+      "d_ffn": 1024,
+      "usar_crf": true,
+      "peso_intencao": 1.0,
+      "peso_entidades": 1.0,
+      "peso_mascara": 1.0
+    },
+    "receita": {
+      "epocas": 80,
+      "taxa": 0.001,
+      "lote_inicial": 64,
+      "lote_final": 128,
+      "minimo_por_intencao": 100,
+      "decaimento": 0.0,
+      "avaliar_a_cada": 5,
+      "criterio": "exact_match"
+    }
+  },
+  "sementes": [
+    0,
+    1,
+    2
+  ],
+  "melhor_epoca": {
+    "0": 80,
+    "1": 45,
+    "2": 65
+  },
+  "regra_de_decisao": "IC95 da diferença de exact match em dev (média de 3 sementes) todo acima de zero",
+  "variantes_aprovadas": [],
+  "ambiente": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13",
+    "torch": "2.15.0+cu132",
+    "gpu": "NVIDIA GeForce RTX 3080"
+  }
+}

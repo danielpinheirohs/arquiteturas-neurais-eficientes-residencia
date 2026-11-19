@@ -1,0 +1,33 @@
+{
+  "etapa": "02_avaliacao",
+  "gerado_em": "2026-11-16",
+  "entrada": "entregas/01_dados",
+  "metricas": [
+    "intent_acc",
+    "intent_macro_f1",
+    "slot_f1",
+    "exact_match"
+  ],
+  "bootstrap": {
+    "sorteios": 2000,
+    "unidade": "enunciado",
+    "confianca": 0.95,
+    "semente": 0
+  },
+  "latencia": {
+    "consultas": 1024,
+    "aquecimento": 50,
+    "lote": 1,
+    "fonte_das_consultas": "dev"
+  },
+  "linha_de_base": {
+    "escolhida": "Linha de base (palavras + caracteres)",
+    "regra": "IC95 da diferença de intent_acc em dev acima de zero"
+  },
+  "maquina": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13"
+  }
+}

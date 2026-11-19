@@ -1,0 +1,135 @@
+{
+  "etapa": "12_investigacao_dos_achados/reajustes/refeito",
+  "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+  "variante": "vocabulario_treino",
+  "nome": "Vocabulário do treino",
+  "familia": "vocabulario",
+  "nivel": null,
+  "semente": 1,
+  "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1",
+  "digital_de_partida": "079748f1611077b7-1109834544",
+  "config": {
+    "modelo_id": "FacebookAI/xlm-roberta-base",
+    "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+    "max_subtokens": 128,
+    "dropout": 0.1,
+    "peso_intencao": 1.0,
+    "peso_entidades": 1.0,
+    "temperatura": 8.0,
+    "peso_rotulo": 0.0
+  },
+  "receita": {
+    "epocas": 10,
+    "taxa": 5e-05,
+    "lote": 32,
+    "aquecimento": 0.1,
+    "decaimento": 0.01,
+    "norma_maxima": 1.0,
+    "passos_por_epoca": 0,
+    "criterio": "exact_match",
+    "precisao_mista": true,
+    "tabela_dividida": true
+  },
+  "orcamento": {
+    "epocas": 10,
+    "epocas_de_rampa": null,
+    "passos_entre_cortes": null
+  },
+  "vocabulario": {
+    "forma": "treino",
+    "linhas_antes": 250002,
+    "linhas": 5196,
+    "cobertura": {
+      "treino": {
+        "enunciados": 11514,
+        "subtokens_antes": 103816,
+        "subtokens_depois": 103816,
+        "subtokens_cortados": 0,
+        "fracao_cortada": 0.0,
+        "enunciados_com_corte": 0,
+        "subtokens_desconhecidos": 0,
+        "fracao_desconhecida": 0.0,
+        "enunciados_com_desconhecido": 0
+      },
+      "dev": {
+        "enunciados": 2033,
+        "subtokens_antes": 18018,
+        "subtokens_depois": 18416,
+        "subtokens_cortados": 326,
+        "fracao_cortada": 0.018093018093018092,
+        "enunciados_com_corte": 257,
+        "subtokens_desconhecidos": 2,
+        "fracao_desconhecida": 0.00010860121633362293,
+        "enunciados_com_desconhecido": 2
+      },
+      "test": {
+        "enunciados": 2974,
+        "subtokens_antes": 26493,
+        "subtokens_depois": 27024,
+        "subtokens_cortados": 485,
+        "fracao_cortada": 0.018306722530479748,
+        "enunciados_com_corte": 376,
+        "subtokens_desconhecidos": 1,
+        "fracao_desconhecida": 3.7004144464179985e-05,
+        "enunciados_com_desconhecido": 1
+      }
+    }
+  },
+  "camadas": 12,
+  "melhor_epoca": 0,
+  "dev": {
+    "intent_acc": 0.8573536645351697,
+    "intent_macro_f1": 0.824473578247974,
+    "slot_precision": 0.702172986791649,
+    "slot_recall": 0.7155883630047764,
+    "slot_f1": 0.7088172043010753,
+    "exact_match": 0.6094441711756026
+  },
+  "dev_antes": {
+    "intent_acc": 0.8573536645351697,
+    "intent_macro_f1": 0.824473578247974,
+    "slot_precision": 0.702172986791649,
+    "slot_recall": 0.7155883630047764,
+    "slot_f1": 0.7088172043010753,
+    "exact_match": 0.6094441711756026
+  },
+  "contagem_de_partida": {
+    "parametros": 277584555,
+    "nao_nulos": 277583755,
+    "podaveis": 84934656,
+    "nao_nulos_podaveis": 84934656,
+    "esparsidade": 0.0
+  },
+  "contagem": {
+    "parametros": 89573547,
+    "nao_nulos": 89572779,
+    "podaveis": 84934656,
+    "nao_nulos_podaveis": 84934656,
+    "esparsidade": 0.0
+  },
+  "parametros_por_parte": {
+    "A. Tabela de subtokens": 3990528,
+    "A. Posições e normalização da entrada": 397056,
+    "B. Corpo do Transformer": 85054464,
+    "C. Cabeça de intenção": 46140,
+    "D. Cabeça de entidades": 85359
+  },
+  "bytes_em_disco": 358975066,
+  "exemplos_de_treino": 11514,
+  "exemplos_de_dev": 2033,
+  "origem": {
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "sem_rotulo_aproveitavel": {
+      "treino": 0,
+      "dev": 0
+    },
+    "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+    "professor": "qwen3_14b__fp16__colab_a100"
+  },
+  "segundos": 147.21219331401517,
+  "segundos_por_epoca": 13.959465287494822,
+  "pico_de_vram_gb": 2.073253631591797,
+  "respostas_em": "NVIDIA GeForce RTX 3080",
+  "torch": "2.15.0+cu132"
+}

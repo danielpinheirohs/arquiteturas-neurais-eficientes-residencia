@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 1,
+  "nome": "todas_menos_saida_da_rede_densa_camada_11",
+  "descricao": "a estática inteira, com a saída da rede densa da camada 11 em 32 bits",
+  "metodo": "MinMax",
+  "operacoes": 75,
+  "bytes_da_rede": 285312712,
+  "slot_f1_dev": 39.620653319283456,
+  "segundos": 37.02946517500095
+}

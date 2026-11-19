@@ -1,0 +1,1203 @@
+{
+  "versao": 3,
+  "gravado_em": "2026-11-19T00:40:09",
+  "etapa": "11c_cenario_b_ate_o_fim",
+  "pergunta": "As receitas de poda e de quantização já escolhidas valem para os alunos do professor novo, e onde o cenário B fica na tabela final com ele?",
+  "metodo": {
+    "decisoes_nesta_etapa": "nenhuma: os alunos novos recebem as receitas que as Etapas 7, 8, 10b e 10c já escolheram; os modelos finais de cada caminho continuam os da 10d",
+    "particoes": "dev e teste, contra os rótulos humanos; a leitura principal é a do teste, e dev vai ao lado; quando as duas discordam, a discordância é dita",
+    "sementes": 3,
+    "media": "um sistema treinado é a média das suas 3 sementes",
+    "intervalo": {
+      "metodo": "bootstrap por enunciado",
+      "reamostragens": 2000,
+      "nivel": 0.95,
+      "pareado": "os mesmos sorteios para os dois sistemas",
+      "semente_do_sorteio": 0
+    },
+    "metricas_das_leituras": [
+      "intent_acc",
+      "slot_f1",
+      "exact_match"
+    ],
+    "leitura": "uma diferença só vale quando o intervalo de 95% não contém zero; senão, 'sem diferença distinguível'",
+    "comparacoes_multiplas": "sem correção; o número esperado de intervalos fora do zero só por acaso (5%) é dito ao lado da contagem",
+    "primarias": {
+      "o_que_sao": "em cada caminho, o aluno A em INT8 menos o representante do cenário B com o professor novo em INT8, nas três métricas, no teste: é o que resta de distância entre os cenários depois da troca de professor. As outras comparações descrevem de onde ela vem",
+      "pares": [
+        {
+          "b": "aluno_a/int8",
+          "a": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+          "caminho": "zero"
+        },
+        {
+          "b": "xlmr/aluno_a/int8",
+          "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+          "caminho": "xlmr"
+        }
+      ]
+    }
+  },
+  "familias": {
+    "entre_caminhos": "o mesmo modelo no mesmo ponto da cadeia (sem_compressao, piso, destilado, podado, int8), outro caminho menos rede do zero. O ONNX de 32 bits fica de fora: nos dois caminhos ele dá as mesmas respostas do modelo podado",
+    "finais": "modelo final de cada caminho menos o modelo final da rede do zero",
+    "aluno_professor": "cada aluno (destilado, int8) menos o professor que rotulou o treino dele, nos dois caminhos",
+    "ponta_a_ponta": "as dez comparações de ponta a ponta fixadas na Etapa 9, repetidas com as chaves de cada caminho",
+    "poda_nos_8_bits": "em cada caminho, o modelo podado em INT8 menos o mesmo modelo em INT8 sem poda (os dois estão na fronteira; esta comparação diz se eles se distinguem)",
+    "troca_de_professor": "o mesmo aluno, no mesmo caminho e no mesmo ponto da cadeia (destilado, podado, int8), com o professor novo menos com o antigo. Cada B2 está na temperatura que a regra escolheu em dev com o seu professor",
+    "cenario_a_menos_b": "em cada caminho, o aluno A menos cada aluno do cenário B (com o professor antigo e com o novo), como saiu da destilação e na forma final de 8 bits: é a distância entre os cenários, antes e depois da troca de professor",
+    "compressao_inteira": "cada modelo em INT8 menos o mesmo modelo como saiu do treino: o custo de toda a compressão (para os sistemas antigos, são as comparações b, d e e2 da Etapa 9)",
+    "entre_professores": "cada professor aberto menos o professor fechado, e cada professor aberto da Etapa 11a menos o aberto antigo"
+  },
+  "comparacoes": [
+    {
+      "id": "caminhos:xlmr/teto",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/teto",
+      "a": "teto",
+      "pergunta": "Teto: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/piso",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/piso",
+      "a": "piso",
+      "pergunta": "Piso: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_a",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "aluno_a",
+      "pergunta": "Aluno A: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b1",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b1",
+      "a": "aluno_b1",
+      "pergunta": "Aluno B1: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2",
+      "a": "aluno_b2",
+      "pergunta": "Aluno B2: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_a/podado",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_a/podado",
+      "a": "aluno_a/podado",
+      "pergunta": "Aluno A, podado: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_a/int8",
+      "familias": [
+        "entre_caminhos",
+        "finais"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "aluno_a/int8",
+      "pergunta": "Aluno A, INT8: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2/podado",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2/podado",
+      "a": "aluno_b2/podado",
+      "pergunta": "Aluno B2, podado: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2/int8",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2/int8",
+      "a": "aluno_b2/int8",
+      "pergunta": "Aluno B2, INT8: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/teto/podado",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/teto/podado",
+      "a": "teto/podado",
+      "pergunta": "Teto, podado: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/teto/int8",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/teto/int8",
+      "a": "teto/int8",
+      "pergunta": "Teto, INT8: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "a": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "pergunta": "Aluno B1 · Qwen3-14B: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "pergunta": "Aluno B2 · Qwen3-14B: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "pergunta": "Aluno B2 · Qwen3-14B, podado: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "caminhos:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "entre_caminhos"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "pergunta": "Aluno B2 · Qwen3-14B, INT8: XLM-R menos a rede do zero"
+    },
+    {
+      "id": "professor:aluno_a",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_a",
+      "a": "claude",
+      "pergunta": "Do zero: Aluno A menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b1",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_b1",
+      "a": "qwen",
+      "pergunta": "Do zero: Aluno B1 menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b2",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_b2",
+      "a": "qwen",
+      "pergunta": "Do zero: Aluno B2 menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_a/int8",
+      "familias": [
+        "aluno_professor",
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_a/int8",
+      "a": "claude",
+      "pergunta": "Do zero: Aluno A, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b2/int8",
+      "familias": [
+        "aluno_professor",
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_b2/int8",
+      "a": "qwen",
+      "pergunta": "Do zero: Aluno B2, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_a",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "claude",
+      "pergunta": "XLM-R: Aluno A menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b1",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b1",
+      "a": "qwen",
+      "pergunta": "XLM-R: Aluno B1 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b2",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b2",
+      "a": "qwen",
+      "pergunta": "XLM-R: Aluno B2 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_a/int8",
+      "familias": [
+        "aluno_professor",
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "claude",
+      "pergunta": "XLM-R: Aluno A, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b2/int8",
+      "familias": [
+        "aluno_professor",
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_b2/int8",
+      "a": "qwen",
+      "pergunta": "XLM-R: Aluno B2, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno B1 · Qwen3-14B menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B1 · Qwen3-14B menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B menos o professor dele"
+    },
+    {
+      "id": "professor:aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B1 · Qwen3-14B, INT8 menos o professor dele"
+    },
+    {
+      "id": "professor:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "aluno_professor"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B, INT8 menos o professor dele"
+    },
+    {
+      "id": "ponta:zero:b",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "aluno_a/int8",
+      "a": "aluno_a",
+      "pergunta": "Do zero: o custo de toda a compressão: poda, exportação e 8 bits"
+    },
+    {
+      "id": "ponta:zero:c",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_a/int8",
+      "a": "teto",
+      "pergunta": "Do zero: o que custa não ter os rótulos humanos do treino"
+    },
+    {
+      "id": "ponta:zero:d",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "teto/int8",
+      "a": "teto",
+      "pergunta": "Do zero: a compressão sozinha, sem o efeito do professor"
+    },
+    {
+      "id": "ponta:zero:e2",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "aluno_b2/int8",
+      "a": "aluno_b2",
+      "pergunta": "Do zero: o custo de toda a compressão no cenário B"
+    },
+    {
+      "id": "ponta:zero:f",
+      "familias": [
+        "ponta_a_ponta",
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a/int8",
+      "a": "aluno_b2/int8",
+      "pergunta": "Do zero: o final do cenário A contra o final do cenário B"
+    },
+    {
+      "id": "ponta:zero:g1",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_a/int8",
+      "a": "base_299",
+      "pergunta": "Do zero: o modelo final contra a linha de base com os mesmos rótulos humanos"
+    },
+    {
+      "id": "ponta:zero:g2",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_a/int8",
+      "a": "base_11514",
+      "pergunta": "Do zero: o modelo final contra a linha de base com todos os rótulos humanos"
+    },
+    {
+      "id": "ponta:zero:g3",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "aluno_a/int8",
+      "a": "piso",
+      "pergunta": "Do zero: o modelo final contra a mesma rede treinada só com os rótulos humanos que a LLM vê"
+    },
+    {
+      "id": "ponta:xlmr:b",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/aluno_a",
+      "pergunta": "XLM-R: o custo de toda a compressão: poda, exportação e 8 bits"
+    },
+    {
+      "id": "ponta:xlmr:c",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/teto",
+      "pergunta": "XLM-R: o que custa não ter os rótulos humanos do treino"
+    },
+    {
+      "id": "ponta:xlmr:d",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "xlmr/teto/int8",
+      "a": "xlmr/teto",
+      "pergunta": "XLM-R: a compressão sozinha, sem o efeito do professor"
+    },
+    {
+      "id": "ponta:xlmr:e2",
+      "familias": [
+        "ponta_a_ponta",
+        "compressao_inteira"
+      ],
+      "b": "xlmr/aluno_b2/int8",
+      "a": "xlmr/aluno_b2",
+      "pergunta": "XLM-R: o custo de toda a compressão no cenário B"
+    },
+    {
+      "id": "ponta:xlmr:f",
+      "familias": [
+        "ponta_a_ponta",
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/aluno_b2/int8",
+      "pergunta": "XLM-R: o final do cenário A contra o final do cenário B"
+    },
+    {
+      "id": "ponta:xlmr:g1",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "base_299",
+      "pergunta": "XLM-R: o modelo final contra a linha de base com os mesmos rótulos humanos"
+    },
+    {
+      "id": "ponta:xlmr:g2",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "base_11514",
+      "pergunta": "XLM-R: o modelo final contra a linha de base com todos os rótulos humanos"
+    },
+    {
+      "id": "ponta:xlmr:g3",
+      "familias": [
+        "ponta_a_ponta"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/piso",
+      "pergunta": "XLM-R: o modelo final contra a mesma rede treinada só com os rótulos humanos que a LLM vê"
+    },
+    {
+      "id": "poda8:aluno_a/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "aluno_a/int8",
+      "a": "aluno_a/int8_sem_poda",
+      "pergunta": "Do zero: Aluno A podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:aluno_b2/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "aluno_b2/int8",
+      "a": "aluno_b2/int8_sem_poda",
+      "pergunta": "Do zero: Aluno B2 podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:teto/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "teto/int8",
+      "a": "teto/int8_sem_poda",
+      "pergunta": "Do zero: Teto podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:xlmr/aluno_a/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/aluno_a/int8_sem_poda",
+      "pergunta": "XLM-R: Aluno A podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:xlmr/aluno_b2/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "xlmr/aluno_b2/int8",
+      "a": "xlmr/aluno_b2/int8_sem_poda",
+      "pergunta": "XLM-R: Aluno B2 podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:xlmr/teto/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "xlmr/teto/int8",
+      "a": "xlmr/teto/int8_sem_poda",
+      "pergunta": "XLM-R: Teto podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+      "pergunta": "Do zero: aluno_b2@qwen3_14b__fp16__colab_a100 podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+      "pergunta": "XLM-R: aluno_b1@qwen3_14b__fp16__colab_a100 podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "poda8:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "poda_nos_8_bits"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+      "pergunta": "XLM-R: aluno_b2@qwen3_14b__fp16__colab_a100 podado em INT8 menos o mesmo modelo em INT8 sem poda"
+    },
+    {
+      "id": "troca:aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "a": "aluno_b1",
+      "pergunta": "Do zero: Aluno B1 · Qwen3-14B menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "a": "aluno_b2",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "a": "xlmr/aluno_b1",
+      "pergunta": "XLM-R: Aluno B1 · Qwen3-14B menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "a": "xlmr/aluno_b2",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "a": "aluno_b2/podado",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B, podado menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "aluno_b2/int8",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B, INT8 menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+      "a": "xlmr/aluno_b2/podado",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B, podado menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "troca:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "troca_de_professor"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "xlmr/aluno_b2/int8",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B, INT8 menos o mesmo aluno com o professor antigo"
+    },
+    {
+      "id": "AB:aluno_b1",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a",
+      "a": "aluno_b1",
+      "pergunta": "Do zero: Aluno A menos Aluno B1"
+    },
+    {
+      "id": "AB:aluno_b2",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a",
+      "a": "aluno_b2",
+      "pergunta": "Do zero: Aluno A menos Aluno B2"
+    },
+    {
+      "id": "AB:aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a",
+      "a": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno A menos Aluno B1 · Qwen3-14B"
+    },
+    {
+      "id": "AB:aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno A menos Aluno B2 · Qwen3-14B"
+    },
+    {
+      "id": "AB:aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "aluno_a/int8",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "pergunta": "Do zero: Aluno A, INT8 menos Aluno B2 · Qwen3-14B, INT8"
+    },
+    {
+      "id": "AB:xlmr/aluno_b1",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "xlmr/aluno_b1",
+      "pergunta": "XLM-R: Aluno A menos Aluno B1"
+    },
+    {
+      "id": "AB:xlmr/aluno_b2",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "xlmr/aluno_b2",
+      "pergunta": "XLM-R: Aluno A menos Aluno B2"
+    },
+    {
+      "id": "AB:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno A menos Aluno B1 · Qwen3-14B"
+    },
+    {
+      "id": "AB:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a",
+      "a": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno A menos Aluno B2 · Qwen3-14B"
+    },
+    {
+      "id": "AB:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "pergunta": "XLM-R: Aluno A, INT8 menos Aluno B1 · Qwen3-14B, INT8"
+    },
+    {
+      "id": "AB:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "cenario_a_menos_b"
+      ],
+      "b": "xlmr/aluno_a/int8",
+      "a": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "pergunta": "XLM-R: Aluno A, INT8 menos Aluno B2 · Qwen3-14B, INT8"
+    },
+    {
+      "id": "compressao:aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "compressao_inteira"
+      ],
+      "b": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "pergunta": "Do zero: Aluno B2 · Qwen3-14B, INT8 menos o mesmo modelo como saiu do treino"
+    },
+    {
+      "id": "compressao:xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "compressao_inteira"
+      ],
+      "b": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+      "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B1 · Qwen3-14B, INT8 menos o mesmo modelo como saiu do treino"
+    },
+    {
+      "id": "compressao:xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "familias": [
+        "compressao_inteira"
+      ],
+      "b": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+      "a": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "pergunta": "XLM-R: Aluno B2 · Qwen3-14B, INT8 menos o mesmo modelo como saiu do treino"
+    },
+    {
+      "id": "professores:qwen:claude",
+      "familias": [
+        "entre_professores"
+      ],
+      "b": "qwen",
+      "a": "claude",
+      "pergunta": "professor aberto menos o professor fechado"
+    },
+    {
+      "id": "professores:qwen3_8b__fp16__colab_l4:claude",
+      "familias": [
+        "entre_professores"
+      ],
+      "b": "qwen3_8b__fp16__colab_l4",
+      "a": "claude",
+      "pergunta": "professor aberto menos o professor fechado"
+    },
+    {
+      "id": "professores:qwen3_8b__fp16__colab_l4:qwen",
+      "familias": [
+        "entre_professores"
+      ],
+      "b": "qwen3_8b__fp16__colab_l4",
+      "a": "qwen",
+      "pergunta": "professor aberto da Etapa 11a menos o professor aberto antigo"
+    },
+    {
+      "id": "professores:qwen3_14b__fp16__colab_a100:claude",
+      "familias": [
+        "entre_professores"
+      ],
+      "b": "qwen3_14b__fp16__colab_a100",
+      "a": "claude",
+      "pergunta": "professor aberto menos o professor fechado"
+    },
+    {
+      "id": "professores:qwen3_14b__fp16__colab_a100:qwen",
+      "familias": [
+        "entre_professores"
+      ],
+      "b": "qwen3_14b__fp16__colab_a100",
+      "a": "qwen",
+      "pergunta": "professor aberto da Etapa 11a menos o professor aberto antigo"
+    }
+  ],
+  "cadeias": {
+    "zero/A": {
+      "nome": "Do zero · Cenário A: professor fechado",
+      "degraus": [
+        [
+          "professor",
+          "claude"
+        ],
+        [
+          "destilado",
+          "aluno_a"
+        ],
+        [
+          "podado",
+          "aluno_a/podado"
+        ],
+        [
+          "onnx",
+          "aluno_a/onnx"
+        ],
+        [
+          "int8",
+          "aluno_a/int8"
+        ]
+      ]
+    },
+    "zero/B": {
+      "nome": "Do zero · Cenário B: professor aberto",
+      "degraus": [
+        [
+          "professor",
+          "qwen"
+        ],
+        [
+          "destilado",
+          "aluno_b2"
+        ],
+        [
+          "podado",
+          "aluno_b2/podado"
+        ],
+        [
+          "onnx",
+          "aluno_b2/onnx"
+        ],
+        [
+          "int8",
+          "aluno_b2/int8"
+        ]
+      ]
+    },
+    "zero/teto": {
+      "nome": "Do zero · Referência: teto (rótulos humanos)",
+      "degraus": [
+        [
+          "sem_compressao",
+          "teto"
+        ],
+        [
+          "podado",
+          "teto/podado"
+        ],
+        [
+          "onnx",
+          "teto/onnx"
+        ],
+        [
+          "int8",
+          "teto/int8"
+        ]
+      ]
+    },
+    "xlmr/A": {
+      "nome": "XLM-R · Cenário A: professor fechado",
+      "degraus": [
+        [
+          "professor",
+          "claude"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_a"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_a/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_a/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_a/int8"
+        ]
+      ]
+    },
+    "xlmr/B": {
+      "nome": "XLM-R · Cenário B: professor aberto",
+      "degraus": [
+        [
+          "professor",
+          "qwen"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_b2"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_b2/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_b2/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_b2/int8"
+        ]
+      ]
+    },
+    "xlmr/teto": {
+      "nome": "XLM-R · Referência: teto (rótulos humanos)",
+      "degraus": [
+        [
+          "sem_compressao",
+          "xlmr/teto"
+        ],
+        [
+          "podado",
+          "xlmr/teto/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/teto/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/teto/int8"
+        ]
+      ]
+    },
+    "zero/B2@qwen3_14b__fp16__colab_a100": {
+      "nome": "Do zero · Cenário B com o Qwen3-14B (aluno B2)",
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "aluno_b2@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "aluno_b2@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    },
+    "xlmr/B1@qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Cenário B com o Qwen3-14B (aluno B1)",
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    },
+    "xlmr/B2@qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Cenário B com o Qwen3-14B (aluno B2)",
+      "degraus": [
+        [
+          "professor",
+          "qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "destilado",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100"
+        ],
+        [
+          "podado",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado"
+        ],
+        [
+          "onnx",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/onnx"
+        ],
+        [
+          "int8",
+          "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8"
+        ]
+      ]
+    }
+  },
+  "degraus_das_cadeias": "em cada cadeia, cada degrau menos o anterior; a diferença calculada aqui tem de ser igual à que a etapa de origem gravou",
+  "finais": {
+    "zero": "aluno_a/int8",
+    "xlmr": "xlmr/aluno_a/int8"
+  },
+  "fronteira": {
+    "definicao": "a da Etapa 9 (etapa9.nao_dominados): um sistema é dominado quando existe outro com custo menor ou igual e exact match maior ou igual, e melhor em pelo menos um dos dois",
+    "candidatos": "todos os sistemas do registro que usam só os poucos rótulos humanos (o cenário do projeto), dos dois caminhos; teto e linha de base com todos os rótulos aparecem como referência",
+    "custos": "latência p50 (uma consulta, 1 thread) e tamanho do arquivo como é entregue (o compactado, quando o sistema é entregue compactado)",
+    "folga_da_latencia": "duas latências mais próximas que a maior variação relativa da mediana entre as rodadas das medidas de origem (Etapas 8 e 10c) contam como empate; o tamanho não tem folga",
+    "qualidade": "exact match no teste, pelo valor medido, sem folga: quem diz se dois vizinhos se distinguem são as comparações pareadas"
+  },
+  "preco_de_cada_ponto": {
+    "o_que_e": "entre os dois modelos finais: (tamanho do final do outro caminho − tamanho do final do zero) ÷ (diferença de exact match, em pontos percentuais); o mesmo com a latência p50",
+    "intervalo": "os limites do intervalo de 95% da diferença pareada de exact match, levados para a razão; só é definido quando o intervalo inteiro está acima de zero",
+    "onde": "no teste (leitura principal) e em dev; a latência é a das etapas de origem, e a medida na mesma sessão vai ao lado"
+  },
+  "latencia_na_mesma_sessao": {
+    "sistemas": "os dois modelos finais, semente 0, em INT8, em ONNX de 32 bits e em PyTorch de 32 bits",
+    "protocolo": "o das Etapas 8 e 10c (eficiencia.medir_latencia): uma consulta por vez, 1 thread, do texto à resposta, pedidos de dev, 50 de aquecimento, 5 rodadas de 1.024 consultas, sistemas alternados dentro de cada rodada",
+    "maquina_quieta": "os outros processos ocupam no máximo 0.25 núcleo de CPU durante a medida (etapa8.nucleos_de_outros), o limite das Etapas 8 e 10c",
+    "leitura": "os números de origem continuam sendo os da tabela; a medida nova vai ao lado. Uma latência nova 'confirma' a de origem quando a diferença relativa entre as duas é menor que a folga da fronteira"
+  },
+  "conferencia": {
+    "tolerancia": 1e-09,
+    "regra": "cada número de qualidade e cada diferença que uma etapa de origem gravou é refeito das respostas; se discordar, é relatado, não consertado"
+  },
+  "ja_era_conhecido_ao_escrever": [
+    "tudo o que a Etapa 10d entregou: os 44 sistemas antigos, as 43 comparações dela, a fronteira e o preço de cada ponto",
+    "os alunos novos como saíram da destilação: a qualidade de cada um, 'novo − antigo', 'aluno − professor' e 'aluno B − aluno A' no ponto destilado já estão na Etapa 11b",
+    "os professores entre si já estão nas Etapas 11a e 11b",
+    "novas nesta etapa: tudo o que envolve um aluno novo podado ou em 8 bits (os degraus das cadeias novas, a troca de professor nos pontos podado e INT8, o cenário A menos o cenário B em INT8 com o professor novo, XLM-R menos rede do zero no B2 novo comprimido) e a fronteira com esses pontos. Nenhum desses números existia quando as regras foram gravadas"
+  ],
+  "decisoes_lidas": {
+    "entregas/04b_intencao/decisao.json": "016932177fabf40c2de67b4634fe4768a83479bf2ade5fa183901c0e3b08d99c",
+    "entregas/06_destilacao/decisao.json": "70b143143ce85644a8c3238d9806c0b70b0d55e15d3ec9b57d8479917174ecc5",
+    "entregas/07_poda/decisao.json": "b9db95d1701f61d4b4125abd47a9def3bd74738b2663e5188499a97a6585f43b",
+    "entregas/08_quantizacao/decisao.json": "ea4a698039f6eab1526432a70bfa43fe134b24d35d6ac0928e6a9ce2869520f1",
+    "entregas/10a_encoder/decisao.json": "4825df67bf8fea29aca357a873185f69c7062355038f2ba5bbd7181ba6dfde47",
+    "entregas/10b_encoder_poda/decisao.json": "41361d8f66c428540e903706e420a4764dcd46922ea13fa41cd370f713118597",
+    "entregas/10c_encoder_quantizacao/decisao.json": "13aeb8c79e6cd2a9e115bb357118d4349e725c15ee12b2beaf5ccc0d4a559a2f",
+    "entregas/11b_alunos_do_professor_maior/decisao.json": "93238e4598eaa8f484c4bbac6ad35b0d5b0a6fecc5524224462a1a12ae2f6d4c"
+  },
+  "sistemas_no_registro": [
+    "base_299",
+    "base_11514",
+    "claude",
+    "qwen",
+    "teto",
+    "piso",
+    "aluno_a",
+    "aluno_b1",
+    "aluno_b2",
+    "aluno_a/podado",
+    "aluno_a/onnx",
+    "aluno_a/int8",
+    "aluno_a/soltos",
+    "aluno_b2/podado",
+    "aluno_b2/onnx",
+    "aluno_b2/int8",
+    "aluno_b2/soltos",
+    "teto/podado",
+    "teto/onnx",
+    "teto/int8",
+    "teto/soltos",
+    "aluno_a/int8_sem_poda",
+    "aluno_b2/int8_sem_poda",
+    "teto/int8_sem_poda",
+    "xlmr/teto",
+    "xlmr/piso",
+    "xlmr/aluno_a",
+    "xlmr/aluno_b1",
+    "xlmr/aluno_b2",
+    "xlmr/aluno_a/podado",
+    "xlmr/aluno_a/onnx",
+    "xlmr/aluno_a/int8",
+    "xlmr/aluno_a/soltos",
+    "xlmr/aluno_a/int8_sem_poda",
+    "xlmr/aluno_b2/podado",
+    "xlmr/aluno_b2/onnx",
+    "xlmr/aluno_b2/int8",
+    "xlmr/aluno_b2/soltos",
+    "xlmr/aluno_b2/int8_sem_poda",
+    "xlmr/teto/podado",
+    "xlmr/teto/onnx",
+    "xlmr/teto/int8",
+    "xlmr/teto/soltos",
+    "xlmr/teto/int8_sem_poda",
+    "qwen3_8b__fp16__colab_l4",
+    "qwen3_14b__fp16__colab_a100",
+    "aluno_b1@qwen3_14b__fp16__colab_a100",
+    "aluno_b2@qwen3_14b__fp16__colab_a100",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/onnx",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/podado",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/onnx",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/onnx",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda"
+  ],
+  "continua": {
+    "de": "entregas/10d_comparativo_dos_caminhos/",
+    "versoes_anteriores": {
+      "entregas/10d_comparativo_dos_caminhos/regras.json": {
+        "versao": 1,
+        "sha256": "66aacb0e1e1daee9e28ebf33d79f8bdb3d9211d074f1e6f855fe7390c758f70d"
+      },
+      "entregas/10d_comparativo_dos_caminhos/regras_v2.json": {
+        "versao": 2,
+        "sha256": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f"
+      }
+    },
+    "o_que_muda": "o registro lê também as entregas da Etapa 11 (os professores abertos da 11a, os alunos da 11b e as formas comprimidas da 11c) e a lista ganha as famílias de `familias_novas`; o método, a fronteira e a conferência são os da 10d, sem mudança"
+  },
+  "entregas_que_valem": [
+    "01_dados",
+    "02_avaliacao",
+    "03_arquitetura",
+    "04_treino",
+    "04b_intencao",
+    "05a_professor_fechado",
+    "05b_professor_aberto",
+    "06_destilacao",
+    "07_poda",
+    "08_quantizacao",
+    "09_comparativo",
+    "10a_encoder",
+    "10b_encoder_poda",
+    "10c_encoder_quantizacao",
+    "10d_comparativo_dos_caminhos",
+    "11a_professor_aberto_maior",
+    "11b_alunos_do_professor_maior",
+    "11c_cenario_b_ate_o_fim"
+  ],
+  "familias_novas": [
+    "troca_de_professor",
+    "cenario_a_menos_b",
+    "compressao_inteira",
+    "entre_professores"
+  ],
+  "sistemas_desta_etapa": [
+    "aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/onnx",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+    "aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/podado",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/onnx",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8_sem_poda",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/podado",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/onnx",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100/int8_sem_poda"
+  ]
+}

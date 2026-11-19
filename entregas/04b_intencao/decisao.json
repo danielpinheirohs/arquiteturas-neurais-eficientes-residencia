@@ -1,0 +1,37 @@
+{
+  "etapa": "04b_intencao",
+  "gerado_em": "2026-11-16",
+  "adotada": "combinada",
+  "nome": "DIET do zero + suavização de rótulos + média móvel dos pesos (rótulos humanos)",
+  "config": {
+    "d_modelo": 256,
+    "n_camadas": 2,
+    "d_rotulo": 20,
+    "p_mascara": 0.15,
+    "n_cabecas": 4,
+    "d_features": 128,
+    "distancia_max": 5,
+    "dropout": 0.2,
+    "dropout_features": 0.2,
+    "d_ffn": 1024,
+    "usar_crf": true,
+    "peso_intencao": 1.0,
+    "peso_entidades": 1.0,
+    "peso_mascara": 1.0,
+    "atalho_intencao": "nenhum",
+    "suavizacao": 0.1
+  },
+  "receita": {
+    "media_dos_pesos": 0.999
+  },
+  "mudou_em_relacao_a_etapa_4": {
+    "suavizacao": 0.1,
+    "media_dos_pesos": 0.999
+  },
+  "modelos": "entregas/04b_intencao/modelos",
+  "regra": "intenção melhora com IC95 acima de zero em dev (média de 3 sementes) e exact match não piora de forma distinguível",
+  "aprovadas": [
+    "media_dos_pesos",
+    "suavizacao"
+  ]
+}

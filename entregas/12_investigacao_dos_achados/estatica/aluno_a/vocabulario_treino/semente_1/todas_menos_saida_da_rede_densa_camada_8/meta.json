@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 1,
+  "nome": "todas_menos_saida_da_rede_densa_camada_8",
+  "descricao": "a estática inteira, com a saída da rede densa da camada 8 em 32 bits",
+  "metodo": "MinMax",
+  "operacoes": 75,
+  "bytes_da_rede": 97301741,
+  "slot_f1_dev": 62.3574144486692,
+  "segundos": 25.58382713299943
+}

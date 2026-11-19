@@ -1,0 +1,15 @@
+{
+  "id": "CEIA-UFG/Gemma-3-Gaia-PT-BR-4b-it",
+  "nome": "GAIA 4B (CEIA-UFG)",
+  "licenca": "Gemma",
+  "quantizacao": "4 bits (NF4, bitsandbytes)",
+  "vram_do_modelo_gb": 3.23,
+  "vram_de_pico_gb": 6.82,
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "parametros": 2490222960,
+  "tokens_das_instrucoes_em_memoria": 864,
+  "quando": "2026-11-18 01:00:52 -0300",
+  "lote": 8,
+  "pedidos": 2033,
+  "segundos_de_gpu": 691.3
+}

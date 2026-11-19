@@ -1,0 +1,58 @@
+17:26:24 versão qwen3_8b__fp16__colab_l4 | tarefas precisao,dev,test,train | pacote 5968bf3c0f8b | saldo 599.26
+17:26:33 preparo pronto; placa: NVIDIA L4, 23034 MiB, 580.82.07
+17:31:45 {'dev': 150, 'test': 0, 'train': 0} | saldo 598.53 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 120 de 2033, 1.07 s por pedido, faltam 34 min
+17:34:57 {'dev': 414, 'test': 0, 'train': 0} | saldo 598.53 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 360 de 2033, 1.02 s por pedido, faltam 28 min
+17:39:01 {'dev': 684, 'test': 0, 'train': 0} | saldo 597.81 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 600 de 2033, 0.98 s por pedido, faltam 23 min
+17:43:02 {'dev': 1008, 'test': 0, 'train': 0} | saldo 597.11 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 960 de 2033, 0.90 s por pedido, faltam 16 min
+17:47:05 {'dev': 1344, 'test': 0, 'train': 0} | saldo 596.36 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 1320 de 2033, 0.85 s por pedido, faltam 10 min
+17:51:08 {'dev': 1716, 'test': 0, 'train': 0} | saldo 595.67 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 1680 de 2033, 0.81 s por pedido, faltam 5 min
+17:55:16 {'dev': 2033, 'test': 54, 'train': 0} | saldo 594.92 (8.67/h) | qwen3_8b__fp16__colab_l4 dev: 2033 respostas em 26.0 min
+17:59:22 {'dev': 2033, 'test': 276, 'train': 0} | saldo 594.92 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 240 de 2974, 1.13 s por pedido, faltam 51 min
+18:03:30 {'dev': 2033, 'test': 540, 'train': 0} | saldo 594.22 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 480 de 2974, 1.03 s por pedido, faltam 43 min
+18:07:41 {'dev': 2033, 'test': 840, 'train': 0} | saldo 593.49 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 720 de 2974, 0.98 s por pedido, faltam 37 min
+18:11:50 {'dev': 2033, 'test': 1152, 'train': 0} | saldo 592.77 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 1080 de 2974, 0.93 s por pedido, faltam 29 min
+18:15:55 {'dev': 2033, 'test': 1476, 'train': 0} | saldo 592.05 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 1440 de 2974, 0.88 s por pedido, faltam 23 min
+18:20:03 {'dev': 2033, 'test': 1812, 'train': 0} | saldo 591.33 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 1680 de 2974, 0.86 s por pedido, faltam 19 min
+18:24:12 {'dev': 2033, 'test': 2166, 'train': 0} | saldo 591.33 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 2040 de 2974, 0.84 s por pedido, faltam 13 min
+18:28:20 {'dev': 2033, 'test': 2556, 'train': 0} | saldo 590.59 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 2520 de 2974, 0.80 s por pedido, faltam 6 min
+18:32:25 {'dev': 2033, 'test': 2974, 'train': 0} | saldo 589.88 (8.67/h) | qwen3_8b__fp16__colab_l4 test: 2974 respostas em 38.1 min
+18:37:00 {'dev': 2033, 'test': 2974, 'train': 168} | saldo 589.15 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 120 de 11514, 1.33 s por pedido, faltam 253 min
+18:42:02 {'dev': 2033, 'test': 2974, 'train': 420} | saldo 588.41 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 360 de 11514, 1.20 s por pedido, faltam 224 min
+18:46:20 {'dev': 2033, 'test': 2974, 'train': 690} | saldo 587.72 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 600 de 11514, 1.15 s por pedido, faltam 209 min
+18:50:07 {'dev': 2033, 'test': 2974, 'train': 870} | saldo 586.98 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 840 de 11514, 1.12 s por pedido, faltam 199 min
+18:54:11 {'dev': 2033, 'test': 2974, 'train': 1164} | saldo 586.98 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 1080 de 11514, 1.10 s por pedido, faltam 192 min
+18:57:58 {'dev': 2033, 'test': 2974, 'train': 1386} | saldo 586.26 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 1320 de 11514, 1.08 s por pedido, faltam 184 min
+19:02:06 {'dev': 2033, 'test': 2974, 'train': 1638} | saldo 585.54 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 1560 de 11514, 1.07 s por pedido, faltam 178 min
+19:06:13 {'dev': 2033, 'test': 2974, 'train': 1902} | saldo 584.82 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 1800 de 11514, 1.06 s por pedido, faltam 171 min
+19:10:12 {'dev': 2033, 'test': 2974, 'train': 2154} | saldo 584.11 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 2040 de 11514, 1.04 s por pedido, faltam 165 min
+19:15:16 {'dev': 2033, 'test': 2974, 'train': 2478} | saldo 583.37 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 2280 de 11514, 1.03 s por pedido, faltam 159 min
+19:18:46 {'dev': 2033, 'test': 2974, 'train': 2706} | saldo 583.37 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 2640 de 11514, 1.02 s por pedido, faltam 151 min
+19:23:34 {'dev': 2033, 'test': 2974, 'train': 3048} | saldo 582.65 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 2880 de 11514, 1.00 s por pedido, faltam 144 min
+19:27:40 {'dev': 2033, 'test': 2974, 'train': 3342} | saldo 581.92 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 3120 de 11514, 0.99 s por pedido, faltam 139 min
+19:30:50 {'dev': 2033, 'test': 2974, 'train': 3576} | saldo 581.19 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 3480 de 11514, 0.98 s por pedido, faltam 131 min
+19:35:48 {'dev': 2033, 'test': 2974, 'train': 3924} | saldo 580.46 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 3720 de 11514, 0.97 s por pedido, faltam 126 min
+19:39:20 {'dev': 2033, 'test': 2974, 'train': 4182} | saldo 580.46 (8.67/h) | qwen3_8b__fp16__colab_l4 train: 4080 de 11514, 0.96 s por pedido, faltam 118 min
+19:43:29 {'dev': 2033, 'test': 2974, 'train': 4488} | saldo 579.75 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 4440 de 11514, 0.94 s por pedido, faltam 111 min
+19:48:19 {'dev': 2033, 'test': 2974, 'train': 4854} | saldo 579.59 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 4680 de 11514, 0.94 s por pedido, faltam 107 min
+19:51:25 {'dev': 2033, 'test': 2974, 'train': 5088} | saldo 579.43 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 5040 de 11514, 0.92 s por pedido, faltam 100 min
+19:55:33 {'dev': 2033, 'test': 2974, 'train': 5400} | saldo 579.26 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 5280 de 11514, 0.92 s por pedido, faltam 96 min
+19:59:40 {'dev': 2033, 'test': 2974, 'train': 5736} | saldo 579.26 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 5640 de 11514, 0.91 s por pedido, faltam 89 min
+20:03:50 {'dev': 2033, 'test': 2974, 'train': 6060} | saldo 579.11 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 6000 de 11514, 0.90 s por pedido, faltam 83 min
+20:07:58 {'dev': 2033, 'test': 2974, 'train': 6396} | saldo 578.95 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 6360 de 11514, 0.89 s por pedido, faltam 77 min
+20:12:05 {'dev': 2033, 'test': 2974, 'train': 6732} | saldo 578.78 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 6600 de 11514, 0.89 s por pedido, faltam 73 min
+20:16:11 {'dev': 2033, 'test': 2974, 'train': 7080} | saldo 578.62 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 6960 de 11514, 0.88 s por pedido, faltam 67 min
+20:20:33 {'dev': 2033, 'test': 2974, 'train': 7446} | saldo 578.46 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 7320 de 11514, 0.87 s por pedido, faltam 61 min
+20:24:34 {'dev': 2033, 'test': 2974, 'train': 7806} | saldo 578.46 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 7680 de 11514, 0.86 s por pedido, faltam 55 min
+20:29:04 {'dev': 2033, 'test': 2974, 'train': 8178} | saldo 578.3 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 8040 de 11514, 0.85 s por pedido, faltam 49 min
+20:33:18 {'dev': 2033, 'test': 2974, 'train': 8538} | saldo 578.14 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 8400 de 11514, 0.85 s por pedido, faltam 44 min
+20:36:45 {'dev': 2033, 'test': 2974, 'train': 8862} | saldo 577.98 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 8760 de 11514, 0.84 s por pedido, faltam 39 min
+20:41:29 {'dev': 2033, 'test': 2974, 'train': 9312} | saldo 577.81 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 9120 de 11514, 0.83 s por pedido, faltam 33 min
+20:45:51 {'dev': 2033, 'test': 2974, 'train': 9696} | saldo 577.65 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 9480 de 11514, 0.83 s por pedido, faltam 28 min
+20:49:29 {'dev': 2033, 'test': 2974, 'train': 9996} | saldo 577.65 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 9960 de 11514, 0.82 s por pedido, faltam 21 min
+20:53:15 {'dev': 2033, 'test': 2974, 'train': 10434} | saldo 577.49 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 10320 de 11514, 0.81 s por pedido, faltam 16 min
+20:57:26 {'dev': 2033, 'test': 2974, 'train': 10878} | saldo 577.33 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 10800 de 11514, 0.80 s por pedido, faltam 9 min
+21:01:32 {'dev': 2033, 'test': 2974, 'train': 11364} | saldo 577.17 (1.94/h) | qwen3_8b__fp16__colab_l4 train: 11280 de 11514, 0.79 s por pedido, faltam 3 min
+21:03:37 {'dev': 2033, 'test': 2974, 'train': 11514} | saldo 577.17 (1.94/h) | TRABALHO REMOTO TERMINOU codigo=0
+21:03:40 parando a sessão prof11a_l4: [colab] Stopping session 'prof11a_l4'...
+[colab] Session terminated.
+FIM: qwen3_8b__fp16__colab_l4: concluída; pedidos {'dev': 2033, 'test': 2974, 'train': 11514}; unidades gastas 22.09; saldo 577.17

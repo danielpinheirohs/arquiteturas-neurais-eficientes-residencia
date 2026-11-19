@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 2,
+  "nome": "todas",
+  "descricao": "a estática da 10c, refeita",
+  "metodo": "MinMax",
+  "operacoes": 76,
+  "bytes_da_rede": 278236937,
+  "slot_f1_dev": 71.8131030980193,
+  "segundos": 28.089922209008364
+}

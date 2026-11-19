@@ -1,0 +1,535 @@
+{
+  "consultado_em": "2026-11-18T20:55:13",
+  "fonte": "http://export.arxiv.org/api/query e https://aclanthology.org/<id>.bib",
+  "pedidos": [
+    "2506.02153",
+    "2504.13471",
+    "1510.00149",
+    "2405.20935",
+    "2611.00464",
+    "2204.08582",
+    "1707.09861",
+    "1911.02549",
+    "2110.12894",
+    "2305.13512",
+    "2402.13116",
+    "2411.05045",
+    "1503.02531",
+    "1909.10351",
+    "2004.09936",
+    "1902.10909",
+    "1911.02116",
+    "1810.04805",
+    "1711.05101",
+    "2006.04884",
+    "2203.15996",
+    "2010.05609",
+    "2204.00408",
+    "2004.03844",
+    "1506.02626",
+    "1710.01878",
+    "2002.08307",
+    "2003.03033",
+    "2111.05754",
+    "2005.07683",
+    "1712.05877",
+    "1910.06188",
+    "2103.13630",
+    "2109.12948",
+    "1806.08342",
+    "1906.00532"
+  ],
+  "arxiv": {
+    "1906.00532": {
+      "titulo": "Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model",
+      "autores": [
+        "Aishwarya Bhandare",
+        "Vamsi Sripathi",
+        "Deepthi Karkada",
+        "Vivek Menon",
+        "Sun Choi",
+        "Kushal Datta",
+        "Vikram Saletore"
+      ],
+      "publicado": "2019-06-03",
+      "resumo": "In this work, we quantize a trained Transformer machine language translation model leveraging INT8/VNNI instructions in the latest Intel$^\\circledR$ Xeon$^\\circledR$ Cascade Lake processors to improve inference performance while maintaining less than 0.5$\\%$ drop in accuracy. To the best of our knowledge, this is the first attempt in the industry to quantize the Transformer model. This has high impact as it clearly demonstrates the various complexities of quantizing the language translation model. We present novel quantization techniques directly in TensorFlow to opportunistically replace 32-bit floating point (FP32) computations with 8-bit integers (INT8) and transform the FP32 computational graph. We also present a bin-packing parallel batching technique to maximize CPU utilization. Overall, our optimizations with INT8/VNNI deliver 1.5X improvement over the best FP32 performance. Furthermore, it reveals the opportunities and challenges to boost performance of quantized deep learning inference and establishes best practices to run inference with high efficiency on Intel CPUs."
+    },
+    "1902.10909": {
+      "titulo": "BERT for Joint Intent Classification and Slot Filling",
+      "autores": [
+        "Qian Chen",
+        "Zhu Zhuo",
+        "Wen Wang"
+      ],
+      "publicado": "2019-02-28",
+      "resumo": "Intent classification and slot filling are two essential tasks for natural language understanding. They often suffer from small-scale human-labeled training data, resulting in poor generalization capability, especially for rare words. Recently a new language representation model, BERT (Bidirectional Encoder Representations from Transformers), facilitates pre-training deep bidirectional representations on large-scale unlabeled corpora, and has created state-of-the-art models for a wide variety of natural language processing tasks after simple fine-tuning. However, there has not been much effort on exploring BERT for natural language understanding. In this work, we propose a joint intent classification and slot filling model based on BERT. Experimental results demonstrate that our proposed model achieves significant improvement on intent classification accuracy, slot filling F1, and sentence-level semantic frame accuracy on several public benchmark datasets, compared to the attention-based recurrent neural network models and slot-gated models."
+    },
+    "1911.02549": {
+      "titulo": "MLPerf Inference Benchmark",
+      "autores": [
+        "Vijay Janapa Reddi",
+        "Christine Cheng",
+        "David Kanter",
+        "Peter Mattson",
+        "Guenther Schmuelling",
+        "Carole-Jean Wu",
+        "Brian Anderson",
+        "Maximilien Breughe",
+        "Mark Charlebois",
+        "William Chou",
+        "Ramesh Chukka",
+        "Cody Coleman",
+        "Sam Davis",
+        "Pan Deng",
+        "Greg Diamos",
+        "Jared Duke",
+        "Dave Fick",
+        "J. Scott Gardner",
+        "Itay Hubara",
+        "Sachin Idgunji",
+        "Thomas B. Jablin",
+        "Jeff Jiao",
+        "Tom St. John",
+        "Pankaj Kanwar",
+        "David Lee",
+        "Jeffery Liao",
+        "Anton Lokhmotov",
+        "Francisco Massa",
+        "Peng Meng",
+        "Paulius Micikevicius",
+        "Colin Osborne",
+        "Gennady Pekhimenko",
+        "Arun Tejusve Raghunath Rajan",
+        "Dilip Sequeira",
+        "Ashish Sirasao",
+        "Fei Sun",
+        "Hanlin Tang",
+        "Michael Thomson",
+        "Frank Wei",
+        "Ephrem Wu",
+        "Lingjie Xu",
+        "Koichi Yamada",
+        "Bing Yu",
+        "George Yuan",
+        "Aaron Zhong",
+        "Peizhao Zhang",
+        "Yuchen Zhou"
+      ],
+      "publicado": "2019-11-06",
+      "resumo": "Machine-learning (ML) hardware and software system demand is burgeoning. Driven by ML applications, the number of different ML inference systems has exploded. Over 100 organizations are building ML inference chips, and the systems that incorporate existing models span at least three orders of magnitude in power consumption and five orders of magnitude in performance; they range from embedded devices to data-center solutions. Fueling the hardware are a dozen or more software frameworks and libraries. The myriad combinations of ML hardware and ML software make assessing ML-system performance in an architecture-neutral, representative, and reproducible manner challenging. There is a clear need for industry-wide standard ML benchmarking and evaluation criteria. MLPerf Inference answers that call. In this paper, we present our benchmarking method for evaluating ML inference systems. Driven by more than 30 organizations as well as more than 200 ML engineers and practitioners, MLPerf prescribes a set of rules and best practices to ensure comparability across systems with wildly differing architectures. The first call for submissions garnered more than 600 reproducible inference-performance measurements from 14 organizations, representing over 30 systems that showcase a wide range of capabilities. The submissions attest to the benchmark's flexibility and adaptability."
+    },
+    "2003.03033": {
+      "titulo": "What is the State of Neural Network Pruning?",
+      "autores": [
+        "Davis Blalock",
+        "Jose Javier Gonzalez Ortiz",
+        "Jonathan Frankle",
+        "John Guttag"
+      ],
+      "publicado": "2020-03-06",
+      "resumo": "Neural network pruning---the task of reducing the size of a network by removing parameters---has been the subject of a great deal of work in recent years. We provide a meta-analysis of the literature, including an overview of approaches to pruning and consistent findings in the literature. After aggregating results across 81 papers and pruning hundreds of models in controlled conditions, our clearest finding is that the community suffers from a lack of standardized benchmarks and metrics. This deficiency is substantial enough that it is hard to compare pruning techniques to one another or determine how much progress the field has made over the past three decades. To address this situation, we identify issues with current practices, suggest concrete remedies, and introduce ShrinkBench, an open-source framework to facilitate standardized evaluations of pruning methods. We use ShrinkBench to compare various pruning techniques and show that its comprehensive evaluation can prevent common pitfalls when comparing pruning methods."
+    },
+    "1510.00149": {
+      "titulo": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+      "autores": [
+        "Song Han",
+        "Huizi Mao",
+        "William J. Dally"
+      ],
+      "publicado": "2015-10-01",
+      "resumo": "Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded systems with limited hardware resources. To address this limitation, we introduce \"deep compression\", a three stage pipeline: pruning, trained quantization and Huffman coding, that work together to reduce the storage requirement of neural networks by 35x to 49x without affecting their accuracy. Our method first prunes the network by learning only the important connections. Next, we quantize the weights to enforce weight sharing, finally, we apply Huffman coding. After the first two steps we retrain the network to fine tune the remaining connections and the quantized centroids. Pruning, reduces the number of connections by 9x to 13x; Quantization then reduces the number of bits that represent each connection from 32 to 5. On the ImageNet dataset, our method reduced the storage required by AlexNet by 35x, from 240MB to 6.9MB, without loss of accuracy. Our method reduced the size of VGG-16 by 49x from 552MB to 11.3MB, again with no loss of accuracy. This allows fitting the model into on-chip SRAM cache rather than off-chip DRAM memory. Our compression method also facilitates the use of complex neural networks in mobile applications where application size and download bandwidth are constrained. Benchmarked on CPU, GPU and mobile GPU, compressed network has 3x to 4x layerwise speedup and 3x to 7x better energy efficiency."
+    },
+    "1711.05101": {
+      "titulo": "Decoupled Weight Decay Regularization",
+      "autores": [
+        "Ilya Loshchilov",
+        "Frank Hutter"
+      ],
+      "publicado": "2017-11-14",
+      "resumo": "L$_2$ regularization and weight decay regularization are equivalent for standard stochastic gradient descent (when rescaled by the learning rate), but as we demonstrate this is \\emph{not} the case for adaptive gradient algorithms, such as Adam. While common implementations of these algorithms employ L$_2$ regularization (often calling it \"weight decay\" in what may be misleading due to the inequivalence we expose), we propose a simple modification to recover the original formulation of weight decay regularization by \\emph{decoupling} the weight decay from the optimization steps taken w.r.t. the loss function. We provide empirical evidence that our proposed modification (i) decouples the optimal choice of weight decay factor from the setting of the learning rate for both standard SGD and Adam and (ii) substantially improves Adam's generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter). Our proposed decoupled weight decay has already been adopted by many researchers, and the community has implemented it in TensorFlow and PyTorch; the complete source code for our experiments is available at https://github.com/loshchil/AdamW-and-SGDW"
+    },
+    "2506.02153": {
+      "titulo": "Small Language Models are the Future of Agentic AI",
+      "autores": [
+        "Peter Belcak",
+        "Greg Heinrich",
+        "Shizhe Diao",
+        "Yonggan Fu",
+        "Xin Dong",
+        "Saurav Muralidharan",
+        "Yingyan Celine Lin",
+        "Pavlo Molchanov"
+      ],
+      "publicado": "2025-06-02",
+      "resumo": "Large language models (LLMs) are often praised for exhibiting near-human performance on a wide range of tasks and valued for their ability to hold a general conversation. The rise of agentic AI systems is, however, ushering in a mass of applications in which language models perform a small number of specialized tasks repetitively and with little variation. Here we lay out the position that small language models (SLMs) are sufficiently powerful, inherently more suitable, and necessarily more economical for many invocations in agentic systems, and are therefore the future of agentic AI. Our argumentation is grounded in the current level of capabilities exhibited by SLMs, the common architectures of agentic systems, and the economy of LM deployment. We further argue that in situations where general-purpose conversational abilities are essential, heterogeneous agentic systems (i.e., agents invoking multiple different models) are the natural choice. We discuss the potential barriers for the adoption of SLMs in agentic systems and outline a general LLM-to-SLM agent conversion algorithm. Our position, formulated as a value statement, highlights the significance of the operational and economic impact even a partial shift from LLMs to SLMs is to have on the AI agent industry. We aim to stimulate the discussion on the effective use of AI resources and hope to advance the efforts to lower the costs of AI of the present day. Calling for both contributions to and critique of our position, we commit to publishing all such correspondence at https://research.nvidia.com/labs/lpr/slm-agents."
+    },
+    "1707.09861": {
+      "titulo": "Reporting Score Distributions Makes a Difference: Performance Study of LSTM-networks for Sequence Tagging",
+      "autores": [
+        "Nils Reimers",
+        "Iryna Gurevych"
+      ],
+      "publicado": "2017-07-31",
+      "resumo": "In this paper we show that reporting a single performance score is insufficient to compare non-deterministic approaches. We demonstrate for common sequence tagging tasks that the seed value for the random number generator can result in statistically significant (p < 10^-4) differences for state-of-the-art systems. For two recent systems for NER, we observe an absolute difference of one percentage point F1-score depending on the selected seed value, making these systems perceived either as state-of-the-art or mediocre. Instead of publishing and reporting single performance scores, we propose to compare score distributions based on multiple executions. Based on the evaluation of 50.000 LSTM-networks for five sequence tagging tasks, we present network architectures that produce both superior performance as well as are more stable with respect to the remaining hyperparameters."
+    },
+    "2002.08307": {
+      "titulo": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
+      "autores": [
+        "Mitchell A. Gordon",
+        "Kevin Duh",
+        "Nicholas Andrews"
+      ],
+      "publicado": "2020-02-19",
+      "resumo": "Pre-trained universal feature extractors, such as BERT for natural language processing and VGG for computer vision, have become effective methods for improving deep learning models without requiring more labeled data. While effective, feature extractors like BERT may be prohibitively large for some deployment scenarios. We explore weight pruning for BERT and ask: how does compression during pre-training affect transfer learning? We find that pruning affects transfer learning in three broad regimes. Low levels of pruning (30-40%) do not affect pre-training loss or transfer to downstream tasks at all. Medium levels of pruning increase the pre-training loss and prevent useful pre-training information from being transferred to downstream tasks. High levels of pruning additionally prevent models from fitting downstream datasets, leading to further degradation. Finally, we observe that fine-tuning BERT on a specific task does not improve its prunability. We conclude that BERT can be pruned once during pre-training rather than separately for each task without affecting performance."
+    },
+    "1911.02116": {
+      "titulo": "Unsupervised Cross-lingual Representation Learning at Scale",
+      "autores": [
+        "Alexis Conneau",
+        "Kartikay Khandelwal",
+        "Naman Goyal",
+        "Vishrav Chaudhary",
+        "Guillaume Wenzek",
+        "Francisco Guzmán",
+        "Edouard Grave",
+        "Myle Ott",
+        "Luke Zettlemoyer",
+        "Veselin Stoyanov"
+      ],
+      "publicado": "2019-11-05",
+      "resumo": "This paper shows that pretraining multilingual language models at scale leads to significant performance gains for a wide range of cross-lingual transfer tasks. We train a Transformer-based masked language model on one hundred languages, using more than two terabytes of filtered CommonCrawl data. Our model, dubbed XLM-R, significantly outperforms multilingual BERT (mBERT) on a variety of cross-lingual benchmarks, including +14.6% average accuracy on XNLI, +13% average F1 score on MLQA, and +2.4% F1 score on NER. XLM-R performs particularly well on low-resource languages, improving 15.7% in XNLI accuracy for Swahili and 11.4% for Urdu over previous XLM models. We also present a detailed empirical analysis of the key factors that are required to achieve these gains, including the trade-offs between (1) positive transfer and capacity dilution and (2) the performance of high and low resource languages at scale. Finally, we show, for the first time, the possibility of multilingual modeling without sacrificing per-language performance; XLM-R is very competitive with strong monolingual models on the GLUE and XNLI benchmarks. We will make our code, data and models publicly available."
+    },
+    "1810.04805": {
+      "titulo": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "autores": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "publicado": "2018-10-11",
+      "resumo": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement)."
+    },
+    "2305.13512": {
+      "titulo": "Can ChatGPT Detect Intent? Evaluating Large Language Models for Spoken Language Understanding",
+      "autores": [
+        "Mutian He",
+        "Philip N. Garner"
+      ],
+      "publicado": "2023-05-22",
+      "resumo": "Recently, large pretrained language models have demonstrated strong language understanding capabilities. This is particularly reflected in their zero-shot and in-context learning abilities on downstream tasks through prompting. To assess their impact on spoken language understanding (SLU), we evaluate several such models like ChatGPT and OPT of different sizes on multiple benchmarks. We verify the emergent ability unique to the largest models as they can reach intent classification accuracy close to that of supervised models with zero or few shots on various languages given oracle transcripts. By contrast, the results for smaller models fitting a single GPU fall far behind. We note that the error cases often arise from the annotation scheme of the dataset; responses from ChatGPT are still reasonable. We show, however, that the model is worse at slot filling, and its performance is sensitive to ASR errors, suggesting serious challenges for the application of those textual models on SLU."
+    },
+    "2204.08582": {
+      "titulo": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages",
+      "autores": [
+        "Jack FitzGerald",
+        "Christopher Hench",
+        "Charith Peris",
+        "Scott Mackie",
+        "Kay Rottmann",
+        "Ana Sanchez",
+        "Aaron Nash",
+        "Liam Urbach",
+        "Vishesh Kakarala",
+        "Richa Singh",
+        "Swetha Ranganath",
+        "Laurie Crist",
+        "Misha Britan",
+        "Wouter Leeuwis",
+        "Gokhan Tur",
+        "Prem Natarajan"
+      ],
+      "publicado": "2022-04-18",
+      "resumo": "We present the MASSIVE dataset--Multilingual Amazon Slu resource package (SLURP) for Slot-filling, Intent classification, and Virtual assistant Evaluation. MASSIVE contains 1M realistic, parallel, labeled virtual assistant utterances spanning 51 languages, 18 domains, 60 intents, and 55 slots. MASSIVE was created by tasking professional translators to localize the English-only SLURP dataset into 50 typologically diverse languages from 29 genera. We also present modeling results on XLM-R and mT5, including exact match accuracy, intent classification accuracy, and slot-filling F1 score. We have released our dataset, modeling code, and models publicly."
+    },
+    "2111.05754": {
+      "titulo": "Prune Once for All: Sparse Pre-Trained Language Models",
+      "autores": [
+        "Ofir Zafrir",
+        "Ariel Larey",
+        "Guy Boudoukh",
+        "Haihao Shen",
+        "Moshe Wasserblat"
+      ],
+      "publicado": "2021-11-10",
+      "resumo": "Transformer-based language models are applied to a wide range of applications in natural language processing. However, they are inefficient and difficult to deploy. In recent years, many compression algorithms have been proposed to increase the implementation efficiency of large Transformer-based models on target hardware. In this work we present a new method for training sparse pre-trained Transformer language models by integrating weight pruning and model distillation. These sparse pre-trained models can be used to transfer learning for a wide range of tasks while maintaining their sparsity pattern. We demonstrate our method with three known architectures to create sparse pre-trained BERT-Base, BERT-Large and DistilBERT. We show how the compressed sparse pre-trained models we trained transfer their knowledge to five different downstream natural language tasks with minimal accuracy loss. Moreover, we show how to further compress the sparse models' weights to 8bit precision using quantization-aware training. For example, with our sparse pre-trained BERT-Large fine-tuned on SQuADv1.1 and quantized to 8bit we achieve a compression ratio of $40$X for the encoder with less than $1\\%$ accuracy loss. To the best of our knowledge, our results show the best compression-to-accuracy ratio for BERT-Base, BERT-Large, and DistilBERT."
+    },
+    "2504.13471": {
+      "titulo": "From Large to Super-Tiny: End-to-End Optimization for Cost-Efficient LLMs",
+      "autores": [
+        "Jiliang Ni",
+        "Jiachen Pu",
+        "Zhongyi Yang",
+        "Kun Zhou",
+        "Hui Wang",
+        "Xiaoliang Xiao",
+        "Dakui Wang",
+        "Xin Li",
+        "Jingfeng Luo",
+        "Conggang Hu"
+      ],
+      "publicado": "2025-04-18",
+      "resumo": "Large Language Models (LLMs) have significantly advanced artificial intelligence by optimizing traditional Natural Language Processing (NLP) workflows, facilitating their integration into various systems. Many such NLP systems, including ours, directly incorporate LLMs. However, this approach either results in expensive costs or yields suboptimal performance after fine-tuning. In this paper, we introduce a three-stage cost-efficient end-to-end LLM deployment pipeline, comprising prototyping, knowledge transfer, and model compression, to effectively tackle the cost-performance dilemma in LLM-based frameworks. Its high cost-efficiency is manifested not only in simplifying system complexity and producing super-tiny online models with enhanced performance and reduced costs in the results, but also in addressing development cycle constraints, the lack of extensive high-quality data, and limited computational resources during the project development process. In the first stage, we construct an optimal performance prototype system by transforming complex tasks into a function call-based LLM-driven pipeline, which serves as a teacher model to generate high-quality data. In the second stage, we combine techniques like rejection sampling fine-tuning, reinforcement learning, and knowledge distillation to transfer knowledge to 0.5B student models, delivering effective performance at minimal cost. In the final stage, we further compress models to 0.4B via quantization and pruning, achieving ultra-low latency and cost. Extensive experimental results and the framework's modular design suggest cross-domain capabilities and potential applicability in other NLP areas."
+    },
+    "2004.09936": {
+      "titulo": "DIET: Lightweight Language Understanding for Dialogue Systems",
+      "autores": [
+        "Tanja Bunk",
+        "Daksh Varshneya",
+        "Vladimir Vlasov",
+        "Alan Nichol"
+      ],
+      "publicado": "2020-04-21",
+      "resumo": "Large-scale pre-trained language models have shown impressive results on language understanding benchmarks like GLUE and SuperGLUE, improving considerably over other pre-training methods like distributed representations (GloVe) and purely supervised approaches. We introduce the Dual Intent and Entity Transformer (DIET) architecture, and study the effectiveness of different pre-trained representations on intent and entity prediction, two common dialogue language understanding tasks. DIET advances the state of the art on a complex multi-domain NLU dataset and achieves similarly high performance on other simpler datasets. Surprisingly, we show that there is no clear benefit to using large pre-trained models for this task, and in fact DIET improves upon the current state of the art even in a purely supervised setup without any pre-trained embeddings. Our best performing model outperforms fine-tuning BERT and is about six times faster to train."
+    },
+    "2109.12948": {
+      "titulo": "Understanding and Overcoming the Challenges of Efficient Transformer Quantization",
+      "autores": [
+        "Yelysei Bondarenko",
+        "Markus Nagel",
+        "Tijmen Blankevoort"
+      ],
+      "publicado": "2021-09-27",
+      "resumo": "Transformer-based architectures have become the de-facto standard models for a wide range of Natural Language Processing tasks. However, their memory footprint and high latency are prohibitive for efficient deployment and inference on resource-limited devices. In this work, we explore quantization for transformers. We show that transformers have unique quantization challenges -- namely, high dynamic activation ranges that are difficult to represent with a low bit fixed-point format. We establish that these activations contain structured outliers in the residual connections that encourage specific attention patterns, such as attending to the special separator token. To combat these challenges, we present three solutions based on post-training quantization and quantization-aware training, each with a different set of compromises for accuracy, model size, and ease of use. In particular, we introduce a novel quantization scheme -- per-embedding-group quantization. We demonstrate the effectiveness of our methods on the GLUE benchmark using BERT, establishing state-of-the-art results for post-training quantization. Finally, we show that transformer weights and embeddings can be quantized to ultra-low bit-widths, leading to significant memory savings with a minimum accuracy loss. Our source code is available at~\\url{https://github.com/qualcomm-ai-research/transformer-quantization}."
+    },
+    "2004.03844": {
+      "titulo": "On the Effect of Dropping Layers of Pre-trained Transformer Models",
+      "autores": [
+        "Hassan Sajjad",
+        "Fahim Dalvi",
+        "Nadir Durrani",
+        "Preslav Nakov"
+      ],
+      "publicado": "2020-04-08",
+      "resumo": "Transformer-based NLP models are trained using hundreds of millions or even billions of parameters, limiting their applicability in computationally constrained environments. While the number of parameters generally correlates with performance, it is not clear whether the entire network is required for a downstream task. Motivated by the recent work on pruning and distilling pre-trained models, we explore strategies to drop layers in pre-trained models, and observe the effect of pruning on downstream GLUE tasks. We were able to prune BERT, RoBERTa and XLNet models up to 40%, while maintaining up to 98% of their original performance. Additionally we show that our pruned models are on par with those built using knowledge distillation, both in terms of size and performance. Our experiments yield interesting observations such as, (i) the lower layers are most critical to maintain downstream task performance, (ii) some tasks such as paraphrase detection and sentence similarity are more robust to the dropping of layers, and (iii) models trained using a different objective function exhibit different learning patterns and w.r.t the layer dropping."
+    },
+    "2204.00408": {
+      "titulo": "Structured Pruning Learns Compact and Accurate Models",
+      "autores": [
+        "Mengzhou Xia",
+        "Zexuan Zhong",
+        "Danqi Chen"
+      ],
+      "publicado": "2022-04-01",
+      "resumo": "The growing size of neural language models has led to increased attention in model compression. The two predominant approaches are pruning, which gradually removes weights from a pre-trained model, and distillation, which trains a smaller compact model to match a larger one. Pruning methods can significantly reduce the model size but hardly achieve large speedups as distillation. However, distillation methods require large amounts of unlabeled data and are expensive to train. In this work, we propose a task-specific structured pruning method CoFi (Coarse- and Fine-grained Pruning), which delivers highly parallelizable subnetworks and matches the distillation methods in both accuracy and latency, without resorting to any unlabeled data. Our key insight is to jointly prune coarse-grained (e.g., layers) and fine-grained (e.g., heads and hidden units) modules, which controls the pruning decision of each parameter with masks of different granularity. We also devise a layerwise distillation strategy to transfer knowledge from unpruned to pruned models during optimization. Our experiments on GLUE and SQuAD datasets show that CoFi yields models with over 10x speedups with a small accuracy drop, showing its effectiveness and efficiency compared to previous pruning and distillation approaches."
+    },
+    "1503.02531": {
+      "titulo": "Distilling the Knowledge in a Neural Network",
+      "autores": [
+        "Geoffrey Hinton",
+        "Oriol Vinyals",
+        "Jeff Dean"
+      ],
+      "publicado": "2015-03-09",
+      "resumo": "A very simple way to improve the performance of almost any machine learning algorithm is to train many different models on the same data and then to average their predictions. Unfortunately, making predictions using a whole ensemble of models is cumbersome and may be too computationally expensive to allow deployment to a large number of users, especially if the individual models are large neural nets. Caruana and his collaborators have shown that it is possible to compress the knowledge in an ensemble into a single model which is much easier to deploy and we develop this approach further using a different compression technique. We achieve some surprising results on MNIST and we show that we can significantly improve the acoustic model of a heavily used commercial system by distilling the knowledge in an ensemble of models into a single model. We also introduce a new type of ensemble composed of one or more full models and many specialist models which learn to distinguish fine-grained classes that the full models confuse. Unlike a mixture of experts, these specialist models can be trained rapidly and in parallel."
+    },
+    "1712.05877": {
+      "titulo": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+      "autores": [
+        "Benoit Jacob",
+        "Skirmantas Kligys",
+        "Bo Chen",
+        "Menglong Zhu",
+        "Matthew Tang",
+        "Andrew Howard",
+        "Hartwig Adam",
+        "Dmitry Kalenichenko"
+      ],
+      "publicado": "2017-12-15",
+      "resumo": "The rising popularity of intelligent mobile devices and the daunting computational cost of deep learning-based models call for efficient and accurate on-device inference schemes. We propose a quantization scheme that allows inference to be carried out using integer-only arithmetic, which can be implemented more efficiently than floating point inference on commonly available integer-only hardware. We also co-design a training procedure to preserve end-to-end model accuracy post quantization. As a result, the proposed quantization scheme improves the tradeoff between accuracy and on-device latency. The improvements are significant even on MobileNets, a model family known for run-time efficiency, and are demonstrated in ImageNet classification and COCO detection on popular CPUs."
+    },
+    "1710.01878": {
+      "titulo": "To prune, or not to prune: exploring the efficacy of pruning for model compression",
+      "autores": [
+        "Michael Zhu",
+        "Suyog Gupta"
+      ],
+      "publicado": "2017-10-05",
+      "resumo": "Model pruning seeks to induce sparsity in a deep neural network's various connection matrices, thereby reducing the number of nonzero-valued parameters in the model. Recent reports (Han et al., 2015; Narang et al., 2017) prune deep networks at the cost of only a marginal loss in accuracy and achieve a sizable reduction in model size. This hints at the possibility that the baseline models in these experiments are perhaps severely over-parameterized at the outset and a viable alternative for model compression might be to simply reduce the number of hidden units while maintaining the model's dense connection structure, exposing a similar trade-off in model size and accuracy. We investigate these two distinct paths for model compression within the context of energy-efficient inference in resource-constrained environments and propose a new gradual pruning technique that is simple and straightforward to apply across a variety of models/datasets with minimal tuning and can be seamlessly incorporated within the training process. We compare the accuracy of large, but pruned models (large-sparse) and their smaller, but dense (small-dense) counterparts with identical memory footprint. Across a broad range of neural network architectures (deep CNNs, stacked LSTM, and seq2seq LSTM models), we find large-sparse models to consistently outperform small-dense models and achieve up to 10x reduction in number of non-zero parameters with minimal loss in accuracy."
+    },
+    "2411.05045": {
+      "titulo": "Performance-Guided LLM Knowledge Distillation for Efficient Text Classification at Scale",
+      "autores": [
+        "Flavio Di Palo",
+        "Prateek Singhi",
+        "Bilal Fadlallah"
+      ],
+      "publicado": "2024-11-07",
+      "resumo": "Large Language Models (LLMs) face significant challenges at inference time due to their high computational demands. To address this, we present Performance-Guided Knowledge Distillation (PGKD), a cost-effective and high-throughput solution for production text classification applications. PGKD utilizes teacher-student Knowledge Distillation to distill the knowledge of LLMs into smaller, task-specific models. PGKD establishes an active learning routine between the student model and the LLM; the LLM continuously generates new training data leveraging hard-negative mining, student model validation performance, and early-stopping protocols to inform the data generation. By employing a cyclical, performance-aware approach tailored for highly multi-class, sparsely annotated datasets prevalent in industrial text classification, PGKD effectively addresses training challenges and outperforms traditional BERT-base models and other knowledge distillation methods on several multi-class classification datasets. Additionally, cost and latency benchmarking reveals that models fine-tuned with PGKD are up to 130X faster and 25X less expensive than LLMs for inference on the same classification task. While PGKD is showcased for text classification tasks, its versatile framework can be extended to any LLM distillation task, including language generation, making it a powerful tool for optimizing performance across a wide range of AI applications."
+    },
+    "1506.02626": {
+      "titulo": "Learning both Weights and Connections for Efficient Neural Networks",
+      "autores": [
+        "Song Han",
+        "Jeff Pool",
+        "John Tran",
+        "William J. Dally"
+      ],
+      "publicado": "2015-06-08",
+      "resumo": "Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded systems. Also, conventional networks fix the architecture before training starts; as a result, training cannot improve the architecture. To address these limitations, we describe a method to reduce the storage and computation required by neural networks by an order of magnitude without affecting their accuracy by learning only the important connections. Our method prunes redundant connections using a three-step method. First, we train the network to learn which connections are important. Next, we prune the unimportant connections. Finally, we retrain the network to fine tune the weights of the remaining connections. On the ImageNet dataset, our method reduced the number of parameters of AlexNet by a factor of 9x, from 61 million to 6.7 million, without incurring accuracy loss. Similar experiments with VGG-16 found that the number of parameters can be reduced by 13x, from 138 million to 10.3 million, again with no loss of accuracy."
+    },
+    "2611.00464": {
+      "titulo": "Compression Technique Interactions in Small Language Models: A Factorial Ablation Study",
+      "autores": [
+        "Bhushit Nema",
+        "Siddharth Krishnamurthy",
+        "Anjali Kadiyala"
+      ],
+      "publicado": "2026-10-30",
+      "resumo": "Deploying small language models on resource-constrained hardware requires compression, yet practitioners lack systematic guidance on how quantization, pruning, and post-compression recovery interact when combined. We present a factorial ablation study evaluating 72 compression configurations across four SLM architectures (2.7B-7B parameters), extended with a 48-configuration ordering analysis, benchmark accuracy validation on 30 compressed models, and robustness checks including multi-seed validation and full-corpus perplexity evaluation. INT8 quantization is effectively lossless (<0.5% accuracy degradation), while NF4 quantization combined with L1 magnitude pruning causes model collapse in all 16 tested combinations. LoRA-based fine-tuning reduces degraded perplexity by up to 97% after aggressive pruning; an ablation against standard fine-tuning without a teacher model shows the recovery is driven by LoRA adaptation itself rather than the distillation signal. Compression ordering shows no significant effect among viable configurations (ANOVA p = 0.96) but determines viability for NF4+pruning combinations. INT8 quantization alone provides 40-45% memory reduction with no quality loss. On-device CPU deployment via llama.cpp confirms these findings transfer off the GPU: 4-bit quantization runs 46-54% faster than 8-bit for a perplexity difference under 0.5 points, while un-structured pruning yields no CPU latency or memory benefit, consistent with its dense storage format."
+    },
+    "2005.07683": {
+      "titulo": "Movement Pruning: Adaptive Sparsity by Fine-Tuning",
+      "autores": [
+        "Victor Sanh",
+        "Thomas Wolf",
+        "Alexander M. Rush"
+      ],
+      "publicado": "2020-05-15",
+      "resumo": "Magnitude pruning is a widely used strategy for reducing model size in pure supervised learning; however, it is less effective in the transfer learning regime that has become standard for state-of-the-art natural language processing applications. We propose the use of movement pruning, a simple, deterministic first-order weight pruning method that is more adaptive to pretrained model fine-tuning. We give mathematical foundations to the method and compare it to existing zeroth- and first-order pruning methods. Experiments show that when pruning large pretrained language models, movement pruning shows significant improvements in high-sparsity regimes. When combined with distillation, the approach achieves minimal accuracy loss with down to only 3% of the model parameters."
+    },
+    "2110.12894": {
+      "titulo": "The Efficiency Misnomer",
+      "autores": [
+        "Mostafa Dehghani",
+        "Anurag Arnab",
+        "Lucas Beyer",
+        "Ashish Vaswani",
+        "Yi Tay"
+      ],
+      "publicado": "2021-10-25",
+      "resumo": "Model efficiency is a critical aspect of developing and deploying machine learning models. Inference time and latency directly affect the user experience, and some applications have hard requirements. In addition to inference costs, model training also have direct financial and environmental impacts. Although there are numerous well-established metrics (cost indicators) for measuring model efficiency, researchers and practitioners often assume that these metrics are correlated with each other and report only few of them. In this paper, we thoroughly discuss common cost indicators, their advantages and disadvantages, and how they can contradict each other. We demonstrate how incomplete reporting of cost indicators can lead to partial conclusions and a blurred or incomplete picture of the practical considerations of different models. We further present suggestions to improve reporting of efficiency metrics."
+    },
+    "2103.13630": {
+      "titulo": "A Survey of Quantization Methods for Efficient Neural Network Inference",
+      "autores": [
+        "Amir Gholami",
+        "Sehoon Kim",
+        "Zhen Dong",
+        "Zhewei Yao",
+        "Michael W. Mahoney",
+        "Kurt Keutzer"
+      ],
+      "publicado": "2021-03-25",
+      "resumo": "As soon as abstract mathematical computations were adapted to computation on digital computers, the problem of efficient representation, manipulation, and communication of the numerical values in those computations arose. Strongly related to the problem of numerical representation is the problem of quantization: in what manner should a set of continuous real-valued numbers be distributed over a fixed discrete set of numbers to minimize the number of bits required and also to maximize the accuracy of the attendant computations? This perennial problem of quantization is particularly relevant whenever memory and/or computational resources are severely restricted, and it has come to the forefront in recent years due to the remarkable performance of Neural Network models in computer vision, natural language processing, and related areas. Moving from floating-point representations to low-precision fixed integer values represented in four bits or less holds the potential to reduce the memory footprint and latency by a factor of 16x; and, in fact, reductions of 4x to 8x are often realized in practice in these applications. Thus, it is not surprising that quantization has emerged recently as an important and very active sub-area of research in the efficient implementation of computations associated with Neural Networks. In this article, we survey approaches to the problem of quantizing the numerical values in deep Neural Network computations, covering the advantages/disadvantages of current methods. With this survey and its organization, we hope to have presented a useful snapshot of the current research in quantization for Neural Networks and to have given an intelligent organization to ease the evaluation of future research in this area."
+    },
+    "2402.13116": {
+      "titulo": "A Survey on Knowledge Distillation of Large Language Models",
+      "autores": [
+        "Xiaohan Xu",
+        "Ming Li",
+        "Chongyang Tao",
+        "Tao Shen",
+        "Reynold Cheng",
+        "Jinyang Li",
+        "Can Xu",
+        "Dacheng Tao",
+        "Tianyi Zhou"
+      ],
+      "publicado": "2024-02-20",
+      "resumo": "In the era of Large Language Models (LLMs), Knowledge Distillation (KD) emerges as a pivotal methodology for transferring advanced capabilities from leading proprietary LLMs, such as GPT-4, to their open-source counterparts like LLaMA and Mistral. Additionally, as open-source LLMs flourish, KD plays a crucial role in both compressing these models, and facilitating their self-improvement by employing themselves as teachers. This paper presents a comprehensive survey of KD's role within the realm of LLM, highlighting its critical function in imparting advanced knowledge to smaller models and its utility in model compression and self-improvement. Our survey is meticulously structured around three foundational pillars: \\textit{algorithm}, \\textit{skill}, and \\textit{verticalization} -- providing a comprehensive examination of KD mechanisms, the enhancement of specific cognitive abilities, and their practical implications across diverse fields. Crucially, the survey navigates the intricate interplay between data augmentation (DA) and KD, illustrating how DA emerges as a powerful paradigm within the KD framework to bolster LLMs' performance. By leveraging DA to generate context-rich, skill-specific training data, KD transcends traditional boundaries, enabling open-source models to approximate the contextual adeptness, ethical alignment, and deep semantic insights characteristic of their proprietary counterparts. This work aims to provide an insightful guide for researchers and practitioners, offering a detailed overview of current methodologies in KD and proposing future research directions. Importantly, we firmly advocate for compliance with the legal terms that regulate the use of LLMs, ensuring ethical and lawful application of KD of LLMs. An associated Github repository is available at https://github.com/Tebmer/Awesome-Knowledge-Distillation-of-LLMs."
+    },
+    "1910.06188": {
+      "titulo": "Q8BERT: Quantized 8Bit BERT",
+      "autores": [
+        "Ofir Zafrir",
+        "Guy Boudoukh",
+        "Peter Izsak",
+        "Moshe Wasserblat"
+      ],
+      "publicado": "2019-10-14",
+      "resumo": "Recently, pre-trained Transformer based language models such as BERT and GPT, have shown great improvement in many Natural Language Processing (NLP) tasks. However, these models contain a large amount of parameters. The emergence of even larger and more accurate models such as GPT2 and Megatron, suggest a trend of large pre-trained Transformer models. However, using these large models in production environments is a complex task requiring a large amount of compute, memory and power resources. In this work we show how to perform quantization-aware training during the fine-tuning phase of BERT in order to compress BERT by $4\\times$ with minimal accuracy loss. Furthermore, the produced quantized model can accelerate inference speed if it is optimized for 8bit Integer supporting hardware."
+    },
+    "2405.20935": {
+      "titulo": "Effective Interplay between Sparsity and Quantization: From Theory to Practice",
+      "autores": [
+        "Simla Burcu Harma",
+        "Ayan Chakraborty",
+        "Elizaveta Kostenok",
+        "Danila Mishin",
+        "Dongho Ha",
+        "Babak Falsafi",
+        "Martin Jaggi",
+        "Ming Liu",
+        "Yunho Oh",
+        "Suvinay Subramanian",
+        "Amir Yazdanbakhsh"
+      ],
+      "publicado": "2024-05-31",
+      "resumo": "The increasing size of deep neural networks (DNNs) necessitates effective model compression to reduce their computational and memory footprints. Sparsity and quantization are two prominent compression methods that have been shown to reduce DNNs' computational and memory footprints significantly while preserving model accuracy. However, how these two methods interact when combined together remains a key question for developers, as many tacitly assume that they are orthogonal, meaning that their combined use does not introduce additional errors beyond those introduced by each method independently. In this paper, we provide the first mathematical proof that sparsity and quantization are non-orthogonal. We corroborate these results with experiments spanning a range of large language models, including the OPT and LLaMA model families (with 125M to 8B parameters), and vision models like ViT and ResNet. We show that the order in which we apply these methods matters because applying quantization before sparsity may disrupt the relative importance of tensor elements, which may inadvertently remove significant elements from a tensor. More importantly, we show that even if applied in the correct order, the compounded errors from sparsity and quantization can significantly harm accuracy. Our findings extend to the efficient deployment of large models in resource-constrained compute platforms to reduce serving cost, offering insights into best practices for applying these compression methods to maximize hardware resource efficiency without compromising accuracy."
+    },
+    "2203.15996": {
+      "titulo": "TextPruner: A Model Pruning Toolkit for Pre-Trained Language Models",
+      "autores": [
+        "Ziqing Yang",
+        "Yiming Cui",
+        "Zhigang Chen"
+      ],
+      "publicado": "2022-03-30",
+      "resumo": "Pre-trained language models have been prevailed in natural language processing and become the backbones of many NLP tasks, but the demands for computational resources have limited their applications. In this paper, we introduce TextPruner, an open-source model pruning toolkit designed for pre-trained language models, targeting fast and easy model compression. TextPruner offers structured post-training pruning methods, including vocabulary pruning and transformer pruning, and can be applied to various models and tasks. We also propose a self-supervised pruning method that can be applied without the labeled data. Our experiments with several NLP tasks demonstrate the ability of TextPruner to reduce the model size without re-training the model."
+    },
+    "1806.08342": {
+      "titulo": "Quantizing deep convolutional networks for efficient inference: A whitepaper",
+      "autores": [
+        "Raghuraman Krishnamoorthi"
+      ],
+      "publicado": "2018-06-21",
+      "resumo": "We present an overview of techniques for quantizing convolutional neural networks for inference with integer weights and activations. Per-channel quantization of weights and per-layer quantization of activations to 8-bits of precision post-training produces classification accuracies within 2% of floating point networks for a wide variety of CNN architectures. Model sizes can be reduced by a factor of 4 by quantizing weights to 8-bits, even when 8-bit arithmetic is not supported. This can be achieved with simple, post training quantization of weights.We benchmark latencies of quantized networks on CPUs and DSPs and observe a speedup of 2x-3x for quantized implementations compared to floating point on CPUs. Speedups of up to 10x are observed on specialized processors with fixed point SIMD capabilities, like the Qualcomm QDSPs with HVX. Quantization-aware training can provide further improvements, reducing the gap to floating point to 1% at 8-bit precision. Quantization-aware training also allows for reducing the precision of weights to four bits with accuracy losses ranging from 2% to 10%, with higher accuracy drop for smaller networks.We introduce tools in TensorFlow and TensorFlowLite for quantizing convolutional networks and review best practices for quantization-aware training to obtain high accuracy with quantized weights and activations. We recommend that per-channel quantization of weights and per-layer quantization of activations be the preferred quantization scheme for hardware acceleration and kernel optimization. We also propose that future processors and hardware accelerators for optimized inference support precisions of 4, 8 and 16 bits."
+    },
+    "1909.10351": {
+      "titulo": "TinyBERT: Distilling BERT for Natural Language Understanding",
+      "autores": [
+        "Xiaoqi Jiao",
+        "Yichun Yin",
+        "Lifeng Shang",
+        "Xin Jiang",
+        "Xiao Chen",
+        "Linlin Li",
+        "Fang Wang",
+        "Qun Liu"
+      ],
+      "publicado": "2019-09-23",
+      "resumo": "Language model pre-training, such as BERT, has significantly improved the performances of many natural language processing tasks. However, pre-trained language models are usually computationally expensive, so it is difficult to efficiently execute them on resource-restricted devices. To accelerate inference and reduce model size while maintaining accuracy, we first propose a novel Transformer distillation method that is specially designed for knowledge distillation (KD) of the Transformer-based models. By leveraging this new KD method, the plenty of knowledge encoded in a large teacher BERT can be effectively transferred to a small student Tiny-BERT. Then, we introduce a new two-stage learning framework for TinyBERT, which performs Transformer distillation at both the pretraining and task-specific learning stages. This framework ensures that TinyBERT can capture he general-domain as well as the task-specific knowledge in BERT. TinyBERT with 4 layers is empirically effective and achieves more than 96.8% the performance of its teacher BERTBASE on GLUE benchmark, while being 7.5x smaller and 9.4x faster on inference. TinyBERT with 4 layers is also significantly better than 4-layer state-of-the-art baselines on BERT distillation, with only about 28% parameters and about 31% inference time of them. Moreover, TinyBERT with 6 layers performs on-par with its teacher BERTBASE."
+    },
+    "2006.04884": {
+      "titulo": "On the Stability of Fine-tuning BERT: Misconceptions, Explanations, and Strong Baselines",
+      "autores": [
+        "Marius Mosbach",
+        "Maksym Andriushchenko",
+        "Dietrich Klakow"
+      ],
+      "publicado": "2020-06-08",
+      "resumo": "Fine-tuning pre-trained transformer-based language models such as BERT has become a common practice dominating leaderboards across various NLP benchmarks. Despite the strong empirical performance of fine-tuned models, fine-tuning is an unstable process: training the same model with multiple random seeds can result in a large variance of the task performance. Previous literature (Devlin et al., 2019; Lee et al., 2020; Dodge et al., 2020) identified two potential reasons for the observed instability: catastrophic forgetting and small size of the fine-tuning datasets. In this paper, we show that both hypotheses fail to explain the fine-tuning instability. We analyze BERT, RoBERTa, and ALBERT, fine-tuned on commonly used datasets from the GLUE benchmark, and show that the observed instability is caused by optimization difficulties that lead to vanishing gradients. Additionally, we show that the remaining variance of the downstream task performance can be attributed to differences in generalization where fine-tuned models with the same training loss exhibit noticeably different test performance. Based on our analysis, we present a simple but strong baseline that makes fine-tuning BERT-based models significantly more stable than the previously proposed approaches. Code to reproduce our results is available online: https://github.com/uds-lsv/bert-stable-fine-tuning."
+    },
+    "2010.05609": {
+      "titulo": "Load What You Need: Smaller Versions of Multilingual BERT",
+      "autores": [
+        "Amine Abdaoui",
+        "Camille Pradel",
+        "Grégoire Sigel"
+      ],
+      "publicado": "2020-10-12",
+      "resumo": "Pre-trained Transformer-based models are achieving state-of-the-art results on a variety of Natural Language Processing data sets. However, the size of these models is often a drawback for their deployment in real production applications. In the case of multilingual models, most of the parameters are located in the embeddings layer. Therefore, reducing the vocabulary size should have an important impact on the total number of parameters. In this paper, we propose to generate smaller models that handle fewer number of languages according to the targeted corpora. We present an evaluation of smaller versions of multilingual BERT on the XNLI data set, but we believe that this method may be applied to other multilingual transformers. The obtained results confirm that we can generate smaller models that keep comparable results, while reducing up to 45% of the total number of parameters. We compared our models with DistilmBERT (a distilled version of multilingual BERT) and showed that unlike language reduction, distillation induced a 1.7% to 6% drop in the overall accuracy on the XNLI data set. The presented models and code are publicly available."
+    }
+  },
+  "acl": {
+    "W04-3250": {
+      "titulo": "Statistical Significance Tests for Machine Translation Evaluation",
+      "autores": [
+        "Koehn, Philipp"
+      ],
+      "publicado": "2004",
+      "resumo": ""
+    },
+    "D12-1091": {
+      "titulo": "An Empirical Investigation of Statistical Significance in NLP",
+      "autores": [
+        "Berg-Kirkpatrick, Taylor",
+        "Burkett, David",
+        "Klein, Dan"
+      ],
+      "publicado": "2012",
+      "resumo": ""
+    }
+  }
+}

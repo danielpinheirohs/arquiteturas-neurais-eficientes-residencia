@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "so_saida_da_atencao",
+  "descricao": "só saida_da_atencao em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 12,
+  "bytes_da_rede": 1089271820,
+  "slot_f1_dev": 77.23970944309927,
+  "segundos": 43.47639218799304
+}

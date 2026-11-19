@@ -1,0 +1,13 @@
+aluno,contra,momento,metrica,diferenca,ic_min,ic_max,distinguivel
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,exact_match,-0.409903262829971,-1.262502049516312,0.40990326282996387,False
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,intent_acc,-0.4426955238563721,-1.0657484833579312,0.2131496966715776,False
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,slot_f1,-0.33639674254567353,-1.1116562551614093,0.37698398515583775,False
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,exact_match,-0.6722413510411585,-1.5908345630431335,0.21314969667157735,False
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,intent_acc,-0.6394490900147645,-1.295294310542705,0.032792261026382274,False
+xlmr__aluno_b1__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,slot_f1,-0.6314877131250753,-1.4652594955936409,0.15595697165848008,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,exact_match,-0.1803574356451918,-1.0165600918183415,0.6394490900147545,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,intent_acc,0.19675356615839235,-0.37711100180357643,0.7874241678963839,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,sem_corte_e_reajuste,slot_f1,-0.6450303692326003,-1.3810243861838873,0.09425026912804005,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,exact_match,-0.5738645679619623,-1.4756517461879004,0.3279226102639755,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,intent_acc,0.06558452205280219,-0.5574684374487715,0.7218396458435972,False
+xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100,aluno_a,corte_e_reajuste,slot_f1,-0.9089218753289501,-1.724641094859631,-0.11408772189445081,True

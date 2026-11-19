@@ -1,0 +1,96 @@
+{
+  "consultado_em": "2026-11-18T22:04:36",
+  "fonte": "http://export.arxiv.org/api/query e https://aclanthology.org/<id>.bib",
+  "pedidos": [
+    "1503.02531",
+    "1910.01348",
+    "1902.03393",
+    "2005.10419",
+    "1909.11723",
+    "2106.05945",
+    "1805.04770"
+  ],
+  "arxiv": {
+    "2106.05945": {
+      "titulo": "Does Knowledge Distillation Really Work?",
+      "autores": [
+        "Samuel Stanton",
+        "Pavel Izmailov",
+        "Polina Kirichenko",
+        "Alexander A. Alemi",
+        "Andrew Gordon Wilson"
+      ],
+      "publicado": "2021-06-10",
+      "resumo": "Knowledge distillation is a popular technique for training a small student network to emulate a larger teacher model, such as an ensemble of networks. We show that while knowledge distillation can improve student generalization, it does not typically work as it is commonly understood: there often remains a surprisingly large discrepancy between the predictive distributions of the teacher and the student, even in cases when the student has the capacity to perfectly match the teacher. We identify difficulties in optimization as a key reason for why the student is unable to match the teacher. We also show how the details of the dataset used for distillation play a role in how closely the student matches the teacher -- and that more closely matching the teacher paradoxically does not always lead to better student generalization."
+    },
+    "2005.10419": {
+      "titulo": "Why distillation helps: a statistical perspective",
+      "autores": [
+        "Aditya Krishna Menon",
+        "Ankit Singh Rawat",
+        "Sashank J. Reddi",
+        "Seungyeon Kim",
+        "Sanjiv Kumar"
+      ],
+      "publicado": "2020-05-21",
+      "resumo": "Knowledge distillation is a technique for improving the performance of a simple \"student\" model by replacing its one-hot training labels with a distribution over labels obtained from a complex \"teacher\" model. While this simple approach has proven widely effective, a basic question remains unresolved: why does distillation help? In this paper, we present a statistical perspective on distillation which addresses this question, and provides a novel connection to extreme multiclass retrieval techniques. Our core observation is that the teacher seeks to estimate the underlying (Bayes) class-probability function. Building on this, we establish a fundamental bias-variance tradeoff in the student's objective: this quantifies how approximate knowledge of these class-probabilities can significantly aid learning. Finally, we show how distillation complements existing negative mining techniques for extreme multiclass retrieval, and propose a unified objective which combines these ideas."
+    },
+    "1902.03393": {
+      "titulo": "Improved Knowledge Distillation via Teacher Assistant",
+      "autores": [
+        "Seyed-Iman Mirzadeh",
+        "Mehrdad Farajtabar",
+        "Ang Li",
+        "Nir Levine",
+        "Akihiro Matsukawa",
+        "Hassan Ghasemzadeh"
+      ],
+      "publicado": "2019-02-09",
+      "resumo": "Despite the fact that deep neural networks are powerful models and achieve appealing results on many tasks, they are too large to be deployed on edge devices like smartphones or embedded sensor nodes. There have been efforts to compress these networks, and a popular method is knowledge distillation, where a large (teacher) pre-trained network is used to train a smaller (student) network. However, in this paper, we show that the student network performance degrades when the gap between student and teacher is large. Given a fixed student network, one cannot employ an arbitrarily large teacher, or in other words, a teacher can effectively transfer its knowledge to students up to a certain size, not smaller. To alleviate this shortcoming, we introduce multi-step knowledge distillation, which employs an intermediate-sized network (teacher assistant) to bridge the gap between the student and the teacher. Moreover, we study the effect of teacher assistant size and extend the framework to multi-step distillation. Theoretical analysis and extensive experiments on CIFAR-10,100 and ImageNet datasets and on CNN and ResNet architectures substantiate the effectiveness of our proposed approach."
+    },
+    "1910.01348": {
+      "titulo": "On the Efficacy of Knowledge Distillation",
+      "autores": [
+        "Jang Hyun Cho",
+        "Bharath Hariharan"
+      ],
+      "publicado": "2019-10-03",
+      "resumo": "In this paper, we present a thorough evaluation of the efficacy of knowledge distillation and its dependence on student and teacher architectures. Starting with the observation that more accurate teachers often don't make good teachers, we attempt to tease apart the factors that affect knowledge distillation performance. We find crucially that larger models do not often make better teachers. We show that this is a consequence of mismatched capacity, and that small students are unable to mimic large teachers. We find typical ways of circumventing this (such as performing a sequence of knowledge distillation steps) to be ineffective. Finally, we show that this effect can be mitigated by stopping the teacher's training early. Our results generalize across datasets and models."
+    },
+    "1909.11723": {
+      "titulo": "Revisiting Knowledge Distillation via Label Smoothing Regularization",
+      "autores": [
+        "Li Yuan",
+        "Francis E. H. Tay",
+        "Guilin Li",
+        "Tao Wang",
+        "Jiashi Feng"
+      ],
+      "publicado": "2019-09-25",
+      "resumo": "Knowledge Distillation (KD) aims to distill the knowledge of a cumbersome teacher model into a lightweight student model. Its success is generally attributed to the privileged information on similarities among categories provided by the teacher model, and in this sense, only strong teacher models are deployed to teach weaker students in practice. In this work, we challenge this common belief by following experimental observations: 1) beyond the acknowledgment that the teacher can improve the student, the student can also enhance the teacher significantly by reversing the KD procedure; 2) a poorly-trained teacher with much lower accuracy than the student can still improve the latter significantly. To explain these observations, we provide a theoretical analysis of the relationships between KD and label smoothing regularization. We prove that 1) KD is a type of learned label smoothing regularization and 2) label smoothing regularization provides a virtual teacher model for KD. From these results, we argue that the success of KD is not fully due to the similarity information between categories from teachers, but also to the regularization of soft targets, which is equally or even more important. Based on these analyses, we further propose a novel Teacher-free Knowledge Distillation (Tf-KD) framework, where a student model learns from itself or manuallydesigned regularization distribution. The Tf-KD achieves comparable performance with normal KD from a superior teacher, which is well applied when a stronger teacher model is unavailable. Meanwhile, Tf-KD is generic and can be directly deployed for training deep neural networks. Without any extra computation cost, Tf-KD achieves up to 0.65\\% improvement on ImageNet over well-established baseline models, which is superior to label smoothing regularization."
+    },
+    "1503.02531": {
+      "titulo": "Distilling the Knowledge in a Neural Network",
+      "autores": [
+        "Geoffrey Hinton",
+        "Oriol Vinyals",
+        "Jeff Dean"
+      ],
+      "publicado": "2015-03-09",
+      "resumo": "A very simple way to improve the performance of almost any machine learning algorithm is to train many different models on the same data and then to average their predictions. Unfortunately, making predictions using a whole ensemble of models is cumbersome and may be too computationally expensive to allow deployment to a large number of users, especially if the individual models are large neural nets. Caruana and his collaborators have shown that it is possible to compress the knowledge in an ensemble into a single model which is much easier to deploy and we develop this approach further using a different compression technique. We achieve some surprising results on MNIST and we show that we can significantly improve the acoustic model of a heavily used commercial system by distilling the knowledge in an ensemble of models into a single model. We also introduce a new type of ensemble composed of one or more full models and many specialist models which learn to distinguish fine-grained classes that the full models confuse. Unlike a mixture of experts, these specialist models can be trained rapidly and in parallel."
+    },
+    "1805.04770": {
+      "titulo": "Born Again Neural Networks",
+      "autores": [
+        "Tommaso Furlanello",
+        "Zachary C. Lipton",
+        "Michael Tschannen",
+        "Laurent Itti",
+        "Anima Anandkumar"
+      ],
+      "publicado": "2018-05-12",
+      "resumo": "Knowledge Distillation (KD) consists of transferring âknowledgeâ from one machine learning model (the teacher) to another (the student). Commonly, the teacher is a high-capacity model with formidable performance, while the student is more compact. By transferring knowledge, one hopes to benefit from the studentâs compactness, without sacrificing too much performance. We study KD from a new perspective: rather than compressing models, we train students parameterized identically to their teachers. Surprisingly, these Born-Again Networks (BANs), outperform their teachers significantly, both on computer vision and language modeling tasks. Our experiments with BANs based on DenseNets demonstrate state-of-the-art performance on the CIFAR-10 (3.5%) and CIFAR-100 (15.5%) datasets, by validation error. Additional experiments explore two distillation objectives: (i) Confidence-Weighted by Teacher Max (CWTM) and (ii) Dark Knowledge with Permuted Predictions (DKPP). Both methods elucidate the essential components of KD, demonstrating the effect of the teacher outputs on both predicted and non-predicted classes."
+    }
+  },
+  "acl": {}
+}

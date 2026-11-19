@@ -1,0 +1,87 @@
+{
+  "etapa": "11a_professor_aberto_maior",
+  "gerado_em": "2026-11-18 21:41:30 -0300",
+  "regra": "do mais barato para o mais caro; um candidato mais caro só toma o lugar se o exact match em dev for distinguivelmente maior (IC95 da diferença pareada acima de zero)",
+  "regra_escrita_em": "2026-11-18 17:16:11 -0300",
+  "medida": "exact match em dev (2.033 pedidos), diferença pareada, bootstrap por pedido, 2.000 reamostras, semente 0",
+  "titular_de_partida": "qwen3_8b__nf4__local_3080",
+  "ordem": [
+    "qwen3_8b__nf4__local_3080",
+    "qwen3_8b__fp16__colab_l4",
+    "qwen3_14b__fp16__colab_a100"
+  ],
+  "escolhido": "qwen3_14b__fp16__colab_a100",
+  "modelo": "Qwen/Qwen3-14B",
+  "disputas": {
+    "qwen3_8b__fp16__colab_l4": {
+      "contra": "qwen3_8b__nf4__local_3080",
+      "a": 0.4318740777176586,
+      "b": 0.4318740777176586,
+      "diferenca": 0.0,
+      "ic_min": -0.011313330054107229,
+      "ic_max": 0.011805213969503181
+    },
+    "qwen3_14b__fp16__colab_a100": {
+      "contra": "qwen3_8b__nf4__local_3080",
+      "a": 0.4318740777176586,
+      "b": 0.4913920314805706,
+      "diferenca": 0.05951795376291197,
+      "ic_min": 0.0418101328086572,
+      "ic_max": 0.07722577471716674
+    }
+  },
+  "candidatos": {
+    "qwen3_8b__nf4__local_3080": {
+      "nome": "Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",
+      "dev": {
+        "intent_acc": 0.7742252828332513,
+        "intent_macro_f1": 0.7826454318760424,
+        "slot_f1": 0.5795166858457997,
+        "exact_match": 0.4318740777176586
+      },
+      "test": {
+        "intent_acc": 0.7760591795561533,
+        "intent_macro_f1": 0.766170021930593,
+        "slot_f1": 0.5568999345977763,
+        "exact_match": 0.4324142568930733
+      }
+    },
+    "qwen3_8b__fp16__colab_l4": {
+      "nome": "Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",
+      "dev": {
+        "intent_acc": 0.7791441219872111,
+        "intent_macro_f1": 0.7841610258987689,
+        "slot_f1": 0.5782638414217361,
+        "exact_match": 0.4318740777176586
+      },
+      "test": {
+        "intent_acc": 0.7794216543375925,
+        "intent_macro_f1": 0.7687270920422287,
+        "slot_f1": 0.5647819063004846,
+        "exact_match": 0.43409549428379285
+      }
+    },
+    "qwen3_14b__fp16__colab_a100": {
+      "nome": "Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",
+      "dev": {
+        "intent_acc": 0.8057058534185932,
+        "intent_macro_f1": 0.8158645394713039,
+        "slot_f1": 0.624215663490588,
+        "exact_match": 0.4913920314805706
+      },
+      "test": {
+        "intent_acc": 0.8002689979825152,
+        "intent_macro_f1": 0.7868575286134369,
+        "slot_f1": 0.6143423661599471,
+        "exact_match": 0.48957632817753866
+      }
+    }
+  },
+  "o_teste_nao_decide": "os números do teste estão aqui só para relato",
+  "ate_onde_a_escada_foi": "até o Qwen3-14B; candidatos maiores não foram rodados",
+  "para_os_alunos": {
+    "nome": "Qwen3-14B",
+    "etapa": "11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100",
+    "previsoes": "qwen3_14b__fp16__colab_a100"
+  }
+}

@@ -1,0 +1,815 @@
+{
+  "etapa": "10d_comparativo_dos_caminhos",
+  "gerado_em": "2026-11-18T21:20:09",
+  "pergunta": "Com os mesmos professores e as mesmas regras, o que o encoder pré-treinado compra em qualidade, e quanto custa em tamanho e latência, em relação à rede feita do zero?",
+  "finais": {
+    "zero": {
+      "chave": "aluno_a/int8",
+      "sistema": "Aluno A, sem 90% das linhas da tabela de features, INT8, quantização dinâmica",
+      "no_teste": {
+        "intent_acc": 0.80183815288052,
+        "slot_f1": 0.648808848830449,
+        "exact_match": 0.5122169917058955
+      },
+      "em_dev": {
+        "intent_acc": 0.8140678799803246,
+        "slot_f1": 0.6685396108824735,
+        "exact_match": 0.5171339563862929
+      },
+      "bytes": 2113186.0,
+      "latencia_p50_ms": 0.2610945,
+      "latencia_medida_na": "Etapa 8",
+      "parametros": 1992538
+    },
+    "xlmr": {
+      "chave": "xlmr/aluno_a/int8",
+      "sistema": "Aluno A, vocabulário do treino, INT8, quantização dinâmica",
+      "no_teste": {
+        "intent_acc": 0.8242546514234478,
+        "slot_f1": 0.6513263126264465,
+        "exact_match": 0.534969737726967
+      },
+      "em_dev": {
+        "intent_acc": 0.8278406296114117,
+        "slot_f1": 0.6775909562263173,
+        "exact_match": 0.5404164617150352
+      },
+      "bytes": 90666664.0,
+      "latencia_p50_ms": 8.3504895,
+      "latencia_medida_na": "Etapa 10c",
+      "parametros": 89573547
+    }
+  },
+  "final_do_xlmr_menos_final_do_zero": {
+    "test": {
+      "intent_acc": {
+        "diferenca": 0.02241649854292782,
+        "ic_min": 0.014231674512441204,
+        "ic_max": 0.030822685496525448,
+        "distinguivel": true
+      },
+      "slot_f1": {
+        "diferenca": 0.0025174637959974877,
+        "ic_min": -0.006459918306711357,
+        "ic_max": 0.011488044152489345,
+        "distinguivel": false
+      },
+      "exact_match": {
+        "diferenca": 0.022752746021071468,
+        "ic_min": 0.012553239184039496,
+        "ic_max": 0.0329522528581036,
+        "distinguivel": true
+      }
+    },
+    "dev": {
+      "intent_acc": {
+        "diferenca": 0.0137727496310871,
+        "ic_min": 0.004426955238563732,
+        "ic_max": 0.023778488276766714,
+        "distinguivel": true
+      },
+      "slot_f1": {
+        "diferenca": 0.009051345343843775,
+        "ic_min": -0.0008881502292793328,
+        "ic_max": 0.01963003883363615,
+        "distinguivel": false
+      },
+      "exact_match": {
+        "diferenca": 0.02328250532874232,
+        "ic_min": 0.01163715363174292,
+        "ic_max": 0.03623544843416948,
+        "distinguivel": true
+      }
+    }
+  },
+  "custo_do_final_do_xlmr_em_vezes_o_do_zero": {
+    "tamanho": 42.905198122645146,
+    "latencia_de_origem": 31.982632724932927,
+    "latencia_na_mesma_sessao": 31.232077806974047
+  },
+  "preco_de_um_ponto_de_exact_match": [
+    {
+      "caminho": "xlmr",
+      "particao": "dev",
+      "custo": "tamanho",
+      "unidade": "MB",
+      "fonte_do_custo": "arquivos gravados",
+      "do_final": 90.666664,
+      "do_final_do_zero": 2.113186,
+      "custo_a_mais": 88.553478,
+      "vezes": 42.905198122645146,
+      "exact_match_a_mais": 0.02328250532874232,
+      "exact_match_ic_min": 0.01163715363174292,
+      "exact_match_ic_max": 0.03623544843416948,
+      "definido": true,
+      "por_ponto_valor": 38.03434241704241,
+      "por_ponto_ic_min": 24.438355761176506,
+      "por_ponto_ic_max": 76.09547901683685
+    },
+    {
+      "caminho": "xlmr",
+      "particao": "dev",
+      "custo": "latencia",
+      "unidade": "ms",
+      "fonte_do_custo": "etapas de origem",
+      "do_final": 8.3504895,
+      "do_final_do_zero": 0.2610945,
+      "custo_a_mais": 8.089395,
+      "vezes": 31.982632724932927,
+      "exact_match_a_mais": 0.02328250532874232,
+      "exact_match_ic_min": 0.01163715363174292,
+      "exact_match_ic_max": 0.03623544843416948,
+      "definido": true,
+      "por_ponto_valor": 3.474452120070437,
+      "por_ponto_ic_min": 2.232453398416293,
+      "por_ponto_ic_max": 6.951351899260297
+    },
+    {
+      "caminho": "xlmr",
+      "particao": "dev",
+      "custo": "latencia",
+      "unidade": "ms",
+      "fonte_do_custo": "mesma sessão",
+      "do_final": 7.999191,
+      "do_final_do_zero": 0.256121,
+      "custo_a_mais": 7.7430699999999995,
+      "vezes": 31.232077806974047,
+      "exact_match_a_mais": 0.02328250532874232,
+      "exact_match_ic_min": 0.01163715363174292,
+      "exact_match_ic_max": 0.03623544843416948,
+      "definido": true,
+      "por_ponto_valor": 3.3257030936619856,
+      "por_ponto_ic_min": 2.1368771009049805,
+      "por_ponto_ic_max": 6.653749056710104
+    },
+    {
+      "caminho": "xlmr",
+      "particao": "test",
+      "custo": "tamanho",
+      "unidade": "MB",
+      "fonte_do_custo": "arquivos gravados",
+      "do_final": 90.666664,
+      "do_final_do_zero": 2.113186,
+      "custo_a_mais": 88.553478,
+      "vezes": 42.905198122645146,
+      "exact_match_a_mais": 0.022752746021071468,
+      "exact_match_ic_min": 0.012553239184039496,
+      "exact_match_ic_max": 0.0329522528581036,
+      "definido": true,
+      "por_ponto_valor": 38.919907917044405,
+      "por_ponto_ic_min": 26.873269752244862,
+      "por_ponto_ic_max": 70.54233309964262
+    },
+    {
+      "caminho": "xlmr",
+      "particao": "test",
+      "custo": "latencia",
+      "unidade": "ms",
+      "fonte_do_custo": "etapas de origem",
+      "do_final": 8.3504895,
+      "do_final_do_zero": 0.2610945,
+      "custo_a_mais": 8.089395,
+      "vezes": 31.982632724932927,
+      "exact_match_a_mais": 0.022752746021071468,
+      "exact_match_ic_min": 0.012553239184039496,
+      "exact_match_ic_max": 0.0329522528581036,
+      "definido": true,
+      "por_ponto_valor": 3.555348876354686,
+      "por_ponto_ic_min": 2.4548837479591805,
+      "por_ponto_ic_max": 6.444069838392835
+    },
+    {
+      "caminho": "xlmr",
+      "particao": "test",
+      "custo": "latencia",
+      "unidade": "ms",
+      "fonte_do_custo": "mesma sessão",
+      "do_final": 7.999191,
+      "do_final_do_zero": 0.256121,
+      "custo_a_mais": 7.7430699999999995,
+      "vezes": 31.232077806974047,
+      "exact_match_a_mais": 0.022752746021071468,
+      "exact_match_ic_min": 0.012553239184039496,
+      "exact_match_ic_max": 0.0329522528581036,
+      "definido": true,
+      "por_ponto_valor": 3.4031364798029613,
+      "por_ponto_ic_min": 2.3497847122448947,
+      "por_ponto_ic_max": 6.168184869642836
+    }
+  ],
+  "fronteira": {
+    "latencia": [
+      "aluno_a/int8_sem_poda",
+      "xlmr/aluno_a/int8_sem_poda"
+    ],
+    "tamanho": [
+      "aluno_a/soltos",
+      "aluno_a/int8",
+      "aluno_a/int8_sem_poda",
+      "xlmr/aluno_a/int8",
+      "xlmr/aluno_a/int8_sem_poda"
+    ],
+    "latencia_com_a_medida_na_mesma_sessao": [
+      "aluno_a/int8_sem_poda",
+      "xlmr/aluno_a/int8_sem_poda"
+    ],
+    "dominados": {
+      "latencia": {
+        "claude": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "qwen": [
+          "claude",
+          "aluno_a",
+          "aluno_b1",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_b2",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/podado",
+          "xlmr/aluno_b2/onnx",
+          "xlmr/aluno_b2/int8",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "piso": [
+          "aluno_a",
+          "aluno_b1",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda"
+        ],
+        "aluno_a": [
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b1": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda"
+        ],
+        "aluno_b2": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/podado": [
+          "aluno_a/onnx",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/onnx": [
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/int8": [
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/soltos": [
+          "aluno_a/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/podado": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/onnx": [
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/int8": [
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/soltos": [
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/int8_sem_poda": [
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_a/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/podado": [
+          "xlmr/aluno_a",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/onnx": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/int8": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/soltos": [
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/podado": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_b2",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/onnx",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/onnx": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/int8": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/soltos": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/int8_sem_poda": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_a/int8_sem_poda",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda"
+        ]
+      },
+      "tamanho": {
+        "qwen": [
+          "aluno_a",
+          "aluno_b1",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_b1",
+          "xlmr/aluno_b2",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/podado",
+          "xlmr/aluno_b2/onnx",
+          "xlmr/aluno_b2/int8",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "piso": [
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda"
+        ],
+        "aluno_a": [
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b1": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda"
+        ],
+        "aluno_b2": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/podado": [
+          "aluno_a/onnx",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_a/onnx": [
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/podado": [
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/onnx": [
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/int8",
+          "aluno_a/int8_sem_poda"
+        ],
+        "aluno_b2/int8": [
+          "aluno_a/soltos"
+        ],
+        "aluno_b2/soltos": [
+          "aluno_a/soltos"
+        ],
+        "aluno_b2/int8_sem_poda": [
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda"
+        ],
+        "xlmr/piso": [
+          "aluno_a",
+          "aluno_b1",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_b1",
+          "xlmr/aluno_b2",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/podado",
+          "xlmr/aluno_b2/onnx",
+          "xlmr/aluno_b2/int8",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_a": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_b1": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_b2",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_a/int8_sem_poda",
+          "xlmr/aluno_a",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/podado": [
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/onnx": [
+          "xlmr/aluno_a/int8_sem_poda"
+        ],
+        "xlmr/aluno_a/soltos": [
+          "xlmr/aluno_a/int8"
+        ],
+        "xlmr/aluno_b2/podado": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/podado",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/onnx",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/onnx": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/onnx",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda",
+          "xlmr/aluno_b2/soltos",
+          "xlmr/aluno_b2/int8_sem_poda"
+        ],
+        "xlmr/aluno_b2/int8": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/int8"
+        ],
+        "xlmr/aluno_b2/soltos": [
+          "aluno_a",
+          "aluno_b2",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_b2/podado",
+          "aluno_b2/onnx",
+          "aluno_b2/int8",
+          "aluno_b2/soltos",
+          "aluno_a/int8_sem_poda",
+          "aluno_b2/int8_sem_poda",
+          "xlmr/aluno_a/int8"
+        ],
+        "xlmr/aluno_b2/int8_sem_poda": [
+          "aluno_a",
+          "aluno_a/podado",
+          "aluno_a/onnx",
+          "aluno_a/int8",
+          "aluno_a/soltos",
+          "aluno_a/int8_sem_poda",
+          "xlmr/aluno_a/int8",
+          "xlmr/aluno_a/soltos",
+          "xlmr/aluno_a/int8_sem_poda"
+        ]
+      }
+    },
+    "folga_da_latencia": 0.13750540808795467
+  },
+  "latencia_na_mesma_sessao": {
+    "pasta": "latencia/20261118-205508",
+    "medido_em": "2026-11-18T21:01:55",
+    "maquina_quieta": true,
+    "nucleos_de_outros": 0.06790627666254122,
+    "confirma_as_de_origem": true,
+    "p50_ms": {
+      "zero/int8": {
+        "mesma_sessao": 0.256121,
+        "origem": 0.2610945
+      },
+      "xlmr/int8": {
+        "mesma_sessao": 7.999191,
+        "origem": 8.3504895
+      },
+      "zero/onnx": {
+        "mesma_sessao": 0.419779,
+        "origem": 0.4256395
+      },
+      "xlmr/onnx": {
+        "mesma_sessao": 24.348454,
+        "origem": 25.0758705
+      },
+      "zero/pytorch": {
+        "mesma_sessao": 1.1067185,
+        "origem": 1.100955
+      },
+      "xlmr/pytorch": {
+        "mesma_sessao": 35.110134,
+        "origem": 36.103376
+      }
+    }
+  },
+  "conferencia": {
+    "linhas_conferidas": 191,
+    "diferentes": 0,
+    "sem_numero_na_origem": 0,
+    "maior_diferenca": 0.0,
+    "por_tipo": {
+      "comparação entre sistemas": 20,
+      "degrau de uma cadeia": 44,
+      "linha da tabela final da Etapa 9": 21,
+      "qualidade de um sistema": 106
+    }
+  },
+  "comparacoes": {
+    "na_lista_fechada": 43,
+    "intervalos_por_particao": 129,
+    "distinguiveis_no_teste": 87,
+    "distinguiveis_em_dev": 77,
+    "dev_e_teste_discordam": 20,
+    "degraus_de_cadeia_por_particao": 22
+  },
+  "artigos": {
+    "referencias": 38,
+    "conferidas_na_fonte": 38,
+    "com_resumo_lido": 36,
+    "resumo_sustenta": 25,
+    "resumo_sustenta_em_parte": 11,
+    "passos_sem_artigo": [
+      "Exportação"
+    ]
+  },
+  "regras": {
+    "arquivo": "regras_v2.json",
+    "versao": 2,
+    "gravado_em": "2026-11-18T20:54:25",
+    "sha256": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f"
+  },
+  "sistemas_no_registro": 44,
+  "limites": 20,
+  "como_acrescentar_um_sistema": "uma função nova em etapa10d.FONTES, ou um sistemas.json na entrega da etapa nova (formato em etapa10d.fichas_declaradas); depois: regras, preparar, calcular"
+}

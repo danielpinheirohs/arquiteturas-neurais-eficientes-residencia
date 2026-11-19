@@ -1,0 +1,1882 @@
+{
+  "etapa": "10c_encoder_quantizacao",
+  "gerado_em": "2026-11-18",
+  "regra_do_qat": "treino ciente de quantização só se o F1 de entidades cair mais de 1 ponto em dev com a quantização pós-treino (PLANO.md)",
+  "regra_da_forma": "a da Etapa 8: em dev, com rótulos humanos, média de 3 sementes, contra o mesmo modelo em 32 bits: passa a forma cuja queda de F1 de entidades é de no máximo 1 ponto; se as duas passam, sai a distinguivelmente pior em exact match; senão fica a estática só se for mais rápida em todas as rodadas de latência; senão a dinâmica",
+  "como_ler": "Em cada modelo, `forma` é a que a regra escolheu e `pastas_por_semente` aponta para ela. `formas` traz as duas formas de INT8, a escolhida e a outra, cada uma com as suas pastas, a diferença para o mesmo modelo em 32 bits em dev e no teste (o teste da forma não escolhida é só registro) e `passa_na_regra`. Os bytes são do sistema inteiro (rede, tokenizador e ficha); as chaves `*_rede` e `tokenizador` separam as partes.",
+  "precisa_de_qat": [],
+  "final": {
+    "nome": "Aluno A (rótulos do Claude Haiku 5.5), vocabulário do treino",
+    "modelo": "aluno_a",
+    "variante": "vocabulario_treino",
+    "papel": "principal",
+    "forma": "dinamica",
+    "nome_da_forma": "INT8, quantização dinâmica",
+    "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+    "precisa_de_qat": false,
+    "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica",
+    "sementes": [
+      0,
+      1,
+      2
+    ],
+    "pastas_por_semente": {
+      "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_0",
+      "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_1",
+      "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_2"
+    },
+    "arquivo_da_rede": "rede.onnx",
+    "pastas_compactadas_por_semente": null,
+    "em_32_bits": {
+      "0": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_0",
+      "1": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_1",
+      "2": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_2"
+    },
+    "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/fp32/semente_0",
+    "parametros": 89573547,
+    "camadas": 12,
+    "linhas_da_tabela": 5196,
+    "pesos_soltos_em_zero": 0.0,
+    "bytes": {
+      "pytorch_32_bits": 358975066,
+      "onnx_32_bits": 358883089,
+      "pytorch_rede": 358318517,
+      "fp32_rede": 358395095,
+      "tokenizador": 483669,
+      "tokenizador_compactado": 230721,
+      "dinamica": 90666664,
+      "dinamica_rede": 90178537,
+      "dinamica_compactado": 60518713,
+      "dinamica_rede_compactada": 60283534,
+      "estatica": 90714059,
+      "estatica_rede": 90225933,
+      "estatica_compactado": 60529898,
+      "estatica_rede_compactada": 60294720
+    },
+    "latencia_p50_ms": {
+      "pytorch": 36.103376,
+      "fp32": 25.0758705,
+      "dinamica": 8.3504895,
+      "estatica": 8.609304999999999
+    },
+    "queda_de_f1_de_entidades_em_dev": {
+      "dinamica": {
+        "diferenca": 0.0005182761083546428,
+        "ic_min": -0.0039414718998192185,
+        "ic_max": 0.0050038427180645675,
+        "passa": true
+      },
+      "estatica": {
+        "diferenca": -0.09775449000726288,
+        "ic_min": -0.11076796927221284,
+        "ic_max": -0.08361099101000981,
+        "passa": false
+      }
+    },
+    "no_teste": {
+      "intent_acc": 0.8242546514234478,
+      "intent_macro_f1": 0.8038266045589371,
+      "slot_f1": 0.6513263126264465,
+      "exact_match": 0.534969737726967
+    },
+    "formas": {
+      "dinamica": {
+        "nome": "INT8, quantização dinâmica",
+        "passa_na_regra": true,
+        "escolhida": true,
+        "pastas_por_semente": {
+          "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_0",
+          "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_1",
+          "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_2"
+        },
+        "menos_32_bits_em_dev": {
+          "intent_acc": {
+            "diferenca": -0.0040990326282996925,
+            "ic_min": -0.007870142646335346,
+            "ic_max": -0.000327922610264042
+          },
+          "slot_f1": {
+            "diferenca": 0.0005182761083546428,
+            "ic_min": -0.0039414718998192185,
+            "ic_max": 0.0050038427180645675
+          },
+          "exact_match": {
+            "diferenca": 0.000327922610263931,
+            "ic_min": -0.004918839153959634,
+            "ic_max": 0.0054107230693556385
+          }
+        },
+        "menos_32_bits_no_teste": {
+          "intent_acc": {
+            "diferenca": -0.0043712172158706375,
+            "ic_min": -0.007733691997309999,
+            "ic_max": -0.001005940372113763
+          },
+          "slot_f1": {
+            "diferenca": 0.0003031885930998568,
+            "ic_min": -0.003572205288462435,
+            "ic_max": 0.004358028194555321
+          },
+          "exact_match": {
+            "diferenca": -0.00224164985429276,
+            "ic_min": -0.006391504147052273,
+            "ic_max": 0.0021295673615781023
+          }
+        },
+        "bytes": 90666664,
+        "bytes_compactado": 60518713,
+        "latencia_p50_ms": 8.3504895
+      },
+      "estatica": {
+        "nome": "INT8, quantização estática",
+        "passa_na_regra": false,
+        "escolhida": false,
+        "pastas_por_semente": {
+          "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_0",
+          "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_1",
+          "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_2"
+        },
+        "menos_32_bits_em_dev": {
+          "intent_acc": {
+            "diferenca": -0.04968027545499265,
+            "ic_min": -0.05903016888014431,
+            "ic_max": -0.04082636497786518
+          },
+          "slot_f1": {
+            "diferenca": -0.09775449000726288,
+            "ic_min": -0.11076796927221284,
+            "ic_max": -0.08361099101000981
+          },
+          "exact_match": {
+            "diferenca": -0.08919494999180194,
+            "ic_min": -0.10345958353828494,
+            "ic_max": -0.07492621741269057
+          }
+        },
+        "menos_32_bits_no_teste": {
+          "intent_acc": {
+            "diferenca": -0.044608832100425766,
+            "ic_min": -0.05200627661959212,
+            "ic_max": -0.03698722259583054
+          },
+          "slot_f1": {
+            "diferenca": -0.09325132301176597,
+            "ic_min": -0.10537196635700823,
+            "ic_max": -0.08129369649859476
+          },
+          "exact_match": {
+            "diferenca": -0.07800941492938801,
+            "ic_min": -0.089778076664425,
+            "ic_max": -0.06589890159157145
+          }
+        },
+        "bytes": 90714059,
+        "bytes_compactado": 60529898,
+        "latencia_p50_ms": 8.609304999999999
+      }
+    }
+  },
+  "modelos": {
+    "aluno_a/sem_poda": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), sem poda",
+      "modelo": "aluno_a",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10a_encoder/modelos/aluno_a/semente_0",
+        "1": "entregas/10a_encoder/modelos/aluno_a/semente_1",
+        "2": "entregas/10a_encoder/modelos/aluno_a/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 1127466166,
+        "onnx_32_bits": 1119524838,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275388,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 215419303,
+        "dinamica_rede_compactada": 211892921,
+        "estatica": 287322786,
+        "estatica_rede": 278236946,
+        "estatica_compactado": 215427769,
+        "estatica_rede_compactada": 211901388
+      },
+      "latencia_p50_ms": {
+        "pytorch": 35.816196500000004,
+        "fp32": 25.032294,
+        "dinamica": 8.329376,
+        "estatica": 8.654149499999999
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": 0.0021982812021085207,
+          "ic_min": -0.0028476995208616906,
+          "ic_max": 0.007060018591270931,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.09259093044842015,
+          "ic_min": -0.10641383282659861,
+          "ic_max": -0.07803102708950221,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8279533736830307,
+        "intent_macro_f1": 0.8048454374530737,
+        "slot_f1": 0.6559606815672371,
+        "exact_match": 0.5449450795785699
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.0027873421872436355,
+              "ic_min": -0.00656255123790802,
+              "ic_max": 0.0008239055582883207
+            },
+            "slot_f1": {
+              "diferenca": 0.0021982812021085207,
+              "ic_min": -0.0028476995208616906,
+              "ic_max": 0.007060018591270931
+            },
+            "exact_match": {
+              "diferenca": 0.0018035743564518425,
+              "ic_min": -0.003935071323167616,
+              "ic_max": 0.0073782587309394465
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": 0.0014570724052903605,
+              "ic_min": -0.0020174848688635505,
+              "ic_max": 0.0049316296794441605
+            },
+            "slot_f1": {
+              "diferenca": 0.0005504363804601509,
+              "ic_min": -0.0034652137699434705,
+              "ic_max": 0.004159364869109196
+            },
+            "exact_match": {
+              "diferenca": 0.006837032055593051,
+              "ic_min": 0.0024630127774041086,
+              "ic_max": 0.011432414256892901
+            }
+          },
+          "bytes": 287275388,
+          "bytes_compactado": 215419303,
+          "latencia_p50_ms": 8.329376
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/sem_poda/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.05394326938842431,
+              "ic_min": -0.06378094769634368,
+              "ic_max": -0.04443351369076898
+            },
+            "slot_f1": {
+              "diferenca": -0.09259093044842015,
+              "ic_min": -0.10641383282659861,
+              "ic_max": -0.07803102708950221
+            },
+            "exact_match": {
+              "diferenca": -0.09411378914576157,
+              "ic_min": -0.11001803574356456,
+              "ic_max": -0.07968519429414661
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.04617798699843079,
+              "ic_min": -0.05458697601434661,
+              "ic_max": -0.03821732795337362
+            },
+            "slot_f1": {
+              "diferenca": -0.09357047974076338,
+              "ic_min": -0.10528802252382866,
+              "ic_max": -0.0816127276502569
+            },
+            "exact_match": {
+              "diferenca": -0.08002689979825145,
+              "ic_min": -0.09213180901143231,
+              "ic_max": -0.06769782559964127
+            }
+          },
+          "bytes": 287322786,
+          "bytes_compactado": 215427769,
+          "latencia_p50_ms": 8.654149499999999
+        }
+      }
+    },
+    "aluno_a/vocabulario_treino": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), vocabulário do treino",
+      "modelo": "aluno_a",
+      "variante": "vocabulario_treino",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/fp32/semente_0",
+      "parametros": 89573547,
+      "camadas": 12,
+      "linhas_da_tabela": 5196,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 358975066,
+        "onnx_32_bits": 358883089,
+        "pytorch_rede": 358318517,
+        "fp32_rede": 358395095,
+        "tokenizador": 483669,
+        "tokenizador_compactado": 230721,
+        "dinamica": 90666664,
+        "dinamica_rede": 90178537,
+        "dinamica_compactado": 60518713,
+        "dinamica_rede_compactada": 60283534,
+        "estatica": 90714059,
+        "estatica_rede": 90225933,
+        "estatica_compactado": 60529898,
+        "estatica_rede_compactada": 60294720
+      },
+      "latencia_p50_ms": {
+        "pytorch": 36.103376,
+        "fp32": 25.0758705,
+        "dinamica": 8.3504895,
+        "estatica": 8.609304999999999
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": 0.0005182761083546428,
+          "ic_min": -0.0039414718998192185,
+          "ic_max": 0.0050038427180645675,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.09775449000726288,
+          "ic_min": -0.11076796927221284,
+          "ic_max": -0.08361099101000981,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8242546514234478,
+        "intent_macro_f1": 0.8038266045589371,
+        "slot_f1": 0.6513263126264465,
+        "exact_match": 0.534969737726967
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.0040990326282996925,
+              "ic_min": -0.007870142646335346,
+              "ic_max": -0.000327922610264042
+            },
+            "slot_f1": {
+              "diferenca": 0.0005182761083546428,
+              "ic_min": -0.0039414718998192185,
+              "ic_max": 0.0050038427180645675
+            },
+            "exact_match": {
+              "diferenca": 0.000327922610263931,
+              "ic_min": -0.004918839153959634,
+              "ic_max": 0.0054107230693556385
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.0043712172158706375,
+              "ic_min": -0.007733691997309999,
+              "ic_max": -0.001005940372113763
+            },
+            "slot_f1": {
+              "diferenca": 0.0003031885930998568,
+              "ic_min": -0.003572205288462435,
+              "ic_max": 0.004358028194555321
+            },
+            "exact_match": {
+              "diferenca": -0.00224164985429276,
+              "ic_min": -0.006391504147052273,
+              "ic_max": 0.0021295673615781023
+            }
+          },
+          "bytes": 90666664,
+          "bytes_compactado": 60518713,
+          "latencia_p50_ms": 8.3504895
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.04968027545499265,
+              "ic_min": -0.05903016888014431,
+              "ic_max": -0.04082636497786518
+            },
+            "slot_f1": {
+              "diferenca": -0.09775449000726288,
+              "ic_min": -0.11076796927221284,
+              "ic_max": -0.08361099101000981
+            },
+            "exact_match": {
+              "diferenca": -0.08919494999180194,
+              "ic_min": -0.10345958353828494,
+              "ic_max": -0.07492621741269057
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.044608832100425766,
+              "ic_min": -0.05200627661959212,
+              "ic_max": -0.03698722259583054
+            },
+            "slot_f1": {
+              "diferenca": -0.09325132301176597,
+              "ic_min": -0.10537196635700823,
+              "ic_max": -0.08129369649859476
+            },
+            "exact_match": {
+              "diferenca": -0.07800941492938801,
+              "ic_min": -0.089778076664425,
+              "ic_max": -0.06589890159157145
+            }
+          },
+          "bytes": 90714059,
+          "bytes_compactado": 60529898,
+          "latencia_p50_ms": 8.609304999999999
+        }
+      }
+    },
+    "aluno_a/gradual_70": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5), magnitude, 70% gradual",
+      "modelo": "aluno_a",
+      "variante": "gradual_70",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica_compactado/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica_compactado/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica_compactado/semente_2"
+      },
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.7000000565140336,
+      "bytes": {
+        "pytorch_32_bits": 1127466356,
+        "onnx_32_bits": 1119524854,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275404,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 189870120,
+        "dinamica_rede_compactada": 186343722,
+        "estatica": 287322799,
+        "estatica_rede": 278236943,
+        "estatica_compactado": 189878286,
+        "estatica_rede_compactada": 186351889
+      },
+      "latencia_p50_ms": {
+        "pytorch": 36.1387495,
+        "fp32": 25.1370305,
+        "dinamica": 8.369808500000001,
+        "estatica": 8.7407885
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.004703857962839009,
+          "ic_min": -0.0093244265648319,
+          "ic_max": -0.00016510874257213087,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.04426802288133058,
+          "ic_min": -0.05674977263628574,
+          "ic_max": -0.031536754035679744,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.82044384667115,
+        "intent_macro_f1": 0.7960149333419899,
+        "slot_f1": 0.6415583556207985,
+        "exact_match": 0.5293656130912351
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.000655845220528084,
+              "ic_min": -0.004918839153959631,
+              "ic_max": 0.0032792261026398676
+            },
+            "slot_f1": {
+              "diferenca": -0.004703857962839009,
+              "ic_min": -0.0093244265648319,
+              "ic_max": -0.00016510874257213087
+            },
+            "exact_match": {
+              "diferenca": 0.0008198065256599385,
+              "ic_min": -0.004262993933431769,
+              "ic_max": 0.005742744712248063
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.00168123739071957,
+              "ic_min": -0.004934431741762024,
+              "ic_max": 0.00168123739071957
+            },
+            "slot_f1": {
+              "diferenca": -0.003984741691163252,
+              "ic_min": -0.007740054728491011,
+              "ic_max": -0.000633532911804042
+            },
+            "exact_match": {
+              "diferenca": -0.00033624747814386957,
+              "ic_min": -0.004819547186729503,
+              "ic_max": 0.00392288724501233
+            }
+          },
+          "bytes": 287275404,
+          "bytes_compactado": 189870120,
+          "latencia_p50_ms": 8.369808500000001
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_a/gradual_70/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.019839317920970823,
+              "ic_min": -0.028365305787833923,
+              "ic_max": -0.012129037547138729
+            },
+            "slot_f1": {
+              "diferenca": -0.04426802288133058,
+              "ic_min": -0.05674977263628574,
+              "ic_max": -0.031536754035679744
+            },
+            "exact_match": {
+              "diferenca": -0.038202984095753456,
+              "ic_min": -0.051323987538940824,
+              "ic_max": -0.024758157074930287
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.02454606590450581,
+              "ic_min": -0.0314951804528133,
+              "ic_max": -0.01782111634162753
+            },
+            "slot_f1": {
+              "diferenca": -0.0443603965909537,
+              "ic_min": -0.05487248145133711,
+              "ic_max": -0.03421792820841067
+            },
+            "exact_match": {
+              "diferenca": -0.03687514010311582,
+              "ic_min": -0.0474136964806098,
+              "ic_max": -0.026227303295225324
+            }
+          },
+          "bytes": 287322799,
+          "bytes_compactado": 189878286,
+          "latencia_p50_ms": 8.7407885
+        }
+      }
+    },
+    "teto/sem_poda": {
+      "nome": "Teto (rótulos humanos), sem poda",
+      "modelo": "teto",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10a_encoder/modelos/teto/semente_0",
+        "1": "entregas/10a_encoder/modelos/teto/semente_1",
+        "2": "entregas/10a_encoder/modelos/teto/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 1127466166,
+        "onnx_32_bits": 1119524835,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275385,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 215478505,
+        "dinamica_rede_compactada": 211952126,
+        "estatica": 287322778,
+        "estatica_rede": 278236941,
+        "estatica_compactado": 215487855,
+        "estatica_rede_compactada": 211961477
+      },
+      "latencia_p50_ms": {
+        "pytorch": 37.0642165,
+        "fp32": 25.1921925,
+        "dinamica": 8.388413,
+        "estatica": 8.85229
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.001029418779165736,
+          "ic_min": -0.0067074143832675905,
+          "ic_max": 0.0048693096524219034,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.14944254881196994,
+          "ic_min": -0.16321719410478744,
+          "ic_max": -0.13604866613823163,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.867518493611298,
+        "intent_macro_f1": 0.8252302860707307,
+        "slot_f1": 0.7492561566108908,
+        "exact_match": 0.661286707016364
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.004918839153959631,
+              "ic_min": -0.009837678307919265,
+              "ic_max": -0.0004918839153960075
+            },
+            "slot_f1": {
+              "diferenca": -0.001029418779165736,
+              "ic_min": -0.0067074143832675905,
+              "ic_max": 0.0048693096524219034
+            },
+            "exact_match": {
+              "diferenca": -0.008362026561731462,
+              "ic_min": -0.014924577799639373,
+              "ic_max": -0.0018035743564518425
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.00168123739071957,
+              "ic_min": -0.005046514234476573,
+              "ic_max": 0.0017961219457521868
+            },
+            "slot_f1": {
+              "diferenca": -0.00572576843140471,
+              "ic_min": -0.010339118031652012,
+              "ic_max": -0.001202485429874216
+            },
+            "exact_match": {
+              "diferenca": -0.0015691548980049097,
+              "ic_min": -0.00672494956287828,
+              "ic_max": 0.0038108047522975586
+            }
+          },
+          "bytes": 287275385,
+          "bytes_compactado": 215478505,
+          "latencia_p50_ms": 8.388413
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/sem_poda/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.0795212329890147,
+              "ic_min": -0.08887112641416625,
+              "ic_max": -0.07017543859649122
+            },
+            "slot_f1": {
+              "diferenca": -0.14944254881196994,
+              "ic_min": -0.16321719410478744,
+              "ic_max": -0.13604866613823163
+            },
+            "exact_match": {
+              "diferenca": -0.161993769470405,
+              "ic_min": -0.175766519101492,
+              "ic_max": -0.14870880472208564
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.07375028020623187,
+              "ic_min": -0.0813718897108272,
+              "ic_max": -0.0659045057162072
+            },
+            "slot_f1": {
+              "diferenca": -0.1499912224762059,
+              "ic_min": -0.16169512004770129,
+              "ic_max": -0.13817753107400174
+            },
+            "exact_match": {
+              "diferenca": -0.15590674736606147,
+              "ic_min": -0.16722707913023982,
+              "ic_max": -0.14435944855413585
+            }
+          },
+          "bytes": 287322778,
+          "bytes_compactado": 215487855,
+          "latencia_p50_ms": 8.85229
+        }
+      }
+    },
+    "teto/vocabulario_treino": {
+      "nome": "Teto (rótulos humanos), vocabulário do treino",
+      "modelo": "teto",
+      "variante": "vocabulario_treino",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/fp32/semente_0",
+      "parametros": 89573547,
+      "camadas": 12,
+      "linhas_da_tabela": 5196,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 358975066,
+        "onnx_32_bits": 358883086,
+        "pytorch_rede": 358318517,
+        "fp32_rede": 358395095,
+        "tokenizador": 483669,
+        "tokenizador_compactado": 230721,
+        "dinamica": 90666661,
+        "dinamica_rede": 90178537,
+        "dinamica_compactado": 60537734,
+        "dinamica_rede_compactada": 60302558,
+        "estatica": 90714054,
+        "estatica_rede": 90225931,
+        "estatica_compactado": 60546777,
+        "estatica_rede_compactada": 60311602
+      },
+      "latencia_p50_ms": {
+        "pytorch": 37.54087,
+        "fp32": 25.347699499999997,
+        "dinamica": 8.499356,
+        "estatica": 8.747745
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.002047983596514147,
+          "ic_min": -0.007224062921689858,
+          "ic_max": 0.003407531958704601,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.13632802961354262,
+          "ic_min": -0.14976773880049293,
+          "ic_max": -0.12336450441119519,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8630351939027124,
+        "intent_macro_f1": 0.8294731787611749,
+        "slot_f1": 0.7458102824575142,
+        "exact_match": 0.6565792423223492
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.004590916543695589,
+              "ic_min": -0.009509755697655442,
+              "ic_max": 0.0
+            },
+            "slot_f1": {
+              "diferenca": -0.002047983596514147,
+              "ic_min": -0.007224062921689858,
+              "ic_max": 0.003407531958704601
+            },
+            "exact_match": {
+              "diferenca": -0.006558452205279508,
+              "ic_min": -0.012788981800295085,
+              "ic_max": -0.000323823577635657
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.003586639766868349,
+              "ic_min": -0.007173279533736809,
+              "ic_max": -0.00010928043039670074
+            },
+            "slot_f1": {
+              "diferenca": -0.0031427718723207043,
+              "ic_min": -0.007962929576927468,
+              "ic_max": 0.0011939495816417126
+            },
+            "exact_match": {
+              "diferenca": -0.0019054023761488903,
+              "ic_min": -0.007061197041022152,
+              "ic_max": 0.0032503922887244796
+            }
+          },
+          "bytes": 90666661,
+          "bytes_compactado": 60537734,
+          "latencia_p50_ms": 8.499356
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/vocabulario_treino/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.05919003115264798,
+              "ic_min": -0.06739219544187577,
+              "ic_max": -0.0509878668634201
+            },
+            "slot_f1": {
+              "diferenca": -0.13632802961354262,
+              "ic_min": -0.14976773880049293,
+              "ic_max": -0.12336450441119519
+            },
+            "exact_match": {
+              "diferenca": -0.145597638957206,
+              "ic_min": -0.1588785046728971,
+              "ic_max": -0.13215281193638306
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.06007621609504599,
+              "ic_min": -0.06758854516924465,
+              "ic_max": -0.05256388702084735
+            },
+            "slot_f1": {
+              "diferenca": -0.13265059762971165,
+              "ic_min": -0.14380296004618043,
+              "ic_max": -0.12107483525162374
+            },
+            "exact_match": {
+              "diferenca": -0.13965478592243885,
+              "ic_min": -0.15052678771575867,
+              "ic_max": -0.12833165209594255
+            }
+          },
+          "bytes": 90714054,
+          "bytes_compactado": 60546777,
+          "latencia_p50_ms": 8.747745
+        }
+      }
+    },
+    "teto/magnitude_50": {
+      "nome": "Teto (rótulos humanos), magnitude, 50% de uma vez",
+      "modelo": "teto",
+      "variante": "magnitude_50",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica_compactado/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica_compactado/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica_compactado/semente_2"
+      },
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.5,
+      "bytes": {
+        "pytorch_32_bits": 1127466356,
+        "onnx_32_bits": 1119524853,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275403,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 202311607,
+        "dinamica_rede_compactada": 198785210,
+        "estatica": 287322796,
+        "estatica_rede": 278236941,
+        "estatica_compactado": 202318480,
+        "estatica_rede_compactada": 198792084
+      },
+      "latencia_p50_ms": {
+        "pytorch": 37.010848499999994,
+        "fp32": 25.449664,
+        "dinamica": 8.3654505,
+        "estatica": 8.782911
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.005217056363062467,
+          "ic_min": -0.010952139735755354,
+          "ic_max": 0.0004515904875728235,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.13693182869627818,
+          "ic_min": -0.149893919171745,
+          "ic_max": -0.12392390714209242,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.8662855861914368,
+        "intent_macro_f1": 0.8329366762646085,
+        "slot_f1": 0.7444418344316454,
+        "exact_match": 0.6557946648733468
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.002295458271847739,
+              "ic_min": -0.006886374815543439,
+              "ic_max": 0.002295458271847739
+            },
+            "slot_f1": {
+              "diferenca": -0.005217056363062467,
+              "ic_min": -0.010952139735755354,
+              "ic_max": 0.0004515904875728235
+            },
+            "exact_match": {
+              "diferenca": -0.0057386456796197916,
+              "ic_min": -0.011969175274635039,
+              "ic_max": 0.00016806033776035052
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.0003362474781439806,
+              "ic_min": -0.0038108047522977806,
+              "ic_max": 0.0033624747814391424
+            },
+            "slot_f1": {
+              "diferenca": -0.0006797741582174055,
+              "ic_min": -0.00508331355754395,
+              "ic_max": 0.0037418724312575607
+            },
+            "exact_match": {
+              "diferenca": 0.0014570724052903605,
+              "ic_min": -0.00358663976686846,
+              "ic_max": 0.006391504147052364
+            }
+          },
+          "bytes": 287275403,
+          "bytes_compactado": 202311607,
+          "latencia_p50_ms": 8.3654505
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/teto/magnitude_50/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.04672897196261683,
+              "ic_min": -0.05541892113461211,
+              "ic_max": -0.0382029840957534
+            },
+            "slot_f1": {
+              "diferenca": -0.13693182869627818,
+              "ic_min": -0.149893919171745,
+              "ic_max": -0.12392390714209242
+            },
+            "exact_match": {
+              "diferenca": -0.1319888506312512,
+              "ic_min": -0.1446179701590425,
+              "ic_max": -0.11854402361042793
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.04046177986998423,
+              "ic_min": -0.04752297691100649,
+              "ic_max": -0.03328569827392968
+            },
+            "slot_f1": {
+              "diferenca": -0.1302801222470651,
+              "ic_min": -0.14166715351185274,
+              "ic_max": -0.11891877188050651
+            },
+            "exact_match": {
+              "diferenca": -0.11611746245236487,
+              "ic_min": -0.127216431293432,
+              "ic_max": -0.10558170813718903
+            }
+          },
+          "bytes": 287322796,
+          "bytes_compactado": 202318480,
+          "latencia_p50_ms": 8.782911
+        }
+      }
+    },
+    "aluno_b2_t2/sem_poda": {
+      "nome": "Aluno B2 (logits do Qwen3-8B), sem poda",
+      "modelo": "aluno_b2_t2",
+      "variante": "sem_poda",
+      "papel": "sem_poda",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_0",
+        "1": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_1",
+        "2": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 1127466166,
+        "onnx_32_bits": 1119524842,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275392,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 215558087,
+        "dinamica_rede_compactada": 212031701,
+        "estatica": 287322784,
+        "estatica_rede": 278236940,
+        "estatica_compactado": 215565482,
+        "estatica_rede_compactada": 212039097
+      },
+      "latencia_p50_ms": {
+        "pytorch": 37.580111,
+        "fp32": 25.2303905,
+        "dinamica": 8.2613335,
+        "estatica": 8.6748185
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": 0.002026376940621577,
+          "ic_min": -0.0037578034667392875,
+          "ic_max": 0.007609669289131887,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.10833675614746463,
+          "ic_min": -0.12260442721311245,
+          "ic_max": -0.094083822062004,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7899574086527684,
+        "intent_macro_f1": 0.7697977325701055,
+        "slot_f1": 0.5852503187135893,
+        "exact_match": 0.4663752521856086
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.0047548778488277765,
+              "ic_min": -0.0091818330873914,
+              "ic_max": -0.0004918839153958965
+            },
+            "slot_f1": {
+              "diferenca": 0.002026376940621577,
+              "ic_min": -0.0037578034667392875,
+              "ic_max": 0.007609669289131887
+            },
+            "exact_match": {
+              "diferenca": -0.0001639613051319655,
+              "ic_min": -0.006234628627643874,
+              "ic_max": 0.0060665682898836115
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": 0.0008966599417170595,
+              "ic_min": -0.0024686169020400493,
+              "ic_max": 0.004595382201300069
+            },
+            "slot_f1": {
+              "diferenca": -0.0028820673128995278,
+              "ic_min": -0.0077218660829567855,
+              "ic_max": 0.0018345505527190438
+            },
+            "exact_match": {
+              "diferenca": 0.0035866397668684047,
+              "ic_min": -0.0012329074198609846,
+              "ic_max": 0.008518269446312454
+            }
+          },
+          "bytes": 287275392,
+          "bytes_compactado": 215558087,
+          "latencia_p50_ms": 8.2613335
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/sem_poda/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.034267912772585674,
+              "ic_min": -0.04328578455484511,
+              "ic_max": -0.02508607968519438
+            },
+            "slot_f1": {
+              "diferenca": -0.10833675614746463,
+              "ic_min": -0.12260442721311245,
+              "ic_max": -0.094083822062004
+            },
+            "exact_match": {
+              "diferenca": -0.05131988850631247,
+              "ic_min": -0.0652565994425316,
+              "ic_max": -0.036887194622069235
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.02779645819323029,
+              "ic_min": -0.03575991930060533,
+              "ic_max": -0.020062766195920175
+            },
+            "slot_f1": {
+              "diferenca": -0.10485307919944004,
+              "ic_min": -0.11650521734729156,
+              "ic_max": -0.09427409462012512
+            },
+            "exact_match": {
+              "diferenca": -0.04371217215870882,
+              "ic_min": -0.05559291638646041,
+              "ic_max": -0.03138309796009864
+            }
+          },
+          "bytes": 287322784,
+          "bytes_compactado": 215565482,
+          "latencia_p50_ms": 8.6748185
+        }
+      }
+    },
+    "aluno_b2_t2/vocabulario_treino": {
+      "nome": "Aluno B2 (logits do Qwen3-8B), vocabulário do treino",
+      "modelo": "aluno_b2_t2",
+      "variante": "vocabulario_treino",
+      "papel": "principal",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": null,
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/fp32/semente_0",
+      "parametros": 89573547,
+      "camadas": 12,
+      "linhas_da_tabela": 5196,
+      "pesos_soltos_em_zero": 0.0,
+      "bytes": {
+        "pytorch_32_bits": 358975066,
+        "onnx_32_bits": 358883093,
+        "pytorch_rede": 358318517,
+        "fp32_rede": 358395095,
+        "tokenizador": 483669,
+        "tokenizador_compactado": 230721,
+        "dinamica": 90666668,
+        "dinamica_rede": 90178537,
+        "dinamica_compactado": 60541150,
+        "dinamica_rede_compactada": 60305967,
+        "estatica": 90714060,
+        "estatica_rede": 90225930,
+        "estatica_compactado": 60548684,
+        "estatica_rede_compactada": 60313502
+      },
+      "latencia_p50_ms": {
+        "pytorch": 36.795307,
+        "fp32": 24.32903,
+        "dinamica": 7.939712999999999,
+        "estatica": 8.23957
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.0015856033016693472,
+          "ic_min": -0.006615941792547006,
+          "ic_max": 0.0036992301823520674,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.11717473412421736,
+          "ic_min": -0.13063157161553138,
+          "ic_max": -0.10320514280664364,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7822237166554583,
+        "intent_macro_f1": 0.7649333487798753,
+        "slot_f1": 0.5764582053132038,
+        "exact_match": 0.4520286931181349
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.002951303492375934,
+              "ic_min": -0.0070503361206756265,
+              "ic_max": 0.001311690441055946
+            },
+            "slot_f1": {
+              "diferenca": -0.0015856033016693472,
+              "ic_min": -0.006615941792547006,
+              "ic_max": 0.0036992301823520674
+            },
+            "exact_match": {
+              "diferenca": -0.0008198065256599385,
+              "ic_min": -0.006398589932775895,
+              "ic_max": 0.005246761764223564
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.0017933198834343411,
+              "ic_min": -0.005379959650302471,
+              "ic_max": 0.0015691548980047987
+            },
+            "slot_f1": {
+              "diferenca": -0.0022403988684100984,
+              "ic_min": -0.006813132205565289,
+              "ic_max": 0.0023040917177698144
+            },
+            "exact_match": {
+              "diferenca": -0.00044832997085852977,
+              "ic_min": -0.00504371217215871,
+              "ic_max": 0.00392568930733018
+            }
+          },
+          "bytes": 90666668,
+          "bytes_compactado": 60541150,
+          "latencia_p50_ms": 7.939712999999999
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/vocabulario_treino/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.032300377111001866,
+              "ic_min": -0.04115428758812911,
+              "ic_max": -0.023446466633874508
+            },
+            "slot_f1": {
+              "diferenca": -0.11717473412421736,
+              "ic_min": -0.13063157161553138,
+              "ic_max": -0.10320514280664364
+            },
+            "exact_match": {
+              "diferenca": -0.05787834071159209,
+              "ic_min": -0.07165109034267902,
+              "ic_max": -0.043609608132480764
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.030262273032952258,
+              "ic_min": -0.03743555256668918,
+              "ic_max": -0.023201075991930106
+            },
+            "slot_f1": {
+              "diferenca": -0.10720384970096675,
+              "ic_min": -0.1190292911643149,
+              "ic_max": -0.09611350271976389
+            },
+            "exact_match": {
+              "diferenca": -0.04416050212956729,
+              "ic_min": -0.05559852051109614,
+              "ic_max": -0.03239184039453036
+            }
+          },
+          "bytes": 90714060,
+          "bytes_compactado": 60548684,
+          "latencia_p50_ms": 8.23957
+        }
+      }
+    },
+    "aluno_b2_t2/gradual_70": {
+      "nome": "Aluno B2 (logits do Qwen3-8B), magnitude, 70% gradual",
+      "modelo": "aluno_b2_t2",
+      "variante": "gradual_70",
+      "papel": "secundaria",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "motivo": "é a única que fica dentro de 1 ponto de F1 de entidades",
+      "precisa_de_qat": false,
+      "sistemas": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "pastas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_2"
+      },
+      "arquivo_da_rede": "rede.onnx",
+      "pastas_compactadas_por_semente": {
+        "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica_compactado/semente_0",
+        "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica_compactado/semente_1",
+        "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica_compactado/semente_2"
+      },
+      "em_32_bits": {
+        "0": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_0",
+        "1": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_1",
+        "2": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_2"
+      },
+      "onnx_de_32_bits": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/fp32/semente_0",
+      "parametros": 277584555,
+      "camadas": 12,
+      "linhas_da_tabela": 250002,
+      "pesos_soltos_em_zero": 0.7000000565140336,
+      "bytes": {
+        "pytorch_32_bits": 1127466356,
+        "onnx_32_bits": 1119524858,
+        "pytorch_rede": 1110362765,
+        "fp32_rede": 1110439130,
+        "tokenizador": 9081404,
+        "tokenizador_compactado": 3521945,
+        "dinamica": 287275408,
+        "dinamica_rede": 278189547,
+        "dinamica_compactado": 189808070,
+        "dinamica_rede_compactada": 186281668,
+        "estatica": 287322805,
+        "estatica_rede": 278236945,
+        "estatica_compactado": 189818367,
+        "estatica_rede_compactada": 186291966
+      },
+      "latencia_p50_ms": {
+        "pytorch": 36.8670685,
+        "fp32": 24.227866499999998,
+        "dinamica": 8.008744,
+        "estatica": 8.3000005
+      },
+      "queda_de_f1_de_entidades_em_dev": {
+        "dinamica": {
+          "diferenca": -0.004610918565978395,
+          "ic_min": -0.00987166659427712,
+          "ic_max": 0.0004451401422474288,
+          "passa": true
+        },
+        "estatica": {
+          "diferenca": -0.01743768681695712,
+          "ic_min": -0.028219977830032935,
+          "ic_max": -0.005564738782904157,
+          "passa": false
+        }
+      },
+      "no_teste": {
+        "intent_acc": 0.7808787267428827,
+        "intent_macro_f1": 0.7596084613285271,
+        "slot_f1": 0.5842615507205061,
+        "exact_match": 0.45673615781214977
+      },
+      "formas": {
+        "dinamica": {
+          "nome": "INT8, quantização dinâmica",
+          "passa_na_regra": true,
+          "escolhida": true,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/dinamica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.0018035743564519535,
+              "ic_min": -0.005574684374487715,
+              "ic_max": 0.0021314969667157735
+            },
+            "slot_f1": {
+              "diferenca": -0.004610918565978395,
+              "ic_min": -0.00987166659427712,
+              "ic_max": 0.0004451401422474288
+            },
+            "exact_match": {
+              "diferenca": -0.0006558452205279175,
+              "ic_min": -0.006394490900147598,
+              "ic_max": 0.004918839153959631
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.00044832997085852977,
+              "ic_min": -0.004034969737727101,
+              "ic_max": 0.0031383097960098194
+            },
+            "slot_f1": {
+              "diferenca": -0.0024605852170880294,
+              "ic_min": -0.007001189069922734,
+              "ic_max": 0.0018878853114213557
+            },
+            "exact_match": {
+              "diferenca": -0.00112082492714638,
+              "ic_min": -0.005494844205335213,
+              "ic_max": 0.003250392288724424
+            }
+          },
+          "bytes": 287275408,
+          "bytes_compactado": 189808070,
+          "latencia_p50_ms": 8.008744
+        },
+        "estatica": {
+          "nome": "INT8, quantização estática",
+          "passa_na_regra": false,
+          "escolhida": false,
+          "pastas_por_semente": {
+            "0": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/estatica/semente_0",
+            "1": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/estatica/semente_1",
+            "2": "entregas/10c_encoder_quantizacao/modelos/aluno_b2_t2/gradual_70/estatica/semente_2"
+          },
+          "menos_32_bits_em_dev": {
+            "intent_acc": {
+              "diferenca": -0.012297097884899189,
+              "ic_min": -0.019351533038203104,
+              "ic_max": -0.005242662731595288
+            },
+            "slot_f1": {
+              "diferenca": -0.01743768681695712,
+              "ic_min": -0.028219977830032935,
+              "ic_max": -0.005564738782904157
+            },
+            "exact_match": {
+              "diferenca": -0.008525987866863372,
+              "ic_min": -0.020167240531234587,
+              "ic_max": 0.0022954582718478513
+            }
+          },
+          "menos_32_bits_no_teste": {
+            "intent_acc": {
+              "diferenca": -0.013449899125756448,
+              "ic_min": -0.01983860121049086,
+              "ic_max": -0.007061197041022258
+            },
+            "slot_f1": {
+              "diferenca": -0.01932910119373976,
+              "ic_min": -0.028100253203941866,
+              "ic_max": -0.009852474571023931
+            },
+            "exact_match": {
+              "diferenca": 0.00056041246357319,
+              "ic_min": -0.008630351939027116,
+              "ic_max": 0.009414929388029625
+            }
+          },
+          "bytes": 287322805,
+          "bytes_compactado": 189818367,
+          "latencia_p50_ms": 8.3000005
+        }
+      }
+    }
+  },
+  "intencao_com_a_forma_escolhida": {
+    "o_que_e": "acurácia de intenção da forma escolhida menos a do mesmo modelo em 32 bits; a regra não olha esta métrica",
+    "modelos": {
+      "aluno_a/sem_poda": {
+        "dev": {
+          "diferenca": -0.0027873421872436355,
+          "ic_min": -0.00656255123790802,
+          "ic_max": 0.0008239055582883207
+        },
+        "test": {
+          "diferenca": 0.0014570724052903605,
+          "ic_min": -0.0020174848688635505,
+          "ic_max": 0.0049316296794441605
+        }
+      },
+      "aluno_a/vocabulario_treino": {
+        "dev": {
+          "diferenca": -0.0040990326282996925,
+          "ic_min": -0.007870142646335346,
+          "ic_max": -0.000327922610264042
+        },
+        "test": {
+          "diferenca": -0.0043712172158706375,
+          "ic_min": -0.007733691997309999,
+          "ic_max": -0.001005940372113763
+        }
+      },
+      "aluno_a/gradual_70": {
+        "dev": {
+          "diferenca": -0.000655845220528084,
+          "ic_min": -0.004918839153959631,
+          "ic_max": 0.0032792261026398676
+        },
+        "test": {
+          "diferenca": -0.00168123739071957,
+          "ic_min": -0.004934431741762024,
+          "ic_max": 0.00168123739071957
+        }
+      },
+      "teto/sem_poda": {
+        "dev": {
+          "diferenca": -0.004918839153959631,
+          "ic_min": -0.009837678307919265,
+          "ic_max": -0.0004918839153960075
+        },
+        "test": {
+          "diferenca": -0.00168123739071957,
+          "ic_min": -0.005046514234476573,
+          "ic_max": 0.0017961219457521868
+        }
+      },
+      "teto/vocabulario_treino": {
+        "dev": {
+          "diferenca": -0.004590916543695589,
+          "ic_min": -0.009509755697655442,
+          "ic_max": 0.0
+        },
+        "test": {
+          "diferenca": -0.003586639766868349,
+          "ic_min": -0.007173279533736809,
+          "ic_max": -0.00010928043039670074
+        }
+      },
+      "teto/magnitude_50": {
+        "dev": {
+          "diferenca": -0.002295458271847739,
+          "ic_min": -0.006886374815543439,
+          "ic_max": 0.002295458271847739
+        },
+        "test": {
+          "diferenca": -0.0003362474781439806,
+          "ic_min": -0.0038108047522977806,
+          "ic_max": 0.0033624747814391424
+        }
+      },
+      "aluno_b2_t2/sem_poda": {
+        "dev": {
+          "diferenca": -0.0047548778488277765,
+          "ic_min": -0.0091818330873914,
+          "ic_max": -0.0004918839153958965
+        },
+        "test": {
+          "diferenca": 0.0008966599417170595,
+          "ic_min": -0.0024686169020400493,
+          "ic_max": 0.004595382201300069
+        }
+      },
+      "aluno_b2_t2/vocabulario_treino": {
+        "dev": {
+          "diferenca": -0.002951303492375934,
+          "ic_min": -0.0070503361206756265,
+          "ic_max": 0.001311690441055946
+        },
+        "test": {
+          "diferenca": -0.0017933198834343411,
+          "ic_min": -0.005379959650302471,
+          "ic_max": 0.0015691548980047987
+        }
+      },
+      "aluno_b2_t2/gradual_70": {
+        "dev": {
+          "diferenca": -0.0018035743564519535,
+          "ic_min": -0.005574684374487715,
+          "ic_max": 0.0021314969667157735
+        },
+        "test": {
+          "diferenca": -0.00044832997085852977,
+          "ic_min": -0.004034969737727101,
+          "ic_max": 0.0031383097960098194
+        }
+      }
+    },
+    "queda_distinguivel_em_dev": [
+      "aluno_a/vocabulario_treino",
+      "teto/sem_poda",
+      "aluno_b2_t2/sem_poda"
+    ],
+    "queda_distinguivel_no_teste": [
+      "aluno_a/vocabulario_treino",
+      "teto/vocabulario_treino"
+    ]
+  },
+  "como_carregar": "especialista.compressao.sistema_encoder_onnx.SistemaEncoderOnnx.carregar(pasta da semente): roda no ONNX Runtime com o pacote tokenizers, sem PyTorch, e cumpre o contrato da régua",
+  "o_que_e_quantizado": "a tabela de subtokens e a de posições (uint8) e as matrizes de pesos do corpo e das cabeças (int8, simétrico), um degrau por tensor; vieses, normalizações de camada, softmax, GELU e os produtos da atenção em 32 bits",
+  "calibracao_da_estatica": {
+    "pedidos": 512,
+    "de_onde": "pedidos do treino, sem rótulo",
+    "semente_do_sorteio": 0
+  },
+  "latencia": {
+    "protocolo": "uma consulta por vez, 1 thread, do texto à resposta; 5 rodadas de 1.024 consultas, sistemas alternados; semente 0",
+    "maquina_quieta": true,
+    "nucleos_de_cpu_dos_outros_processos_durante_a_medida": 0.0811966575706833
+  },
+  "arquivos": {
+    "tabela_principal": "tabela_principal.csv",
+    "manifesto": "manifesto.json",
+    "previsoes": "previsoes/<modelo>__<variante>__<linha>_semente_<N>_<particao>.parquet"
+  },
+  "ambiente": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13",
+    "instrucoes_da_cpu": "avx2 avx_vnni",
+    "tem_vnni": true,
+    "onnxruntime": "1.32.0",
+    "onnx": "1.23.2",
+    "torch": "2.15.0+cu132"
+  }
+}

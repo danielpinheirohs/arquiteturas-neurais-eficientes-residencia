@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 1,
+  "nome": "so_saida_da_rede_densa_camada_8",
+  "descricao": "só a entrada da saída da rede densa da camada 8 em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 1,
+  "bytes_da_rede": 351357530,
+  "slot_f1_dev": 68.51940584571155,
+  "segundos": 47.85901931801345
+}

@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 0,
+  "nome": "calibracao_percentile",
+  "descricao": "calibração Percentile",
+  "metodo": "Percentile",
+  "operacoes": 76,
+  "bytes_da_rede": 90225939,
+  "slot_f1_dev": 65.61808798230524,
+  "segundos": 28.038436622999143
+}

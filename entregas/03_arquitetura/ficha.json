@@ -1,0 +1,56 @@
+{
+  "etapa": "03_arquitetura",
+  "gerado_em": "2026-11-16",
+  "entrada": [
+    "entregas/01_dados",
+    "entregas/02_avaliacao"
+  ],
+  "artigo": "Bunk et al., DIET, arXiv 2004.09936",
+  "config": {
+    "d_modelo": 256,
+    "n_camadas": 2,
+    "d_rotulo": 20,
+    "p_mascara": 0.15,
+    "n_cabecas": 4,
+    "d_features": 128,
+    "distancia_max": 5,
+    "dropout": 0.2,
+    "dropout_features": 0.2,
+    "d_ffn": 1024,
+    "peso_intencao": 1.0,
+    "peso_entidades": 1.0,
+    "peso_mascara": 1.0
+  },
+  "features": {
+    "total": 25202,
+    "contagem_minima": 2,
+    "n_max": 5
+  },
+  "saidas": {
+    "intents": 60,
+    "tags": 111,
+    "esquema": "BIO"
+  },
+  "parametros": {
+    "total": 4895834,
+    "B. Tabela de features": 3225856,
+    "C. Projeção e CLS": 33280,
+    "D. Encoder": 1581440,
+    "E. Cabeça de intenção": 6340,
+    "F. Cabeça de entidades (CRF)": 41070,
+    "G. Cabeça de máscara (só no treino)": 7848
+  },
+  "medida": {
+    "dispositivo": "cpu",
+    "threads": 1,
+    "consultas": 1024,
+    "fonte_das_consultas": "dev"
+  },
+  "ambiente": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13",
+    "torch": "2.15.0+cu132"
+  }
+}

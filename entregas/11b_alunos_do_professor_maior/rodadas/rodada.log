@@ -1,0 +1,67 @@
+[22:20:02] Etapa 11b, rodada (pid 788464): regras de 2026-11-18 22:04:17 -0300; qwen3_14b__fp16__colab_a100: 0 de 33 execuções prontas (Rede do zero 0 de 18, XLM-R 0 de 15)
+[22:20:03] Rede do zero: 18 execuções, 7 de cada vez
+[22:32:09] zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100 1 época 45 de 80 {'intent_acc': 0.8101, 'intent_macro_f1': 0.788, 'slot_precision': 0.6995, 'slot_recall': 0.6752, 'slot_f1': 0.6871, 'exact_match': 0.547} 718s
+[22:32:12] zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100 2 época 25 de 80 {'intent_acc': 0.8091, 'intent_macro_f1': 0.7865, 'slot_precision': 0.699, 'slot_recall': 0.6765, 'slot_f1': 0.6876, 'exact_match': 0.5544} 722s
+[22:32:13] zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100 0 época 35 de 80 {'intent_acc': 0.8101, 'intent_macro_f1': 0.7859, 'slot_precision': 0.7027, 'slot_recall': 0.6774, 'slot_f1': 0.6898, 'exact_match': 0.5514} 723s
+[22:32:25] zero__aluno_b1__qwen3_14b__fp16__colab_a100 0 época 30 de 80 {'intent_acc': 0.8106, 'intent_macro_f1': 0.7831, 'slot_precision': 0.6976, 'slot_recall': 0.6752, 'slot_f1': 0.6862, 'exact_match': 0.5504} 734s
+[22:32:27] zero__aluno_b1__qwen3_14b__fp16__colab_a100 1 época 30 de 80 {'intent_acc': 0.8106, 'intent_macro_f1': 0.7873, 'slot_precision': 0.7001, 'slot_recall': 0.6761, 'slot_f1': 0.6879, 'exact_match': 0.5514} 737s
+[22:32:28] zero__aluno_b1__qwen3_14b__fp16__colab_a100 2 época 50 de 80 {'intent_acc': 0.8165, 'intent_macro_f1': 0.791, 'slot_precision': 0.7019, 'slot_recall': 0.6769, 'slot_f1': 0.6892, 'exact_match': 0.5598} 737s
+[22:32:32] zero__aluno_b2_t1__qwen3_14b__fp16__colab_a100 0 época 20 de 80 {'intent_acc': 0.816, 'intent_macro_f1': 0.7903, 'slot_precision': 0.7037, 'slot_recall': 0.6848, 'slot_f1': 0.6941, 'exact_match': 0.5539} 741s
+[22:44:34] zero__aluno_b2_t1__qwen3_14b__fp16__colab_a100 2 época 30 de 80 {'intent_acc': 0.8062, 'intent_macro_f1': 0.7863, 'slot_precision': 0.7017, 'slot_recall': 0.6752, 'slot_f1': 0.6882, 'exact_match': 0.5534} 733s
+[22:44:35] zero__aluno_b2_t1__qwen3_14b__fp16__colab_a100 1 época 25 de 80 {'intent_acc': 0.8106, 'intent_macro_f1': 0.7864, 'slot_precision': 0.7068, 'slot_recall': 0.6804, 'slot_f1': 0.6934, 'exact_match': 0.548} 738s
+[22:44:38] zero__aluno_b2_t2__qwen3_14b__fp16__colab_a100 0 época 70 de 80 {'intent_acc': 0.8239, 'intent_macro_f1': 0.8037, 'slot_precision': 0.7008, 'slot_recall': 0.6722, 'slot_f1': 0.6862, 'exact_match': 0.5598} 736s
+[22:45:01] zero__aluno_b2_t2__qwen3_14b__fp16__colab_a100 1 época 65 de 80 {'intent_acc': 0.8229, 'intent_macro_f1': 0.7972, 'slot_precision': 0.7094, 'slot_recall': 0.6826, 'slot_f1': 0.6957, 'exact_match': 0.5583} 745s
+[22:45:07] zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100 1 época 70 de 80 {'intent_acc': 0.8254, 'intent_macro_f1': 0.7998, 'slot_precision': 0.6868, 'slot_recall': 0.657, 'slot_f1': 0.6715, 'exact_match': 0.5455} 746s
+[22:45:08] zero__aluno_b2_t2__qwen3_14b__fp16__colab_a100 2 época 60 de 80 {'intent_acc': 0.817, 'intent_macro_f1': 0.7966, 'slot_precision': 0.7076, 'slot_recall': 0.6809, 'slot_f1': 0.694, 'exact_match': 0.5568} 750s
+[22:45:08] zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100 0 época 75 de 80 {'intent_acc': 0.816, 'intent_macro_f1': 0.7966, 'slot_precision': 0.7017, 'slot_recall': 0.667, 'slot_f1': 0.6839, 'exact_match': 0.5485} 750s
+[22:52:20] zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 0 época 80 de 80 {'intent_acc': 0.8273, 'intent_macro_f1': 0.8121, 'slot_precision': 0.7078, 'slot_recall': 0.6722, 'slot_f1': 0.6895, 'exact_match': 0.5617} 457s
+[22:52:24] zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 1 época 80 de 80 {'intent_acc': 0.818, 'intent_macro_f1': 0.8056, 'slot_precision': 0.6934, 'slot_recall': 0.6492, 'slot_f1': 0.6706, 'exact_match': 0.5376} 457s
+[22:52:28] zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100 2 época 80 de 80 {'intent_acc': 0.8214, 'intent_macro_f1': 0.8021, 'slot_precision': 0.6976, 'slot_recall': 0.6722, 'slot_f1': 0.6847, 'exact_match': 0.5548} 465s
+[22:52:35] zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 2 época 75 de 80 {'intent_acc': 0.8283, 'intent_macro_f1': 0.815, 'slot_precision': 0.6923, 'slot_recall': 0.6496, 'slot_f1': 0.6703, 'exact_match': 0.5494} 446s
+[22:52:36] XLM-R: 15 execuções, 1 de cada vez
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3729.57it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it]
+[22:56:22] xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 0 época 10 de 10 {'intent_acc': 0.8515, 'intent_macro_f1': 0.826, 'slot_precision': 0.7118, 'slot_recall': 0.7282, 'slot_f1': 0.7199, 'exact_match': 0.6011} 212s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3906.42it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s]
+[23:00:26] xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 1 época 9 de 10 {'intent_acc': 0.849, 'intent_macro_f1': 0.8137, 'slot_precision': 0.6981, 'slot_recall': 0.7208, 'slot_f1': 0.7093, 'exact_match': 0.603} 228s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4144.88it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it]
+[23:04:41] xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 2 época 9 de 10 {'intent_acc': 0.8421, 'intent_macro_f1': 0.8168, 'slot_precision': 0.7139, 'slot_recall': 0.713, 'slot_f1': 0.7134, 'exact_match': 0.603} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4371.22it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.03s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.03s/it]
+[23:08:56] xlmr__aluno_b2_t1__qwen3_14b__fp16__colab_a100 0 época 10 de 10 {'intent_acc': 0.8534, 'intent_macro_f1': 0.8267, 'slot_precision': 0.7115, 'slot_recall': 0.7238, 'slot_f1': 0.7176, 'exact_match': 0.6094} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4231.85it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]
+[23:11:59] xlmr__aluno_b2_t1__qwen3_14b__fp16__colab_a100 1 época 10 de 10 {'intent_acc': 0.847, 'intent_macro_f1': 0.8241, 'slot_precision': 0.6968, 'slot_recall': 0.7165, 'slot_f1': 0.7065, 'exact_match': 0.5962} 168s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4138.80it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it]
+[23:16:15] xlmr__aluno_b2_t1__qwen3_14b__fp16__colab_a100 2 época 9 de 10 {'intent_acc': 0.8451, 'intent_macro_f1': 0.8177, 'slot_precision': 0.724, 'slot_recall': 0.7165, 'slot_f1': 0.7202, 'exact_match': 0.6001} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3899.56it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it]
+[23:20:32] xlmr__aluno_b2_t2__qwen3_14b__fp16__colab_a100 0 época 10 de 10 {'intent_acc': 0.8642, 'intent_macro_f1': 0.8413, 'slot_precision': 0.7134, 'slot_recall': 0.723, 'slot_f1': 0.7181, 'exact_match': 0.6149} 242s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4157.21it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it]
+[23:24:48] xlmr__aluno_b2_t2__qwen3_14b__fp16__colab_a100 1 época 9 de 10 {'intent_acc': 0.8583, 'intent_macro_f1': 0.8321, 'slot_precision': 0.7006, 'slot_recall': 0.7264, 'slot_f1': 0.7133, 'exact_match': 0.6119} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4103.44it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.09s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.09s/it]
+[23:29:05] xlmr__aluno_b2_t2__qwen3_14b__fp16__colab_a100 2 época 9 de 10 {'intent_acc': 0.8593, 'intent_macro_f1': 0.8316, 'slot_precision': 0.716, 'slot_recall': 0.7182, 'slot_f1': 0.7171, 'exact_match': 0.6114} 241s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3931.49it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it]
+[23:33:23] xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100 0 época 10 de 10 {'intent_acc': 0.8657, 'intent_macro_f1': 0.8289, 'slot_precision': 0.7026, 'slot_recall': 0.716, 'slot_f1': 0.7092, 'exact_match': 0.6075} 243s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4207.03it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]
+[23:36:31] xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100 1 época 9 de 10 {'intent_acc': 0.8672, 'intent_macro_f1': 0.8318, 'slot_precision': 0.6946, 'slot_recall': 0.716, 'slot_f1': 0.7052, 'exact_match': 0.6139} 174s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4196.54it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it]
+[23:40:44] xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100 2 época 9 de 10 {'intent_acc': 0.8672, 'intent_macro_f1': 0.8289, 'slot_precision': 0.7041, 'slot_recall': 0.7152, 'slot_f1': 0.7096, 'exact_match': 0.6055} 237s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4119.46it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]
+[23:44:59] xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 0 época 8 de 10 {'intent_acc': 0.8593, 'intent_macro_f1': 0.8148, 'slot_precision': 0.7172, 'slot_recall': 0.7112, 'slot_f1': 0.7142, 'exact_match': 0.6045} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4223.50it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]
+[23:49:13] xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 1 época 9 de 10 {'intent_acc': 0.8613, 'intent_macro_f1': 0.8272, 'slot_precision': 0.7083, 'slot_recall': 0.7169, 'slot_f1': 0.7126, 'exact_match': 0.6124} 240s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4233.13it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it]
+[23:52:09] xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 2 época 8 de 10 {'intent_acc': 0.8569, 'intent_macro_f1': 0.8079, 'slot_precision': 0.7091, 'slot_recall': 0.706, 'slot_f1': 0.7076, 'exact_match': 0.605} 161s
+[23:52:10] FIM: 33 de 33 execuções de qwen3_14b__fp16__colab_a100 prontas em 92 min; registro em /home/danie/project/residencia/data/execucoes/11b_alunos_do_professor_maior/qwen3_14b__fp16__colab_a100/rodadas/rodada_20261118-222002.json

@@ -1,0 +1,184 @@
+{
+  "etapa": "06_destilacao",
+  "gerado_em": "2026-11-18",
+  "rede_e_receita": "entregas/04b_intencao/decisao.json",
+  "temperatura_do_b2": 8,
+  "regra_da_temperatura": "maior acurácia de intenção em dev (rótulos humanos), média de 3 sementes; empate: maior exact match, depois menor temperatura",
+  "seguem": [
+    "A",
+    "B2"
+  ],
+  "principal": "A",
+  "regra_do_que_segue": "o aluno A segue; do professor aberto segue o B2 se a intenção for distinguivelmente maior que a do B1 em dev (IC95 acima de zero) e o exact match não for distinguivelmente menor, senão o B1; o principal é o de maior exact match em dev entre os que seguem",
+  "alunos": {
+    "A": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5)",
+      "segue": true,
+      "variante": "aluno_a",
+      "modelos": "entregas/06_destilacao/modelos/aluno_a",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.1,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 80,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sinal": {
+        "treino": "rótulos do professor fechado: entregas/05a_professor_fechado/rotulos_treino.parquet",
+        "dev": "rótulos do professor fechado: entregas/05a_professor_fechado/previsoes/claude_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        }
+      },
+      "exact_match_em_dev": 0.5204131824889325
+    },
+    "B1": {
+      "nome": "Aluno B1 (rótulos do Qwen3-8B)",
+      "segue": false,
+      "variante": "aluno_b1",
+      "modelos": "entregas/06_destilacao/modelos/aluno_b1",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.1,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 80,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        }
+      },
+      "exact_match_em_dev": 0.4517133956386292
+    },
+    "B2": {
+      "nome": "Aluno B2 (logits do Qwen3-8B, T = 8)",
+      "segue": true,
+      "variante": "aluno_b2_t8",
+      "modelos": "entregas/06_destilacao/modelos/aluno_b2_t8",
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 80,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        },
+        "logits": "entregas/05b_professor_aberto/logits_treino.npy"
+      },
+      "exact_match_em_dev": 0.4689293326774881
+    }
+  },
+  "referencias": {
+    "teto": "entregas/04b_intencao/modelos",
+    "piso": "entregas/06_destilacao/modelos/piso"
+  },
+  "controle": {
+    "nome": "Aluno B1 sem suavização de rótulos (controle)",
+    "variante": "aluno_b1_sem_suavizacao",
+    "concorre_a_seguir": false,
+    "para_que_serve": "aluno B1 sem a suavização de rótulos: B2 − controle muda só os logits",
+    "previsoes": "entregas/06_destilacao/previsoes",
+    "exact_match_em_dev": 0.4426955238563699
+  }
+}

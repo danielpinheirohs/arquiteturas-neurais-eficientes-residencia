@@ -1,0 +1,97 @@
+{
+  "modelo": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+  "variante": "vocabulario_treino",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "pytorch": [
+      34.7251315,
+      34.408211,
+      34.446732,
+      34.409608500000004,
+      34.69924
+    ],
+    "fp32": [
+      23.9267155,
+      23.760022499999998,
+      23.814745000000002,
+      23.3777115,
+      23.746166
+    ],
+    "dinamica": [
+      7.7049579999999995,
+      7.6393795,
+      7.610164,
+      7.604284,
+      7.6832175
+    ],
+    "estatica": [
+      8.010353,
+      7.935199000000001,
+      7.88971,
+      7.985887,
+      8.012630000000001
+    ]
+  },
+  "resumo": {
+    "pytorch": {
+      "latencia_p50_ms": 34.5073745,
+      "latencia_p90_ms": 43.0590339,
+      "latencia_p95_ms": 46.9902933,
+      "latencia_p99_ms": 51.88118194000007,
+      "latencia_media_ms": 35.72360431542968
+    },
+    "fp32": {
+      "latencia_p50_ms": 23.7271985,
+      "latencia_p90_ms": 31.295703200000002,
+      "latencia_p95_ms": 35.681614100000004,
+      "latencia_p99_ms": 39.30905289000001,
+      "latencia_media_ms": 25.05627628085937
+    },
+    "dinamica": {
+      "latencia_p50_ms": 7.6540099999999995,
+      "latencia_p90_ms": 10.2275038,
+      "latencia_p95_ms": 11.485674750000001,
+      "latencia_p99_ms": 13.278181590000006,
+      "latencia_media_ms": 7.964073805859376
+    },
+    "estatica": {
+      "latencia_p50_ms": 7.9672415,
+      "latencia_p90_ms": 10.705782,
+      "latencia_p95_ms": 11.9748307,
+      "latencia_p99_ms": 13.757141970000003,
+      "latencia_media_ms": 8.302861923632813
+    }
+  },
+  "tempo_por_trecho_ms": {
+    "fp32": {
+      "texto para subtokens": 0.1117124091796875,
+      "rede (ONNX Runtime)": 24.82975152734375,
+      "montar a resposta": 0.0436538330078125
+    },
+    "dinamica": {
+      "texto para subtokens": 0.0873199736328125,
+      "rede (ONNX Runtime)": 7.921113490234375,
+      "montar a resposta": 0.03325830078125
+    },
+    "estatica": {
+      "texto para subtokens": 0.08730098828125,
+      "rede (ONNX Runtime)": 8.189939610351562,
+      "montar a resposta": 0.0318220712890625
+    }
+  },
+  "nucleos_de_outros": 0.030082940834282246,
+  "carga_antes": 1.10498046875,
+  "carga_depois": 1.02978515625,
+  "medido_em": "2026-11-19T01:53:37",
+  "onnxruntime": "1.32.0",
+  "torch": "2.15.0+cu132",
+  "python": "3.12.13",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "instrucoes_da_cpu": "avx2 avx_vnni",
+  "tem_vnni": true
+}

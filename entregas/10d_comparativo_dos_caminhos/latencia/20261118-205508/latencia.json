@@ -1,0 +1,160 @@
+{
+  "etapa": "10d_comparativo_dos_caminhos",
+  "medido_em": "2026-11-18T21:01:55",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "aquecimento": 50,
+  "pedidos": "dev",
+  "ordem_na_rodada": [
+    "zero/int8",
+    "xlmr/int8",
+    "zero/onnx",
+    "xlmr/onnx",
+    "zero/pytorch",
+    "xlmr/pytorch"
+  ],
+  "sistemas": {
+    "zero/int8": {
+      "como": "onnx_diet",
+      "pasta": "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_0"
+    },
+    "xlmr/int8": {
+      "como": "onnx_encoder",
+      "pasta": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/dinamica/semente_0"
+    },
+    "zero/onnx": {
+      "como": "exportar_diet",
+      "pasta": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_0"
+    },
+    "xlmr/onnx": {
+      "como": "onnx_encoder",
+      "pasta": "entregas/10c_encoder_quantizacao/modelos/aluno_a/vocabulario_treino/fp32/semente_0"
+    },
+    "zero/pytorch": {
+      "como": "diet",
+      "pasta": "entregas/07_poda/modelos/aluno_a/linhas_90/semente_0"
+    },
+    "xlmr/pytorch": {
+      "como": "encoder",
+      "pasta": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_0"
+    }
+  },
+  "reproduz_as_respostas_gravadas": {
+    "zero/int8": true,
+    "xlmr/int8": true,
+    "zero/onnx": true,
+    "xlmr/onnx": true,
+    "zero/pytorch": true,
+    "xlmr/pytorch": true
+  },
+  "p50_por_rodada_ms": {
+    "zero/int8": [
+      0.26874149999999997,
+      0.2586185,
+      0.25437,
+      0.243211,
+      0.26033
+    ],
+    "xlmr/int8": [
+      8.109662,
+      7.8709775,
+      7.917061,
+      7.999017,
+      8.0820075
+    ],
+    "zero/onnx": [
+      0.43685399999999996,
+      0.417818,
+      0.42096,
+      0.4161085,
+      0.4110395
+    ],
+    "xlmr/onnx": [
+      24.658513499999998,
+      24.234679999999997,
+      24.516984,
+      24.115318,
+      24.2339045
+    ],
+    "zero/pytorch": [
+      1.1265315,
+      1.089803,
+      1.1057025,
+      1.1069655,
+      1.105731
+    ],
+    "xlmr/pytorch": [
+      35.149139000000005,
+      35.077062,
+      35.0150515,
+      34.8821865,
+      35.519743
+    ]
+  },
+  "resumo": {
+    "zero/int8": {
+      "latencia_p50_ms": 0.256121,
+      "latencia_p90_ms": 0.4013584,
+      "latencia_p95_ms": 0.44408915,
+      "latencia_p99_ms": 0.5757534300000006,
+      "latencia_media_ms": 0.2714331283203125
+    },
+    "xlmr/int8": {
+      "latencia_p50_ms": 7.999191,
+      "latencia_p90_ms": 10.717710900000002,
+      "latencia_p95_ms": 11.77890515,
+      "latencia_p99_ms": 13.769686910000008,
+      "latencia_media_ms": 8.328851455664061
+    },
+    "zero/onnx": {
+      "latencia_p50_ms": 0.419779,
+      "latencia_p90_ms": 0.6376461000000001,
+      "latencia_p95_ms": 0.69738705,
+      "latencia_p99_ms": 0.918101520000001,
+      "latencia_media_ms": 0.42887481562499996
+    },
+    "xlmr/onnx": {
+      "latencia_p50_ms": 24.348454,
+      "latencia_p90_ms": 32.0976445,
+      "latencia_p95_ms": 36.416311900000004,
+      "latencia_p99_ms": 40.506977840000005,
+      "latencia_media_ms": 25.694733180273438
+    },
+    "zero/pytorch": {
+      "latencia_p50_ms": 1.1067185,
+      "latencia_p90_ms": 1.4086175,
+      "latencia_p95_ms": 1.5191599,
+      "latencia_p99_ms": 1.7770028400000002,
+      "latencia_media_ms": 1.136130534375
+    },
+    "xlmr/pytorch": {
+      "latencia_p50_ms": 35.110134,
+      "latencia_p90_ms": 43.91175410000001,
+      "latencia_p95_ms": 47.73717155000001,
+      "latencia_p99_ms": 52.33292420000001,
+      "latencia_media_ms": 36.35006501152344
+    }
+  },
+  "nucleos_de_outros": 0.06790627666254122,
+  "nucleos_de_outros_por_rodada": [
+    0.06970050059616113,
+    0.10211091791835294,
+    0.028184400448150012,
+    0.0343551675993497,
+    0.10496211917835546
+  ],
+  "limite_de_outros": 0.25,
+  "maquina_quieta": true,
+  "carga_antes": 2.3466796875,
+  "carga_depois": 1.1005859375,
+  "onnxruntime": "1.32.0",
+  "torch": "2.15.0+cu132",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "python": "3.12.13",
+  "instrucoes_da_cpu": "avx2 avx_vnni",
+  "tem_vnni": true
+}

@@ -1,0 +1,40 @@
+antes: 2026-11-19 07:57:40 -0300; depois: 2026-11-19 09:12:59 -0300
+igual  data/execucoes/04_treino: 126 de 126 arquivos iguais (126 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/04b_intencao: 108 de 108 arquivos iguais (108 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/05a_professor_fechado: 16 de 16 arquivos iguais (16 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/05b_professor_aberto: 15 de 15 arquivos iguais (15 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/06_destilacao: 144 de 144 arquivos iguais (144 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/07_poda: 1224 de 1224 arquivos iguais (1224 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/08_quantizacao: 909 de 909 arquivos iguais (909 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/09_comparativo: 20 de 20 arquivos iguais (20 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/10a_encoder: 303 de 303 arquivos iguais (272 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/10b_encoder_poda: 746 de 746 arquivos iguais (728 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/10c_encoder_quantizacao: 516 de 516 arquivos iguais (453 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/10d_comparativo_dos_caminhos: 55 de 55 arquivos iguais (55 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/11a_professor_aberto_maior: 112 de 112 arquivos iguais (112 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/11b_alunos_do_professor_maior: 352 de 352 arquivos iguais (337 com sha256); mudaram 0, sumiram 0, novos 0
+igual  data/execucoes/11c_cenario_b_ate_o_fim: 627 de 627 arquivos iguais (593 com sha256); mudaram 0, sumiram 0, novos 0
+MUDOU  data/execucoes/sintese: 0 de 0 arquivos iguais (0 com sha256); mudaram 0, sumiram 0, novos 4
+        novos: data/execucoes/sintese/gerar_sintese.py
+        novos: data/execucoes/sintese/medir_memoria.py
+        novos: data/execucoes/sintese/memoria.json
+        novos: data/execucoes/sintese/textos_dev_256.json
+igual  entregas/01_dados: 12 de 12 arquivos iguais (12 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/02_avaliacao: 13 de 13 arquivos iguais (13 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/03_arquitetura: 13 de 13 arquivos iguais (13 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/04_treino: 27 de 27 arquivos iguais (27 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/04b_intencao: 24 de 24 arquivos iguais (24 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/05a_professor_fechado: 31 de 31 arquivos iguais (31 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/05b_professor_aberto: 34 de 34 arquivos iguais (34 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/06_destilacao: 116 de 116 arquivos iguais (116 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/07_poda: 282 de 282 arquivos iguais (282 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/08_quantizacao: 122 de 122 arquivos iguais (122 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/09_comparativo: 35 de 35 arquivos iguais (35 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/10a_encoder: 154 de 154 arquivos iguais (145 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/10b_encoder_poda: 270 de 270 arquivos iguais (252 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/10c_encoder_quantizacao: 513 de 513 arquivos iguais (441 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/10d_comparativo_dos_caminhos: 80 de 80 arquivos iguais (80 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/11a_professor_aberto_maior: 113 de 113 arquivos iguais (113 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/11b_alunos_do_professor_maior: 177 de 177 arquivos iguais (171 com sha256); mudaram 0, sumiram 0, novos 0
+igual  entregas/11c_cenario_b_ate_o_fim: 332 de 332 arquivos iguais (310 com sha256); mudaram 0, sumiram 0, novos 0
+4 DIFERENÇAS

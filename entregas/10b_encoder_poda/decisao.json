@@ -1,0 +1,470 @@
+{
+  "etapa": "10b_encoder_poda",
+  "gerado_em": "2026-11-18",
+  "regra": "em dev, com rótulos humanos: passa a variante cujo exact match depois do reajuste não é distinguivelmente menor que o do modelo sem poda (IC95 da diferença pareada, média de 3 sementes). A principal é a que passa com o menor arquivo comum (denso); se nenhuma peça inteira passa, é o modelo sem poda. A secundária é a de pesos soltos que passa com a maior esparsidade.",
+  "como_ler": "Em cada modelo de partida: `principal` e `secundaria` trazem o nome da variante (null na principal quer dizer: o modelo sem poda; null na secundária: nenhuma de pesos soltos passou). `seguem` traz a ficha de cada variante podada que segue, e `sem_poda`, a do modelo de partida. Toda pasta em `pastas_por_semente` é lida por especialista.modelos.encoder.SistemaEncoder.carregar. Em `bytes`, os três formatos são do sistema inteiro (rede, tokenizador e configurações); `so_a_rede` e `tokenizador_e_configuracao` separam as partes. Os modelos com `grade: do_principal` recebem as variantes do aluno principal por desenho; `passa_na_regra` diz como elas se saem neles.",
+  "reajuste": {
+    "epocas": 10,
+    "epocas_de_rampa_da_poda_gradual": 5,
+    "passos_entre_cortes": 100,
+    "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+  },
+  "principal": {
+    "modelo": "aluno_a",
+    "variante": "vocabulario_treino",
+    "pastas_por_semente": {
+      "0": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_0",
+      "1": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_1",
+      "2": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_2"
+    }
+  },
+  "modelos": {
+    "aluno_a": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5)",
+      "variante_da_etapa_10a": "aluno_a",
+      "grade": "completa",
+      "sinal_do_reajuste": {
+        "treino": "rótulos do professor fechado: entregas/05a_professor_fechado/rotulos_treino.parquet",
+        "dev": "rótulos do professor fechado: entregas/05a_professor_fechado/previsoes/claude_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        }
+      },
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sem_poda": {
+        "pastas_por_semente": {
+          "0": "entregas/10a_encoder/modelos/aluno_a/semente_0",
+          "1": "entregas/10a_encoder/modelos/aluno_a/semente_1",
+          "2": "entregas/10a_encoder/modelos/aluno_a/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 277584555,
+        "nao_nulos": 277583755,
+        "bytes": {
+          "arquivo_comum": 1127466166,
+          "arquivo_comum_com_zip": 832143320,
+          "arquivo_esparso": 1127507673,
+          "so_a_rede": {
+            "arquivo_comum": 1110362765,
+            "arquivo_comum_com_zip": 828132097,
+            "arquivo_esparso": 1110404272
+          },
+          "tokenizador_e_configuracao": 17103401
+        },
+        "latencia_p50_ms": 35.942138,
+        "exact_match_em_dev": 0.543695687817675
+      },
+      "principal": "vocabulario_treino",
+      "secundaria": "gradual_70",
+      "seguem": [
+        {
+          "variante": "vocabulario_treino",
+          "papel": "principal",
+          "nome": "Vocabulário do treino",
+          "familia": "vocabulario",
+          "nivel": null,
+          "modelos": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/aluno_a/vocabulario_treino/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 89573547,
+          "nao_nulos": 89572779,
+          "camadas": 12,
+          "linhas_da_tabela": 5196,
+          "bytes": {
+            "arquivo_comum": 358975066,
+            "arquivo_comum_com_zip": 332976023,
+            "arquivo_esparso": 359016789,
+            "so_a_rede": {
+              "arquivo_comum": 358318517,
+              "arquivo_comum_com_zip": 332735420,
+              "arquivo_esparso": 358360240
+            },
+            "tokenizador_e_configuracao": 656549
+          },
+          "latencia_p50_ms": 36.0412455,
+          "exact_match_em_dev": 0.5400885391047713,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.003607148712903685,
+            "ic_min": -0.010165600918183304,
+            "ic_max": 0.002951303492375823
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). É um XLM-R comum da biblioteca, só que menor, com o tokenizador reduzido na mesma pasta."
+        },
+        {
+          "variante": "gradual_70",
+          "papel": "secundaria",
+          "nome": "Magnitude, 70% gradual",
+          "familia": "gradual",
+          "nivel": 70,
+          "modelos": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/aluno_a/gradual_70/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 277584555,
+          "nao_nulos": 218129491,
+          "camadas": 12,
+          "linhas_da_tabela": 250002,
+          "bytes": {
+            "arquivo_comum": 1127466356,
+            "arquivo_comum_com_zip": 647866800,
+            "arquivo_esparso": 900359191,
+            "so_a_rede": {
+              "arquivo_comum": 1110362765,
+              "arquivo_comum_com_zip": 643855500,
+              "arquivo_esparso": 883255600
+            },
+            "tokenizador_e_configuracao": 17103591
+          },
+          "latencia_p50_ms": 37.3794125,
+          "exact_match_em_dev": 0.5350057386456796,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.008689949171995393,
+            "ic_min": -0.017871782259386793,
+            "ic_max": 0.0004959829480243897
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). Os pesos podados estão gravados como zeros em encoder/model.safetensors; a máscara é lida deles (poda_encoder.mascaras_dos_zeros). O arquivo esparso é gravado por poda_encoder.salvar_esparso."
+        }
+      ]
+    },
+    "aluno_b2_t2": {
+      "nome": "Aluno B2 (logits do Qwen3-8B)",
+      "variante_da_etapa_10a": "aluno_b2_t2",
+      "grade": "do_principal",
+      "sinal_do_reajuste": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        },
+        "logits": "entregas/05b_professor_aberto/logits_treino.npy"
+      },
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 2.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sem_poda": {
+        "pastas_por_semente": {
+          "0": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_0",
+          "1": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_1",
+          "2": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 277584555,
+        "nao_nulos": 277583755,
+        "bytes": {
+          "arquivo_comum": 1127466166,
+          "arquivo_comum_com_zip": 832271410,
+          "arquivo_esparso": 1127507673,
+          "so_a_rede": {
+            "arquivo_comum": 1110362765,
+            "arquivo_comum_com_zip": 828260185,
+            "arquivo_esparso": 1110404272
+          },
+          "tokenizador_e_configuracao": 17103401
+        },
+        "latencia_p50_ms": 38.015105,
+        "exact_match_em_dev": 0.4728644040006558
+      },
+      "principal": "vocabulario_treino",
+      "secundaria": "gradual_70",
+      "seguem": [
+        {
+          "variante": "vocabulario_treino",
+          "papel": "principal",
+          "nome": "Vocabulário do treino",
+          "familia": "vocabulario",
+          "nivel": null,
+          "modelos": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/vocabulario_treino/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 89573547,
+          "nao_nulos": 89572779,
+          "camadas": 12,
+          "linhas_da_tabela": 5196,
+          "bytes": {
+            "arquivo_comum": 358975066,
+            "arquivo_comum_com_zip": 332964874,
+            "arquivo_esparso": 359016789,
+            "so_a_rede": {
+              "arquivo_comum": 358318517,
+              "arquivo_comum_com_zip": 332724269,
+              "arquivo_esparso": 358360240
+            },
+            "tokenizador_e_configuracao": 656549
+          },
+          "latencia_p50_ms": 38.476051999999996,
+          "exact_match_em_dev": 0.46843744876209215,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.004426955238563679,
+            "ic_min": -0.0091818330873914,
+            "ic_max": 0.0001680603377602964
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). É um XLM-R comum da biblioteca, só que menor, com o tokenizador reduzido na mesma pasta."
+        },
+        {
+          "variante": "gradual_70",
+          "papel": "secundaria",
+          "nome": "Magnitude, 70% gradual",
+          "familia": "gradual",
+          "nivel": 70,
+          "modelos": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/aluno_b2_t2/gradual_70/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 277584555,
+          "nao_nulos": 218129491,
+          "camadas": 12,
+          "linhas_da_tabela": 250002,
+          "bytes": {
+            "arquivo_comum": 1127466356,
+            "arquivo_comum_com_zip": 647798634,
+            "arquivo_esparso": 900359191,
+            "so_a_rede": {
+              "arquivo_comum": 1110362765,
+              "arquivo_comum_com_zip": 643787332,
+              "arquivo_esparso": 883255600
+            },
+            "tokenizador_e_configuracao": 17103591
+          },
+          "latencia_p50_ms": 37.991217,
+          "exact_match_em_dev": 0.46843744876209215,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.004426955238563679,
+            "ic_min": -0.014760616494507358,
+            "ic_max": 0.0063944909001475425
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). Os pesos podados estão gravados como zeros em encoder/model.safetensors; a máscara é lida deles (poda_encoder.mascaras_dos_zeros). O arquivo esparso é gravado por poda_encoder.salvar_esparso."
+        }
+      ]
+    },
+    "teto": {
+      "nome": "Teto (rótulos humanos)",
+      "variante_da_etapa_10a": "teto",
+      "grade": "completa",
+      "sinal_do_reajuste": {
+        "treino": "rótulos humanos de todos os pedidos",
+        "dev": "rótulos humanos de dev"
+      },
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita_do_reajuste": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sem_poda": {
+        "pastas_por_semente": {
+          "0": "entregas/10a_encoder/modelos/teto/semente_0",
+          "1": "entregas/10a_encoder/modelos/teto/semente_1",
+          "2": "entregas/10a_encoder/modelos/teto/semente_2"
+        },
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "parametros": 277584555,
+        "nao_nulos": 277583755,
+        "bytes": {
+          "arquivo_comum": 1127466166,
+          "arquivo_comum_com_zip": 832256877,
+          "arquivo_esparso": 1127507673,
+          "so_a_rede": {
+            "arquivo_comum": 1110362765,
+            "arquivo_comum_com_zip": 828245654,
+            "arquivo_esparso": 1110404272
+          },
+          "tokenizador_e_configuracao": 17103401
+        },
+        "latencia_p50_ms": 37.8018325,
+        "exact_match_em_dev": 0.6681423184128547
+      },
+      "principal": "vocabulario_treino",
+      "secundaria": "magnitude_50",
+      "seguem": [
+        {
+          "variante": "vocabulario_treino",
+          "papel": "principal",
+          "nome": "Vocabulário do treino",
+          "familia": "vocabulario",
+          "nivel": null,
+          "modelos": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/teto/vocabulario_treino/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 89573547,
+          "nao_nulos": 89572779,
+          "camadas": 12,
+          "linhas_da_tabela": 5196,
+          "bytes": {
+            "arquivo_comum": 358975066,
+            "arquivo_comum_com_zip": 332968334,
+            "arquivo_esparso": 359016789,
+            "so_a_rede": {
+              "arquivo_comum": 358318517,
+              "arquivo_comum_com_zip": 332727731,
+              "arquivo_esparso": 358360240
+            },
+            "tokenizador_e_configuracao": 656549
+          },
+          "latencia_p50_ms": 37.803514,
+          "exact_match_em_dev": 0.6666666666666666,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.0014756517461880225,
+            "ic_min": -0.0070503361206755155,
+            "ic_max": 0.0037711100180358725
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). É um XLM-R comum da biblioteca, só que menor, com o tokenizador reduzido na mesma pasta."
+        },
+        {
+          "variante": "magnitude_50",
+          "papel": "secundaria",
+          "nome": "Magnitude, 50% de uma vez",
+          "familia": "magnitude",
+          "nivel": 50,
+          "modelos": "entregas/10b_encoder_poda/modelos/teto/magnitude_50",
+          "pastas_por_semente": {
+            "0": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_0",
+            "1": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_1",
+            "2": "entregas/10b_encoder_poda/modelos/teto/magnitude_50/semente_2"
+          },
+          "sementes": [
+            0,
+            1,
+            2
+          ],
+          "parametros": 277584555,
+          "nao_nulos": 235116427,
+          "camadas": 12,
+          "linhas_da_tabela": 250002,
+          "bytes": {
+            "arquivo_comum": 1127466356,
+            "arquivo_comum_com_zip": 708017215,
+            "arquivo_esparso": 968306935,
+            "so_a_rede": {
+              "arquivo_comum": 1110362765,
+              "arquivo_comum_com_zip": 704005915,
+              "arquivo_esparso": 951203344
+            },
+            "tokenizador_e_configuracao": 17103591
+          },
+          "latencia_p50_ms": 37.116037500000004,
+          "exact_match_em_dev": 0.6624036727332351,
+          "passa_na_regra": true,
+          "diferenca_para_sem_poda_em_dev": {
+            "diferenca": -0.0057386456796195695,
+            "ic_min": -0.013772749631086992,
+            "ic_max": 0.0019716346942123012
+          },
+          "como_ler": "SistemaEncoder.carregar(pasta da semente). Os pesos podados estão gravados como zeros em encoder/model.safetensors; a máscara é lida deles (poda_encoder.mascaras_dos_zeros). O arquivo esparso é gravado por poda_encoder.salvar_esparso."
+        }
+      ]
+    }
+  }
+}

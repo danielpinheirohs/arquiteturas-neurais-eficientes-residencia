@@ -1,0 +1,192 @@
+o_que,chave,particao,gravado_em,respostas_geradas_agora,gravado,maior_diferenca,confere,colunas_diferentes,anterior,cadeia
+qualidade de um sistema,base_299,dev,entregas/05a_professor_fechado/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,base_299,test,entregas/05a_professor_fechado/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,base_11514,dev,entregas/02_avaliacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,base_11514,test,entregas/02_avaliacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,claude,dev,entregas/05a_professor_fechado/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,claude,test,entregas/05a_professor_fechado/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,qwen,dev,entregas/05b_professor_aberto/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,qwen,test,entregas/05b_professor_aberto/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto,dev,entregas/04b_intencao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto,test,entregas/04b_intencao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,piso,dev,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,piso,test,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a,dev,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a,test,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b1,dev,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b1,test,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2,dev,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2,test,entregas/06_destilacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/podado,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/podado,dev,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/podado,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/podado,test,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/onnx,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/onnx,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/int8,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_a/int8,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/soltos,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_a/soltos,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/podado,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/podado,dev,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/podado,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/podado,test,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/onnx,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/onnx,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/int8,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/int8,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/soltos,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/soltos,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/podado,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/podado,dev,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/podado,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/podado,test,entregas/07_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/onnx,dev,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/onnx,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/int8,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,teto/int8,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,teto/soltos,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,teto/soltos,test,entregas/08_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,aluno_a/int8_sem_poda,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_a/int8_sem_poda,test,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/int8_sem_poda,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,aluno_b2/int8_sem_poda,test,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,teto/int8_sem_poda,dev,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,teto/int8_sem_poda,test,entregas/08_quantizacao/resultados.csv,True,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto,dev,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto,test,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/piso,dev,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/piso,test,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a,dev,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a,test,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b1,dev,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b1,test,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2,dev,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2,test,entregas/10a_encoder/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/podado,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/podado,dev,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/podado,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/podado,test,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/onnx,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/onnx,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/int8,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/int8,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/soltos,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/soltos,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/int8_sem_poda,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_a/int8_sem_poda,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/podado,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/podado,dev,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/podado,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/podado,test,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/onnx,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/onnx,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/int8,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/int8,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/soltos,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/soltos,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/int8_sem_poda,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/aluno_b2/int8_sem_poda,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/podado,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/podado,dev,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/podado,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/podado,test,entregas/10b_encoder_poda/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/onnx,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/onnx,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/int8,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/int8,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/soltos,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/soltos,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/int8_sem_poda,dev,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+qualidade de um sistema,xlmr/teto/int8_sem_poda,test,entregas/10c_encoder_quantizacao/resultados.csv,False,True,0.0,True,,,
+linha da tabela final da Etapa 9,base_299,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,base_11514,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,claude,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,qwen,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,teto,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,piso,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_a,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b1,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b2,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_a/podado,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_a/onnx,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_a/int8,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_a/soltos,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b2/podado,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b2/onnx,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b2/int8,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,aluno_b2/soltos,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,teto/podado,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,teto/onnx,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,teto/int8,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+linha da tabela final da Etapa 9,teto/soltos,test,entregas/09_comparativo/tabela_final.csv,,True,0.0,True,,,
+degrau de uma cadeia,aluno_a,dev,entregas/06_destilacao/comparacoes.csv,,True,0.0,True,,claude,zero/A
+degrau de uma cadeia,aluno_a/podado,dev,entregas/07_poda/comparacoes.csv,,True,0.0,True,,aluno_a,zero/A
+degrau de uma cadeia,aluno_a/onnx,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_a/podado,zero/A
+degrau de uma cadeia,aluno_a/int8,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_a/onnx,zero/A
+degrau de uma cadeia,aluno_b2,dev,entregas/06_destilacao/comparacoes.csv,,True,0.0,True,,qwen,zero/B
+degrau de uma cadeia,aluno_b2/podado,dev,entregas/07_poda/comparacoes.csv,,True,0.0,True,,aluno_b2,zero/B
+degrau de uma cadeia,aluno_b2/onnx,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_b2/podado,zero/B
+degrau de uma cadeia,aluno_b2/int8,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_b2/onnx,zero/B
+degrau de uma cadeia,teto/podado,dev,entregas/07_poda/comparacoes.csv,,True,0.0,True,,teto,zero/teto
+degrau de uma cadeia,teto/onnx,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,teto/podado,zero/teto
+degrau de uma cadeia,teto/int8,dev,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,teto/onnx,zero/teto
+degrau de uma cadeia,xlmr/aluno_a,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,claude,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/podado,dev,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/onnx,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a/podado,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/int8,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a/onnx,xlmr/A
+degrau de uma cadeia,xlmr/aluno_b2,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,qwen,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/podado,dev,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/onnx,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2/podado,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/int8,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2/onnx,xlmr/B
+degrau de uma cadeia,xlmr/teto/podado,dev,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/teto,xlmr/teto
+degrau de uma cadeia,xlmr/teto/onnx,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/teto/podado,xlmr/teto
+degrau de uma cadeia,xlmr/teto/int8,dev,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/teto/onnx,xlmr/teto
+degrau de uma cadeia,aluno_a,test,entregas/06_destilacao/comparacoes.csv,,True,0.0,True,,claude,zero/A
+degrau de uma cadeia,aluno_a/podado,test,entregas/07_poda/comparacoes.csv,,True,0.0,True,,aluno_a,zero/A
+degrau de uma cadeia,aluno_a/onnx,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_a/podado,zero/A
+degrau de uma cadeia,aluno_a/int8,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_a/onnx,zero/A
+degrau de uma cadeia,aluno_b2,test,entregas/06_destilacao/comparacoes.csv,,True,0.0,True,,qwen,zero/B
+degrau de uma cadeia,aluno_b2/podado,test,entregas/07_poda/comparacoes.csv,,True,0.0,True,,aluno_b2,zero/B
+degrau de uma cadeia,aluno_b2/onnx,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_b2/podado,zero/B
+degrau de uma cadeia,aluno_b2/int8,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,aluno_b2/onnx,zero/B
+degrau de uma cadeia,teto/podado,test,entregas/07_poda/comparacoes.csv,,True,0.0,True,,teto,zero/teto
+degrau de uma cadeia,teto/onnx,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,teto/podado,zero/teto
+degrau de uma cadeia,teto/int8,test,entregas/08_quantizacao/comparacoes.csv,,True,0.0,True,,teto/onnx,zero/teto
+degrau de uma cadeia,xlmr/aluno_a,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,claude,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/podado,test,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/onnx,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a/podado,xlmr/A
+degrau de uma cadeia,xlmr/aluno_a/int8,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_a/onnx,xlmr/A
+degrau de uma cadeia,xlmr/aluno_b2,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,qwen,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/podado,test,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/onnx,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2/podado,xlmr/B
+degrau de uma cadeia,xlmr/aluno_b2/int8,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/aluno_b2/onnx,xlmr/B
+degrau de uma cadeia,xlmr/teto/podado,test,entregas/10b_encoder_poda/comparacoes.csv,,True,0.0,True,,xlmr/teto,xlmr/teto
+degrau de uma cadeia,xlmr/teto/onnx,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/teto/podado,xlmr/teto
+degrau de uma cadeia,xlmr/teto/int8,test,entregas/10c_encoder_quantizacao/comparacoes.csv,,True,0.0,True,,xlmr/teto/onnx,xlmr/teto
+comparação entre sistemas,xlmr/teto,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,teto,
+comparação entre sistemas,xlmr/teto,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,teto,
+comparação entre sistemas,xlmr/piso,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,piso,
+comparação entre sistemas,xlmr/piso,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,piso,
+comparação entre sistemas,xlmr/aluno_a,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_a,
+comparação entre sistemas,xlmr/aluno_a,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_a,
+comparação entre sistemas,xlmr/aluno_b1,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_b1,
+comparação entre sistemas,xlmr/aluno_b1,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_b1,
+comparação entre sistemas,xlmr/aluno_b2,dev,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_b2,
+comparação entre sistemas,xlmr/aluno_b2,test,entregas/10a_encoder/comparacoes.csv,,True,0.0,True,,aluno_b2,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,claude,
+comparação entre sistemas,aluno_b2/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,qwen,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,aluno_a,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,teto,
+comparação entre sistemas,teto/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,teto,
+comparação entre sistemas,aluno_b2/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,aluno_b2,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,aluno_b2/int8,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,base_299,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,base_11514,
+comparação entre sistemas,aluno_a/int8,test,entregas/09_comparativo/comparacoes.csv,,True,0.0,True,,piso,

@@ -1,0 +1,19 @@
+{
+  "tipo": "refeito",
+  "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+  "semente": 1,
+  "epocas_gravadas": 11,
+  "receita": {
+    "epocas": 10,
+    "taxa": 5e-05,
+    "lote": 32,
+    "aquecimento": 0.1,
+    "decaimento": 0.01,
+    "norma_maxima": 1.0,
+    "passos_por_epoca": 0,
+    "criterio": "exact_match",
+    "precisao_mista": true,
+    "tabela_dividida": true
+  },
+  "o_que_e": "T2: o corte e o reajuste das Etapas 10b e 11c, refeitos com as respostas em dev gravadas a cada época"
+}

@@ -1,0 +1,245 @@
+{
+  "como_ler": "`seguem` traz as siglas dos alunos que a Etapa 10b comprime, e `principal`, o que ela comprime primeiro. Em `alunos` e em `referencias.teto`, toda pasta de `pastas_por_semente` é lida por especialista.modelos.encoder.SistemaEncoder.carregar. `sinal` diz de onde vêm os rótulos do treino e da parada de cada aluno: é com ele que o reajuste depois da poda tem de continuar.",
+  "etapa": "10a_encoder",
+  "gerado_em": "2026-11-18",
+  "encoder": {
+    "modelo_id": "FacebookAI/xlm-roberta-base",
+    "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089"
+  },
+  "receita": {
+    "epocas": 10,
+    "taxa": 5e-05,
+    "lote": 32,
+    "aquecimento": 0.1,
+    "decaimento": 0.01,
+    "norma_maxima": 1.0,
+    "passos_por_epoca": 0,
+    "criterio": "exact_match",
+    "precisao_mista": true,
+    "tabela_dividida": true
+  },
+  "regra_da_receita": "maior exact match em dev (rótulos humanos), na melhor época de cada configuração, 1 semente; empate exato: maior acurácia de intenção, depois menos épocas, depois a menor taxa",
+  "teto_perto_do_publicado": true,
+  "regra_do_teto": "em cada uma das três métricas (intenção, entidades, exact match), no teste, o intervalo de 95% do teto (média de 3 sementes, bootstrap por enunciado) alcança o intervalo publicado (valor ± margem do artigo), ou o teto fica acima",
+  "temperatura_do_b2": 2,
+  "regra_da_temperatura": "a da Etapa 6: maior acurácia de intenção em dev (rótulos humanos), média de 3 sementes; empate: maior exact match, depois menor temperatura",
+  "seguem": [
+    "A",
+    "B2"
+  ],
+  "principal": "A",
+  "regra_do_que_segue": "seguem o aluno A e o aluno B2 (na temperatura escolhida em dev), os mesmos do caminho do zero, para que a Etapa 10c compare cadeia com cadeia; o principal é o de maior exact match em dev; a regra da Etapa 6 (B2 − B1 em dev) é aplicada e relatada como conferência, sem mudar quem segue",
+  "b2_passa_na_regra_da_etapa_6": true,
+  "alunos": {
+    "A": {
+      "nome": "Aluno A (rótulos do Claude Haiku 5.5)",
+      "segue": true,
+      "variante": "aluno_a",
+      "modelos": "entregas/10a_encoder/modelos/aluno_a",
+      "pastas_por_semente": {
+        "0": "entregas/10a_encoder/modelos/aluno_a/semente_0",
+        "1": "entregas/10a_encoder/modelos/aluno_a/semente_1",
+        "2": "entregas/10a_encoder/modelos/aluno_a/semente_2"
+      },
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos do professor fechado: entregas/05a_professor_fechado/rotulos_treino.parquet",
+        "dev": "rótulos do professor fechado: entregas/05a_professor_fechado/previsoes/claude_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        }
+      },
+      "exact_match_em_dev": 0.543695687817675
+    },
+    "B1": {
+      "nome": "Aluno B1 (rótulos do Qwen3-8B)",
+      "segue": false,
+      "variante": "aluno_b1",
+      "modelos": null,
+      "pastas_por_semente": null,
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        }
+      },
+      "exact_match_em_dev": 0.4672897196261682
+    },
+    "B2": {
+      "nome": "Aluno B2 (logits do Qwen3-8B)",
+      "segue": true,
+      "variante": "aluno_b2_t2",
+      "modelos": "entregas/10a_encoder/modelos/aluno_b2_t2",
+      "pastas_por_semente": {
+        "0": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_0",
+        "1": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_1",
+        "2": "entregas/10a_encoder/modelos/aluno_b2_t2/semente_2"
+      },
+      "sementes": [
+        0,
+        1,
+        2
+      ],
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 2.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/05b_professor_aberto/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 11,
+          "dev": 0
+        },
+        "logits": "entregas/05b_professor_aberto/logits_treino.npy"
+      },
+      "exact_match_em_dev": 0.4728644040006558
+    }
+  },
+  "referencias": {
+    "teto": {
+      "modelos": "entregas/10a_encoder/modelos/teto",
+      "pastas_por_semente": {
+        "0": "entregas/10a_encoder/modelos/teto/semente_0",
+        "1": "entregas/10a_encoder/modelos/teto/semente_1",
+        "2": "entregas/10a_encoder/modelos/teto/semente_2"
+      },
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos humanos de todos os pedidos",
+        "dev": "rótulos humanos de dev"
+      }
+    },
+    "caminho_do_zero": "entregas/06_destilacao/decisao.json"
+  },
+  "custo_de_partida": {
+    "parametros": 277584555,
+    "parametros_por_parte": {
+      "A. Tabela de subtokens": 192001536,
+      "A. Posições e normalização da entrada": 397056,
+      "B. Corpo do Transformer": 85054464,
+      "C. Cabeça de intenção": 46140,
+      "D. Cabeça de entidades": 85359
+    },
+    "linhas_da_tabela_de_subtokens": 250002,
+    "linhas_da_tabela_usadas_no_treino": 5196,
+    "bytes_em_disco_por_modelo": 1127466166,
+    "latencia_p50_ms_cpu_1_thread": 36.105286500000005,
+    "maquina_quieta": true
+  },
+  "controle_de_32_bits": {
+    "entra_em_decisao": false,
+    "precisao_mista_menos_32_bits_em_dev": {
+      "intent_acc": {
+        "diferenca": 0.0004918839153960075,
+        "ic_min": -0.009837678307919262,
+        "ic_max": 0.009837678307919373
+      },
+      "slot_f1": {
+        "diferenca": 0.005101487353267542,
+        "ic_min": -0.006572890055106906,
+        "ic_max": 0.017253051817939666
+      },
+      "exact_match": {
+        "diferenca": 0.0,
+        "ic_min": -0.012309394982784085,
+        "ic_max": 0.011805213969503181
+      }
+    }
+  }
+}

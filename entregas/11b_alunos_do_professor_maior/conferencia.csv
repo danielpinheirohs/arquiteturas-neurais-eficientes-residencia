@@ -1,0 +1,89 @@
+particao,id,etapa_de_origem,nome_na_origem,metrica,daqui,de_la,maior_distancia,fecha
+dev,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,intent_acc,0.016560091818330847,0.016560091818330847,0.0,True
+dev,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,intent_macro_f1,0.026131622942438093,0.026131622942438093,0.0,True
+dev,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,slot_f1,0.010182405748389245,0.010182405748389245,0.0,True
+dev,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,exact_match,0.0262338088211182,0.0262338088211182,0.0,True
+test,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,intent_acc,0.02308899349921545,0.02308899349921545,0.0,True
+test,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,intent_macro_f1,0.026450427701524837,0.026450427701524837,0.0,True
+test,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,slot_f1,0.009648290254153036,0.009648290254153036,0.0,True
+test,logits|zero:B2:antigo|zero:B1s:antigo,06_destilacao,Aluno B2 − aluno B1 sem suavização,exact_match,0.026563550773369138,0.026563550773369138,0.0,True
+dev,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,intent_acc,0.010821446138711277,0.010821446138711277,0.0,True
+dev,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,intent_macro_f1,0.014728731138282325,0.014728731138282325,0.0,True
+dev,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,slot_f1,0.005313699726171128,0.005313699726171128,0.0,True
+dev,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,exact_match,0.017215937038858875,0.017215937038858875,0.0,True
+test,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,intent_acc,0.015131136516476129,0.015131136516476129,0.0,True
+test,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,intent_macro_f1,0.0203187923344762,0.0203187923344762,0.0,True
+test,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,slot_f1,0.008873357219276734,0.008873357219276734,0.0,True
+test,logits|zero:B2:antigo|zero:B1:antigo,06_destilacao,Aluno B2 − aluno B1,exact_match,0.02342524097735932,0.02342524097735932,0.0,True
+dev,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,intent_acc,-0.0021314969667158845,-0.0021314969667158845,0.0,True
+dev,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,intent_macro_f1,-0.020198100561076404,-0.020198100561076404,0.0,True
+dev,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,slot_f1,0.020122348263297174,0.020122348263297174,0.0,True
+dev,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,exact_match,0.0198393179209706,0.0198393179209706,0.0,True
+test,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,intent_acc,-0.01300156915489803,-0.01300156915489803,0.0,True
+test,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,intent_macro_f1,-0.021224339635252387,-0.021224339635252387,0.0,True
+test,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,slot_f1,0.014402977317438004,0.014402977317438004,0.0,True
+test,aluno_menos_professor|zero:B1:antigo|prof:antigo,06_destilacao,Aluno B1 − professor aberto,exact_match,0.00392288724501233,0.00392288724501233,0.0,True
+dev,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,intent_acc,0.008689949171995393,0.008689949171995393,0.0,True
+dev,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,intent_macro_f1,-0.005469369422794079,-0.005469369422794079,0.0,True
+dev,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,slot_f1,0.025436047989468302,0.025436047989468302,0.0,True
+dev,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,exact_match,0.037055254959829476,0.037055254959829476,0.0,True
+test,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,intent_acc,0.0021295673615780997,0.0021295673615780997,0.0,True
+test,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,intent_macro_f1,-0.0009055473007761883,-0.0009055473007761883,0.0,True
+test,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,slot_f1,0.023276334536714738,0.023276334536714738,0.0,True
+test,aluno_menos_professor|zero:B2:antigo|prof:antigo,06_destilacao,Aluno B2 − professor aberto,exact_match,0.027348128222371648,0.027348128222371648,0.0,True
+dev,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,intent_acc,-0.04394162977537297,-0.04394162977537297,0.0,True
+dev,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,intent_macro_f1,-0.036537760003351405,-0.036537760003351405,1.734723475976807e-17,True
+dev,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,slot_f1,-0.06992855264145503,-0.06992855264145503,1.3877787807814457e-17,True
+dev,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,exact_match,-0.06869978685030331,-0.06869978685030331,2.0816681711721685e-17,True
+test,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,intent_acc,-0.04404841963685269,-0.04404841963685269,0.0,True
+test,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,intent_macro_f1,-0.03798560213644375,-0.03798560213644375,1.0408340855860843e-17,True
+test,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,slot_f1,-0.07691120411549601,-0.07691120411549601,0.0,True
+test,b_menos_a|zero:B1:antigo|zero:A,06_destilacao,Aluno A − aluno B1,exact_match,-0.07576776507509536,-0.07576776507509536,0.0,True
+dev,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,intent_acc,0.00803410395146753,0.00803410395146753,0.0,True
+dev,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,intent_macro_f1,0.012379417800893244,0.012379417800893244,0.0,True
+dev,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,slot_f1,-0.001969083647066605,-0.001969083647066605,0.0,True
+dev,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,exact_match,0.005574684374487604,0.005574684374487604,0.0,True
+test,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,intent_acc,0.0021295673615780997,0.0021295673615780997,0.0,True
+test,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,intent_macro_f1,0.004942548195713714,0.004942548195713714,0.0,True
+test,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,slot_f1,0.0032998831560778763,0.0032998831560778763,0.0,True
+test,logits|xlmr:B2:antigo|xlmr:B1:antigo,10a_encoder,Aluno B2 − aluno B1,exact_match,0.00571620712844656,0.00571620712844656,0.0,True
+dev,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,intent_acc,0.016232169208066916,0.016232169208066916,0.0,True
+dev,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,intent_macro_f1,0.0039026532073279663,0.0039026532073279663,0.0,True
+dev,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,slot_f1,0.0359409393842367,0.0359409393842367,0.0,True
+dev,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,exact_match,0.0354156419085096,0.0354156419085096,0.0,True
+test,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,intent_acc,0.01087200179331993,0.01087200179331993,0.0,True
+test,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,intent_macro_f1,-0.002370294588597499,-0.002370294588597499,0.0,True
+test,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,slot_f1,0.027932568272634684,0.027932568272634684,0.0,True
+test,aluno_menos_professor|xlmr:B1:antigo|prof:antigo,10a_encoder,Aluno B1 − professor aberto,exact_match,0.02465814839722036,0.02465814839722036,0.0,True
+dev,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,intent_acc,0.024266273159534446,0.024266273159534446,0.0,True
+dev,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,intent_macro_f1,0.01628207100822121,0.01628207100822121,0.0,True
+dev,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,slot_f1,0.0339718557371701,0.0339718557371701,0.0,True
+dev,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,exact_match,0.0409903262829972,0.0409903262829972,0.0,True
+test,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,intent_acc,0.01300156915489803,0.01300156915489803,0.0,True
+test,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,intent_macro_f1,0.002572253607116215,0.002572253607116215,0.0,True
+test,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,slot_f1,0.03123245142871256,0.03123245142871256,0.0,True
+test,aluno_menos_professor|xlmr:B2:antigo|prof:antigo,10a_encoder,Aluno B2 − professor aberto,exact_match,0.03037435552566692,0.03037435552566692,0.0,True
+dev,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,intent_acc,0.03148057058534193,0.03148057058534193,0.0,True
+dev,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,intent_macro_f1,0.03321910759526148,0.03321910759526148,0.0,True
+dev,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,slot_f1,0.04469897764478825,0.04469897764478825,0.0,True
+dev,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,exact_match,0.05951795376291197,0.05951795376291197,0.0,True
+test,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,intent_acc,0.02420981842636183,0.02420981842636183,0.0,True
+test,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,intent_macro_f1,0.020687506682843915,0.020687506682843915,0.0,True
+test,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,slot_f1,0.05744243156217077,0.05744243156217077,0.0,True
+test,professores|prof:novo|prof:antigo,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − qwen3_8b__nf4__local_3080,exact_match,0.05716207128446538,0.05716207128446538,0.0,True
+dev,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,intent_acc,-0.03541564190850954,-0.03541564190850954,0.0,True
+dev,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,intent_macro_f1,-0.028539024715284356,-0.028539024715284356,0.0,True
+dev,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,slot_f1,-0.06037044497753763,-0.06037044497753763,0.0,True
+dev,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,exact_match,-0.05607476635514014,-0.05607476635514014,0.0,True
+test,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,intent_acc,-0.03429724277067914,-0.03429724277067914,0.0,True
+test,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,intent_macro_f1,-0.03438918702928784,-0.03438918702928784,0.0,True
+test,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,slot_f1,-0.04627286329038072,-0.04627286329038072,0.0,True
+test,professores|prof:novo|prof:fechado,11a_professor_aberto_maior,qwen3_14b__fp16__colab_a100 − claude,exact_match,-0.05077336919973102,-0.05077336919973102,0.0,True
+dev,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,intent_acc,-0.06689621249385147,-0.06689621249385147,0.0,True
+dev,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,intent_macro_f1,-0.06175813231054583,-0.06175813231054583,0.0,True
+dev,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,slot_f1,-0.10506942262232588,-0.10506942262232588,0.0,True
+dev,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,exact_match,-0.1155927201180521,-0.1155927201180521,0.0,True
+test,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,intent_acc,-0.058507061197040966,-0.058507061197040966,0.0,True
+test,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,intent_macro_f1,-0.05507669371213175,-0.05507669371213175,0.0,True
+test,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,slot_f1,-0.10371529485255149,-0.10371529485255149,0.0,True
+test,professores|prof:antigo|prof:fechado,11a_professor_aberto_maior,qwen3_8b__nf4__local_3080 − claude,exact_match,-0.1079354404841964,-0.1079354404841964,0.0,True

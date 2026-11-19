@@ -1,0 +1,527 @@
+{
+  "etapa": "10d_comparativo_dos_caminhos",
+  "gerado_em": "2026-11-18T21:20:11",
+  "o_que_e": "De que arquivos a Etapa 10d leu (com a impressão digital de cada um), as regras, o que ela produziu, o código usado (copiado em codigo/), as versões das bibliotecas e a máquina.",
+  "nada_foi_treinado": true,
+  "entradas": {
+    "tabelas_e_decisoes": {
+      "entregas/01_dados/manifesto.json": "9e37aa0c6d2aafe335decfe17521a0b993d86afa3fbb5618913e6ae6519e58cb",
+      "entregas/02_avaliacao/resultados.csv": "5a0a9db75b79d49768995cc179537807cc5e7fbf68eb72193d499df8f85fc409",
+      "entregas/02_avaliacao/manifesto.json": "e9b2de73e8df2602a650b6acda123b224e6501734e76e9f3b5c8ba623dde616d",
+      "entregas/04b_intencao/decisao.json": "016932177fabf40c2de67b4634fe4768a83479bf2ade5fa183901c0e3b08d99c",
+      "entregas/04b_intencao/resultados.csv": "e721d5445c94bab3e64b64853232a76f01f9c78d90f0b6eef75adfafae49dc89",
+      "entregas/05a_professor_fechado/resultados.csv": "66bff02127ad0600f3e758ab6d8cd634ddb3142825690964618fe46e6f64f746",
+      "entregas/05a_professor_fechado/comparacoes.csv": "035878ed8c318ce5fb39d2f7d15e6111f6c34d8271efbcd398df0bdd4f04f5e1",
+      "entregas/05a_professor_fechado/configuracao.json": "90d1a08d7c48b5e383bfd5b8ee2b3b479a8824bf5626b7128a7778c6fc74913c",
+      "entregas/05b_professor_aberto/resultados.csv": "2259cb170275728b68222b0ba6b1517e34b39571fc9c8e8799fec3bcaa6612fb",
+      "entregas/05b_professor_aberto/comparacoes.csv": "f166d5aade5f7ec1826acba12fb1cf976d10db708829a2d69e92f75762530706",
+      "entregas/05b_professor_aberto/escolha.json": "22e46b2490d9dd26ca6871153424153199594163c393b6cc71aac62ab87b1873",
+      "entregas/06_destilacao/decisao.json": "70b143143ce85644a8c3238d9806c0b70b0d55e15d3ec9b57d8479917174ecc5",
+      "entregas/06_destilacao/resultados.csv": "9de4feace61ab0e5408ee09b3157b25cf7ee672b5135f4be573f6d1936b5372b",
+      "entregas/06_destilacao/comparacoes.csv": "407160679b20e81f66b94ef58fb483ffc5b8bd40b255f2e1f2bc4b3192d0d8f7",
+      "entregas/07_poda/decisao.json": "b9db95d1701f61d4b4125abd47a9def3bd74738b2663e5188499a97a6585f43b",
+      "entregas/07_poda/resultados.csv": "e2572b6e2f4fd9dd9b0fa4cb1f6e992aaf94f610fbfb221fb9de454965c978bd",
+      "entregas/07_poda/comparacoes.csv": "6a7b0c77f67515a81db3ed89191b5eeaf0fcb40b8babc2b0babffc19d1f4d3dd",
+      "entregas/07_poda/eficiencia.csv": "792f0852385d55e4e8b287391afe53d6a0a67b48db4c581292d586988c25aeee",
+      "entregas/08_quantizacao/decisao.json": "ea4a698039f6eab1526432a70bfa43fe134b24d35d6ac0928e6a9ce2869520f1",
+      "entregas/08_quantizacao/resultados.csv": "e4217bb4179e87e275cb6ed76e49ed855b18c8bd30f37b174dd20b17eaa24308",
+      "entregas/08_quantizacao/comparacoes.csv": "c239fa84cbeb2c8a200d83430210a1645d5a303d425fe9aa6c1e70842f607541",
+      "entregas/08_quantizacao/eficiencia.csv": "f06b80e5d8da9e845478beec7939ecc50b3c88b1da10a7a0fecde9bcf7027a5b",
+      "entregas/09_comparativo/comparacoes.csv": "e47e57bca273f43e34082b740e69ac84eee3b2d1369110ed80d78e726f46b0a9",
+      "entregas/09_comparativo/tabela_final.csv": "c91b61edb2285ae227a8f2c6e7263c565434f8706284fa3d7af82e3caff8652a",
+      "entregas/09_comparativo/medidas_novas.json": "2b70cae9cd0856008982e75251a20e6489a39d3b73c080e62f8db0f527638add",
+      "entregas/10a_encoder/decisao.json": "4825df67bf8fea29aca357a873185f69c7062355038f2ba5bbd7181ba6dfde47",
+      "entregas/10a_encoder/resultados.csv": "399a22da50c1b532f5436f118e9d6faffd5ab61c22f3ef61037aec8608c657aa",
+      "entregas/10a_encoder/comparacoes.csv": "315a68e25f942959b967013b01e42be840c185248cd1b0a870aa622427a83183",
+      "entregas/10b_encoder_poda/decisao.json": "41361d8f66c428540e903706e420a4764dcd46922ea13fa41cd370f713118597",
+      "entregas/10b_encoder_poda/resultados.csv": "50f051c7855c9dbe0e1fe9df40b7c560d18436b7addc398cbd37b0c12e4045a7",
+      "entregas/10b_encoder_poda/comparacoes.csv": "7b1cffc15c4f0ca523b96c924e70753e8714e5c9e301d12da8e2c7fcb6c6e882",
+      "entregas/10b_encoder_poda/eficiencia.csv": "390294ad08b6de3ef62fe02bee2922e41ef7567206fe25997a853440c91e0533",
+      "entregas/10c_encoder_quantizacao/decisao.json": "13aeb8c79e6cd2a9e115bb357118d4349e725c15ee12b2beaf5ccc0d4a559a2f",
+      "entregas/10c_encoder_quantizacao/resultados.csv": "8eb5465c019edcb87b3b50443024b6b390af8214fb10e941401558736ddd53ee",
+      "entregas/10c_encoder_quantizacao/comparacoes.csv": "bf4b26f2394d9f6fc96ffcecf7d335c1ef3bef237ed1b1175acef53bc9c74e15",
+      "entregas/10c_encoder_quantizacao/eficiencia.csv": "9ff108326af53de60e57f670458987b40c031e121caebad939c5e8aa89e52e1a",
+      "entregas/10c_encoder_quantizacao/manifesto.json": "dbbcf8828e2a97a34480a0448864097065c751d0eb255a8b6ded7a76c5789fb6"
+    },
+    "respostas": {
+      "arquivos": 230,
+      "sha256": {
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__linhas_90__dinamica_semente_0_dev.parquet": "cdf976481d4125dae76dffa410890b263e008f414d3d71f8efe9473bec642cc3",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__linhas_90__dinamica_semente_1_dev.parquet": "61a0aa54ee9d31778d555e2054b26ce4d0440052bf231b27f34ad590b1ab1911",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__linhas_90__dinamica_semente_2_dev.parquet": "e3eb833150ebbc4a7b728caefa3781805a991275e07d874db1ba376d58e9ead4",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__magnitude_95__dinamica_semente_0_dev.parquet": "6ad712162e6690dba640eba18248c1d486d01ac09f14581b38d01fc3469bd0d6",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__magnitude_95__dinamica_semente_1_dev.parquet": "d374f9ace4c5034a2e35c37cf4c439465945c0b91ee7a18c6be7f462254162b6",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__magnitude_95__dinamica_semente_2_dev.parquet": "09011adcdc547408b1cbb4143d66abb03c8f5bc9990e40773d03bffd13a5bcbb",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_0_dev.parquet": "59ca642c83f216869950e2fbd7bb009c359ff559f6c353e598bc62a7176deeec",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_0_test.parquet": "8b4c8ddf16c46d72af93b37ab8b13c844b29e2bb42bd81c32eda36410cc8414d",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_1_dev.parquet": "d74ac14eb29bd8661c72e5dd3124f0d9fd5a3b422ae79878ce891785c7d2b28d",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_1_test.parquet": "2467ec7dd392491f5ff7f2839174b20651e9da0f7e04e776e4dfa9380e76c619",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_2_dev.parquet": "e4954c52d9c167d44aba197c42ae67c884adf720bfc8f9e615ed61dbd06762eb",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_a__sem_poda__dinamica_semente_2_test.parquet": "88afadc08e783724a0a73ae206ee689db7d4210fe209f6e3a58d340edfce6084",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_0_dev.parquet": "d94692840067d1baa7d87ea4bdfb695d5d3529f9bceaf39ce09f38ba8397fd2a",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_1_dev.parquet": "442142aacf364b98a818dacbd95671a3a5b9597e1f2ce8d6034828f953d28521",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_2_dev.parquet": "f2d7382b9fedefe6ea5852092c086732f4553bd60c2da489f5ae80b440f00e46",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_0_dev.parquet": "b26a0e22e19c25db6fbcecc5e9eeff6d9fb4d4af4f67932cec7ad2fdf0fc9718",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_1_dev.parquet": "92840830f173461949327593e72b675f5d14e433055063d1d59a85318728c20b",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_2_dev.parquet": "d3e36ec200439cfe1a1cfadd107754222d03ad49315907f77f0fd718600aeb62",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_0_dev.parquet": "f9f3b13c2a29e4c5c7a7a1e1793afd4e06132d1abf13727b02ea61009c22a876",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_0_test.parquet": "2946c871b64552c014c54bc5c0a441727890cbed30ab47182b51215f30788a9d",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_1_dev.parquet": "e71bbf766bfb6b87295c85377827ddc3c180830d809f184eed0dc9072c498704",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_1_test.parquet": "63ac4b442babbff3f2eb633270bc326c42ca3edf0555d3939270da2b17223c80",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_2_dev.parquet": "4528083a8d7a158d1464c0643f853348648a4773c5d745f4bdb9e50fa6f88683",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/aluno_b2_t8__sem_poda__dinamica_semente_2_test.parquet": "4d16d8769558348265677a6321f6f1d3cda4ca6c0fd3f0776e8ba897b2601a8e",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/base_299_dev.parquet": "c6953aaa1046e7e8d01d0baaabeb10228de9f27a1e819cc574c357524a318d27",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__linhas_90__dinamica_semente_0_dev.parquet": "654119f325b11af9b93fb7ba90fb9fb0752202bb7d7c72b840c56012e1485c2a",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__linhas_90__dinamica_semente_1_dev.parquet": "83738550d235ca6832c5ca4b8543de0f79a49c6fbfdf8e9493fb3ed47c3054b5",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__linhas_90__dinamica_semente_2_dev.parquet": "382391970b481a569a4eae4f72e977c20c539b152b7d50ac3581cb951c754f95",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__magnitude_90__dinamica_semente_0_dev.parquet": "825275883c2d7a9e0dfc5d22e6b07cfd37cd2b7b15d87513767b6350241e038a",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__magnitude_90__dinamica_semente_1_dev.parquet": "687733063df188b41530f2abee90f08636e80491c3267669fab5046e7c948c64",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__magnitude_90__dinamica_semente_2_dev.parquet": "0dc541b538885682a9336090b4cf0b1c8c5736d7fbc311e1a064081d0012fc03",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_0_dev.parquet": "055716ab8bb943991483e328efa8ae6934c092c1972c41c56867982bf7df84e8",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_0_test.parquet": "c4363f90c8253634a6d5866f39ca3fc821beb9590f6d7ee52c830d3867113e88",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_1_dev.parquet": "82c3e271b8611f98ccf713b8db62a6c920244e5ce60a95a67d2b4539f82bdb1e",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_1_test.parquet": "20c2653122ede3d864b53dcaa03b5453452af48b7f0649f87dd012a0f514a34a",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_2_dev.parquet": "b33d3a89403bdbcf1269241fcca7546a809956e360749986d9b4771757f72a4e",
+        "data/execucoes/10d_comparativo_dos_caminhos/previsoes/teto__sem_poda__dinamica_semente_2_test.parquet": "08d9ae98bf0aa1872e8e29935c42a1a12cc4c6a5011ec0462e9a0c36cf6b7046",
+        "entregas/02_avaliacao/previsoes/linha_de_base_dev.parquet": "28d1de9d667310c0e9013824301491cfa946599fa2640e38a0ef829a46e15dbd",
+        "entregas/02_avaliacao/previsoes/linha_de_base_test.parquet": "6b1871281d91ebefd5f635cacb5ea15adaed2dc62528c1b797598f3abebfb7b3",
+        "entregas/04b_intencao/previsoes/semente_0_dev.parquet": "b313518953a6a54a18c4a37630c8a6b3b266bd1d7a05e39b99579f62385adc67",
+        "entregas/04b_intencao/previsoes/semente_0_test.parquet": "e9329a07105a208228673807d46b006065ec85641939bdb2eae4832abb843bc5",
+        "entregas/04b_intencao/previsoes/semente_1_dev.parquet": "1608c8b2866bf03d1ed4485dd337ac9cdb2efa19ea68412b178c66f4ee4a57d9",
+        "entregas/04b_intencao/previsoes/semente_1_test.parquet": "e2f5e18653cf9f98171ae1bede2a4e1a25b1216bcf69cc962cad2a29556ec389",
+        "entregas/04b_intencao/previsoes/semente_2_dev.parquet": "d045f5d480ba35194522a60922e10082afcf9ed519328ca505c2a10bd49d315b",
+        "entregas/04b_intencao/previsoes/semente_2_test.parquet": "ea82a79a44d72c526c5af22ab580fff965d6ac877649a5c47dc35374ff183dc4",
+        "entregas/05a_professor_fechado/previsoes/claude_dev.parquet": "f1496c33586b8f4d6e9f98dcbc9f1c558cc99cda8d662c7602310017c8014090",
+        "entregas/05a_professor_fechado/previsoes/claude_test.parquet": "d1487a22fb9f2e66d807ea86e85813c944ab7394a83bc3e0f2535b7ba2ab06c5",
+        "entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet": "b2dd59532219e002b307a8dbdcd2c4eda8562ff359448745e81d83984ad02948",
+        "entregas/05b_professor_aberto/previsoes/qwen3_8b_test.parquet": "fb6681aa8baa03941f7372bb30a1d81118f671edc78a164767ca86659c1f5a9b",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_0_dev.parquet": "f2c8ddf936d2456f114799bea754adc3013d18aba558daba76a3e741baffbe27",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_0_test.parquet": "0f8a6168e798d1b06e4d8ca386282202bf7ac18ae51373c9fdc342ec4cd3db01",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_1_dev.parquet": "3cd37a8ffc4ceea2583fb38fd7ac2edd37a801133f6e70611d7affd61498bf4f",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_1_test.parquet": "d06b913ca6d66f44e7df8af255fde129ccc1cfc429ec3f72ca310c6d9158fd43",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_2_dev.parquet": "0a0b0f57e7fadacbcd77c892006bcfc957a0d7c39814d6338ae5f927218c7415",
+        "entregas/06_destilacao/previsoes/aluno_a_semente_2_test.parquet": "1956b695304343aa8d12a9956c7c2ace9f9fa55e8049504957fe3faff589616a",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_0_dev.parquet": "e820df35d694c8301f903c9e3fbea76ec65e2986f0e3f2ea2a64a88d1e64ef9d",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_0_test.parquet": "6e2b5cc0e5748d2e3bb2ab0cd64042fc9985a09d64e2de62a6c5e1fe81e6bcea",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_1_dev.parquet": "b06572787a97b1bb3360f4b2529aa57d08f8c32ab0e18489b9645497b8a795fd",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_1_test.parquet": "7db15870c38970ad2ab45e0faac3291dbb45eb1209a2d0dcdd91c40b3496d406",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_2_dev.parquet": "9f871c486d926546e9250d5b03970f01fc92f07490aa87a67ee41b1539f6ade4",
+        "entregas/06_destilacao/previsoes/aluno_b1_semente_2_test.parquet": "bd8535cbf1443a845ab75ac5a49dcb17010a2166a59b4484c486569c4d60f4aa",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_0_dev.parquet": "c2747c3938ad0970edc0e40b034a4f3abf20a66663183fe8038f456cb66290b8",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_0_test.parquet": "a9d04d311218837534113a388331bf62936d295667b7d26b30c2a5806d92317f",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_1_dev.parquet": "c64100eb2760afe34c05816de3cbbd63949a2dae7d5d86bdd6f49f63f8747a68",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_1_test.parquet": "258805ea503542e6e2fc94d8220e353488e0f6a35b014603a3edf3ac699a8a61",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_2_dev.parquet": "a5ce11482ce2af911fd4d3ebb0ce5b207a439f79cb756c936080f39b4e48b568",
+        "entregas/06_destilacao/previsoes/aluno_b2_t8_semente_2_test.parquet": "ce84bdd1afa4f458b637ba807d3794b3546b7a7ba51bdd3fe88ff5d833e2534d",
+        "entregas/06_destilacao/previsoes/piso_semente_0_dev.parquet": "b74f647beebaa0f40c1d5c8e3621fa06b7d936205b83f4edeac0887ce3f57214",
+        "entregas/06_destilacao/previsoes/piso_semente_0_test.parquet": "211838962829b0951ae57a41a2159c4107a28b4bbff73963a87a59e5524c5aee",
+        "entregas/06_destilacao/previsoes/piso_semente_1_dev.parquet": "b1a90f7138221029637c206b6142fd4e28164c344ff4bfac3a97fe1f6b4c3194",
+        "entregas/06_destilacao/previsoes/piso_semente_1_test.parquet": "886adffffe6167c0a1a498c86492dae922456f0b04ed9ce0c41413feaac90740",
+        "entregas/06_destilacao/previsoes/piso_semente_2_dev.parquet": "05a871e00029e9371722e4b8df38ac908c19d80afa42cc75202051ec2e344fda",
+        "entregas/06_destilacao/previsoes/piso_semente_2_test.parquet": "5e4a7b84f4d698f6cd112ea11662114989e3248b8b7f985492b6036d23c2a3dd",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_0_dev.parquet": "24782ce5a8b67b5cd224fb80f17978c463ef77eef061e4415c095fe7de6a87e0",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_0_test.parquet": "96a5b3b789582e54924a5a3324b5fedccd7f60ab5d6eecf9248edd2a9d4983da",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_1_dev.parquet": "d8253cfd3dc4a70181f790232a8422dbe80b3810064c19cbdbd569050d84a5c0",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_1_test.parquet": "a5e758493c8020a5c63d55fdfc160aa6292b2df5474d16b932623bf372cf3439",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_2_dev.parquet": "fa031a5e028b8735b513654e97b70189393386d6625ffa76ae2743b911da28db",
+        "entregas/07_poda/previsoes/aluno_a__linhas_90_semente_2_test.parquet": "72f41e7158878eb5c6a4d54f1dca75db99bb82722800fca7d519812a02738ec9",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_0_dev.parquet": "0d51130f713ee6e63499d5f24b84abe90a7786be052180722becdfb1eee7bd9d",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_0_test.parquet": "82e147d39628e1d6dc978900f598a724010173dec2b802b945063e87bf4e5004",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_1_dev.parquet": "8e4b904b93d58ee9cfe65ce9407e15b7687975c54f95d8476079cae6dd28847b",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_1_test.parquet": "c15245c3a64e6c8ab8c945d0101584b0611c3b7ea7e4fe263494fbdade4679cd",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_2_dev.parquet": "792b8e80eebbb6383ae0740ea482947bb413c72e6bb44813431fc6540e57bc7d",
+        "entregas/07_poda/previsoes/aluno_b2_t8__linhas_90_semente_2_test.parquet": "77ee8262be3d3aaab215f1a07d277ed054587e39ab308636fb094d42c47306d6",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_0_dev.parquet": "101af6641125163e857117979e2a683fdb4b767d1e926c337c3b6864a0f7a24f",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_0_test.parquet": "bb968a2e43784bf9c9a5ad536b17cbac511edb30da62b6e63d14303aefaa730a",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_1_dev.parquet": "f3c43b6b870850f557b7fe43443e424b9d8df60e55b669293744cf74dd53922d",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_1_test.parquet": "cffb1e21af29b124e2757a13c9d8eccae72ba2f510b33be3537baea11c43e623",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_2_dev.parquet": "1db26ec9d4afd2a440520279ce8639e53c1fc3d2664d687f11479305a31cbb01",
+        "entregas/07_poda/previsoes/teto__linhas_90_semente_2_test.parquet": "112483477e6aded0c1c438681c0320e974e068e81e5fafb0135ee50c475e8d6e",
+        "entregas/09_comparativo/previsoes/aluno_a__linhas_90__dinamica_semente_0_test.parquet": "f1ae34d7891e1407dbb31f2f42ba5d4158381f4cca20696b813c961516d511ae",
+        "entregas/09_comparativo/previsoes/aluno_a__linhas_90__dinamica_semente_1_test.parquet": "85164cd2c1f5c6e8e1f8d6dc74e297bd5888b0e04229f670a3171e466ab4a71c",
+        "entregas/09_comparativo/previsoes/aluno_a__linhas_90__dinamica_semente_2_test.parquet": "a46dd923f14a0a3ec10669f39fd99b7e1c617cc36112ef30531cbdb3c57496d8",
+        "entregas/09_comparativo/previsoes/aluno_a__magnitude_95__dinamica_semente_0_test.parquet": "7c4af72b844b2ae68b238498e6fee5a02f198bfb3b1bff1d0a4064f08915df06",
+        "entregas/09_comparativo/previsoes/aluno_a__magnitude_95__dinamica_semente_1_test.parquet": "a49163b1c5c90f505ca0d0a9b2730c3ab5f5360b938bc9fcc01031220128ce62",
+        "entregas/09_comparativo/previsoes/aluno_a__magnitude_95__dinamica_semente_2_test.parquet": "01ae371c72f9b2eac21d72218d8e2a4a6086bc5ac0fc604034740ce04122a835",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_0_test.parquet": "2ebe07c6dc27c0560518f06b119f1aa44e37e93fd43a9bfa61aa27021e40c6bf",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_1_test.parquet": "256e9a435d33c8dd43da3613352361f7d5ddbaed4feb905a17b245111df3ea2d",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__gradual_90__dinamica_semente_2_test.parquet": "6add7144041c5d49b7adb5390fb93fa7a809be8d56d98a5d2bd86d3a0927c9bd",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_0_test.parquet": "bad76dacd8465e25fd6d3b9f321e2ae941beb16451c6ebb40b142e51e398ad63",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_1_test.parquet": "4e6ac2a1e874fc621a437c5ae8e5fbe597e44a7a7dc45b533184bf1ce35ff646",
+        "entregas/09_comparativo/previsoes/aluno_b2_t8__linhas_90__dinamica_semente_2_test.parquet": "886f4e48629a0366ac2f198c3836d52531be9c46699eb93add65efebf8bda450",
+        "entregas/09_comparativo/previsoes/base_299_test.parquet": "649a401ce45cf822738b221430ba68aab7289e7b50d4388cf3383d289c76ecbd",
+        "entregas/09_comparativo/previsoes/teto__linhas_90__dinamica_semente_0_test.parquet": "2550af8f080b7cfa70718f83dc8ade3e2f5d71ee56b79f2634c31d4ad2441eae",
+        "entregas/09_comparativo/previsoes/teto__linhas_90__dinamica_semente_1_test.parquet": "bcebd0ecb2f7f15adee98044e2a43ddfed5d4d5b11d04f3f34285097ec5ea474",
+        "entregas/09_comparativo/previsoes/teto__linhas_90__dinamica_semente_2_test.parquet": "780074824ff8a78f1212eeee660443e2e055a80121a56f8ca35c311fe66020ed",
+        "entregas/09_comparativo/previsoes/teto__magnitude_90__dinamica_semente_0_test.parquet": "4046774a059e03b4a4c2ba16e0c935c3b7daea4a075a518d4bd75db377a22ffe",
+        "entregas/09_comparativo/previsoes/teto__magnitude_90__dinamica_semente_1_test.parquet": "ba0a7b1f38b0dd44164910fa28a0d07208c9caccf51806dc839de6f8f7523531",
+        "entregas/09_comparativo/previsoes/teto__magnitude_90__dinamica_semente_2_test.parquet": "c73365c2b4e64384eb7f5241b88684684e08690fcca72f95050e18fba1a80019",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_0_dev.parquet": "0973802eb6a33803935183271d7fba7c026cb5b58667e32446fa8d1c9ee57b25",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_0_test.parquet": "b1718207461bda2138d6ebcff106e575f5e5f65b076803566f441ca304e15a96",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_1_dev.parquet": "69666885db1663ed674b5107d8258444360859a79a5e703d134179e46ddd7ca7",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_1_test.parquet": "203c16576c7110bde70eb7eb06cb946901aa1cfcc87942dda49f967f73ce979c",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_2_dev.parquet": "3f6814eb1bc4464db5a584259bb0de8b53a683cf6a4dfe7c324f21815003c3ef",
+        "entregas/10a_encoder/previsoes/aluno_a_semente_2_test.parquet": "a4876ff9d8b49ed85b49054263f0353ba154c81b9ccc548b7cce4c2f79a6d904",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_0_dev.parquet": "7c6d038858d13354245d4d82f734213981373f5d49eb785aebd892c34874dc47",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_0_test.parquet": "8368dfe0f5b9b6fa69a0e27a62a9623e3e0caaefc58f1420572cb159d6b4d3c8",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_1_dev.parquet": "b68b7462be9108e2c4290fa5f64b587e271416f9ca98600c24a27ddb84855f41",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_1_test.parquet": "837d85d8f93e484782b04567e54b25fecef752a89bda342e18c5e79058e7260f",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_2_dev.parquet": "7c0930cfc9052136a47020a72f0eb45ce384075a75cc431af5964dd17d3461ea",
+        "entregas/10a_encoder/previsoes/aluno_b1_semente_2_test.parquet": "dded4d8fdedd7ff39c3102dac257121d7c85817c1ef25808816a7b2dcefb016a",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_0_dev.parquet": "8d7facb40454e26d18db94971fcb44b0f9b00d30f99f9a39f8e7b653aa6db2fc",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_0_test.parquet": "bd53ba0c5dfbf70eb629e0ec3bb640a9a3c9d311513ca791ce202c9907300b2b",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_1_dev.parquet": "ad17461be1265a68cf7a159dd375907cc80685eb7e5119c7cbf96320ba1b3fa2",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_1_test.parquet": "b56e5216c85b1dd83d7a308892f31e2a1971931e433f3476d20b9a60796634e2",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_2_dev.parquet": "ab1025b7ecde0d2f832105d1811d8165a9237e5fbb04094a1b3e5460dab13f0e",
+        "entregas/10a_encoder/previsoes/aluno_b2_t2_semente_2_test.parquet": "b01421a66cd58118a0229545be95e253ab74f31acd35bb9658947558179432b3",
+        "entregas/10a_encoder/previsoes/piso_semente_0_dev.parquet": "7e0175ba8bd85303a43fd033164482c477e1ea45ae926687e1c7d536bbb7d5c7",
+        "entregas/10a_encoder/previsoes/piso_semente_0_test.parquet": "61d58f9dece2cf760cd74a841036a68f55ef31da16215910ac482d1ce0830f20",
+        "entregas/10a_encoder/previsoes/piso_semente_1_dev.parquet": "256b66a98475c738d0ced5d42565762977734ec1fce8f7a8bb90f1c946617fc6",
+        "entregas/10a_encoder/previsoes/piso_semente_1_test.parquet": "451855775bf4c7097090abc575a70e32661e4ffa08a81fc7635f223ca3813864",
+        "entregas/10a_encoder/previsoes/piso_semente_2_dev.parquet": "0a4ecfb251c3e669033a01402537abef65284432ebeea8aabf6cfef35b7f3b11",
+        "entregas/10a_encoder/previsoes/piso_semente_2_test.parquet": "b676c3ab26ba32538224103eaeffa702c6bbe9daa2bf5fd245f849d33dac328c",
+        "entregas/10a_encoder/previsoes/teto_semente_0_dev.parquet": "ca7f1537481238a7b875fa88e3b398143c7a0fab4c3d53a3c2153461d0fe54f1",
+        "entregas/10a_encoder/previsoes/teto_semente_0_test.parquet": "620bf27a1f9645de6569f174c409b39d5c407d4aa5632d3a02e73d2e55d2f910",
+        "entregas/10a_encoder/previsoes/teto_semente_1_dev.parquet": "f33395e177a57f99cf296a0a71202967d4b61c0fac7fa05259512ee233be346e",
+        "entregas/10a_encoder/previsoes/teto_semente_1_test.parquet": "6ba206534e06f2921cda53e56986c2d9aea173a5d2a958ae28cce72e068f7197",
+        "entregas/10a_encoder/previsoes/teto_semente_2_dev.parquet": "76ae23882f3a00e37e178ed42f95a55d6d7a10ca5e2bcb09c4bd57a8c183f95c",
+        "entregas/10a_encoder/previsoes/teto_semente_2_test.parquet": "8f861af615dbb9d66d08ea288e036d31837d6392e21453f65b8be45529c16b17",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_0_dev.parquet": "9b8b37f67122e8a7e9e3625889ff89e5f9f03312ee36a285965e8e820aa44b69",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_0_test.parquet": "f8ee4e73ce4c2fc8a5ea01e07b83f5287dc20b41dbc74e07efde7f86df8bdc26",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_1_dev.parquet": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_1_test.parquet": "66793ee994a75efa5eeb9c3063e9397a45b3361a90a51478682aefe198b0679b",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_2_dev.parquet": "7bb1b01d6ddd962882e1c017af8c17daa4f668f309530ae1055c69569a060b8b",
+        "entregas/10b_encoder_poda/previsoes/aluno_a__vocabulario_treino_semente_2_test.parquet": "4f2b1458c288459dcbddb55464dacc86cff3ee4b267c3c23984491acc4b90a24",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_0_dev.parquet": "6cd3b6018c14375f8697978551adb72ce43006839239a61d2e7a9dd9df572fca",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_0_test.parquet": "37c6198b754f1a93e0b79a9c080bbb193b7fbeb0559f0c672239d826f2f708df",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_1_dev.parquet": "2527403a950941b8fe57b2f13ab575e53f0ee0b8857bb57e446a23751d7886c4",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_1_test.parquet": "5b380e07e00b09fc307d9c3537f313ca337112bef30955eb1a44dfbc601ece6c",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_2_dev.parquet": "e0a9f80ab476878e22e80b51b643b460ef8b9b93376d69a4a48b3e866a17718d",
+        "entregas/10b_encoder_poda/previsoes/aluno_b2_t2__vocabulario_treino_semente_2_test.parquet": "09ef08850d074292e84f8a42e1248794d857479360bf2d112ac5b1cb3140833d",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_0_dev.parquet": "026379a3a39c82fb197d1405721e6679d47295babdfd00f82cc9e3b6bb2bbf9c",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_0_test.parquet": "6fa716e7cfe0914e81b562c74047e74096c2b36c9175caf34db7d6b4a2761a8a",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_1_dev.parquet": "56953bc86251247f880c49c4e9d99ca67635c80e2efd7659510b8c69c7810505",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_1_test.parquet": "5ee638e21336e905c60218752d63d5724f731b7a07f5143d60313f3d54435a3d",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_2_dev.parquet": "758d0b5ff92f7004b3b4be5c7b7102430006d24c6c6d8b8e79f708b47c0f1198",
+        "entregas/10b_encoder_poda/previsoes/teto__vocabulario_treino_semente_2_test.parquet": "f279f0b81aa2181017c318c487b875ac521d5dbc182ce36f210ccc5c5cf7a132",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_0_dev.parquet": "bb07be3bd7e54f77de0448d17da1bc9aded3db7d92f29fb136d9cbb203ec6770",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_0_test.parquet": "c6bb893b07b0c3561410dec36c2786d3c3da3b4d5c347271c04c8892b86ad238",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_1_dev.parquet": "f9dae81a27eef446b04c43b8edb8822bbcee8d66f126de5e98cd05919f490109",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_1_test.parquet": "058073f66c5543769269dd4283dd4a7e37f320bbecb92652c0f9be4fc541d209",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_2_dev.parquet": "bdb32da749a433bdc7be81c845ddd607f0612cbe4a0321a649f50bac445ded7b",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__gradual_70__dinamica_semente_2_test.parquet": "a38c67f744125b43b49b7be55c47f40a4a184c1c683be3c15ba54462c10b6b80",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_0_dev.parquet": "3efb8b22398ca6543e3998250c7663e6ecf1987379897d0967d808e0f714f05b",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_0_test.parquet": "335864d2344d8b1516f8cccc79fdb751755a1599a6f72cea6df4742a99fdfac4",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_1_dev.parquet": "8defddb9f12bd6a8773c7bd1893009c0a233604d2cadfaabc6eba7cb19af54c4",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_1_test.parquet": "8530bc308ba0b2f4d3d441ad67935578565d7302e296426005d9a6a19347d47d",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_2_dev.parquet": "d97553e5e5e1622782de77a40e9ae7b18f6c734abb47f885d44c5a4e5161e908",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__sem_poda__dinamica_semente_2_test.parquet": "a0839b5620a0d22b06810a10fd852eae4defd14c427f44a2cae1febd0f218df4",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_0_dev.parquet": "2868b8cc8c1e4bc3a55ea45d3f9c8145a18e689e64f6f74884739c75a5d6909e",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_0_test.parquet": "2ba92119e07193a4cc5c305fe83b7ba65ef138935bd3d21685fa605aa6ed6a7c",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_1_dev.parquet": "10b61273018648ac00f9020cdc8cc88d1d6a2f4c0f4862e97e33c9b56db8ca8e",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_1_test.parquet": "109897888a762a00f0596d32a1232b67bc3714939a442258441ac911e25c356f",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_2_dev.parquet": "7ec679d0755ab32883ece890ce46822ab8a32150da10af29ee9ee8e7bfbf5035",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__dinamica_semente_2_test.parquet": "f92d1f1384546b3e876e6c6f2585c61baca570162fdeb446400cf5cc41341206",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_0_dev.parquet": "9b8b37f67122e8a7e9e3625889ff89e5f9f03312ee36a285965e8e820aa44b69",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_0_test.parquet": "f8ee4e73ce4c2fc8a5ea01e07b83f5287dc20b41dbc74e07efde7f86df8bdc26",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_1_dev.parquet": "5452c8dc0d89d1ad526a04f69ce3f9827405dd0648a74c4ff562aa876182cc9a",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_1_test.parquet": "66793ee994a75efa5eeb9c3063e9397a45b3361a90a51478682aefe198b0679b",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_2_dev.parquet": "7bb1b01d6ddd962882e1c017af8c17daa4f668f309530ae1055c69569a060b8b",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_a__vocabulario_treino__fp32_semente_2_test.parquet": "4f2b1458c288459dcbddb55464dacc86cff3ee4b267c3c23984491acc4b90a24",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_0_dev.parquet": "633be4de708c4a744afe2782c62aab451844d10ff7fcbe646416b9524628dc5c",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_0_test.parquet": "3d8f4b33212aef7a725d3e1e93d67b599fc951489153d1dffe4f688d5830f04f",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_1_dev.parquet": "7d2796167f28d6dfe8633d6835b68bdbce061f8f80b368db145456fcd3969008",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_1_test.parquet": "f75297878445f173034b3d7593f32957f119b05b3c0001c981a23837cf1942ef",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_2_dev.parquet": "fae79967f9f9787abab309a389d7e6f03ff00dd79c061acd7d1ea897762d9668",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__gradual_70__dinamica_semente_2_test.parquet": "8b7b9a63a27524bb8969e1972947a2cbde807d67a95d90505b653452265b437c",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_0_dev.parquet": "47de8c42d0390d65da5811452397c302f09cf24cfc7faf5b1a58027d8fbb0f34",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_0_test.parquet": "b56fe18bb0fe4bddd24fdb645c8e0671052e0c883ec7f0a5b2be4b371208eefd",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_1_dev.parquet": "c317a726bf1279bf7f0748a3a0420c359f772e7060e725baa13af0d606ebcb4a",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_1_test.parquet": "719bfb51e9b78dda1a072759aab5a938861a45796113c7fb881a7859de62d5ef",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_2_dev.parquet": "9631a40ca97458bbb607305f69fdff5aa844f601abbda2fd3864bd3b2d3ef6d6",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__sem_poda__dinamica_semente_2_test.parquet": "3d74761e6aa666422f260dc84763f9b9a932634fed56531f81320551036125e7",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_0_dev.parquet": "a5d6ae5321c514422b137ce31c5c9aeb7fada4994886bd01c8df60a49670cf61",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_0_test.parquet": "e630240149eaa80256f2e5d43713aea72875e458a700da337ddaddb51af3c7b7",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_1_dev.parquet": "f14f74f0da760887cbf1760a1d1f4c7bdc87c9449511938c9e0b300b8a8a41b9",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_1_test.parquet": "139ae882dfedfe104b847d1c92c7ad9624ed012beefe11dd3378fa2932fedef1",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_2_dev.parquet": "3221ae0294fac52f7ba7038d1b9dc2c7c5038f0f5c2f42f9882b6e1ad2808512",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__dinamica_semente_2_test.parquet": "761e88259e9231700120a60d71f31dcfe72121a77dd6598b9b970faee31188de",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_0_dev.parquet": "6cd3b6018c14375f8697978551adb72ce43006839239a61d2e7a9dd9df572fca",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_0_test.parquet": "37c6198b754f1a93e0b79a9c080bbb193b7fbeb0559f0c672239d826f2f708df",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_1_dev.parquet": "2527403a950941b8fe57b2f13ab575e53f0ee0b8857bb57e446a23751d7886c4",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_1_test.parquet": "5b380e07e00b09fc307d9c3537f313ca337112bef30955eb1a44dfbc601ece6c",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_2_dev.parquet": "e0a9f80ab476878e22e80b51b643b460ef8b9b93376d69a4a48b3e866a17718d",
+        "entregas/10c_encoder_quantizacao/previsoes/aluno_b2_t2__vocabulario_treino__fp32_semente_2_test.parquet": "09ef08850d074292e84f8a42e1248794d857479360bf2d112ac5b1cb3140833d",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_0_dev.parquet": "eafa10819a5bb72d256999d44208471aa8632baa664cb051dc0cf654ca1e195e",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_0_test.parquet": "bcff3bb65d2712f3064381f8462f427542db27666751058640ef15a16ff1ec54",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_1_dev.parquet": "4d443d079fa3c96cc20e87867e2e9d95336fab3957ce042b7a7799cd5c830eea",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_1_test.parquet": "da9d6ac6502d1e4c954969c7c3bd1f021bdc5b07be242ba1edc53aee732b6a16",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_2_dev.parquet": "c199d115129f3578be752c480fb2fadd40c9f039a497903f7a6f2d566971e5a2",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__magnitude_50__dinamica_semente_2_test.parquet": "b3750b037fff6e45944c3828a9c2a1887cd16641b492fc0a4fcf990447983238",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_0_dev.parquet": "86010978f71e9e824fa5ad8abd802f0a72327f913caf484680fb788d15ee898e",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_0_test.parquet": "d64751febd659b276339eb58dc1c832e5fc88f4614b91ec16d5ebeb368ef2827",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_1_dev.parquet": "e9c396f00fa143ac331766dba58cb76071d0e14cd617fbb33ba707dc973ad360",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_1_test.parquet": "7ea89f0df1c6aeb4b074d039bb6d870496237ebb4ead231b90e1ba428fa72fa0",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_2_dev.parquet": "892880214c92674610288f7b528457d77a5b83f25b381d47a3706f3719b04db2",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__sem_poda__dinamica_semente_2_test.parquet": "38816b3e56a85073bc74af8d00b94a9977edb8d5bec03335bf879c598c1d926d",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_0_dev.parquet": "4e8fca36379c70d1a950636b704a607c651ac90d3b7c7ad96d082388e7134eaf",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_0_test.parquet": "eb36aa79005af37e5eca13fbb65bf3057b5c75680705b875fc19e89ca114c305",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_1_dev.parquet": "e0940ba5c10a67847b716aaf70ea323a288ebbf3c3dcbe02f343ec3c5daadbc2",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_1_test.parquet": "000e1825466ce64fc4dd9f858d6215116df91e4e0bf9bfe44de116adfb752355",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_2_dev.parquet": "14d28d94667c7f234df7a66bb36e4dd0759c12e03bcb9c532e620414998b484a",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__dinamica_semente_2_test.parquet": "d117a652402abbd00704cdfa993e74066a8b98c9bd1e7cb49b8ef38e325dd670",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_0_dev.parquet": "026379a3a39c82fb197d1405721e6679d47295babdfd00f82cc9e3b6bb2bbf9c",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_0_test.parquet": "6fa716e7cfe0914e81b562c74047e74096c2b36c9175caf34db7d6b4a2761a8a",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_1_dev.parquet": "56953bc86251247f880c49c4e9d99ca67635c80e2efd7659510b8c69c7810505",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_1_test.parquet": "5ee638e21336e905c60218752d63d5724f731b7a07f5143d60313f3d54435a3d",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_2_dev.parquet": "758d0b5ff92f7004b3b4be5c7b7102430006d24c6c6d8b8e79f708b47c0f1198",
+        "entregas/10c_encoder_quantizacao/previsoes/teto__vocabulario_treino__fp32_semente_2_test.parquet": "f279f0b81aa2181017c318c487b875ac521d5dbc182ce36f210ccc5c5cf7a132"
+      }
+    }
+  },
+  "regras": [
+    {
+      "arquivo": "regras.json",
+      "versao": 1,
+      "gravado_em": "2026-11-18T20:54:00",
+      "sha256": "66aacb0e1e1daee9e28ebf33d79f8bdb3d9211d074f1e6f855fe7390c758f70d"
+    },
+    {
+      "arquivo": "regras_v2.json",
+      "versao": 2,
+      "gravado_em": "2026-11-18T20:54:25",
+      "sha256": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f"
+    }
+  ],
+  "calculo": {
+    "calculado_em": "2026-11-18T21:15:27",
+    "com_as_regras": {
+      "arquivo": "regras_v2.json",
+      "versao": 2,
+      "gravado_em": "2026-11-18T20:54:25",
+      "sha256": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f"
+    }
+  },
+  "produzido_nesta_etapa": {
+    "respostas": {
+      "base_299": {
+        "como": "linha_de_base",
+        "de": [
+          "entregas/05a_professor_fechado/demonstracoes.parquet"
+        ],
+        "arquivos": {
+          "dev": [
+            "base_299_dev.parquet"
+          ]
+        }
+      },
+      "aluno_a/int8": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_a__linhas_90__dinamica_semente_0_dev.parquet",
+            "aluno_a__linhas_90__dinamica_semente_1_dev.parquet",
+            "aluno_a__linhas_90__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "aluno_a/soltos": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_a__magnitude_95__dinamica_semente_0_dev.parquet",
+            "aluno_a__magnitude_95__dinamica_semente_1_dev.parquet",
+            "aluno_a__magnitude_95__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "aluno_b2/int8": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_b2_t8__linhas_90__dinamica_semente_0_dev.parquet",
+            "aluno_b2_t8__linhas_90__dinamica_semente_1_dev.parquet",
+            "aluno_b2_t8__linhas_90__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "aluno_b2/soltos": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_b2_t8__gradual_90__dinamica_semente_0_dev.parquet",
+            "aluno_b2_t8__gradual_90__dinamica_semente_1_dev.parquet",
+            "aluno_b2_t8__gradual_90__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "teto/int8": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/teto/linhas_90/semente_0",
+          "entregas/08_quantizacao/modelos/teto/linhas_90/semente_1",
+          "entregas/08_quantizacao/modelos/teto/linhas_90/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "teto__linhas_90__dinamica_semente_0_dev.parquet",
+            "teto__linhas_90__dinamica_semente_1_dev.parquet",
+            "teto__linhas_90__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "teto/soltos": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_0",
+          "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_1",
+          "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "teto__magnitude_90__dinamica_semente_0_dev.parquet",
+            "teto__magnitude_90__dinamica_semente_1_dev.parquet",
+            "teto__magnitude_90__dinamica_semente_2_dev.parquet"
+          ]
+        }
+      },
+      "aluno_a/int8_sem_poda": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_a/sem_poda/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_a__sem_poda__dinamica_semente_0_dev.parquet",
+            "aluno_a__sem_poda__dinamica_semente_1_dev.parquet",
+            "aluno_a__sem_poda__dinamica_semente_2_dev.parquet"
+          ],
+          "test": [
+            "aluno_a__sem_poda__dinamica_semente_0_test.parquet",
+            "aluno_a__sem_poda__dinamica_semente_1_test.parquet",
+            "aluno_a__sem_poda__dinamica_semente_2_test.parquet"
+          ]
+        }
+      },
+      "aluno_b2/int8_sem_poda": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_0",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_1",
+          "entregas/08_quantizacao/modelos/aluno_b2_t8/sem_poda/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "aluno_b2_t8__sem_poda__dinamica_semente_0_dev.parquet",
+            "aluno_b2_t8__sem_poda__dinamica_semente_1_dev.parquet",
+            "aluno_b2_t8__sem_poda__dinamica_semente_2_dev.parquet"
+          ],
+          "test": [
+            "aluno_b2_t8__sem_poda__dinamica_semente_0_test.parquet",
+            "aluno_b2_t8__sem_poda__dinamica_semente_1_test.parquet",
+            "aluno_b2_t8__sem_poda__dinamica_semente_2_test.parquet"
+          ]
+        }
+      },
+      "teto/int8_sem_poda": {
+        "como": "onnx",
+        "de": [
+          "entregas/08_quantizacao/modelos/teto/sem_poda/semente_0",
+          "entregas/08_quantizacao/modelos/teto/sem_poda/semente_1",
+          "entregas/08_quantizacao/modelos/teto/sem_poda/semente_2"
+        ],
+        "arquivos": {
+          "dev": [
+            "teto__sem_poda__dinamica_semente_0_dev.parquet",
+            "teto__sem_poda__dinamica_semente_1_dev.parquet",
+            "teto__sem_poda__dinamica_semente_2_dev.parquet"
+          ],
+          "test": [
+            "teto__sem_poda__dinamica_semente_0_test.parquet",
+            "teto__sem_poda__dinamica_semente_1_test.parquet",
+            "teto__sem_poda__dinamica_semente_2_test.parquet"
+          ]
+        }
+      }
+    },
+    "latencia": [
+      {
+        "pasta": "latencia/20261118-205508",
+        "medido_em": "2026-11-18T21:01:55",
+        "maquina_quieta": true,
+        "nucleos_de_outros": 0.06790627666254122
+      }
+    ],
+    "consulta_das_referencias": "artigos_na_fonte/arxiv_20261118-205513.json"
+  },
+  "saidas": {
+    "artigos.csv": "5e7ae6993238e9773fdd435536ee974eb0647d1dbff9d37988c65caa9acf36c8",
+    "cadeias.csv": "83aeeb4ec8c0011d365483795e8c06ca934255a2d1fc9fcbaf7aadbe71c2fe7e",
+    "comparacoes.csv": "beeca68dea2613ec7f2c30a65004bff4d12ba36820ea87060ddb134f7a8e85e9",
+    "conferencia.csv": "0751bb3015d864b6b4cae30decfd43d951d48f7551e0096625219f9380452a3b",
+    "fronteira.csv": "70cb9850b6045a8c881dbfccaa52d0734045275cb06ca4b22fff62311ece3576",
+    "fronteira_sem_int8_sem_poda_exploratoria.csv": "0b9bc06c55144665e15a2a63d3290a1dd2f11df3d96b3b1650016ecf16b53d43",
+    "latencia_ao_lado.csv": "50580e39e05b18e56ada01b9a676c8a98365b7c087258fe69d6c8e4374dbbd20",
+    "precos.csv": "4f7a5a573f5298b362e3da45ed703295935effc14ed0a171e8a9d63e7a74ac36",
+    "registro.csv": "312563661d598d4c87674095ca19b721beb409e24fcb4f4c91f5fee30cf8d401",
+    "tabela_final.csv": "010227a408e476a5094ea484656eb3d8b8610b81c16efdd0a3905aadd3d31f9f",
+    "regras.json": "66aacb0e1e1daee9e28ebf33d79f8bdb3d9211d074f1e6f855fe7390c758f70d",
+    "regras_v2.json": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f",
+    "conclusao.json": "b300172db9fff5d9b06692be19a27765b54508373b9e6814f63d7975a0c3eab6",
+    "calculo.json": "3d35f2c42844071bbcbcf282016814e833170f1312d06dae1506fc532f569822"
+  },
+  "codigo": {
+    "pasta": "codigo/",
+    "sha256": {
+      "src/especialista/experimentos/etapa10d.py": "8fa2f827269a3f3b6d2f56000ef511714b0f7b5683754c25c360ec868bfe3060",
+      "src/especialista/experimentos/etapa9.py": "f6243eea79b32c139196711e5fbee1d1b1c3789305a6b64589e50874eaf5e4ea",
+      "src/especialista/avaliacao/qualidade.py": "96427986f3f5ebafa9c44296e9745c775dac28accc99786015ff2c1e05c4660c",
+      "src/especialista/avaliacao/eficiencia.py": "a8d2b9993cd8393190321099162f0f96d1d5a0834188802d4c1cd2516cc4ee58",
+      "src/especialista/visual.py": "0bd95689271da5a6153019304369a912681246dc6736d6d18192ba6ee370531b",
+      "notebooks/construtores/build_nb10d.py": "1527e91df968199777b08bea704efafccaa21c996454f0346da6b948d8d68505",
+      "tests/test_etapa10d.py": "4c9ca7de8e1562a44b497f1db522cd76c8132aa5a6682cf963e897556f178699"
+    }
+  },
+  "versoes": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "onnxruntime": "1.32.0",
+    "onnx": "1.23.2",
+    "torch": "2.15.0",
+    "tokenizers": "0.23.3",
+    "transformers": "5.23.0",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "maquina": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13",
+    "instrucoes_da_cpu": "avx2 avx_vnni",
+    "tem_vnni": true
+  },
+  "cache": "data/execucoes/10d_comparativo_dos_caminhos"
+}

@@ -1,0 +1,182 @@
+{
+  "etapa": "10b_encoder_poda",
+  "decidido_em": "2026-11-18T13:47:17",
+  "modelo": "aluno_a",
+  "regra": "em dev, com rótulos humanos: passa a variante cujo exact match depois do reajuste não é distinguivelmente menor que o do modelo sem poda (IC95 da diferença pareada, média de 3 sementes). A principal é a que passa com o menor arquivo comum (denso); se nenhuma peça inteira passa, é o modelo sem poda. A secundária é a de pesos soltos que passa com a maior esparsidade.",
+  "principal": "vocabulario_treino",
+  "secundaria": "gradual_70",
+  "seguem": [
+    "vocabulario_treino",
+    "gradual_70"
+  ],
+  "em_dev": {
+    "vocabulario_treino": {
+      "familia": "vocabulario",
+      "nivel": null,
+      "nao_nulos": 89572779,
+      "bytes": 358975066,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5400885391,
+      "diferenca": -0.0036071487,
+      "ic_min": -0.0101656009,
+      "ic_max": 0.0029513035,
+      "passa": true
+    },
+    "vocabulario_alfabeto": {
+      "familia": "vocabulario",
+      "nivel": null,
+      "nao_nulos": 172555169,
+      "bytes": 697943377,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5436956878,
+      "diferenca": 0.0,
+      "ic_min": -0.0032833251,
+      "ic_max": 0.0032792261,
+      "passa": true
+    },
+    "camadas_8": {
+      "familia": "camadas",
+      "nivel": 4.0,
+      "nao_nulos": 249232267,
+      "bytes": 1014053035,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5312346286,
+      "diferenca": -0.0124610592,
+      "ic_min": -0.0204992622,
+      "ic_max": -0.0045909165,
+      "passa": false
+    },
+    "camadas_6": {
+      "familia": "camadas",
+      "nivel": 6.0,
+      "nao_nulos": 235056523,
+      "bytes": 957346459,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5210690277,
+      "diferenca": -0.0226266601,
+      "ic_min": -0.0326323988,
+      "ic_max": -0.0132808657,
+      "passa": false
+    },
+    "vocabulario_treino_camadas_8": {
+      "familia": "combinacao",
+      "nivel": 4.0,
+      "nao_nulos": 61221291,
+      "bytes": 245561865,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5286112477,
+      "diferenca": -0.0150844401,
+      "ic_min": -0.0236104279,
+      "ic_max": -0.0068863748,
+      "passa": false
+    },
+    "vocabulario_treino_camadas_6": {
+      "familia": "combinacao",
+      "nivel": 6.0,
+      "nao_nulos": 47045547,
+      "bytes": 188855281,
+      "sem_poda": 0.5436956878,
+      "podado": 0.517461879,
+      "diferenca": -0.0262338088,
+      "ic_min": -0.036563371,
+      "ic_max": -0.0163920315,
+      "passa": false
+    },
+    "magnitude_90": {
+      "familia": "magnitude",
+      "nivel": 90.0,
+      "nao_nulos": 201142555,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.3892441384,
+      "diferenca": -0.1544515494,
+      "ic_min": -0.1733111986,
+      "ic_max": -0.1355959993,
+      "passa": false
+    },
+    "gradual_90": {
+      "familia": "gradual",
+      "nivel": 90.0,
+      "nao_nulos": 201142555,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.4274471225,
+      "diferenca": -0.1162485653,
+      "ic_min": -0.1347761928,
+      "ic_max": -0.0993605509,
+      "passa": false
+    },
+    "magnitude_70": {
+      "familia": "magnitude",
+      "nivel": 70.0,
+      "nao_nulos": 218129491,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5261518282,
+      "diferenca": -0.0175438596,
+      "ic_min": -0.0282013445,
+      "ic_max": -0.0067183145,
+      "passa": false
+    },
+    "gradual_70": {
+      "familia": "gradual",
+      "nivel": 70.0,
+      "nao_nulos": 218129491,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5350057386,
+      "diferenca": -0.0086899492,
+      "ic_min": -0.0178717823,
+      "ic_max": 0.0004959829,
+      "passa": true
+    },
+    "magnitude_50": {
+      "familia": "magnitude",
+      "nivel": 50.0,
+      "nao_nulos": 235116427,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5394326939,
+      "diferenca": -0.0042629939,
+      "ic_min": -0.0116453517,
+      "ic_max": 0.0032792261,
+      "passa": true
+    },
+    "gradual_50": {
+      "familia": "gradual",
+      "nivel": 50.0,
+      "nao_nulos": 235116427,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5397606165,
+      "diferenca": -0.0039350713,
+      "ic_min": -0.0114772914,
+      "ic_max": 0.0042629939,
+      "passa": true
+    },
+    "magnitude_30": {
+      "familia": "magnitude",
+      "nivel": 30.0,
+      "nao_nulos": 252103363,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5435317265,
+      "diferenca": -0.0001639613,
+      "ic_min": -0.0072142974,
+      "ic_max": 0.0067224135,
+      "passa": true
+    },
+    "gradual_30": {
+      "familia": "gradual",
+      "nivel": 30.0,
+      "nao_nulos": 252103363,
+      "bytes": 1127466356,
+      "sem_poda": 0.5436956878,
+      "podado": 0.5384489261,
+      "diferenca": -0.0052467618,
+      "ic_min": -0.0124610592,
+      "ic_max": 0.0019675357,
+      "passa": true
+    }
+  }
+}

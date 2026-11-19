@@ -1,0 +1,167 @@
+{
+  "id": "qwen3_8b__nf4__local_3080",
+  "etapa": "11a_professor_aberto_maior",
+  "papel": "titular de partida: o professor aberto escolhido na Etapa 5b",
+  "retroativo": "montado em 2026-11-18 17:16:16 -0300 a partir do que a Etapa 5b deixou em disco; as saídas não foram tocadas",
+  "modelo": {
+    "repositorio": "Qwen/Qwen3-8B",
+    "nome": "Qwen3-8B",
+    "commit": "b968826d9c46dd6066d109eabc6255188de91218",
+    "de_onde_vem_o_commit": "único snapshot no cache local do Hugging Face"
+  },
+  "precisao": {
+    "id": "nf4",
+    "descricao": "4 bits (NF4, bitsandbytes, quantização dupla)",
+    "tipo_de_calculo": "float16"
+  },
+  "prompt": {
+    "sha256_das_instrucoes": "8f25e16485386efb1e39e1cd734dd9842af9b1b3baa0b7375921c1d32fe3c7b8",
+    "sha256_das_demonstracoes": "93e827140fc497d439432d59711d3a3c66a0b5b3f744795bc03c8c90b9e8826b",
+    "demonstracoes": 299,
+    "por_intencao": 5,
+    "semente_das_demonstracoes": 0,
+    "k": 10,
+    "escolha_das_demonstracoes": "as k mais parecidas por TF-IDF de n-gramas de caracteres",
+    "sha256_dos_dados": {
+      "train.parquet": "d574d1117722716800042c1320ab400551ec6cedc87dad517e1858c5e16336e5",
+      "dev.parquet": "c3077b6273348cb00eed722c132987a9ca9c148242b2f1137b43816d36e0fb8e",
+      "test.parquet": "d0d3d7e2300e8811937be7db4fb6b5cfee5849662af59c468ca6c747d28238ed",
+      "rotulos.json": "974851bdf5bce38026c16f144779a1775012bff8b1266ff35f45e8bfa69508c3"
+    }
+  },
+  "geracao": {
+    "lote": 6,
+    "ordem": "prompts mais longos primeiro (ordenação estável), lotes consecutivos",
+    "intencao": "a mais provável das 60, pela soma dos logaritmos dos tokens do nome",
+    "entidades": "decodificação gulosa (o token mais provável), sem amostragem",
+    "max_tokens": 200,
+    "inicio_forcado": "{\"intent\": \"",
+    "depois_da_intencao": "\", \"slots\":",
+    "enable_thinking": false
+  },
+  "codigo": {
+    "pacote": null,
+    "observacao": "rodou direto da pasta do projeto, que não é um repositório git",
+    "arquivos": {
+      "src/especialista/professores/local.py": {
+        "sha256": "7d24c3a5b0cfabe63a49673e75968c5a07e6014fd6fb4836a082a1bf4b32c852",
+        "alterado_em": "2026-11-18 00:33:35",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/professores/prompt.py": {
+        "sha256": "5ccdd19a8a4e7cbac96e4ae6d70c107a27fdba6184728afc990c9c0b4061156e",
+        "alterado_em": "2026-11-16 22:40:05",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/professores/demonstracoes.py": {
+        "sha256": "fba4acd55814f5a6b26bddda421d8e192d62816c03d14ee307645ea36348994f",
+        "alterado_em": "2026-11-16 22:40:05",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/professores/resposta.py": {
+        "sha256": "bcafa4302b69c60188016a5f5edd85c99933a290cacc54dfde4f36d4bc7d9ffa",
+        "alterado_em": "2026-11-16 22:53:59",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/professores/rotulagem.py": {
+        "sha256": "a00a16b7206f5e5523dc793778dc24a91829a58b9e73106551ed90d5ab6afd52",
+        "alterado_em": "2026-11-17 19:59:18",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/experimentos/etapa5b.py": {
+        "sha256": "8613c7fac2c30c582ca0a9d7aba8920e85900552efba4b99e7e846cc4e6a2051",
+        "alterado_em": "2026-11-18 04:05:09",
+        "igual_ao_da_rodada": false
+      },
+      "src/especialista/dados/massive.py": {
+        "sha256": "ee241cbe474fe7a49e203c006c7d89cbf843584f7e1f654d7efbd109c01cd760",
+        "alterado_em": "2026-11-16 19:03:06",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/bio.py": {
+        "sha256": "55475b7ffce5b27e1e41ebeec80f8668008341e2af776f97152e0d2d5ac47813",
+        "alterado_em": "2026-11-16 18:57:53",
+        "igual_ao_da_rodada": true
+      },
+      "src/especialista/avaliacao/previsao.py": {
+        "sha256": "16b38fbc6d67ce07899e75bb255e1abce952d04676d39a6248c70e7be7c3f484",
+        "alterado_em": "2026-11-18 11:14:40",
+        "igual_ao_da_rodada": false
+      }
+    }
+  },
+  "ambiente": {
+    "maquina": "local (WSL2)",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "vram_total_gb": 10,
+    "driver": "610.88",
+    "python": "3.12.13",
+    "torch": "2.15.0+cu132",
+    "torch_git": "d0f2af8b66b20da4baa50644c0cd3f887a2eae2e",
+    "cuda": "13.2",
+    "transformers": "5.23.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.16.0",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "2.4.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "observacao": "versões lidas hoje do ambiente do projeto (uv.lock); a rodada foi na madrugada do mesmo dia"
+  },
+  "execucao": {
+    "fim_de_cada_conjunto": {
+      "dev": "2026-11-18 01:19:35 -0300",
+      "test": "2026-11-18 02:14:02 -0300",
+      "train": "2026-11-18 04:04:15 -0300"
+    },
+    "pedidos": {
+      "dev": 2033,
+      "test": 2974,
+      "train": 11514
+    },
+    "segundos_de_gpu": {
+      "dev": 1093.0,
+      "test": 1595.8,
+      "train": 6578.3
+    },
+    "vram_do_modelo_gb": 6.09,
+    "vram_de_pico_gb": 8.33,
+    "tokens_das_instrucoes_em_memoria": 804,
+    "unidades_de_computacao": 0
+  },
+  "onde_estao_as_saidas": {
+    "cache": "data/execucoes/05b_professor_aberto/qwen3_8b",
+    "entrega": "entregas/05b_professor_aberto"
+  },
+  "saidas": {
+    "data/execucoes/05b_professor_aberto/qwen3_8b/dev/respostas.jsonl": {
+      "sha256": "8ffdb7e9d245c2fa9f4b6a25f43a0f6d409abbc8b39130d30cadda3f5c120a2e",
+      "pedidos": 2033
+    },
+    "data/execucoes/05b_professor_aberto/qwen3_8b/test/respostas.jsonl": {
+      "sha256": "182dbb43c833c1b3dde0985356a5f1cef7e99c2406cc5e85e8756918bbbe32bc",
+      "pedidos": 2974
+    },
+    "data/execucoes/05b_professor_aberto/qwen3_8b/train/respostas.jsonl": {
+      "sha256": "14f6e7a95162b4e0ec9ac1a275a192499f1cabb671b9bcf561e74b5f7b57d6f7",
+      "pedidos": 11514
+    },
+    "entregas/05b_professor_aberto/logits_dev.npy": {
+      "sha256": "d648b1ca79e7ed260b93ed63238c9e8c4d27f1909d91ae078350e1a616298540"
+    },
+    "entregas/05b_professor_aberto/logits_test.npy": {
+      "sha256": "89f3bd8cf9ac041f8f6191b13fb7e314a5d4a9220fddfe203d37f6c2dff17a10"
+    },
+    "entregas/05b_professor_aberto/logits_treino.npy": {
+      "sha256": "47ec09ca29cf3d727eb3763aeb89a28f8bbc9dc45d87f20a256ef84c30ebd0d2"
+    },
+    "entregas/05b_professor_aberto/rotulos_treino.parquet": {
+      "sha256": "c71aa703b18d6cc27adbd00d2d68d01de8b0dacf70a469911132d75b377a63f3"
+    },
+    "entregas/05b_professor_aberto/escolha.json": {
+      "sha256": "22e46b2490d9dd26ca6871153424153199594163c393b6cc71aac62ab87b1873"
+    }
+  }
+}

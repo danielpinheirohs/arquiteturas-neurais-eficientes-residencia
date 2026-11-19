@@ -1,0 +1,3 @@
+forma,o que fica,linhas que ficam,parte da tabela,treino: subtokens cortados,dev: subtokens cortados,teste: subtokens cortados,dev: pedidos com algum corte,dev: subtokens que viram <unk>,"dev: subtokens por pedido, antes → depois"
+treino,"os subtokens que aparecem no texto de treino pt-PT (os pedidos, sem rótulo), mais os tokens especiais",5.196,"2,1%","0,00%","1,81%","1,83%","12,6%","0,01%","8,86 → 9,06"
+alfabeto,"os subtokens escritos só com letras latinas, dígitos e pontuação, mais os tokens especiais (sem corpus)",113.246,"45,3%","0,00%","0,00%","0,00%","0,0%","0,00%","8,86 → 8,86"

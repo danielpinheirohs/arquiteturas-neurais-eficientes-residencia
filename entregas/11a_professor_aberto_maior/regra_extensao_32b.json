@@ -1,0 +1,63 @@
+{
+  "etapa": "11a_professor_aberto_maior",
+  "escrita_em": "2026-11-18 22:09:00 -0300",
+  "o_que_e": "extensão da escada da Etapa 11a com mais um degrau: o Qwen3-32B, sem os 4 bits, desafia o titular atual",
+  "o_que_ja_se_sabia": "esta extensão NÃO estava nas regras das 17h16. Foi decidida depois de ver o resultado da escada de três degraus (em dev, o Qwen3-14B tomou o lugar do Qwen3-8B; no teste, ele ficou abaixo do professor fechado). Um degrau acrescentado depois de ver o resultado é uma segunda olhada nos mesmos dados: a regra não muda por causa disso, e o resultado será relatado como extensão, não como parte da escada planejada",
+  "autorizacao": "do usuário, em 18/11/2026 perto das 22h, com custo previsto de cerca de 40 unidades. Ela chegou a esta rodada pela mensagem do orquestrador; o agente que preparou e lançou a rodada não falou com o usuário",
+  "regra": "do mais barato para o mais caro; um candidato mais caro só toma o lugar se o exact match em dev for distinguivelmente maior (IC95 da diferença pareada acima de zero)",
+  "titular": "qwen3_14b__fp16__colab_a100",
+  "desafiante": "qwen3_32b__fp16__colab_g4",
+  "medida": "exact match em dev (2.033 pedidos), diferença pareada desafiante − titular, bootstrap por pedido, 2.000 reamostras, semente 0 (`qualidade.comparar`)",
+  "relato": "a decisão sai de dev; o teste só é relatado",
+  "o_que_roda": "o desafiante rotula dev, teste e treino inteiros, ganhe ou perca, e a versão fica guardada",
+  "precisao": "sem quantização, o cálculo é em float16, o mesmo tipo de cálculo da versão em 4 bits. Só se o float16 produzir NaN ou infinito nas 60 pontuações de intenção a versão é refeita inteira em bfloat16 (outra versão, outro nome). antes de rotular, 10 lotes de dev espalhados pela ordem de execução (60 pedidos) passam pelo modelo e só se olha se as pontuações são números finitos; durante a rotulagem, todo lote é conferido do mesmo jeito e um não finito para o trabalho",
+  "igual_as_outras_versoes": "mesmo prompt, mesmas demonstrações, mesma pontuação e geração, lote 6",
+  "modelo": {
+    "repositorio": "Qwen/Qwen3-32B",
+    "commit": "9216db5781bf21249d130ec9da846c4624c16137"
+  },
+  "placa": "G4 do Colab (RTX PRO 6000 Blackwell, 96 GB), 10,05 unidades por hora. Se não alocar, a rodada não acontece: não se troca de placa nem de precisão",
+  "travas_de_custo": {
+    "teto_de_unidades_do_condutor": 60,
+    "piso_de_saldo": 500,
+    "teto_de_horas": 7,
+    "projecao_depois_de_dev": "quando dev terminar (12% dos pedidos), se o custo total projetado passar de 60 unidades, a sessão é desligada e o motivo fica registrado",
+    "desligamento": "pelo condutor, no fim ou na falha; pela própria VM, se o condutor sumir"
+  },
+  "o_que_fica_como_esta": "`regra.json`, `fecho/escolha.json` e a entrega `entregas/11a_professor_aberto_maior/` não são alterados por esta rodada; a extensão entra depois, como versão nova da escolha",
+  "resultado_ja_visto_ao_escrever": {
+    "escolhido_na_escada_de_tres_degraus": "qwen3_14b__fp16__colab_a100",
+    "disputas": {
+      "qwen3_8b__fp16__colab_l4": {
+        "contra": "qwen3_8b__nf4__local_3080",
+        "a": 0.4318740777176586,
+        "b": 0.4318740777176586,
+        "diferenca": 0.0,
+        "ic_min": -0.011313330054107229,
+        "ic_max": 0.011805213969503181
+      },
+      "qwen3_14b__fp16__colab_a100": {
+        "contra": "qwen3_8b__nf4__local_3080",
+        "a": 0.4318740777176586,
+        "b": 0.4913920314805706,
+        "diferenca": 0.05951795376291197,
+        "ic_min": 0.0418101328086572,
+        "ic_max": 0.07722577471716674
+      }
+    },
+    "exact_match": {
+      "qwen3_8b__nf4__local_3080": {
+        "dev": 0.4318740777176586,
+        "test": 0.4324142568930733
+      },
+      "qwen3_8b__fp16__colab_l4": {
+        "dev": 0.4318740777176586,
+        "test": 0.43409549428379285
+      },
+      "qwen3_14b__fp16__colab_a100": {
+        "dev": 0.4913920314805706,
+        "test": 0.48957632817753866
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "moeda": "USD",
+  "precos_por_milhao_de_tokens": {
+    "entrada": 0.1,
+    "saida": 0.5,
+    "cache_lido": 0.01,
+    "cache_escrito": 0.125
+  },
+  "desconto_do_lote": 0.5,
+  "partes": {
+    "Teste de formato (chamadas diretas)": {
+      "pedidos": 5,
+      "com_resposta": 5,
+      "entrada": 3271,
+      "saida": 154,
+      "cache_lido": 12745,
+      "cache_escrito": 0,
+      "dolares": 0.0005315500000000001,
+      "em_lote": false
+    },
+    "Lote de dev": {
+      "pedidos": 2033,
+      "com_resposta": 2033,
+      "entrada": 1401676,
+      "saida": 83254,
+      "cache_lido": 5179568,
+      "cache_escrito": 2549,
+      "dolares": 0.1169544525,
+      "em_lote": true
+    },
+    "Lote de teste": {
+      "pedidos": 2974,
+      "com_resposta": 2974,
+      "entrada": 2039094,
+      "saida": 120476,
+      "cache_lido": 7578177,
+      "cache_escrito": 2549,
+      "dolares": 0.1701238975,
+      "em_lote": true
+    },
+    "Lote de treino": {
+      "pedidos": 11514,
+      "com_resposta": 11514,
+      "entrada": 7920027,
+      "saida": 474011,
+      "cache_lido": 29346637,
+      "cache_escrito": 2549,
+      "dolares": 0.6613965975,
+      "em_lote": true
+    },
+    "Latência (todas as chamadas diretas com registro)": {
+      "pedidos": 1080,
+      "com_resposta": 1080,
+      "entrada": 740981,
+      "saida": 43599,
+      "cache_lido": 2752920,
+      "cache_escrito": 0,
+      "dolares": 0.1234268,
+      "em_lote": false
+    }
+  },
+  "total_com_registro": 1.0724332975000002,
+  "sem_registro": [
+    {
+      "o_que": "primeira tentativa do teste de formato, interrompida antes de gravar",
+      "chamadas_no_maximo": 5
+    },
+    {
+      "o_que": "primeira medição de latência, descartada: concorreu com o envio dos lotes pela mesma rede e foi encerrada sem gravar",
+      "chamadas_no_maximo": 1074
+    },
+    {
+      "o_que": "duas verificações de conexão com a API durante a instabilidade (pedidos mínimos)",
+      "chamadas_no_maximo": 2
+    }
+  ],
+  "teto_das_chamadas_sem_registro": 0.12359298912109376,
+  "por_pedido_em_lote": {
+    "tokens de entrada": 3236.657950487259,
+    "tokens de saída": 41.023001028993406,
+    "pedidos com leitura de cache": 0.9998184129289994,
+    "custo": 5.7410262544640157e-05,
+    "custo sem cache": 0.0001720886477816113
+  },
+  "por_pedido_direto": {
+    "tokens de entrada": 3235.423828125,
+    "tokens de saída": 40.3994140625,
+    "pedidos com leitura de cache": 1.0,
+    "custo": 0.00011433208984375001,
+    "custo sem cache": 0.00034374208984375
+  }
+}

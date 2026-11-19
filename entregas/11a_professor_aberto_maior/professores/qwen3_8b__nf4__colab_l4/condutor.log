@@ -1,0 +1,6 @@
+17:19:04 versão qwen3_8b__nf4__colab_l4 | tarefas conferencia | pacote 5968bf3c0f8b | saldo 599.97
+17:19:09 sessão prof11a_l4 (L4): [colab] Session READY.
+17:19:56 preparo pronto; placa: NVIDIA L4, 23034 MiB, 580.82.07
+17:24:05 {'conferencia': 174} | saldo 599.97 (8.67/h) | qwen3_8b__nf4__colab_l4 conferência: 120 de 300, 0.96 s por pedido, faltam 3 min
+17:25:58 {'conferencia': 300} | saldo 599.26 (8.67/h) | TRABALHO REMOTO TERMINOU codigo=0
+FIM: qwen3_8b__nf4__colab_l4: concluída; pedidos {'conferencia': 300}; unidades gastas 0.71; saldo 599.26

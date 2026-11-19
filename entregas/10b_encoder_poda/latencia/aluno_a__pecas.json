@@ -1,0 +1,120 @@
+{
+  "modelo": "aluno_a",
+  "grupo": "pecas",
+  "execucao": "comum",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "de_partida": [
+      36.086608999999996,
+      35.987252999999995,
+      35.643519999999995,
+      35.8938,
+      35.4745005
+    ],
+    "vocabulario_treino": [
+      35.891767,
+      35.480196,
+      36.87137,
+      35.933357,
+      36.1791805
+    ],
+    "vocabulario_alfabeto": [
+      35.999039499999995,
+      35.6021155,
+      36.312554000000006,
+      36.36096,
+      36.473127000000005
+    ],
+    "camadas_8": [
+      24.723626000000003,
+      23.912100000000002,
+      24.626199999999997,
+      24.414467000000002,
+      24.533974
+    ],
+    "camadas_6": [
+      19.2308345,
+      19.04044,
+      19.3720435,
+      19.1543195,
+      19.111646
+    ],
+    "vocabulario_treino_camadas_8": [
+      24.137761500000003,
+      24.794047,
+      24.671142500000002,
+      24.142718000000002,
+      24.363597
+    ],
+    "vocabulario_treino_camadas_6": [
+      18.364114,
+      18.2267165,
+      18.3832795,
+      18.1806005,
+      18.47322
+    ]
+  },
+  "resumo": {
+    "de_partida": {
+      "latencia_p50_ms": 35.837446,
+      "latencia_p90_ms": 44.149758600000006,
+      "latencia_p95_ms": 47.75466,
+      "latencia_p99_ms": 53.022055970000046,
+      "latencia_media_ms": 36.89376989765625
+    },
+    "vocabulario_treino": {
+      "latencia_p50_ms": 36.0412455,
+      "latencia_p90_ms": 44.6840835,
+      "latencia_p95_ms": 48.720434299999994,
+      "latencia_p99_ms": 53.40242695000002,
+      "latencia_media_ms": 37.261250696875
+    },
+    "vocabulario_alfabeto": {
+      "latencia_p50_ms": 36.130261000000004,
+      "latencia_p90_ms": 44.61788120000001,
+      "latencia_p95_ms": 48.1510857,
+      "latencia_p99_ms": 53.56766363000002,
+      "latencia_media_ms": 37.25458969941406
+    },
+    "camadas_8": {
+      "latencia_p50_ms": 24.429288999999997,
+      "latencia_p90_ms": 30.211257,
+      "latencia_p95_ms": 32.51390280000001,
+      "latencia_p99_ms": 36.23925859000002,
+      "latencia_media_ms": 25.17875330234375
+    },
+    "camadas_6": {
+      "latencia_p50_ms": 19.1736265,
+      "latencia_p90_ms": 23.421461800000003,
+      "latencia_p95_ms": 25.186863900000002,
+      "latencia_p99_ms": 28.16011518000001,
+      "latencia_media_ms": 19.721655896679685
+    },
+    "vocabulario_treino_camadas_8": {
+      "latencia_p50_ms": 24.437971,
+      "latencia_p90_ms": 30.305510599999998,
+      "latencia_p95_ms": 33.0063571,
+      "latencia_p99_ms": 37.152479360000015,
+      "latencia_media_ms": 25.283489760351564
+    },
+    "vocabulario_treino_camadas_6": {
+      "latencia_p50_ms": 18.330384000000002,
+      "latencia_p90_ms": 22.716279100000005,
+      "latencia_p95_ms": 24.493413800000003,
+      "latencia_p99_ms": 27.047721480000007,
+      "latencia_media_ms": 18.900641850976562
+    }
+  },
+  "nucleos_de_outros": 0.03560268397451928,
+  "carga_antes": 0.533203125,
+  "carga_depois": 1.00048828125,
+  "medido_em": "2026-11-18T16:07:18",
+  "torch": "2.15.0+cu132",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "python": "3.12.13"
+}

@@ -1,0 +1,92 @@
+{
+  "modelo": "aluno_a",
+  "grupo": "gradual",
+  "execucao": "comum",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "de_partida": [
+      36.157587,
+      35.851514,
+      35.882735999999994,
+      35.6674755,
+      36.2123815
+    ],
+    "gradual_30": [
+      37.2891645,
+      36.9727715,
+      37.402265,
+      36.658958999999996,
+      37.577849
+    ],
+    "gradual_50": [
+      37.238946,
+      36.527695,
+      37.3315415,
+      36.428051999999994,
+      37.860155
+    ],
+    "gradual_70": [
+      37.773593,
+      37.279671,
+      37.584002,
+      36.921797999999995,
+      37.3317655
+    ],
+    "gradual_90": [
+      37.164428,
+      36.809383999999994,
+      37.905541,
+      36.4045315,
+      36.8906075
+    ]
+  },
+  "resumo": {
+    "de_partida": {
+      "latencia_p50_ms": 35.942138,
+      "latencia_p90_ms": 44.179779800000006,
+      "latencia_p95_ms": 47.5032573,
+      "latencia_p99_ms": 52.53655463000001,
+      "latencia_media_ms": 36.93899023867188
+    },
+    "gradual_30": {
+      "latencia_p50_ms": 37.1353515,
+      "latencia_p90_ms": 45.3772621,
+      "latencia_p95_ms": 49.01489945,
+      "latencia_p99_ms": 54.09195563000002,
+      "latencia_media_ms": 38.19852165078125
+    },
+    "gradual_50": {
+      "latencia_p50_ms": 37.0432215,
+      "latencia_p90_ms": 45.4249389,
+      "latencia_p95_ms": 49.082123750000015,
+      "latencia_p99_ms": 53.763031330000004,
+      "latencia_media_ms": 38.14952165429687
+    },
+    "gradual_70": {
+      "latencia_p50_ms": 37.3794125,
+      "latencia_p90_ms": 45.6520701,
+      "latencia_p95_ms": 49.33983315,
+      "latencia_p99_ms": 54.20319808000001,
+      "latencia_media_ms": 38.446577990625
+    },
+    "gradual_90": {
+      "latencia_p50_ms": 37.055044,
+      "latencia_p90_ms": 45.3089363,
+      "latencia_p95_ms": 48.521968300000005,
+      "latencia_p99_ms": 54.25471642000003,
+      "latencia_media_ms": 38.077742783398435
+    }
+  },
+  "nucleos_de_outros": 0.026463176825049915,
+  "carga_antes": 1.0,
+  "carga_depois": 1.0166015625,
+  "medido_em": "2026-11-18T16:24:34",
+  "torch": "2.15.0+cu132",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "python": "3.12.13"
+}

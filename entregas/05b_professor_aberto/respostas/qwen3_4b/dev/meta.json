@@ -1,0 +1,15 @@
+{
+  "id": "Qwen/Qwen3-4B",
+  "nome": "Qwen3-4B",
+  "licenca": "Apache 2.0",
+  "quantizacao": "4 bits (NF4, bitsandbytes)",
+  "vram_do_modelo_gb": 2.68,
+  "vram_de_pico_gb": 5.51,
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "parametros": 2205810176,
+  "tokens_das_instrucoes_em_memoria": 804,
+  "quando": "2026-11-18 00:48:53 -0300",
+  "lote": 8,
+  "pedidos": 2033,
+  "segundos_de_gpu": 783.5
+}

@@ -1,0 +1,35 @@
+{
+  "versao": "qwen3_8b__nf4__colab_l4",
+  "contra": "qwen3_8b__nf4__local_3080",
+  "medido": {
+    "pedidos": 300,
+    "mesmos_tokens_de_entrada": 1.0,
+    "mesma_intencao": 0.9966666666666667,
+    "mesmo_texto": 0.9633333333333334,
+    "mesma_resposta_lida": 0.9633333333333334,
+    "p50_da_diferenca_de_probabilidade": 2.6483138288777537e-08,
+    "p95_da_diferenca_de_probabilidade": 0.04764599652192309,
+    "maior_diferenca_de_probabilidade": 0.17529309358985123
+  },
+  "limiar": {
+    "pedidos": 300,
+    "lotes": 50,
+    "ancora": "conferencia_dos_atalhos.em_lote_contra_um_a_um de entregas/05b_professor_aberto/escolha.json",
+    "mesmos_tokens_de_entrada_min": 1.0,
+    "mesma_intencao_min": 0.97,
+    "mesma_resposta_lida_min": 0.9375,
+    "p95_da_diferenca_de_probabilidade_max": 0.0985,
+    "maior_diferenca_de_probabilidade": "relatada, sem limiar: é o máximo de 300 pedidos, e nos atalhos era o de 32",
+    "se_reprovar": "o trabalho longo não é lançado; relata-se a diferença",
+    "desenho": "a configuração da 5b (4 bits) roda no Colab em 50 lotes inteiros da rodada local de dev, espalhados pela ordem de execução e com os mesmos pedidos na mesma ordem; assim a companhia no lote é a mesma e a única coisa que muda é o ambiente"
+  },
+  "criterios": {
+    "pedidos": true,
+    "mesmos_tokens_de_entrada": true,
+    "mesma_intencao": true,
+    "mesma_resposta_lida": true,
+    "p95_da_diferenca_de_probabilidade": true
+  },
+  "aprovado": true,
+  "quando": "2026-11-18 17:26:09 -0300"
+}

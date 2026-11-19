@@ -1,0 +1,585 @@
+{
+  "escritas_em": "2026-11-19 00:40:09 -0300",
+  "etapa": "11c_cenario_b_ate_o_fim",
+  "pergunta": "As receitas de poda e de quantização já escolhidas valem para os alunos do professor novo, e onde o cenário B fica na tabela final com ele?",
+  "o_que_muda": "nada é escolhido: os alunos da Etapa 11b recebem a poda, o reajuste e a forma de 8 bits que as Etapas 7, 8, 10b e 10c escolheram para os alunos antigos",
+  "professor": {
+    "versao": "qwen3_14b__fp16__colab_a100",
+    "nome": "Qwen3-14B",
+    "de_onde": "entregas/11b_alunos_do_professor_maior/decisao.json"
+  },
+  "regra_dos_alunos": "em cada caminho, o aluno que a regra de 'quem segue' das etapas de origem (`etapa6.quem_segue`) aponta como representante do cenário B com o professor novo, como a Etapa 11b relata em `quem_representa_o_cenario_b` (entregas/11b_alunos_do_professor_maior/decisao.json); e, onde o representante não é o B2, também o B2, porque as cadeias antigas do cenário B são de B2 nos dois caminhos",
+  "alunos": {
+    "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "caminho": "zero",
+      "sigla": "B2",
+      "aluno": "aluno_b2_t8",
+      "representa": true,
+      "papel": "representa o cenário B neste caminho",
+      "chave": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "modelos": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 80,
+        "taxa": 0.001,
+        "lote_inicial": 64,
+        "lote_final": 128,
+        "minimo_por_intencao": 100,
+        "decaimento": 0.0,
+        "media_dos_pesos": 0.999,
+        "avaliar_a_cada": 5,
+        "criterio": "exact_match"
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "vocabulario": "todos os pedidos do treino, sem rótulo",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "de_partida": {
+        "0": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+        "1": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1",
+        "2": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2"
+      }
+    },
+    "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Aluno B1 (rótulos do Qwen3-14B)",
+      "curto": "Aluno B1 · Qwen3-14B",
+      "caminho": "xlmr",
+      "sigla": "B1",
+      "aluno": "aluno_b1",
+      "representa": true,
+      "papel": "representa o cenário B neste caminho",
+      "chave": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100",
+      "modelos": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "de_partida": {
+        "0": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+        "1": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1",
+        "2": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2"
+      }
+    },
+    "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "caminho": "xlmr",
+      "sigla": "B2",
+      "aluno": "aluno_b2_t8",
+      "representa": false,
+      "papel": "entra para a cadeia ficar comparável com a antiga, que é de B2",
+      "chave": "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100",
+      "modelos": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      },
+      "sinal": {
+        "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+        "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+        "sem_rotulo_aproveitavel": {
+          "treino": 0,
+          "dev": 0
+        },
+        "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+        "professor": "qwen3_14b__fp16__colab_a100"
+      },
+      "de_partida": {
+        "0": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+        "1": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1",
+        "2": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2"
+      }
+    }
+  },
+  "receitas": {
+    "zero": {
+      "poda": "linhas_90",
+      "nome_da_poda": "Sem 90% das linhas da tabela de features",
+      "reajuste": {
+        "epocas": 30,
+        "epocas_de_rampa_da_poda_gradual": 15,
+        "passos_entre_cortes": 100,
+        "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+      },
+      "regra_da_poda": "em dev, com rótulos humanos: passa a variante cujo exact match depois do reajuste não é distinguivelmente menor que o do modelo sem poda (IC95 da diferença pareada, média de 3 sementes). A principal é a que passa com o menor arquivo comum (denso); se nenhuma peça inteira passa, é o modelo sem poda. A secundária é a de pesos soltos que passa com a maior esparsidade.",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "regra_da_forma": "em dev, com rótulos humanos, média de 3 sementes, contra o mesmo modelo em 32 bits: passa a forma cuja queda de F1 de entidades é de no máximo 1 ponto; se as duas passam, sai a distinguivelmente pior em exact match; senão fica a estática só se for mais rápida em todas as rodadas de latência; senão a dinâmica",
+      "de": {
+        "poda": "entregas/07_poda/decisao.json (principal.variante)",
+        "forma": "entregas/08_quantizacao/decisao.json (final.forma)"
+      },
+      "no_aluno_antigo_do_cenario_b": {
+        "modelo": "aluno_b2_t8",
+        "poda": "linhas_90",
+        "forma": "dinamica"
+      },
+      "funcoes": {
+        "poda": "etapa7.executar, sem mudança, com o modelo de partida, o professor e a pasta desta etapa (`etapa11c.emprestar`)",
+        "quantizacao": "etapa8.quantizar_modelo, sem mudança",
+        "latencia": "etapa8.medir_latencia, sem mudança, na pasta desta etapa"
+      }
+    },
+    "xlmr": {
+      "poda": "vocabulario_treino",
+      "nome_da_poda": "Vocabulário do treino",
+      "reajuste": {
+        "epocas": 10,
+        "epocas_de_rampa_da_poda_gradual": 5,
+        "passos_entre_cortes": 100,
+        "receita": "a de quem treinou o modelo, com o sinal de quem treinou o modelo"
+      },
+      "regra_da_poda": "em dev, com rótulos humanos: passa a variante cujo exact match depois do reajuste não é distinguivelmente menor que o do modelo sem poda (IC95 da diferença pareada, média de 3 sementes). A principal é a que passa com o menor arquivo comum (denso); se nenhuma peça inteira passa, é o modelo sem poda. A secundária é a de pesos soltos que passa com a maior esparsidade.",
+      "forma": "dinamica",
+      "nome_da_forma": "INT8, quantização dinâmica",
+      "regra_da_forma": "a da Etapa 8: em dev, com rótulos humanos, média de 3 sementes, contra o mesmo modelo em 32 bits: passa a forma cuja queda de F1 de entidades é de no máximo 1 ponto; se as duas passam, sai a distinguivelmente pior em exact match; senão fica a estática só se for mais rápida em todas as rodadas de latência; senão a dinâmica",
+      "de": {
+        "poda": "entregas/10b_encoder_poda/decisao.json (principal.variante)",
+        "forma": "entregas/10c_encoder_quantizacao/decisao.json (final.forma)"
+      },
+      "no_aluno_antigo_do_cenario_b": {
+        "modelo": "aluno_b2_t2",
+        "poda": "vocabulario_treino",
+        "forma": "dinamica"
+      },
+      "funcoes": {
+        "poda": "etapa10b.executar, sem mudança, com o modelo de partida, o professor e a pasta desta etapa (`etapa11c.emprestar`)",
+        "quantizacao": "etapa10c.quantizar_modelo, sem mudança",
+        "latencia": "etapa10c.medir_latencia, sem mudança, na pasta desta etapa"
+      }
+    }
+  },
+  "sinal_do_reajuste": "o de quem treinou o aluno (Etapas 7 e 10b): os rótulos do professor novo no treino e no dev de parada e, no B2, os logits dele; nenhum rótulo humano entra. `etapa11b.dados_do_aluno` confere, em cada execução, que os três vieram da pasta desse professor",
+  "o_que_e_exportado_e_quantizado": {
+    "variantes": "o modelo podado e reajustado e, como as Etapas 8 e 10c fizeram ('como referência'), o mesmo aluno sem poda: é ele que dá a latência do aluno destilado no mesmo protocolo e o ponto 'INT8, sem poda' do registro",
+    "formas": "a função de origem produz todas as formas dela (ONNX de 32 bits, dinâmica, estática e as duas de diagnóstico). A forma desta etapa é a escolhida na origem; as outras são subproduto da função reaproveitada: nenhuma conta desta etapa as lê para decidir, e a estática só participa do rodízio da latência, para o protocolo ser o mesmo das Etapas 8 e 10c",
+    "fica_de_fora": "a poda de pesos soltos (a secundária das Etapas 7 e 10b), o treino ciente de quantização e qualquer busca nova"
+  },
+  "conferencias": {
+    "poda": {
+      "regra_de_origem": "a das Etapas 7 e 10b (`etapa7.quem_segue`, passo 1): passa a poda cujo exact match em dev, depois do reajuste, não é distinguivelmente menor que o do modelo sem poda (o intervalo de 95% da diferença pareada, na média de 3 sementes, não fica todo abaixo de zero)",
+      "aqui": "aplicada à poda principal de cada aluno novo, contra o mesmo aluno sem poda (as respostas entregues pela Etapa 11b), em dev, com os rótulos humanos",
+      "metrica": "exact_match",
+      "passa_se": "ic_max >= 0"
+    },
+    "quantizacao": {
+      "regra_de_origem": "a das Etapas 8 e 10c (`etapa8.escolher_forma`, passo 1; PLANO.md): passa a forma cuja queda de F1 de entidades é de no máximo 1 ponto em dev, contra o mesmo modelo em 32 bits no PyTorch (diferença pareada, média de 3 sementes)",
+      "aqui": "aplicada à forma escolhida na etapa de origem, no modelo podado de cada aluno novo (e, como registro, no modelo sem poda)",
+      "metrica": "slot_f1",
+      "passa_se": "diferenca >= -0.01"
+    },
+    "onnx": "o ONNX de 32 bits tem de dar a mesma resposta do PyTorch em todos os pedidos de dev e do teste, em toda execução (contagem em meta.json)",
+    "se_nao_passar": "a receita que não passar com um aluno novo é relatada como está; não se procura outra poda, outra forma, outro orçamento de reajuste nem treino ciente de quantização",
+    "o_teste": "todas as execuções respondem dev e teste, como nas etapas de origem; nenhuma conferência lê o teste"
+  },
+  "custo": {
+    "tamanho": "bytes dos arquivos gravados, como nas Etapas 8 e 10c (no XLM-R, com a rede separada do tokenizador)",
+    "latencia": "o protocolo das Etapas 8 e 10c: semente 0, 1 thread, uma consulta por vez, do texto à resposta, pedidos de dev, 5 rodadas de 1.024 consultas, sistemas alternados em cada rodada (PyTorch, ONNX de 32 bits, dinâmica e estática), por último na cadeia, com a placa e o resto parados",
+    "maquina_quieta": "os outros processos ocupam no máximo 0.25 núcleo de CPU durante a medida (`etapa8.nucleos_de_outros`). Uma medida acima disso é guardada como `latencia_recusada_<n>` e refeita, até 3 tentativas; se nenhuma passar, a última fica e a cadeia termina com `FIM COM ERROS`"
+  },
+  "sementes": [
+    0,
+    1,
+    2
+  ],
+  "semente_do_custo": 0,
+  "execucoes": {
+    "total": 33,
+    "poda": 9,
+    "quantizar": 18,
+    "latencia": 6,
+    "lista": [
+      {
+        "passo": "poda",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 0
+      },
+      {
+        "passo": "poda",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 1
+      },
+      {
+        "passo": "poda",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 2
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 1
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 2
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 1
+      },
+      {
+        "passo": "poda",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 2
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 1
+      },
+      {
+        "passo": "quantizar",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 2
+      },
+      {
+        "passo": "latencia",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "linhas_90",
+        "semente": 0
+      },
+      {
+        "passo": "latencia",
+        "aluno": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      },
+      {
+        "passo": "latencia",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "latencia",
+        "aluno": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      },
+      {
+        "passo": "latencia",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "vocabulario_treino",
+        "semente": 0
+      },
+      {
+        "passo": "latencia",
+        "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "variante": "sem_poda",
+        "semente": 0
+      }
+    ]
+  },
+  "ordem_da_cadeia": "poda e reajuste (rede do zero, depois XLM-R: as duas famílias nunca dividem a placa; do XLM-R, um processo por vez), depois exportação e quantização (na CPU), e a latência por último, um modelo por vez",
+  "pastas": "data/execucoes/11c_cenario_b_ate_o_fim/poda/<variante da 11b>/<poda>/semente_<n>/ e data/execucoes/11c_cenario_b_ate_o_fim/quantizacao/<variante da 11b>/<poda ou sem_poda>/semente_<n>/",
+  "decisoes_lidas": {
+    "entregas/11b_alunos_do_professor_maior/decisao.json": "93238e4598eaa8f484c4bbac6ad35b0d5b0a6fecc5524224462a1a12ae2f6d4c",
+    "entregas/07_poda/decisao.json": "b9db95d1701f61d4b4125abd47a9def3bd74738b2663e5188499a97a6585f43b",
+    "entregas/08_quantizacao/decisao.json": "ea4a698039f6eab1526432a70bfa43fe134b24d35d6ac0928e6a9ce2869520f1",
+    "entregas/10b_encoder_poda/decisao.json": "41361d8f66c428540e903706e420a4764dcd46922ea13fa41cd370f713118597",
+    "entregas/10c_encoder_quantizacao/decisao.json": "13aeb8c79e6cd2a9e115bb357118d4349e725c15ee12b2beaf5ccc0d4a559a2f"
+  },
+  "artigos": [
+    {
+      "quem": "Koehn",
+      "onde": "W04-3250",
+      "para_que": "Intervalo de 95% e comparação pareada por bootstrap, por enunciado"
+    },
+    {
+      "quem": "Berg-Kirkpatrick et al.",
+      "onde": "D12-1091",
+      "para_que": "Intervalo de 95% e comparação pareada por bootstrap, por enunciado"
+    },
+    {
+      "quem": "Reimers & Gurevych",
+      "onde": "1707.09861",
+      "para_que": "Três sementes por modelo treinado; o resultado é a média"
+    },
+    {
+      "quem": "Reddi et al.",
+      "onde": "1911.02549",
+      "para_que": "Latência: uma consulta por vez, percentis, máquina registrada"
+    },
+    {
+      "quem": "Yang, Cui & Chen",
+      "onde": "2203.15996",
+      "para_que": "Cortar da tabela de subtokens o que o corpus da tarefa não usa, com o tokenizador junto"
+    },
+    {
+      "quem": "Abdaoui, Pradel & Sigel",
+      "onde": "2010.05609",
+      "para_que": "Num modelo multilíngue a maior parte dos parâmetros está na tabela; ficar só com os idiomas que interessam"
+    },
+    {
+      "quem": "Xia et al.",
+      "onde": "2204.00408",
+      "para_que": "Poda de peças inteiras (estruturada): as linhas da tabela de features"
+    },
+    {
+      "quem": "Zafrir et al.",
+      "onde": "2111.05754",
+      "para_que": "Fine-tuning de recuperação com a máscara travada, com o sinal do professor"
+    },
+    {
+      "quem": "Sanh, Wolf & Rush",
+      "onde": "2005.07683",
+      "para_que": "Magnitude contra outros critérios num encoder pré-treinado; as tabelas de entrada fora da poda"
+    },
+    {
+      "quem": "Jacob et al.",
+      "onde": "1712.05877",
+      "para_que": "Inteiros de 8 bits: escala e ponto zero"
+    },
+    {
+      "quem": "Zafrir et al.",
+      "onde": "1910.06188",
+      "para_que": "Um Transformer em 8 bits: o que quantizar e o que deixar em 32 bits"
+    },
+    {
+      "quem": "Gholami et al.",
+      "onde": "2103.13630",
+      "para_que": "As formas de quantizar, lado a lado: dinâmica, estática, com treino"
+    },
+    {
+      "quem": "Bondarenko et al.",
+      "onde": "2109.12948",
+      "para_que": "Por que as ativações de um Transformer são difíceis de quantizar com faixa fixa (a estática que não passou)"
+    },
+    {
+      "quem": "Krishnamoorthi",
+      "onde": "1806.08342",
+      "para_que": "Quantização pós-treino, só dos pesos ou também das ativações, e quando o treino é necessário"
+    },
+    {
+      "quem": "Bhandare et al.",
+      "onde": "1906.00532",
+      "para_que": "Um Transformer quantizado em 8 bits depois de treinado"
+    }
+  ],
+  "comparativo": {
+    "regras": "data/execucoes/11c_cenario_b_ate_o_fim/comparativo/regras_v3.json",
+    "versao": 3,
+    "sha256": "b2d74e4da6752014fde3628552ea5458b65c6ea0e3ec05ec5d502a5227ac6fb1",
+    "sistemas": 62,
+    "comparacoes": 84,
+    "cadeias": [
+      "zero/A",
+      "zero/B",
+      "zero/teto",
+      "xlmr/A",
+      "xlmr/B",
+      "xlmr/teto",
+      "zero/B2@qwen3_14b__fp16__colab_a100",
+      "xlmr/B1@qwen3_14b__fp16__colab_a100",
+      "xlmr/B2@qwen3_14b__fp16__colab_a100"
+    ],
+    "primarias": {
+      "o_que_sao": "em cada caminho, o aluno A em INT8 menos o representante do cenário B com o professor novo em INT8, nas três métricas, no teste: é o que resta de distância entre os cenários depois da troca de professor. As outras comparações descrevem de onde ela vem",
+      "pares": [
+        {
+          "b": "aluno_a/int8",
+          "a": "aluno_b2@qwen3_14b__fp16__colab_a100/int8",
+          "caminho": "zero"
+        },
+        {
+          "b": "xlmr/aluno_a/int8",
+          "a": "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100/int8",
+          "caminho": "xlmr"
+        }
+      ]
+    },
+    "como_ler": "as regras do comparativo são um arquivo com versão: se o registro crescer antes das contas (um professor novo na entrega da Etapa 11a, por exemplo), grava-se a versão seguinte e esta não é tocada"
+  }
+}

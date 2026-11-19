@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 1,
+  "nome": "so_tabelas",
+  "descricao": "só tabelas em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 2,
+  "bytes_da_rede": 533290751,
+  "slot_f1_dev": 77.08434909800097,
+  "segundos": 43.81912218598882
+}

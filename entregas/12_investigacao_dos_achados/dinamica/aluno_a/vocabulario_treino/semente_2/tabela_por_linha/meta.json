@@ -1,0 +1,7 @@
+{
+  "alternativa": "tabela_por_linha",
+  "o_que_e": "a dinâmica, com a tabela de subtokens em 8 bits com um degrau e um ponto zero por linha (grafo editado)",
+  "semente": 2,
+  "bytes_da_rede": 90221163,
+  "segundos": 10.643244453007355
+}

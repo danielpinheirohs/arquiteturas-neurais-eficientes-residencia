@@ -1,0 +1,895 @@
+{
+  "escritas_em": "2026-11-18 22:04:17 -0300",
+  "etapa": "11b_alunos_do_professor_maior",
+  "pergunta": "Um professor aberto melhor faz alunos melhores? Quanto do ganho do professor chega ao aluno, e com ele os logits passam a valer mais que os rótulos?",
+  "o_que_muda": "só o professor aberto: os rótulos do treino, os rótulos de dev que escolhem a época de parada e, no B2, os logits de intenção",
+  "o_que_muda_junto": "o número de exemplos de treino de cada aluno é o de pedidos em que o seu professor deixou rótulo aproveitável (ver `pedidos_com_rotulo_aproveitavel` de cada professor): faz parte da troca de professor, não é uma escolha desta etapa",
+  "o_que_nao_muda": "a rede, a receita, as sementes, a grade de temperaturas e a regra de escolha de cada caminho são as das Etapas 6 e 10a; não há nova busca, nem mais épocas, nem mais sementes, nem temperatura fora da grade",
+  "professor_novo": {
+    "versao": "qwen3_14b__fp16__colab_a100",
+    "nome": "Qwen3-14B",
+    "de_onde": "entregas/11a_professor_aberto_maior/escolha.json (o escolhido da escada)",
+    "em_dev": {
+      "intent_acc": 0.8057058534185932,
+      "intent_macro_f1": 0.8158645394713039,
+      "slot_f1": 0.624215663490588,
+      "exact_match": 0.4913920314805706
+    },
+    "pedidos_com_rotulo_aproveitavel": {
+      "treino": 11514,
+      "dev": 2033
+    },
+    "arquivos": {
+      "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet": "1789cebefc258471dadfeb63fc5c9da8bad63d12a63827476fd4e0586f4a31bb",
+      "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy": "7b3aa7cbad59a44f49493628223c8e3aa0a8d9cfc9c8e1d6fafc0e6cb6647072",
+      "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet": "927b0362d1274fb5f966f0c1fcb5ba30b1113136018940b0aa26d8706273af3d",
+      "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_test.parquet": "ff95747ef9d89918a65957948a74871e675a3f96ba8034e190a810cba264a644"
+    }
+  },
+  "professor_antigo": {
+    "versao": "qwen3_8b__nf4__local_3080",
+    "nome": "Qwen3-8B",
+    "de_onde": "entregas/05b_professor_aberto/ (o professor dos alunos das Etapas 6 e 10a)",
+    "em_dev": {
+      "intent_acc": 0.7742252828332513,
+      "intent_macro_f1": 0.7826454318760424,
+      "slot_f1": 0.5795166858457997,
+      "exact_match": 0.4318740777176586
+    },
+    "pedidos_com_rotulo_aproveitavel": {
+      "treino": 11503,
+      "dev": 2033
+    },
+    "arquivos": {
+      "entregas/05b_professor_aberto/rotulos_treino.parquet": "c71aa703b18d6cc27adbd00d2d68d01de8b0dacf70a469911132d75b377a63f3",
+      "entregas/05b_professor_aberto/logits_treino.npy": "47ec09ca29cf3d727eb3763aeb89a28f8bbc9dc45d87f20a256ef84c30ebd0d2",
+      "entregas/05b_professor_aberto/previsoes/qwen3_8b_dev.parquet": "b2dd59532219e002b307a8dbdcd2c4eda8562ff359448745e81d83984ad02948",
+      "entregas/05b_professor_aberto/previsoes/qwen3_8b_test.parquet": "fb6681aa8baa03941f7372bb30a1d81118f671edc78a164767ca86659c1f5a9b"
+    }
+  },
+  "escopo": {
+    "sem_alunos_para": "qwen3_8b__fp16__colab_l4",
+    "por_que": "escolha de escopo: na escada da Etapa 11a, o Qwen3-8B sem os 4 bits não se distinguiu do de 4 bits (exact match em dev: +0.0, IC95 de -1.1 a +1.2 pontos). Treinar alunos para ele repetiria os alunos antigos com um professor de mesma qualidade e não responderia à pergunta desta etapa"
+  },
+  "caminhos": {
+    "zero": {
+      "nome": "Rede do zero",
+      "receita_de": "entregas/06_destilacao/",
+      "alunos": [
+        "aluno_b1",
+        "aluno_b1_sem_suavizacao",
+        "aluno_b2_t1",
+        "aluno_b2_t2",
+        "aluno_b2_t4",
+        "aluno_b2_t8"
+      ],
+      "temperatura_com_o_professor_antigo": 8,
+      "treinos_juntos_na_placa": 7
+    },
+    "xlmr": {
+      "nome": "XLM-R",
+      "receita_de": "entregas/10a_encoder/",
+      "alunos": [
+        "aluno_b1",
+        "aluno_b2_t1",
+        "aluno_b2_t2",
+        "aluno_b2_t4",
+        "aluno_b2_t8"
+      ],
+      "temperatura_com_o_professor_antigo": 2,
+      "treinos_juntos_na_placa": 1
+    }
+  },
+  "ordem_da_rodada": "primeiro a rede do zero, depois o XLM-R; os dois caminhos nunca dividem a placa",
+  "sementes": [
+    0,
+    1,
+    2
+  ],
+  "temperaturas": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "execucoes": 33,
+  "variantes": {
+    "zero__aluno_b1__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b1",
+      "nome": "Rede do zero · Aluno B1 (rótulos do Qwen3-14B)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.1
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b1_sem_suavizacao",
+      "nome": "Rede do zero · Aluno B1 sem suavização de rótulos (controle do B2; rótulos do Qwen3-14B)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "zero__aluno_b2_t1__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b2_t1",
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 1)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 1.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "zero__aluno_b2_t2__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b2_t2",
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 2)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 2.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b2_t4",
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 4)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 4.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "caminho": "zero",
+      "aluno": "aluno_b2_t8",
+      "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "config": {
+        "d_modelo": 256,
+        "n_camadas": 2,
+        "d_rotulo": 20,
+        "p_mascara": 0.15,
+        "n_cabecas": 4,
+        "d_features": 128,
+        "distancia_max": 5,
+        "dropout": 0.2,
+        "dropout_features": 0.2,
+        "d_ffn": 1024,
+        "usar_crf": true,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "peso_mascara": 1.0,
+        "atalho_intencao": "nenhum",
+        "suavizacao": 0.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "media_dos_pesos": 0.999
+      }
+    },
+    "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": {
+      "caminho": "xlmr",
+      "aluno": "aluno_b1",
+      "nome": "XLM-R · Aluno B1 (rótulos do Qwen3-14B)",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 0.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      }
+    },
+    "xlmr__aluno_b2_t1__qwen3_14b__fp16__colab_a100": {
+      "caminho": "xlmr",
+      "aluno": "aluno_b2_t1",
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 1)",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 1.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      }
+    },
+    "xlmr__aluno_b2_t2__qwen3_14b__fp16__colab_a100": {
+      "caminho": "xlmr",
+      "aluno": "aluno_b2_t2",
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 2)",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 2.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      }
+    },
+    "xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100": {
+      "caminho": "xlmr",
+      "aluno": "aluno_b2_t4",
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 4)",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 4.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      }
+    },
+    "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": {
+      "caminho": "xlmr",
+      "aluno": "aluno_b2_t8",
+      "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+      "config": {
+        "modelo_id": "FacebookAI/xlm-roberta-base",
+        "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+        "max_subtokens": 128,
+        "dropout": 0.1,
+        "peso_intencao": 1.0,
+        "peso_entidades": 1.0,
+        "temperatura": 8.0,
+        "peso_rotulo": 0.0
+      },
+      "receita": {
+        "epocas": 10,
+        "taxa": 5e-05,
+        "lote": 32,
+        "aquecimento": 0.1,
+        "decaimento": 0.01,
+        "norma_maxima": 1.0,
+        "passos_por_epoca": 0,
+        "criterio": "exact_match",
+        "precisao_mista": true,
+        "tabela_dividida": true
+      }
+    }
+  },
+  "receitas_iguais_as_antigas": {
+    "como": "a configuração e a receita de cada variante, comparadas com o meta.json das 3 execuções antigas de mesmo nome no cache da etapa de origem (null: cache antigo ausente)",
+    "resultado": {
+      "zero__aluno_b1__qwen3_14b__fp16__colab_a100": true,
+      "zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100": true,
+      "zero__aluno_b2_t1__qwen3_14b__fp16__colab_a100": true,
+      "zero__aluno_b2_t2__qwen3_14b__fp16__colab_a100": true,
+      "zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100": true,
+      "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100": true,
+      "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": true,
+      "xlmr__aluno_b2_t1__qwen3_14b__fp16__colab_a100": true,
+      "xlmr__aluno_b2_t2__qwen3_14b__fp16__colab_a100": true,
+      "xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100": true,
+      "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": true
+    }
+  },
+  "pasta_das_execucoes": "data/execucoes/11b_alunos_do_professor_maior/<caminho>__<aluno>__<professor>/semente_<n>/",
+  "regra_da_temperatura": "a da Etapa 6 (`etapa6.escolher_temperatura`), aplicada em cada caminho, com o professor novo: maior acurácia de intenção em dev (rótulos humanos), média de 3 sementes; empate exato: maior exact match, depois a menor temperatura. A grade é a das Etapas 6 e 10a e não é ampliada, mesmo que a escolhida fique na ponta",
+  "regra_do_teste": "o teste só é aberto depois da temperatura decidida, e só para: o aluno B1, o controle sem suavização (rede do zero), o aluno B2 na temperatura escolhida e, se ela for diferente da que o professor antigo teve, o B2 novo também na temperatura antiga (só para a comparação de sensibilidade 'mesma temperatura', que não decide nada). As outras temperaturas nunca são medidas no teste",
+  "estatistica": "toda comparação é pareada, B − A, na média de 3 sementes, com intervalo de 95% por bootstrap por enunciado (2000 reamostragens, semente 0, percentis 2,5 e 97,5), em dev e no teste, nas métricas de `qualidade.METRICAS`",
+  "blocos": {
+    "novo_menos_antigo": "O professor melhor faz alunos melhores? Aluno novo − aluno antigo: mesma receita, muda o professor",
+    "logits": "O que os logits valem (B2 − B1), com cada professor",
+    "aluno_menos_professor": "O aluno ao lado do seu professor (aluno − professor)",
+    "b_menos_a": "O cenário B ao lado do cenário A (aluno B − aluno A do mesmo caminho)",
+    "professores": "Os professores entre si (o ganho do professor é o denominador do repasse; a Etapa 11a já o mediu)",
+    "mesma_temperatura": "Sensibilidade: o B2 novo na temperatura do B2 antigo (só existe se a regra escolher outra temperatura)"
+  },
+  "comparacoes": [
+    {
+      "id": "novo_menos_antigo|zero:B1:novo|zero:B1:antigo",
+      "bloco": "novo_menos_antigo",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1: com o professor novo − com o antigo",
+      "a": "zero:B1:antigo",
+      "b": "zero:B1:novo",
+      "pergunta": "Com a mesma receita, o aluno do professor melhor é melhor?"
+    },
+    {
+      "id": "novo_menos_antigo|zero:B1s:novo|zero:B1s:antigo",
+      "bloco": "novo_menos_antigo",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1 sem suavização: com o professor novo − com o antigo",
+      "a": "zero:B1s:antigo",
+      "b": "zero:B1s:novo",
+      "pergunta": "Com a mesma receita, o aluno do professor melhor é melhor?"
+    },
+    {
+      "id": "novo_menos_antigo|zero:B2:novo|zero:B2:antigo",
+      "bloco": "novo_menos_antigo",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2: com o professor novo − com o antigo",
+      "a": "zero:B2:antigo",
+      "b": "zero:B2:novo",
+      "pergunta": "Com a mesma receita, o aluno do professor melhor é melhor? (cada B2 na temperatura escolhida em dev com o seu professor)"
+    },
+    {
+      "id": "logits|zero:B2:novo|zero:B1s:novo",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · professor novo: B2 − B1 sem suavização · só os logits mudam",
+      "a": "zero:B1s:novo",
+      "b": "zero:B2:novo",
+      "pergunta": "Com o professor novo, quanto os logits acrescentam aos rótulos, com o resto igual?"
+    },
+    {
+      "id": "logits|zero:B2:novo|zero:B1:novo",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · professor novo: B2 − B1 · entram os logits e sai a suavização",
+      "a": "zero:B1:novo",
+      "b": "zero:B2:novo",
+      "pergunta": "Com o professor novo, o B2 contra o B1 da receita da Etapa 4b (mudam duas coisas)"
+    },
+    {
+      "id": "aluno_menos_professor|zero:B1:novo|prof:novo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1 − professor novo",
+      "a": "prof:novo",
+      "b": "zero:B1:novo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor novo pelo aluno B1 dele?"
+    },
+    {
+      "id": "b_menos_a|zero:B1:novo|zero:A",
+      "bloco": "b_menos_a",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1 do professor novo − aluno A",
+      "a": "zero:A",
+      "b": "zero:B1:novo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B1 do professor novo?"
+    },
+    {
+      "id": "aluno_menos_professor|zero:B2:novo|prof:novo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2 − professor novo",
+      "a": "prof:novo",
+      "b": "zero:B2:novo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor novo pelo aluno B2 dele?"
+    },
+    {
+      "id": "b_menos_a|zero:B2:novo|zero:A",
+      "bloco": "b_menos_a",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2 do professor novo − aluno A",
+      "a": "zero:A",
+      "b": "zero:B2:novo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B2 do professor novo?"
+    },
+    {
+      "id": "logits|zero:B2:antigo|zero:B1s:antigo",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · professor antigo: B2 − B1 sem suavização · só os logits mudam",
+      "a": "zero:B1s:antigo",
+      "b": "zero:B2:antigo",
+      "pergunta": "Com o professor antigo, quanto os logits acrescentam aos rótulos, com o resto igual?"
+    },
+    {
+      "id": "logits|zero:B2:antigo|zero:B1:antigo",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · professor antigo: B2 − B1 · entram os logits e sai a suavização",
+      "a": "zero:B1:antigo",
+      "b": "zero:B2:antigo",
+      "pergunta": "Com o professor antigo, o B2 contra o B1 da receita da Etapa 4b (mudam duas coisas)"
+    },
+    {
+      "id": "aluno_menos_professor|zero:B1:antigo|prof:antigo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1 − professor antigo",
+      "a": "prof:antigo",
+      "b": "zero:B1:antigo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor antigo pelo aluno B1 dele?"
+    },
+    {
+      "id": "b_menos_a|zero:B1:antigo|zero:A",
+      "bloco": "b_menos_a",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1 do professor antigo − aluno A",
+      "a": "zero:A",
+      "b": "zero:B1:antigo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B1 do professor antigo?"
+    },
+    {
+      "id": "aluno_menos_professor|zero:B2:antigo|prof:antigo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2 − professor antigo",
+      "a": "prof:antigo",
+      "b": "zero:B2:antigo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor antigo pelo aluno B2 dele?"
+    },
+    {
+      "id": "b_menos_a|zero:B2:antigo|zero:A",
+      "bloco": "b_menos_a",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2 do professor antigo − aluno A",
+      "a": "zero:A",
+      "b": "zero:B2:antigo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B2 do professor antigo?"
+    },
+    {
+      "id": "mesma_temperatura|zero:B2:novo@T_antiga|zero:B2:antigo",
+      "bloco": "mesma_temperatura",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2: novo na temperatura do antigo − antigo",
+      "a": "zero:B2:antigo",
+      "b": "zero:B2:novo@T_antiga",
+      "pergunta": "Se a regra escolher outra temperatura: a diferença 'novo − antigo' do B2 se mantém com a temperatura igual?"
+    },
+    {
+      "id": "novo_menos_antigo|xlmr:B1:novo|xlmr:B1:antigo",
+      "bloco": "novo_menos_antigo",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1: com o professor novo − com o antigo",
+      "a": "xlmr:B1:antigo",
+      "b": "xlmr:B1:novo",
+      "pergunta": "Com a mesma receita, o aluno do professor melhor é melhor?"
+    },
+    {
+      "id": "novo_menos_antigo|xlmr:B2:novo|xlmr:B2:antigo",
+      "bloco": "novo_menos_antigo",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2: com o professor novo − com o antigo",
+      "a": "xlmr:B2:antigo",
+      "b": "xlmr:B2:novo",
+      "pergunta": "Com a mesma receita, o aluno do professor melhor é melhor? (cada B2 na temperatura escolhida em dev com o seu professor)"
+    },
+    {
+      "id": "logits|xlmr:B2:novo|xlmr:B1:novo",
+      "bloco": "logits",
+      "caminho": "xlmr",
+      "nome": "XLM-R · professor novo: B2 − B1 · só os logits mudam",
+      "a": "xlmr:B1:novo",
+      "b": "xlmr:B2:novo",
+      "pergunta": "Com o professor novo, quanto os logits acrescentam aos rótulos, com o resto igual?"
+    },
+    {
+      "id": "aluno_menos_professor|xlmr:B1:novo|prof:novo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1 − professor novo",
+      "a": "prof:novo",
+      "b": "xlmr:B1:novo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor novo pelo aluno B1 dele?"
+    },
+    {
+      "id": "b_menos_a|xlmr:B1:novo|xlmr:A",
+      "bloco": "b_menos_a",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1 do professor novo − aluno A",
+      "a": "xlmr:A",
+      "b": "xlmr:B1:novo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B1 do professor novo?"
+    },
+    {
+      "id": "aluno_menos_professor|xlmr:B2:novo|prof:novo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2 − professor novo",
+      "a": "prof:novo",
+      "b": "xlmr:B2:novo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor novo pelo aluno B2 dele?"
+    },
+    {
+      "id": "b_menos_a|xlmr:B2:novo|xlmr:A",
+      "bloco": "b_menos_a",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2 do professor novo − aluno A",
+      "a": "xlmr:A",
+      "b": "xlmr:B2:novo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B2 do professor novo?"
+    },
+    {
+      "id": "logits|xlmr:B2:antigo|xlmr:B1:antigo",
+      "bloco": "logits",
+      "caminho": "xlmr",
+      "nome": "XLM-R · professor antigo: B2 − B1 · só os logits mudam",
+      "a": "xlmr:B1:antigo",
+      "b": "xlmr:B2:antigo",
+      "pergunta": "Com o professor antigo, quanto os logits acrescentam aos rótulos, com o resto igual?"
+    },
+    {
+      "id": "aluno_menos_professor|xlmr:B1:antigo|prof:antigo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1 − professor antigo",
+      "a": "prof:antigo",
+      "b": "xlmr:B1:antigo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor antigo pelo aluno B1 dele?"
+    },
+    {
+      "id": "b_menos_a|xlmr:B1:antigo|xlmr:A",
+      "bloco": "b_menos_a",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1 do professor antigo − aluno A",
+      "a": "xlmr:A",
+      "b": "xlmr:B1:antigo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B1 do professor antigo?"
+    },
+    {
+      "id": "aluno_menos_professor|xlmr:B2:antigo|prof:antigo",
+      "bloco": "aluno_menos_professor",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2 − professor antigo",
+      "a": "prof:antigo",
+      "b": "xlmr:B2:antigo",
+      "pergunta": "Quanto se perde (ou se ganha) ao trocar o professor antigo pelo aluno B2 dele?"
+    },
+    {
+      "id": "b_menos_a|xlmr:B2:antigo|xlmr:A",
+      "bloco": "b_menos_a",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2 do professor antigo − aluno A",
+      "a": "xlmr:A",
+      "b": "xlmr:B2:antigo",
+      "pergunta": "A que distância do aluno A (professor fechado) fica o aluno B2 do professor antigo?"
+    },
+    {
+      "id": "mesma_temperatura|xlmr:B2:novo@T_antiga|xlmr:B2:antigo",
+      "bloco": "mesma_temperatura",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2: novo na temperatura do antigo − antigo",
+      "a": "xlmr:B2:antigo",
+      "b": "xlmr:B2:novo@T_antiga",
+      "pergunta": "Se a regra escolher outra temperatura: a diferença 'novo − antigo' do B2 se mantém com a temperatura igual?"
+    },
+    {
+      "id": "professores|prof:novo|prof:antigo",
+      "bloco": "professores",
+      "caminho": null,
+      "nome": "professor novo − professor antigo",
+      "a": "prof:antigo",
+      "b": "prof:novo",
+      "pergunta": "Quanto o professor melhorou? (o denominador do repasse)"
+    },
+    {
+      "id": "professores|prof:novo|prof:fechado",
+      "bloco": "professores",
+      "caminho": null,
+      "nome": "professor novo − professor fechado",
+      "a": "prof:fechado",
+      "b": "prof:novo",
+      "pergunta": "A que distância o professor aberto novo fica do fechado?"
+    },
+    {
+      "id": "professores|prof:antigo|prof:fechado",
+      "bloco": "professores",
+      "caminho": null,
+      "nome": "professor antigo − professor fechado",
+      "a": "prof:fechado",
+      "b": "prof:antigo",
+      "pergunta": "E o antigo?"
+    }
+  ],
+  "diferencas_de_diferencas": [
+    {
+      "id": "logits|zero|B2-B1s",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · o valor dos logits (só os logits mudam): com o professor novo − com o antigo",
+      "pergunta": "Os logits passam a valer mais com o professor novo?",
+      "a_novo": "zero:B1s:novo",
+      "b_novo": "zero:B2:novo",
+      "a_antigo": "zero:B1s:antigo",
+      "b_antigo": "zero:B2:antigo"
+    },
+    {
+      "id": "logits|zero|B2-B1",
+      "bloco": "logits",
+      "caminho": "zero",
+      "nome": "Rede do zero · B2 − B1 (entram os logits e sai a suavização): com o professor novo − com o antigo",
+      "pergunta": "O mesmo, contra o B1 da receita da Etapa 4b",
+      "a_novo": "zero:B1:novo",
+      "b_novo": "zero:B2:novo",
+      "a_antigo": "zero:B1:antigo",
+      "b_antigo": "zero:B2:antigo"
+    },
+    {
+      "id": "ganho|zero|B1",
+      "bloco": "ganho",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B1: ganho do aluno − ganho do professor, em pontos",
+      "pergunta": "O aluno ganhou menos pontos do que o professor? (o repasse em diferença, que não depende de dividir)",
+      "a_novo": "prof:novo",
+      "b_novo": "zero:B1:novo",
+      "a_antigo": "prof:antigo",
+      "b_antigo": "zero:B1:antigo"
+    },
+    {
+      "id": "ganho|zero|B2",
+      "bloco": "ganho",
+      "caminho": "zero",
+      "nome": "Rede do zero · aluno B2: ganho do aluno − ganho do professor, em pontos",
+      "pergunta": "O aluno ganhou menos pontos do que o professor? (o repasse em diferença, que não depende de dividir)",
+      "a_novo": "prof:novo",
+      "b_novo": "zero:B2:novo",
+      "a_antigo": "prof:antigo",
+      "b_antigo": "zero:B2:antigo"
+    },
+    {
+      "id": "logits|xlmr|B2-B1",
+      "bloco": "logits",
+      "caminho": "xlmr",
+      "nome": "XLM-R · o valor dos logits (só os logits mudam): com o professor novo − com o antigo",
+      "pergunta": "Os logits passam a valer mais com o professor novo?",
+      "a_novo": "xlmr:B1:novo",
+      "b_novo": "xlmr:B2:novo",
+      "a_antigo": "xlmr:B1:antigo",
+      "b_antigo": "xlmr:B2:antigo"
+    },
+    {
+      "id": "ganho|xlmr|B1",
+      "bloco": "ganho",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B1: ganho do aluno − ganho do professor, em pontos",
+      "pergunta": "O aluno ganhou menos pontos do que o professor? (o repasse em diferença, que não depende de dividir)",
+      "a_novo": "prof:novo",
+      "b_novo": "xlmr:B1:novo",
+      "a_antigo": "prof:antigo",
+      "b_antigo": "xlmr:B1:antigo"
+    },
+    {
+      "id": "ganho|xlmr|B2",
+      "bloco": "ganho",
+      "caminho": "xlmr",
+      "nome": "XLM-R · aluno B2: ganho do aluno − ganho do professor, em pontos",
+      "pergunta": "O aluno ganhou menos pontos do que o professor? (o repasse em diferença, que não depende de dividir)",
+      "a_novo": "prof:novo",
+      "b_novo": "xlmr:B2:novo",
+      "a_antigo": "prof:antigo",
+      "b_antigo": "xlmr:B2:antigo"
+    }
+  ],
+  "repasses": [
+    {
+      "id": "repasse|zero|B1",
+      "caminho": "zero",
+      "aluno": "B1",
+      "nome": "Rede do zero · aluno B1",
+      "aluno_antigo": "zero:B1:antigo",
+      "aluno_novo": "zero:B1:novo",
+      "professor_antigo": "prof:antigo",
+      "professor_novo": "prof:novo"
+    },
+    {
+      "id": "repasse|zero|B1s",
+      "caminho": "zero",
+      "aluno": "B1s",
+      "nome": "Rede do zero · aluno B1 sem suavização",
+      "aluno_antigo": "zero:B1s:antigo",
+      "aluno_novo": "zero:B1s:novo",
+      "professor_antigo": "prof:antigo",
+      "professor_novo": "prof:novo"
+    },
+    {
+      "id": "repasse|zero|B2",
+      "caminho": "zero",
+      "aluno": "B2",
+      "nome": "Rede do zero · aluno B2",
+      "aluno_antigo": "zero:B2:antigo",
+      "aluno_novo": "zero:B2:novo",
+      "professor_antigo": "prof:antigo",
+      "professor_novo": "prof:novo"
+    },
+    {
+      "id": "repasse|xlmr|B1",
+      "caminho": "xlmr",
+      "aluno": "B1",
+      "nome": "XLM-R · aluno B1",
+      "aluno_antigo": "xlmr:B1:antigo",
+      "aluno_novo": "xlmr:B1:novo",
+      "professor_antigo": "prof:antigo",
+      "professor_novo": "prof:novo"
+    },
+    {
+      "id": "repasse|xlmr|B2",
+      "caminho": "xlmr",
+      "aluno": "B2",
+      "nome": "XLM-R · aluno B2",
+      "aluno_antigo": "xlmr:B2:antigo",
+      "aluno_novo": "xlmr:B2:novo",
+      "professor_antigo": "prof:antigo",
+      "professor_novo": "prof:novo"
+    }
+  ],
+  "regra_do_repasse": "repasse = (aluno novo − aluno antigo) ÷ (professor novo − professor antigo), na mesma métrica e na mesma partição, contra os rótulos humanos. O aluno entra com a média das 3 sementes; cada professor é uma rotulagem só. O 'aluno antigo' e o 'aluno novo' têm a mesma receita e só diferem no professor (o B2, cada um na temperatura que a regra escolheu em dev com o seu professor). O intervalo de 95% vem do mesmo bootstrap por enunciado das outras medidas, com os quatro sistemas reamostrados juntos (2.000 reamostragens, semente 0): em cada reamostra calcula-se a razão, e ficam os percentis 2,5 e 97,5. Leitura: 1 = o aluno ganhou os mesmos pontos que o professor; entre 0 e 1 = só parte do ganho chegou; 0 = nada chegou; acima de 1 = o aluno ganhou mais pontos do que o professor. A métrica principal é o exact match no teste. A razão só é lida onde o ganho do professor é distinguível de zero e positivo (IC95 da diferença pareada acima de zero): com o denominador perto de zero a razão não quer dizer nada, e então relatam-se só os dois ganhos e a diferença entre eles, em pontos (lista de diferenças, bloco 'ganho')",
+  "leituras": {
+    "distinguivel": "uma diferença só vale quando o intervalo de 95% não contém zero",
+    "onde_se_le": "a leitura principal é no teste; dev fica ao lado. A única decisão da etapa (a temperatura do B2) sai de dev",
+    "alunos_melhores": "para um aluno e um caminho, o professor melhor fez um aluno melhor se 'novo − antigo' em exact match no teste tem o intervalo todo acima de zero; 'não se distingue' se o intervalo contém zero; 'pior' se fica todo abaixo",
+    "repasse": "lido em exact match no teste, com o intervalo; nas outras métricas é relatado ao lado",
+    "logits_valem": "com um professor, os logits valem se 'B2 − B1, só os logits mudam' em acurácia de intenção no teste tem o intervalo todo acima de zero (os logits só falam de intenção); o exact match é relatado ao lado",
+    "logits_valem_mais": "os logits passam a valer mais com o professor novo se a diferença das diferenças (novo − antigo) em acurácia de intenção no teste tem o intervalo todo acima de zero; se o intervalo contém zero, a etapa diz que não dá para afirmar mudança",
+    "quem_representa_o_cenario_b": "a regra da Etapa 6 (`etapa6.quem_segue`: o B2 se a intenção dele for distinguivelmente maior que a do B1 em dev e o exact match não for distinguivelmente menor; senão o B1) é aplicada em cada caminho, com o professor novo, e relatada. Ela só diz que aluno do cenário B o comparativo deve citar: nesta etapa nada é comprimido",
+    "descritivo": "sem decidir nada, relatam-se também: cada sistema com intervalo; a grade de temperaturas em dev; a fração do caminho piso → teto de cada aluno (`etapa10a.fracao_do_caminho`); e a concordância de cada aluno com o seu professor no teste"
+  },
+  "de_onde_vem_os_alunos_antigos": "das respostas entregues: entregas/06_destilacao/previsoes/ e entregas/10a_encoder/previsoes/ (e entregas/04b_intencao/previsoes/ para o teto da rede do zero). Nenhum aluno antigo é treinado de novo",
+  "artigos": [
+    {
+      "quem": "Hinton, Vinyals & Dean",
+      "arxiv": "1503.02531",
+      "para_que": "A perda do aluno B2: os logits do professor amolecidos por uma temperatura"
+    },
+    {
+      "quem": "Cho & Hariharan",
+      "arxiv": "1910.01348",
+      "para_que": "Um professor mais exato não faz, por si só, um aluno melhor"
+    },
+    {
+      "quem": "Mirzadeh et al.",
+      "arxiv": "1902.03393",
+      "para_que": "A distância de tamanho entre professor e aluno atrapalha a destilação"
+    },
+    {
+      "quem": "Menon et al.",
+      "arxiv": "2005.10419",
+      "para_que": "O que os logits valem depende de quão bem aproximam as probabilidades de cada classe"
+    },
+    {
+      "quem": "Yuan et al.",
+      "arxiv": "1909.11723",
+      "para_que": "Parte do ganho dos alvos suaves é regularização, como a suavização de rótulos (o controle do B2)"
+    },
+    {
+      "quem": "Stanton et al.",
+      "arxiv": "2106.05945",
+      "para_que": "Imitar o professor e acertar a tarefa são medidas diferentes (aluno − professor e concordância)"
+    },
+    {
+      "quem": "Furlanello et al.",
+      "arxiv": "1805.04770",
+      "para_que": "Um aluno pode passar o seu professor"
+    }
+  ]
+}

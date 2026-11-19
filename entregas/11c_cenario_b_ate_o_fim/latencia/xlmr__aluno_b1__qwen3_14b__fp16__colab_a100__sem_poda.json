@@ -1,0 +1,97 @@
+{
+  "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+  "variante": "sem_poda",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "pytorch": [
+      34.640777,
+      34.349757499999996,
+      34.488603499999996,
+      34.1489105,
+      34.5640065
+    ],
+    "fp32": [
+      23.461486,
+      23.435686,
+      23.5176685,
+      23.232828,
+      23.6522025
+    ],
+    "dinamica": [
+      7.7139265,
+      7.632897,
+      7.7025845,
+      7.602805,
+      7.73865
+    ],
+    "estatica": [
+      8.035367,
+      8.0053145,
+      8.114193499999999,
+      7.9543225,
+      8.0434495
+    ]
+  },
+  "resumo": {
+    "pytorch": {
+      "latencia_p50_ms": 34.4211315,
+      "latencia_p90_ms": 42.7846779,
+      "latencia_p95_ms": 46.1550734,
+      "latencia_p99_ms": 51.06552188000003,
+      "latencia_media_ms": 35.400613117382804
+    },
+    "fp32": {
+      "latencia_p50_ms": 23.458866,
+      "latencia_p90_ms": 30.79087,
+      "latencia_p95_ms": 35.199188150000005,
+      "latencia_p99_ms": 38.23174677,
+      "latencia_media_ms": 24.70597224628906
+    },
+    "dinamica": {
+      "latencia_p50_ms": 7.6809795,
+      "latencia_p90_ms": 10.272271300000002,
+      "latencia_p95_ms": 11.1997482,
+      "latencia_p99_ms": 12.774994660000022,
+      "latencia_media_ms": 7.965499049609376
+    },
+    "estatica": {
+      "latencia_p50_ms": 8.026741000000001,
+      "latencia_p90_ms": 10.723432500000001,
+      "latencia_p95_ms": 11.8543958,
+      "latencia_p99_ms": 13.617520080000002,
+      "latencia_media_ms": 8.313376635546875
+    }
+  },
+  "tempo_por_trecho_ms": {
+    "fp32": {
+      "texto para subtokens": 0.1155739140625,
+      "rede (ONNX Runtime)": 24.46349495703125,
+      "montar a resposta": 0.042663427734375
+    },
+    "dinamica": {
+      "texto para subtokens": 0.089142232421875,
+      "rede (ONNX Runtime)": 7.87181348046875,
+      "montar a resposta": 0.0315762919921875
+    },
+    "estatica": {
+      "texto para subtokens": 0.0914670712890625,
+      "rede (ONNX Runtime)": 8.19576057421875,
+      "montar a resposta": 0.032341169921875
+    }
+  },
+  "nucleos_de_outros": 0.025774787963139142,
+  "carga_antes": 1.00341796875,
+  "carga_depois": 1.12451171875,
+  "medido_em": "2026-11-19T01:45:51",
+  "onnxruntime": "1.32.0",
+  "torch": "2.15.0+cu132",
+  "python": "3.12.13",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "instrucoes_da_cpu": "avx2 avx_vnni",
+  "tem_vnni": true
+}

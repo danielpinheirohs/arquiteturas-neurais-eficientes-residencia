@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "so_consulta_chave_valor",
+  "descricao": "só consulta_chave_valor em 8 bits",
+  "metodo": "MinMax",
+  "operacoes": 36,
+  "bytes_da_rede": 1046837109,
+  "slot_f1_dev": 77.33138543949354,
+  "segundos": 39.95418872201117
+}

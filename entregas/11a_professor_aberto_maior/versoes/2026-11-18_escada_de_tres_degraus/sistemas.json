@@ -1,0 +1,66 @@
+{
+  "sistemas": {
+    "qwen3_8b__fp16__colab_l4": {
+      "nome": "Qwen3-8B sem os 4 bits (professor aberto sem compressão, Etapa 11a)",
+      "curto": "Qwen3-8B, float16",
+      "bloco": "Professores",
+      "rotulos_humanos": 299,
+      "rotulos_como": "no prompt",
+      "dev_humano": "escada do professor aberto (Etapas 5b e 11a): escolha entre versões pelo exact match em dev",
+      "caminho": null,
+      "modelo": null,
+      "ponto": "professor",
+      "papel": "professor aberto, Etapa 11a",
+      "modelo_id": "Qwen/Qwen3-8B",
+      "versao": "qwen3_8b__fp16__colab_l4",
+      "escolhido_na_escada": false,
+      "resultado": [
+        "11a_professor_aberto_maior",
+        {
+          "versao": "qwen3_8b__fp16__colab_l4"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11a_professor_aberto_maior/professores/qwen3_8b__fp16__colab_l4/previsoes/qwen3_8b__fp16__colab_l4_dev.parquet"
+        ],
+        "test": [
+          "entregas/11a_professor_aberto_maior/professores/qwen3_8b__fp16__colab_l4/previsoes/qwen3_8b__fp16__colab_l4_test.parquet"
+        ]
+      }
+    },
+    "qwen3_14b__fp16__colab_a100": {
+      "nome": "Qwen3-14B sem os 4 bits (professor aberto maior, Etapa 11a)",
+      "curto": "Qwen3-14B, float16",
+      "bloco": "Professores",
+      "rotulos_humanos": 299,
+      "rotulos_como": "no prompt",
+      "dev_humano": "escada do professor aberto (Etapas 5b e 11a): escolha entre versões pelo exact match em dev",
+      "caminho": null,
+      "modelo": null,
+      "ponto": "professor",
+      "papel": "professor aberto, Etapa 11a",
+      "modelo_id": "Qwen/Qwen3-14B",
+      "versao": "qwen3_14b__fp16__colab_a100",
+      "escolhido_na_escada": true,
+      "resultado": [
+        "11a_professor_aberto_maior",
+        {
+          "versao": "qwen3_14b__fp16__colab_a100"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet"
+        ],
+        "test": [
+          "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_test.parquet"
+        ]
+      }
+    }
+  },
+  "fora_do_formato": {
+    "qwen3_8b__nf4__colab_l4": "só tem 300 pedidos de dev (a conferência de ambiente): sem dev e teste inteiros não há linha de resultado nem previsões para declarar",
+    "qwen3_8b__nf4__local_3080": "já está no comparativo com a chave `qwen` (entrega da Etapa 5b)"
+  }
+}

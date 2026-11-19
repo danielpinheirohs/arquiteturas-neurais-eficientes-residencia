@@ -1,0 +1,179 @@
+{
+  "consultado_em": "2026-11-19T08:25:01",
+  "fonte": "http://export.arxiv.org/api/query e https://aclanthology.org/<id>.bib",
+  "pedidos": [
+    "1706.05394",
+    "1611.03530",
+    "2106.05945",
+    "2006.04884",
+    "2308.04014",
+    "2010.05609",
+    "2305.15020",
+    "2109.12948",
+    "2105.06990",
+    "2208.07339",
+    "2004.09602",
+    "1712.05877",
+    "2407.09141"
+  ],
+  "arxiv": {
+    "2305.15020": {
+      "titulo": "An Efficient Multilingual Language Model Compression through Vocabulary Trimming",
+      "autores": [
+        "Asahi Ushio",
+        "Yi Zhou",
+        "Jose Camacho-Collados"
+      ],
+      "publicado": "2023-05-24",
+      "resumo": "Multilingual language model (LM) have become a powerful tool in NLP especially for non-English languages. Nevertheless, model parameters of multilingual LMs remain large due to the larger embedding matrix of the vocabulary covering tokens in different languages. On the contrary, monolingual LMs can be trained in a target language with the language-specific vocabulary only, but this requires a large budget and availability of reliable corpora to achieve a high-quality LM from scratch. In this paper, we propose vocabulary-trimming (VT), a method to reduce a multilingual LM vocabulary to a target language by deleting irrelevant tokens from its vocabulary. In theory, VT can compress any existing multilingual LM to build monolingual LMs in any language covered by the multilingual LM. In our experiments, we show that VT can retain the original performance of the multilingual LM, while being smaller in size (in general around 50% of the original vocabulary size is enough) than the original multilingual LM. The evaluation is performed over four NLP tasks (two generative and two classification tasks) among four widely used multilingual LMs in seven languages. Finally, we show that this methodology can keep the best of both monolingual and multilingual worlds by keeping a small size as monolingual models without the need for specifically retraining them, and even limiting potentially harmful social biases."
+    },
+    "1611.03530": {
+      "titulo": "Understanding deep learning requires rethinking generalization",
+      "autores": [
+        "Chiyuan Zhang",
+        "Samy Bengio",
+        "Moritz Hardt",
+        "Benjamin Recht",
+        "Oriol Vinyals"
+      ],
+      "publicado": "2016-11-10",
+      "resumo": "Despite their massive size, successful deep artificial neural networks can exhibit a remarkably small difference between training and test performance. Conventional wisdom attributes small generalization error either to properties of the model family, or to the regularization techniques used during training. Through extensive systematic experiments, we show how these traditional approaches fail to explain why large neural networks generalize well in practice. Specifically, our experiments establish that state-of-the-art convolutional networks for image classification trained with stochastic gradient methods easily fit a random labeling of the training data. This phenomenon is qualitatively unaffected by explicit regularization, and occurs even if we replace the true images by completely unstructured random noise. We corroborate these experimental findings with a theoretical construction showing that simple depth two neural networks already have perfect finite sample expressivity as soon as the number of parameters exceeds the number of data points as it usually does in practice. We interpret our experimental findings by comparison with traditional models."
+    },
+    "2106.05945": {
+      "titulo": "Does Knowledge Distillation Really Work?",
+      "autores": [
+        "Samuel Stanton",
+        "Pavel Izmailov",
+        "Polina Kirichenko",
+        "Alexander A. Alemi",
+        "Andrew Gordon Wilson"
+      ],
+      "publicado": "2021-06-10",
+      "resumo": "Knowledge distillation is a popular technique for training a small student network to emulate a larger teacher model, such as an ensemble of networks. We show that while knowledge distillation can improve student generalization, it does not typically work as it is commonly understood: there often remains a surprisingly large discrepancy between the predictive distributions of the teacher and the student, even in cases when the student has the capacity to perfectly match the teacher. We identify difficulties in optimization as a key reason for why the student is unable to match the teacher. We also show how the details of the dataset used for distillation play a role in how closely the student matches the teacher -- and that more closely matching the teacher paradoxically does not always lead to better student generalization."
+    },
+    "2407.09141": {
+      "titulo": "Accuracy is Not All You Need",
+      "autores": [
+        "Abhinav Dutta",
+        "Sanjeev Krishnan",
+        "Nipun Kwatra",
+        "Ramachandran Ramjee"
+      ],
+      "publicado": "2024-07-12",
+      "resumo": "When Large Language Models (LLMs) are compressed using techniques such as quantization, the predominant way to demonstrate the validity of such techniques is by measuring the model's accuracy on various benchmarks.If the accuracies of the baseline model and the compressed model are close, it is assumed that there was negligible degradation in quality.However, even when the accuracy of baseline and compressed model are similar, we observe the phenomenon of flips, wherein answers change from correct to incorrect and vice versa in proportion.We conduct a detailed study of metrics across multiple compression techniques, models and datasets, demonstrating that the behavior of compressed models as visible to end-users is often significantly different from the baseline model, even when accuracy is similar.We further evaluate compressed models qualitatively and quantitatively using MT-Bench and show that compressed models are significantly worse than baseline models in this free-form generative task.Thus, we argue that compression techniques should also be evaluated using distance metrics.We propose two such metrics, KL-Divergence and flips, and show that they are well correlated."
+    },
+    "2109.12948": {
+      "titulo": "Understanding and Overcoming the Challenges of Efficient Transformer Quantization",
+      "autores": [
+        "Yelysei Bondarenko",
+        "Markus Nagel",
+        "Tijmen Blankevoort"
+      ],
+      "publicado": "2021-09-27",
+      "resumo": "Transformer-based architectures have become the de-facto standard models for a wide range of Natural Language Processing tasks. However, their memory footprint and high latency are prohibitive for efficient deployment and inference on resource-limited devices. In this work, we explore quantization for transformers. We show that transformers have unique quantization challenges -- namely, high dynamic activation ranges that are difficult to represent with a low bit fixed-point format. We establish that these activations contain structured outliers in the residual connections that encourage specific attention patterns, such as attending to the special separator token. To combat these challenges, we present three solutions based on post-training quantization and quantization-aware training, each with a different set of compromises for accuracy, model size, and ease of use. In particular, we introduce a novel quantization scheme -- per-embedding-group quantization. We demonstrate the effectiveness of our methods on the GLUE benchmark using BERT, establishing state-of-the-art results for post-training quantization. Finally, we show that transformer weights and embeddings can be quantized to ultra-low bit-widths, leading to significant memory savings with a minimum accuracy loss. Our source code is available at~\\url{https://github.com/qualcomm-ai-research/transformer-quantization}."
+    },
+    "2105.06990": {
+      "titulo": "BERT Busters: Outlier Dimensions that Disrupt Transformers",
+      "autores": [
+        "Olga Kovaleva",
+        "Saurabh Kulshreshtha",
+        "Anna Rogers",
+        "Anna Rumshisky"
+      ],
+      "publicado": "2021-05-14",
+      "resumo": "Multiple studies have shown that Transformers are remarkably robust to pruning. Contrary to this received wisdom, we demonstrate that pre-trained Transformer encoders are surprisingly fragile to the removal of a very small number of features in the layer outputs (<0.0001% of model weights). In case of BERT and other pre-trained encoder Transformers, the affected component is the scaling factors and biases in the LayerNorm. The outliers are high-magnitude normalization parameters that emerge early in pre-training and show up consistently in the same dimensional position throughout the model. We show that disabling them significantly degrades both the MLM loss and the downstream task performance. This effect is observed across several BERT-family models and other popular pre-trained Transformer architectures, including BART, XLNet and ELECTRA; we also show a similar effect in GPT-2."
+    },
+    "2208.07339": {
+      "titulo": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+      "autores": [
+        "Tim Dettmers",
+        "Mike Lewis",
+        "Younes Belkada",
+        "Luke Zettlemoyer"
+      ],
+      "publicado": "2022-08-15",
+      "resumo": "Large language models have been widely adopted but require significant GPU memory for inference. We develop a procedure for Int8 matrix multiplication for feed-forward and attention projection layers in transformers, which cut the memory needed for inference by half while retaining full precision performance. With our method, a 175B parameter 16/32-bit checkpoint can be loaded, converted to Int8, and used immediately without performance degradation. This is made possible by understanding and working around properties of highly systematic emergent features in transformer language models that dominate attention and transformer predictive performance. To cope with these features, we develop a two-part quantization procedure, LLM.int8(). We first use vector-wise quantization with separate normalization constants for each inner product in the matrix multiplication, to quantize most of the features. However, for the emergent outliers, we also include a new mixed-precision decomposition scheme, which isolates the outlier feature dimensions into a 16-bit matrix multiplication while still more than 99.9% of values are multiplied in 8-bit. Using LLM.int8(), we show empirically it is possible to perform inference in LLMs with up to 175B parameters without any performance degradation. This result makes such models much more accessible, for example making it possible to use OPT-175B/BLOOM on a single server with consumer GPUs. We open-source our software."
+    },
+    "1712.05877": {
+      "titulo": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+      "autores": [
+        "Benoit Jacob",
+        "Skirmantas Kligys",
+        "Bo Chen",
+        "Menglong Zhu",
+        "Matthew Tang",
+        "Andrew Howard",
+        "Hartwig Adam",
+        "Dmitry Kalenichenko"
+      ],
+      "publicado": "2017-12-15",
+      "resumo": "The rising popularity of intelligent mobile devices and the daunting computational cost of deep learning-based models call for efficient and accurate on-device inference schemes. We propose a quantization scheme that allows inference to be carried out using integer-only arithmetic, which can be implemented more efficiently than floating point inference on commonly available integer-only hardware. We also co-design a training procedure to preserve end-to-end model accuracy post quantization. As a result, the proposed quantization scheme improves the tradeoff between accuracy and on-device latency. The improvements are significant even on MobileNets, a model family known for run-time efficiency, and are demonstrated in ImageNet classification and COCO detection on popular CPUs."
+    },
+    "1706.05394": {
+      "titulo": "A Closer Look at Memorization in Deep Networks",
+      "autores": [
+        "Devansh Arpit",
+        "Stanisław Jastrzębski",
+        "Nicolas Ballas",
+        "David Krueger",
+        "Emmanuel Bengio",
+        "Maxinder S. Kanwal",
+        "Tegan Maharaj",
+        "Asja Fischer",
+        "Aaron Courville",
+        "Yoshua Bengio",
+        "Simon Lacoste-Julien"
+      ],
+      "publicado": "2017-06-16",
+      "resumo": "We examine the role of memorization in deep learning, drawing connections to capacity, generalization, and adversarial robustness. While deep networks are capable of memorizing noise data, our results suggest that they tend to prioritize learning simple patterns first. In our experiments, we expose qualitative differences in gradient-based optimization of deep neural networks (DNNs) on noise vs. real data. We also demonstrate that for appropriately tuned explicit regularization (e.g., dropout) we can degrade DNN training performance on noise datasets without compromising generalization on real data. Our analysis suggests that the notions of effective capacity which are dataset independent are unlikely to explain the generalization performance of deep networks when trained with gradient based methods because training data itself plays an important role in determining the degree of memorization."
+    },
+    "2308.04014": {
+      "titulo": "Continual Pre-Training of Large Language Models: How to (re)warm your model?",
+      "autores": [
+        "Kshitij Gupta",
+        "Benjamin Thérien",
+        "Adam Ibrahim",
+        "Mats L. Richter",
+        "Quentin Anthony",
+        "Eugene Belilovsky",
+        "Irina Rish",
+        "Timothée Lesort"
+      ],
+      "publicado": "2023-08-08",
+      "resumo": "Large language models (LLMs) are routinely pre-trained on billions of tokens, only to restart the process over again once new data becomes available. A much cheaper and more efficient solution would be to enable the continual pre-training of these models, i.e. updating pre-trained models with new data instead of re-training them from scratch. However, the distribution shift induced by novel data typically results in degraded performance on past data. Taking a step towards efficient continual pre-training, in this work, we examine the effect of different warm-up strategies. Our hypothesis is that the learning rate must be re-increased to improve compute efficiency when training on a new dataset. We study the warmup phase of models pre-trained on the Pile (upstream data, 300B tokens) as we continue to pre-train on SlimPajama (downstream data, 297B tokens), following a linear warmup and cosine decay schedule. We conduct all experiments on the Pythia 410M language model architecture and evaluate performance through validation perplexity. We experiment with different pre-training checkpoints, various maximum learning rates, and various warmup lengths. Our results show that while rewarming models first increases the loss on upstream and downstream data, in the longer run it improves the downstream performance, outperforming models trained from scratch$\\unicode{x2013}$even for a large downstream dataset."
+    },
+    "2004.09602": {
+      "titulo": "Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation",
+      "autores": [
+        "Hao Wu",
+        "Patrick Judd",
+        "Xiaojie Zhang",
+        "Mikhail Isaev",
+        "Paulius Micikevicius"
+      ],
+      "publicado": "2020-04-20",
+      "resumo": "Quantization techniques can reduce the size of Deep Neural Networks and improve inference latency and throughput by taking advantage of high throughput integer instructions. In this paper we review the mathematical aspects of quantization parameters and evaluate their choices on a wide range of neural network models for different application domains, including vision, speech, and language. We focus on quantization techniques that are amenable to acceleration by processors with high-throughput integer math pipelines. We also present a workflow for 8-bit quantization that is able to maintain accuracy within 1% of the floating-point baseline on all networks studied, including models that are more difficult to quantize, such as MobileNets and BERT-large."
+    },
+    "2006.04884": {
+      "titulo": "On the Stability of Fine-tuning BERT: Misconceptions, Explanations, and Strong Baselines",
+      "autores": [
+        "Marius Mosbach",
+        "Maksym Andriushchenko",
+        "Dietrich Klakow"
+      ],
+      "publicado": "2020-06-08",
+      "resumo": "Fine-tuning pre-trained transformer-based language models such as BERT has become a common practice dominating leaderboards across various NLP benchmarks. Despite the strong empirical performance of fine-tuned models, fine-tuning is an unstable process: training the same model with multiple random seeds can result in a large variance of the task performance. Previous literature (Devlin et al., 2019; Lee et al., 2020; Dodge et al., 2020) identified two potential reasons for the observed instability: catastrophic forgetting and small size of the fine-tuning datasets. In this paper, we show that both hypotheses fail to explain the fine-tuning instability. We analyze BERT, RoBERTa, and ALBERT, fine-tuned on commonly used datasets from the GLUE benchmark, and show that the observed instability is caused by optimization difficulties that lead to vanishing gradients. Additionally, we show that the remaining variance of the downstream task performance can be attributed to differences in generalization where fine-tuned models with the same training loss exhibit noticeably different test performance. Based on our analysis, we present a simple but strong baseline that makes fine-tuning BERT-based models significantly more stable than the previously proposed approaches. Code to reproduce our results is available online: https://github.com/uds-lsv/bert-stable-fine-tuning."
+    },
+    "2010.05609": {
+      "titulo": "Load What You Need: Smaller Versions of Multilingual BERT",
+      "autores": [
+        "Amine Abdaoui",
+        "Camille Pradel",
+        "Grégoire Sigel"
+      ],
+      "publicado": "2020-10-12",
+      "resumo": "Pre-trained Transformer-based models are achieving state-of-the-art results on a variety of Natural Language Processing data sets. However, the size of these models is often a drawback for their deployment in real production applications. In the case of multilingual models, most of the parameters are located in the embeddings layer. Therefore, reducing the vocabulary size should have an important impact on the total number of parameters. In this paper, we propose to generate smaller models that handle fewer number of languages according to the targeted corpora. We present an evaluation of smaller versions of multilingual BERT on the XNLI data set, but we believe that this method may be applied to other multilingual transformers. The obtained results confirm that we can generate smaller models that keep comparable results, while reducing up to 45% of the total number of parameters. We compared our models with DistilmBERT (a distilled version of multilingual BERT) and showed that unlike language reduction, distillation induced a 1.7% to 6% drop in the overall accuracy on the XNLI data set. The presented models and code are publicly available."
+    }
+  },
+  "acl": {}
+}

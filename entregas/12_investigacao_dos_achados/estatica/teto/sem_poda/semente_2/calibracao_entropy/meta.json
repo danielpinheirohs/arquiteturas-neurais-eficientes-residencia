@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 2,
+  "nome": "calibracao_entropy",
+  "descricao": "calibração Entropy",
+  "metodo": "Entropy",
+  "operacoes": 76,
+  "bytes_da_rede": 278236910,
+  "slot_f1_dev": 71.99175470239629,
+  "segundos": 36.26964675800991
+}

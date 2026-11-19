@@ -1,0 +1,5 @@
+[
+  {"o_que": "primeira tentativa do teste de formato, interrompida antes de gravar", "chamadas_no_maximo": 5},
+  {"o_que": "primeira medição de latência, descartada: concorreu com o envio dos lotes pela mesma rede e foi encerrada sem gravar", "chamadas_no_maximo": 1074},
+  {"o_que": "duas verificações de conexão com a API durante a instabilidade (pedidos mínimos)", "chamadas_no_maximo": 2}
+]

@@ -1,0 +1,50 @@
+{
+  "etapa": "11c_cenario_b_ate_o_fim",
+  "calculado_em": "2026-11-19 02:53:08 -0300",
+  "regras_escritas_em": "2026-11-19 00:40:09 -0300",
+  "professor": "qwen3_14b__fp16__colab_a100",
+  "reamostragens": 2000,
+  "cadeia": {
+    "pid": 830465,
+    "iniciada_em": "2026-11-19 00:45:53 -0300",
+    "terminada_em": "2026-11-19 02:01:35 -0300",
+    "minutos": 75.7,
+    "prontas": 33,
+    "erros": [],
+    "codigo_igual_do_inicio_ao_fim": true,
+    "conferido": {
+      "faltam": [],
+      "podas_que_nao_leram_do_professor": [],
+      "onnx_de_32_bits": {
+        "pedidos": 90126,
+        "iguais_ao_pytorch": 90126,
+        "diferentes_em": []
+      },
+      "compactado_que_responde_diferente": [],
+      "outros_processos_na_latencia": {
+        "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90": 0.0289830459383047,
+        "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda": 0.033634766100411016,
+        "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino": 0.03310733224364046,
+        "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda": 0.025774787963139142,
+        "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino": 0.030082940834282246,
+        "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda": 0.027514514142436414
+      },
+      "latencias_com_a_maquina_ocupada": []
+    }
+  },
+  "conferencias": {
+    "feitas": 9,
+    "passam": 7,
+    "nao_passam": [
+      "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100: poda",
+      "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100: poda"
+    ]
+  },
+  "linhas": {
+    "resultados": 60,
+    "comparacoes": 396,
+    "conferencias": 15,
+    "eficiencia": 24,
+    "reajustes": 9
+  }
+}

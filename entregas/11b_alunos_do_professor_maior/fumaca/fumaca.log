@@ -1,0 +1,76 @@
+[22:15:43] Etapa 11b, teste de fumaça (pid 785322): regras de 2026-11-18 22:04:17 -0300; qwen3_14b__fp16__colab_a100: 0 de 33 execuções prontas (Rede do zero 0 de 18, XLM-R 0 de 15)
+[22:15:43] Rede do zero: 2 execuções, 7 de cada vez
+[22:15:58] zero__aluno_b1__qwen3_14b__fp16__colab_a100 0 época 2 de 2 {'intent_acc': 0.6645, 'intent_macro_f1': 0.5551, 'slot_precision': 0.6531, 'slot_recall': 0.5732, 'slot_f1': 0.6105, 'exact_match': 0.393} 10s
+[22:15:58] zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100 0 época 2 de 2 {'intent_acc': 0.7014, 'intent_macro_f1': 0.5997, 'slot_precision': 0.5916, 'slot_recall': 0.4485, 'slot_f1': 0.5102, 'exact_match': 0.366} 10s
+[22:15:59] XLM-R: 2 execuções, 1 de cada vez
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4339.49it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.10it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.10it/s]
+[22:16:24] xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 0 época 1 de 1 {'intent_acc': 0.4343, 'intent_macro_f1': 0.1877, 'slot_precision': 0.5611, 'slot_recall': 0.4507, 'slot_f1': 0.4999, 'exact_match': 0.2076} 13s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4057.58it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.14it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.14it/s]
+[22:16:50] xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100 0 época 1 de 1 {'intent_acc': 0.4471, 'intent_macro_f1': 0.1894, 'slot_precision': 0.4735, 'slot_recall': 0.3717, 'slot_f1': 0.4164, 'exact_match': 0.1845} 13s
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4124.69it/s]
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 4212.80it/s]
+[
+  {
+    "variante": "zero__aluno_b1__qwen3_14b__fp16__colab_a100",
+    "nome": "Rede do zero · Aluno B1 (rótulos do Qwen3-14B) [fumaça]",
+    "epocas": 2,
+    "exemplos_de_treino": 11514,
+    "professor": "qwen3_14b__fp16__colab_a100",
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "logits": null,
+    "temperatura": 0.0,
+    "perda_na_primeira_epoca": 13.7412648753116,
+    "perda_na_ultima_epoca": 10.052376355622943,
+    "segundos_de_treino": 9.7,
+    "respostas_iguais_ao_reler_o_modelo": "200 de 200"
+  },
+  {
+    "variante": "zero__aluno_b2_t4__qwen3_14b__fp16__colab_a100",
+    "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 4) [fumaça]",
+    "epocas": 2,
+    "exemplos_de_treino": 11514,
+    "professor": "qwen3_14b__fp16__colab_a100",
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+    "temperatura": 4.0,
+    "perda_na_primeira_epoca": 53.03989020899722,
+    "perda_na_ultima_epoca": 30.05519955283717,
+    "segundos_de_treino": 9.8,
+    "respostas_iguais_ao_reler_o_modelo": "200 de 200"
+  },
+  {
+    "variante": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+    "nome": "XLM-R · Aluno B1 (rótulos do Qwen3-14B) [fumaça]",
+    "epocas": 1,
+    "exemplos_de_treino": 11514,
+    "professor": "qwen3_14b__fp16__colab_a100",
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "logits": null,
+    "temperatura": 0.0,
+    "perda_na_primeira_epoca": 12.894932725694444,
+    "perda_na_ultima_epoca": 12.894932725694444,
+    "segundos_de_treino": 12.5,
+    "respostas_iguais_ao_reler_o_modelo": "200 de 200"
+  },
+  {
+    "variante": "xlmr__aluno_b2_t4__qwen3_14b__fp16__colab_a100",
+    "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 4) [fumaça]",
+    "epocas": 1,
+    "exemplos_de_treino": 11514,
+    "professor": "qwen3_14b__fp16__colab_a100",
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+    "temperatura": 4.0,
+    "perda_na_primeira_epoca": 57.767849392361114,
+    "perda_na_ultima_epoca": 57.767849392361114,
+    "segundos_de_treino": 12.6,
+    "respostas_iguais_ao_reler_o_modelo": "200 de 200"
+  }
+]
+[22:16:58] FIM: 4 de 4 execuções de qwen3_14b__fp16__colab_a100 prontas em 1 min; registro em /tmp/claude-1000/-home-danie-project-residencia/c1dbcf82-9fd9-4bd9-8334-38545bedeb18/scratchpad/e11b/fumaca2/11b_alunos_do_professor_maior/qwen3_14b__fp16__colab_a100/rodadas/rodada_20261118-221543.json

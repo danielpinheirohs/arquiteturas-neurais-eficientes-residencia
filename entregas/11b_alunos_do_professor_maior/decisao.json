@@ -1,0 +1,464 @@
+{
+  "como_ler": "`temperatura_do_b2` é a única decisão da etapa, por caminho, tomada em dev. `alunos` traz, por caminho, o B1, o B2 na temperatura escolhida e, na rede do zero, o controle sem suavização (B1s). As pastas de `pastas_por_semente` são lidas por `SistemaDiet.carregar` (zero) e `SistemaEncoder.carregar` (xlmr). `sinal` diz de onde vêm os rótulos do treino e da parada de cada aluno. Nada segue para a compressão nesta etapa",
+  "etapa": "11b_alunos_do_professor_maior",
+  "gerado_em": "2026-11-19 00:17:56 -0300",
+  "pergunta": "Um professor aberto melhor faz alunos melhores? Quanto do ganho do professor chega ao aluno, e com ele os logits passam a valer mais que os rótulos?",
+  "professor": {
+    "versao": "qwen3_14b__fp16__colab_a100",
+    "nome": "Qwen3-14B",
+    "de_onde": "entregas/11a_professor_aberto_maior/escolha.json (o escolhido da escada)"
+  },
+  "professor_antigo": {
+    "versao": "qwen3_8b__nf4__local_3080",
+    "nome": "Qwen3-8B"
+  },
+  "regras": {
+    "arquivo": "entregas/11b_alunos_do_professor_maior/regras.json",
+    "escritas_em": "2026-11-18 22:04:17 -0300"
+  },
+  "temperatura_do_b2": {
+    "zero": 8,
+    "xlmr": 8
+  },
+  "temperatura_com_o_professor_antigo": {
+    "zero": 8,
+    "xlmr": 2
+  },
+  "regra_da_temperatura": "a da Etapa 6 (`etapa6.escolher_temperatura`), aplicada em cada caminho, com o professor novo: maior acurácia de intenção em dev (rótulos humanos), média de 3 sementes; empate exato: maior exact match, depois a menor temperatura. A grade é a das Etapas 6 e 10a e não é ampliada, mesmo que a escolhida fique na ponta",
+  "em_dev_por_temperatura": {
+    "zero": {
+      "1": {
+        "intent_acc": 0.7901295294,
+        "intent_macro_f1": 0.7777859597,
+        "slot_precision": 0.5957279915,
+        "slot_recall": 0.6626666667,
+        "slot_f1": 0.6274127434,
+        "exact_match": 0.4767994753
+      },
+      "2": {
+        "intent_acc": 0.7875061485,
+        "intent_macro_f1": 0.7802214476,
+        "slot_precision": 0.5970491709,
+        "slot_recall": 0.6608333333,
+        "slot_f1": 0.6273237343,
+        "exact_match": 0.4704049844
+      },
+      "4": {
+        "intent_acc": 0.798491556,
+        "intent_macro_f1": 0.7866018922,
+        "slot_precision": 0.5967457153,
+        "slot_recall": 0.6575,
+        "slot_f1": 0.6256465886,
+        "exact_match": 0.4810624693
+      },
+      "8": {
+        "intent_acc": 0.8048860469,
+        "intent_macro_f1": 0.7957791863,
+        "slot_precision": 0.5974738593,
+        "slot_recall": 0.6476666667,
+        "slot_f1": 0.6215525219,
+        "exact_match": 0.4845056567
+      }
+    },
+    "xlmr": {
+      "1": {
+        "intent_acc": 0.8080013117,
+        "intent_macro_f1": 0.7962071417,
+        "slot_precision": 0.5922504269,
+        "slot_recall": 0.6898333333,
+        "slot_f1": 0.6372868463,
+        "exact_match": 0.5022134776
+      },
+      "2": {
+        "intent_acc": 0.8107886539,
+        "intent_macro_f1": 0.8051821334,
+        "slot_precision": 0.5931014471,
+        "slot_recall": 0.695,
+        "slot_f1": 0.6399896731,
+        "exact_match": 0.5048368585
+      },
+      "4": {
+        "intent_acc": 0.8143958026,
+        "intent_macro_f1": 0.7988770297,
+        "slot_precision": 0.583840371,
+        "slot_recall": 0.687,
+        "slot_f1": 0.6312268841,
+        "exact_match": 0.5015576324
+      },
+      "8": {
+        "intent_acc": 0.8143958026,
+        "intent_macro_f1": 0.7954355375,
+        "slot_precision": 0.5949638034,
+        "slot_recall": 0.685,
+        "slot_f1": 0.636802837,
+        "exact_match": 0.5082800459
+      }
+    }
+  },
+  "abertas_no_teste": {
+    "zero": [
+      "aluno_b1",
+      "aluno_b1_sem_suavizacao",
+      "aluno_b2_t8"
+    ],
+    "xlmr": [
+      "aluno_b1",
+      "aluno_b2_t8",
+      "aluno_b2_t2"
+    ]
+  },
+  "quem_representa_o_cenario_b": {
+    "regra": "a regra da Etapa 6 (`etapa6.quem_segue`: o B2 se a intenção dele for distinguivelmente maior que a do B1 em dev e o exact match não for distinguivelmente menor; senão o B1) é aplicada em cada caminho, com o professor novo, e relatada. Ela só diz que aluno do cenário B o comparativo deve citar: nesta etapa nada é comprimido",
+    "zero": {
+      "representa": "B2",
+      "b2_passa": true,
+      "b2_menos_b1_em_dev": {
+        "intent_acc": {
+          "diferenca": 0.013936710936219066,
+          "ic_min": 0.004586817511067401,
+          "ic_max": 0.023122643056238956
+        },
+        "exact_match": {
+          "diferenca": 0.009673717002787297,
+          "ic_min": -0.001639613051319877,
+          "ic_max": 0.020335300868994887
+        }
+      },
+      "exact_match_em_dev": {
+        "A": 0.5204131824889325,
+        "B1": 0.47483193966223974,
+        "B2": 0.48450565666502704
+      }
+    },
+    "xlmr": {
+      "representa": "B1",
+      "b2_passa": false,
+      "b2_menos_b1_em_dev": {
+        "intent_acc": {
+          "diferenca": 0.0044269552385635125,
+          "ic_min": -0.00311526479750768,
+          "ic_max": 0.012133136579767223
+        },
+        "exact_match": {
+          "diferenca": 0.0040990326282996925,
+          "ic_min": -0.004922938186588038,
+          "ic_max": 0.012788981800295142
+        }
+      },
+      "exact_match_em_dev": {
+        "A": 0.543695687817675,
+        "B1": 0.5041810132808657,
+        "B2": 0.5082800459091654
+      }
+    }
+  },
+  "alunos": {
+    "zero": {
+      "B1": {
+        "nome": "Rede do zero · Aluno B1 (rótulos do Qwen3-14B)",
+        "variante": "zero__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "aluno": "aluno_b1",
+        "modelos": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "pastas_por_semente": {
+          "0": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+          "1": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1",
+          "2": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2"
+        },
+        "no_cache": "data/execucoes/11b_alunos_do_professor_maior/zero__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "d_modelo": 256,
+          "n_camadas": 2,
+          "d_rotulo": 20,
+          "p_mascara": 0.15,
+          "n_cabecas": 4,
+          "d_features": 128,
+          "distancia_max": 5,
+          "dropout": 0.2,
+          "dropout_features": 0.2,
+          "d_ffn": 1024,
+          "usar_crf": true,
+          "peso_intencao": 1.0,
+          "peso_entidades": 1.0,
+          "peso_mascara": 1.0,
+          "atalho_intencao": "nenhum",
+          "suavizacao": 0.1,
+          "temperatura": 0.0,
+          "peso_rotulo": 0.0
+        },
+        "receita": {
+          "epocas": 80,
+          "taxa": 0.001,
+          "lote_inicial": 64,
+          "lote_final": 128,
+          "minimo_por_intencao": 100,
+          "decaimento": 0.0,
+          "media_dos_pesos": 0.999,
+          "avaliar_a_cada": 5,
+          "criterio": "exact_match"
+        },
+        "sinal": {
+          "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+          "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+          "vocabulario": "todos os pedidos do treino, sem rótulo",
+          "sem_rotulo_aproveitavel": {
+            "treino": 0,
+            "dev": 0
+          },
+          "professor": "qwen3_14b__fp16__colab_a100"
+        },
+        "melhor_epoca": [
+          30,
+          30,
+          50
+        ],
+        "exact_match_em_dev": 0.47483193966223974
+      },
+      "B2": {
+        "nome": "Rede do zero · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+        "variante": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "aluno": "aluno_b2_t8",
+        "modelos": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "pastas_por_semente": {
+          "0": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+          "1": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1",
+          "2": "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2"
+        },
+        "no_cache": "data/execucoes/11b_alunos_do_professor_maior/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "d_modelo": 256,
+          "n_camadas": 2,
+          "d_rotulo": 20,
+          "p_mascara": 0.15,
+          "n_cabecas": 4,
+          "d_features": 128,
+          "distancia_max": 5,
+          "dropout": 0.2,
+          "dropout_features": 0.2,
+          "d_ffn": 1024,
+          "usar_crf": true,
+          "peso_intencao": 1.0,
+          "peso_entidades": 1.0,
+          "peso_mascara": 1.0,
+          "atalho_intencao": "nenhum",
+          "suavizacao": 0.0,
+          "temperatura": 8.0,
+          "peso_rotulo": 0.0
+        },
+        "receita": {
+          "epocas": 80,
+          "taxa": 0.001,
+          "lote_inicial": 64,
+          "lote_final": 128,
+          "minimo_por_intencao": 100,
+          "decaimento": 0.0,
+          "media_dos_pesos": 0.999,
+          "avaliar_a_cada": 5,
+          "criterio": "exact_match"
+        },
+        "sinal": {
+          "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+          "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+          "vocabulario": "todos os pedidos do treino, sem rótulo",
+          "sem_rotulo_aproveitavel": {
+            "treino": 0,
+            "dev": 0
+          },
+          "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+          "professor": "qwen3_14b__fp16__colab_a100"
+        },
+        "melhor_epoca": [
+          80,
+          80,
+          75
+        ],
+        "exact_match_em_dev": 0.48450565666502704
+      },
+      "B1s": {
+        "nome": "Rede do zero · Aluno B1 sem suavização de rótulos (controle do B2; rótulos do Qwen3-14B)",
+        "variante": "zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100",
+        "aluno": "aluno_b1_sem_suavizacao",
+        "modelos": null,
+        "pastas_por_semente": null,
+        "no_cache": "data/execucoes/11b_alunos_do_professor_maior/zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100",
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "d_modelo": 256,
+          "n_camadas": 2,
+          "d_rotulo": 20,
+          "p_mascara": 0.15,
+          "n_cabecas": 4,
+          "d_features": 128,
+          "distancia_max": 5,
+          "dropout": 0.2,
+          "dropout_features": 0.2,
+          "d_ffn": 1024,
+          "usar_crf": true,
+          "peso_intencao": 1.0,
+          "peso_entidades": 1.0,
+          "peso_mascara": 1.0,
+          "atalho_intencao": "nenhum",
+          "suavizacao": 0.0,
+          "temperatura": 0.0,
+          "peso_rotulo": 0.0
+        },
+        "receita": {
+          "epocas": 80,
+          "taxa": 0.001,
+          "lote_inicial": 64,
+          "lote_final": 128,
+          "minimo_por_intencao": 100,
+          "decaimento": 0.0,
+          "media_dos_pesos": 0.999,
+          "avaliar_a_cada": 5,
+          "criterio": "exact_match"
+        },
+        "sinal": {
+          "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+          "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+          "vocabulario": "todos os pedidos do treino, sem rótulo",
+          "sem_rotulo_aproveitavel": {
+            "treino": 0,
+            "dev": 0
+          },
+          "professor": "qwen3_14b__fp16__colab_a100"
+        },
+        "melhor_epoca": [
+          35,
+          45,
+          25
+        ],
+        "exact_match_em_dev": null
+      }
+    },
+    "xlmr": {
+      "B1": {
+        "nome": "XLM-R · Aluno B1 (rótulos do Qwen3-14B)",
+        "variante": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "aluno": "aluno_b1",
+        "modelos": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "pastas_por_semente": {
+          "0": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+          "1": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1",
+          "2": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2"
+        },
+        "no_cache": "data/execucoes/11b_alunos_do_professor_maior/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "modelo_id": "FacebookAI/xlm-roberta-base",
+          "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+          "max_subtokens": 128,
+          "dropout": 0.1,
+          "peso_intencao": 1.0,
+          "peso_entidades": 1.0,
+          "temperatura": 0.0,
+          "peso_rotulo": 0.0
+        },
+        "receita": {
+          "epocas": 10,
+          "taxa": 5e-05,
+          "lote": 32,
+          "aquecimento": 0.1,
+          "decaimento": 0.01,
+          "norma_maxima": 1.0,
+          "passos_por_epoca": 0,
+          "criterio": "exact_match",
+          "precisao_mista": true,
+          "tabela_dividida": true
+        },
+        "sinal": {
+          "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+          "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+          "sem_rotulo_aproveitavel": {
+            "treino": 0,
+            "dev": 0
+          },
+          "professor": "qwen3_14b__fp16__colab_a100"
+        },
+        "melhor_epoca": [
+          10,
+          9,
+          9
+        ],
+        "exact_match_em_dev": 0.5041810132808657
+      },
+      "B2": {
+        "nome": "XLM-R · Aluno B2 (logits do Qwen3-14B, temperatura 8)",
+        "variante": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "aluno": "aluno_b2_t8",
+        "modelos": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "pastas_por_semente": {
+          "0": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0",
+          "1": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1",
+          "2": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2"
+        },
+        "no_cache": "data/execucoes/11b_alunos_do_professor_maior/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+        "sementes": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "modelo_id": "FacebookAI/xlm-roberta-base",
+          "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+          "max_subtokens": 128,
+          "dropout": 0.1,
+          "peso_intencao": 1.0,
+          "peso_entidades": 1.0,
+          "temperatura": 8.0,
+          "peso_rotulo": 0.0
+        },
+        "receita": {
+          "epocas": 10,
+          "taxa": 5e-05,
+          "lote": 32,
+          "aquecimento": 0.1,
+          "decaimento": 0.01,
+          "norma_maxima": 1.0,
+          "passos_por_epoca": 0,
+          "criterio": "exact_match",
+          "precisao_mista": true,
+          "tabela_dividida": true
+        },
+        "sinal": {
+          "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+          "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+          "sem_rotulo_aproveitavel": {
+            "treino": 0,
+            "dev": 0
+          },
+          "logits": "entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/logits_treino.npy",
+          "professor": "qwen3_14b__fp16__colab_a100"
+        },
+        "melhor_epoca": [
+          8,
+          9,
+          8
+        ],
+        "exact_match_em_dev": 0.5082800459091654
+      }
+    }
+  },
+  "alunos_antigos": {
+    "zero": "entregas/06_destilacao/decisao.json",
+    "xlmr": "entregas/10a_encoder/decisao.json"
+  },
+  "extensao_da_escada": "quando esta etapa foi entregue, a extensão da escada da Etapa 11a (um quarto degrau, maior) ainda estava sendo fechada. Pela regra desta etapa, só se treinam alunos do professor que toma o lugar do titular na escada"
+}

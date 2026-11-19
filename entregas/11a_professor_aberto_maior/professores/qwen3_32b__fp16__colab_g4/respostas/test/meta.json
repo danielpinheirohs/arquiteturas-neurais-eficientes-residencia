@@ -1,0 +1,10 @@
+{
+  "versao": "qwen3_32b__fp16__colab_g4",
+  "lote": 6,
+  "pedidos": 2974,
+  "segundos_de_gpu": 1494.1,
+  "trechos": 1,
+  "vram_de_pico_gb": 69.14,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "quando_utc": "2026-11-19 02:13:54"
+}

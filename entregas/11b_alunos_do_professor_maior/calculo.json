@@ -1,0 +1,17 @@
+{
+  "etapa": "11b_alunos_do_professor_maior",
+  "professor": "qwen3_14b__fp16__colab_a100",
+  "calculado_em": "2026-11-19 00:01:42 -0300",
+  "regras_escritas_em": "2026-11-18 22:04:17 -0300",
+  "reamostras": 2000,
+  "temperaturas": {
+    "zero": {
+      "nova": 8,
+      "antiga": 8
+    },
+    "xlmr": {
+      "nova": 8,
+      "antiga": 2
+    }
+  }
+}

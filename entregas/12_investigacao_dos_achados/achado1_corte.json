@@ -1,0 +1,52 @@
+{
+  "pedidos_de_dev": 2033,
+  "afetados": 257,
+  "pedidos_do_teste": 2974,
+  "afetados_no_teste": 376,
+  "com_e_sem_corte_por_semente": {
+    "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": [
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 160,
+        "afetados": 257
+      },
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 158,
+        "afetados": 257
+      },
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 165,
+        "afetados": 257
+      }
+    ],
+    "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": [
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 150,
+        "afetados": 257
+      },
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 165,
+        "afetados": 257
+      },
+      {
+        "nao_afetados_iguais": 1776,
+        "nao_afetados": 1776,
+        "afetados_iguais": 161,
+        "afetados": 257
+      }
+    ]
+  },
+  "com_e_sem_corte_iguais_no_treino_inteiro": {
+    "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100": true,
+    "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100": true
+  }
+}

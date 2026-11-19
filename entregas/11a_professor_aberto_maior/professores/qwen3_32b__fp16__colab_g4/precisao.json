@@ -1,0 +1,9 @@
+{
+  "versao": "qwen3_32b__fp16__colab_g4",
+  "tipo_das_contas": "torch.float16",
+  "lotes": 10,
+  "pedidos": 60,
+  "pontuacoes_nao_finitas": 0,
+  "finito": true,
+  "quando_utc": "2026-11-19 01:31:28"
+}

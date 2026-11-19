@@ -1,0 +1,26 @@
+{
+  "o_que_e": "a entrega da Etapa 11a como foi fechada, antes de ser regenerada: resumo, notebook executado, HTML, escolha, regra, tabelas, figuras, manifesto e código",
+  "guardada_em": "2026-11-19 02:35:53 -0300",
+  "manifesto_gerado_em": "2026-11-18T21:42:53",
+  "arquivos_iguais_aos_do_manifesto": {
+    "11a_professor_aberto_maior.html": true,
+    "RESUMO.md": true,
+    "comparacoes.csv": true,
+    "conferencia_de_ambiente.json": true,
+    "custo.json": true,
+    "diagnosticos.csv": true,
+    "escolha.json": true,
+    "mudancas_entre_professores.csv": true,
+    "qualidade.csv": true,
+    "regra.json": true,
+    "resultados.csv": true,
+    "sistemas.json": true
+  },
+  "todos_iguais": true,
+  "notebook": {
+    "arquivo": "11a_professor_aberto_maior.ipynb",
+    "alterado_em": "2026-11-18 21:42:49",
+    "observacao": "o notebook não estava no manifesto; a data é a prova de que é o executado no fecho"
+  },
+  "o_que_nao_esta_aqui": "as pastas das versões de professor, que não mudam: entregas/11a_professor_aberto_maior/professores/"
+}

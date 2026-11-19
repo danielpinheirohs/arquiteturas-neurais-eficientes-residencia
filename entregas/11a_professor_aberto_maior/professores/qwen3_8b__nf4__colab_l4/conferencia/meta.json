@@ -1,0 +1,10 @@
+{
+  "versao": "qwen3_8b__nf4__colab_l4",
+  "lote": 6,
+  "pedidos": 300,
+  "segundos_de_gpu": 248.2,
+  "trechos": 1,
+  "vram_de_pico_gb": 8.28,
+  "gpu": "NVIDIA L4",
+  "quando_utc": "2026-11-18 20:25:27"
+}

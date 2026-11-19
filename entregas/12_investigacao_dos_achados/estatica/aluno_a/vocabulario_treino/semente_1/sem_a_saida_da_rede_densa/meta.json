@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 1,
+  "nome": "sem_a_saida_da_rede_densa",
+  "descricao": "as 12 multiplicações da saída da rede densa em 32 bits",
+  "metodo": "MinMax",
+  "operacoes": 64,
+  "bytes_da_rede": 175135609,
+  "slot_f1_dev": 66.9824727617243,
+  "segundos": 23.634305942978244
+}

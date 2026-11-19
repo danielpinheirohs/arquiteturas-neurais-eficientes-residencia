@@ -1,0 +1,21 @@
+decisão,valor,origem,observação
+Features: palavra + n-gramas de até 5 caracteres,n ≤ 5,Artigo,
+Dropout nos features esparsos,"0,2",Artigo; taxa da referência,O artigo não informa a taxa
+Token CLS ao final da sentença,sim,Artigo,
+Transformer,"2 blocos, dimensão 256",Artigo,
+Posição relativa na atenção,distância até ±5,Artigo; alcance da referência,O artigo não informa o alcance
+CRF na cabeça de entidades,sim,Artigo,
+Espaço de comparação de intenção e máscara,20 dimensões,Artigo,
+Máscara,15% das palavras; 70/10/20,Artigo,
+Perda total,soma das três perdas,Artigo,
+Cabeças de atenção,4,Referência (Rasa),O artigo não informa
+Dimensão da tabela de features,128,Referência (Rasa),O artigo não informa
+Dropout do encoder,"0,2",Referência (Rasa),O artigo não informa
+Rede densa do bloco,"1024, ReLU",Vaswani et al.,Proporção de 4 vezes e ativação originais
+Normalização antes da subcamada,sim,Escolha (Xiong et al.),Treino estável sem aquecimento
+Valor inicial do CLS,média dos vetores das palavras,Adaptação do artigo,É a regra que o artigo usa para vetores sem contexto
+Contagem mínima de um feature,2,Escolha,Feature visto uma vez não generaliza
+Intenções erradas na perda,todas as outras,Desvio,Com 60 intenções é a versão exata; o artigo amostra
+Palavras erradas na perda de máscara,as outras escondidas do lote,Desvio,O artigo sorteia
+Esquema de tags,"BIO, com regras fixas no CRF",Desvio,30 de 55 tipos têm menos de 100 exemplos
+Embeddings pré-treinados,nenhum,Escopo,A proposta é uma rede do zero; o encoder pré-treinado é a Etapa 10

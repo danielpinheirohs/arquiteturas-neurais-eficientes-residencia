@@ -1,0 +1,95 @@
+{
+  "etapa": "12_investigacao_dos_achados/reajustes/sem_corte",
+  "modelo": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+  "variante": "sem_poda",
+  "nome": "Sem poda, com o mesmo reajuste (controle)",
+  "familia": "controle",
+  "nivel": 0,
+  "semente": 0,
+  "de_partida": "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0",
+  "digital_de_partida": "930f9132bde2e9b5-1109834544",
+  "config": {
+    "modelo_id": "FacebookAI/xlm-roberta-base",
+    "revisao": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+    "max_subtokens": 128,
+    "dropout": 0.1,
+    "peso_intencao": 1.0,
+    "peso_entidades": 1.0,
+    "temperatura": 0.0,
+    "peso_rotulo": 0.0
+  },
+  "receita": {
+    "epocas": 10,
+    "taxa": 5e-05,
+    "lote": 32,
+    "aquecimento": 0.1,
+    "decaimento": 0.01,
+    "norma_maxima": 1.0,
+    "passos_por_epoca": 0,
+    "criterio": "exact_match",
+    "precisao_mista": true,
+    "tabela_dividida": true
+  },
+  "orcamento": {
+    "epocas": 10,
+    "epocas_de_rampa": null,
+    "passos_entre_cortes": null
+  },
+  "vocabulario": null,
+  "camadas": 12,
+  "melhor_epoca": 10,
+  "dev": {
+    "intent_acc": 0.8524348253812101,
+    "intent_macro_f1": 0.8319309096996067,
+    "slot_precision": 0.7087462300732443,
+    "slot_recall": 0.7142857142857143,
+    "slot_f1": 0.7115051903114187,
+    "exact_match": 0.602065912444663
+  },
+  "dev_antes": {
+    "intent_acc": 0.8514510575504181,
+    "intent_macro_f1": 0.8260266034867985,
+    "slot_precision": 0.7117996604414262,
+    "slot_recall": 0.72818063395571,
+    "slot_f1": 0.7198969735994849,
+    "exact_match": 0.6010821446138711
+  },
+  "contagem_de_partida": {
+    "parametros": 277584555,
+    "nao_nulos": 277583755,
+    "podaveis": 84934656,
+    "nao_nulos_podaveis": 84934656,
+    "esparsidade": 0.0
+  },
+  "contagem": {
+    "parametros": 277584555,
+    "nao_nulos": 277583755,
+    "podaveis": 84934656,
+    "nao_nulos_podaveis": 84934656,
+    "esparsidade": 0.0
+  },
+  "parametros_por_parte": {
+    "A. Tabela de subtokens": 192001536,
+    "A. Posições e normalização da entrada": 397056,
+    "B. Corpo do Transformer": 85054464,
+    "C. Cabeça de intenção": 46140,
+    "D. Cabeça de entidades": 85359
+  },
+  "bytes_em_disco": 1127466356,
+  "exemplos_de_treino": 11514,
+  "exemplos_de_dev": 2033,
+  "origem": {
+    "treino": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/rotulos_treino.parquet",
+    "dev": "rótulos do professor aberto: entregas/11a_professor_aberto_maior/professores/qwen3_14b__fp16__colab_a100/previsoes/qwen3_14b__fp16__colab_a100_dev.parquet",
+    "sem_rotulo_aproveitavel": {
+      "treino": 0,
+      "dev": 0
+    },
+    "professor": "qwen3_14b__fp16__colab_a100"
+  },
+  "segundos": 127.01120512001216,
+  "segundos_por_epoca": 11.842999616506859,
+  "pico_de_vram_gb": 2.9684696197509766,
+  "respostas_em": "NVIDIA GeForce RTX 3080",
+  "torch": "2.15.0+cu132"
+}

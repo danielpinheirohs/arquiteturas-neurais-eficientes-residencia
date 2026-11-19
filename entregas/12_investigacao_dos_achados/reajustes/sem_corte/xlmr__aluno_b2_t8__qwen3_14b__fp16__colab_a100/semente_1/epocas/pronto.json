@@ -1,0 +1,19 @@
+{
+  "tipo": "sem_corte",
+  "aluno": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+  "semente": 1,
+  "epocas_gravadas": 11,
+  "receita": {
+    "epocas": 10,
+    "taxa": 5e-05,
+    "lote": 32,
+    "aquecimento": 0.1,
+    "decaimento": 0.01,
+    "norma_maxima": 1.0,
+    "passos_por_epoca": 0,
+    "criterio": "exact_match",
+    "precisao_mista": true,
+    "tabela_dividida": true
+  },
+  "o_que_e": "T1: o reajuste de 10 épocas da receita, sem cortar nada (o controle da Etapa 10b)"
+}

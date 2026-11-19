@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dois alunos, lado a lado</title>
+<style>
+  :root {
+    --fundo: #f6f5f1; --cartao: #ffffff; --texto: #1c1b19; --suave: #6b675f; --linha: #e3e0d8;
+    --a: #b4532a; --a-fraco: #f6e3d8; --b: #2a6f8f; --b-fraco: #d9eaf2;
+    --bom: #2f7d4f; --ruim: #b3372f; --aviso: #8a6100; --campo: #ffffff;
+    --t1: #8d6bb0; --t2: #c9963a; --t3: #4f9a84;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #161513; --cartao: #1f1e1b; --texto: #ecebe6; --suave: #a09b90; --linha: #34322d;
+      --a: #e0855c; --a-fraco: #3a261c; --b: #6db3d3; --b-fraco: #1a2f39;
+      --bom: #6cc08d; --ruim: #e37a72; --aviso: #d9b25a; --campo: #262521;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fundo); color: var(--texto); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 28px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--suave); margin: 32px 0 10px; font-weight: 600; }
+  p.sub { margin: 0 0 20px; color: var(--suave); max-width: 70ch; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  form { display: flex; gap: 8px; flex-wrap: wrap; }
+  input[type=text] { flex: 1 1 320px; min-width: 0; padding: 12px 14px; font: inherit; font-size: 17px; color: var(--texto); background: var(--campo); border: 1px solid var(--linha); border-radius: 10px; }
+  input[type=text]:focus { outline: 2px solid var(--b); outline-offset: 1px; }
+  button { font: inherit; cursor: pointer; border-radius: 10px; border: 1px solid var(--linha); background: var(--cartao); color: var(--texto); padding: 8px 12px; }
+  button.principal { background: var(--texto); color: var(--fundo); border-color: var(--texto); padding: 12px 20px; font-weight: 600; }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .opcoes { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 10px; color: var(--suave); font-size: 13px; }
+  .exemplos { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .exemplos button { font-size: 13px; padding: 5px 10px; border-radius: 999px; color: var(--suave); }
+  .exemplos button:hover { color: var(--texto); border-color: var(--suave); }
+
+  .veredito { margin-top: 20px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--linha); background: var(--cartao); font-weight: 600; display: none; }
+  .veredito.sim { border-color: var(--bom); color: var(--bom); }
+  .veredito.nao { border-color: var(--aviso); color: var(--aviso); }
+
+  .dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 820px) { .dupla { grid-template-columns: 1fr; } }
+  .cartao { background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; overflow: hidden; }
+  .cartao .topo { padding: 14px 16px; border-bottom: 1px solid var(--linha); border-top: 4px solid var(--cor); }
+  .cartao .topo .nome { font-size: 18px; font-weight: 700; color: var(--cor); }
+  .cartao .topo .metodo { color: var(--suave); font-size: 13px; }
+  .ficha { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 12px; margin-top: 12px; font-size: 12px; color: var(--suave); }
+  .ficha b { display: block; font-size: 15px; color: var(--texto); font-weight: 600; }
+  .ficha .prof { display: block; font-size: 11px; }
+  .corpo { padding: 16px; min-height: 300px; }
+  .vazio { color: var(--suave); padding: 40px 0; text-align: center; }
+  .rotulo { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--suave); margin: 16px 0 6px; }
+  .rotulo:first-child { margin-top: 0; }
+  .intencao { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .intencao .valor { font-size: 22px; font-weight: 700; overflow-wrap: anywhere; }
+  .intencao .conf { color: var(--suave); }
+  .barra-linha { display: grid; grid-template-columns: minmax(0, 11em) 1fr 3.6em; gap: 8px; align-items: center; font-size: 12px; margin-top: 4px; }
+  .barra-linha .nome-int { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .trilho { height: 8px; background: var(--linha); border-radius: 4px; overflow: hidden; }
+  .trilho i { display: block; height: 100%; background: var(--cor); border-radius: 4px; }
+  .frase { display: flex; flex-wrap: wrap; gap: 6px 6px; align-items: flex-start; font-size: 17px; }
+  .palavra { padding: 2px 0; }
+  .palavra.nova { text-decoration: underline dotted var(--suave); text-underline-offset: 4px; }
+  .entidade { background: var(--cor-fraca); border-radius: 8px; padding: 2px 8px 3px; display: inline-flex; flex-direction: column; }
+  .entidade small { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cor); font-weight: 700; }
+  .sem { color: var(--suave); font-size: 13px; }
+  .tempo { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .tempo .valor { font-size: 22px; font-weight: 700; }
+  .tempo .extra { color: var(--suave); font-size: 13px; }
+  .trechos { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 8px; background: var(--linha); }
+  .trechos i { display: block; height: 100%; }
+  .legenda { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--suave); margin-top: 6px; }
+  .legenda span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--c); margin-right: 5px; }
+  .contra { margin-top: 10px; font-size: 13px; color: var(--suave); }
+  .contra b { color: var(--texto); }
+  .julgar { display: flex; gap: 8px; align-items: center; margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--linha); font-size: 13px; color: var(--suave); flex-wrap: wrap; }
+  .julgar button.marcado.certo { border-color: var(--bom); color: var(--bom); font-weight: 700; }
+  .julgar button.marcado.errado { border-color: var(--ruim); color: var(--ruim); font-weight: 700; }
+
+  .placar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .placar div { background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: 10px 12px; font-size: 12px; color: var(--suave); }
+  .placar b { display: block; font-size: 20px; color: var(--texto); }
+  .rolagem { overflow-x: auto; margin-top: 12px; border: 1px solid var(--linha); border-radius: 12px; background: var(--cartao); }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--linha); white-space: nowrap; }
+  td.texto { white-space: normal; min-width: 14em; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--suave); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  .ok { color: var(--bom); } .nok { color: var(--ruim); } .dif { color: var(--aviso); }
+  .nota { color: var(--suave); font-size: 12px; margin-top: 10px; max-width: 80ch; }
+  .erro { color: var(--ruim); margin-top: 10px; display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dois alunos, lado a lado</h1>
+  <p class="sub">Escreva um comando de assistente virtual. Os dois modelos destilados respondem nesta máquina, na CPU, e a página mostra o que cada um entendeu e quanto tempo levou.</p>
+
+  <form id="formulario">
+    <input type="text" id="pedido" placeholder="me acorda amanhã às 7" autocomplete="off" autofocus maxlength="300" aria-label="Pedido">
+    <button class="principal" id="enviar" type="submit">Perguntar</button>
+  </form>
+  <div class="opcoes">
+    <label><input type="checkbox" id="repetir"> medir o tempo em 200 repetições (mediana e p95)</label>
+  </div>
+  <div class="exemplos" id="exemplos"></div>
+  <div class="erro" id="erro" role="alert"></div>
+
+  <div class="veredito" id="veredito"></div>
+  <div class="dupla">
+    <section class="cartao" id="cartao-a" style="--cor: var(--a); --cor-fraca: var(--a-fraco)"></section>
+    <section class="cartao" id="cartao-b2" style="--cor: var(--b); --cor-fraca: var(--b-fraco)"></section>
+  </div>
+
+  <h2>Esta sessão</h2>
+  <div class="placar" id="placar"></div>
+  <div class="rolagem">
+    <table>
+      <thead><tr><th>Pedido</th><th>Aluno A</th><th>Aluno B2</th><th>Concordam</th><th>A, ms</th><th>B2, ms</th><th>Seu julgamento</th></tr></thead>
+      <tbody id="historico"><tr><td colspan="7" class="sem">Nenhum pedido ainda.</td></tr></tbody>
+    </table>
+  </div>
+  <p class="nota">Os números "no teste" de cada cartão são fixos: vêm dos 2.974 pedidos de teste do MASSIVE pt-PT (Etapa 9). O placar acima é só desta sessão e depende do que você marcar como certo ou errado. A confiança é a probabilidade que o modelo dá à intenção escolhida; ela não foi calibrada. O tempo é medido no servidor, por consulta, sem a ida e volta do navegador; nas 200 repetições o pedido é o mesmo, então o trecho "texto para ids" já está na memória e a mediana sai menor que a da Etapa 8. Palavra sublinhada com pontos: não estava no vocabulário de treino, e o modelo a lê só pelos pedaços de letras.</p>
+</main>
+
+<script>
+const EXEMPLOS = [
+  "me acorda amanhã às 7", "toca legião urbana", "vai chover amanhã em são paulo", "quanto tá o dólar hoje",
+  "adiciona leite na lista de compras", "marca dentista na terça às três da tarde", "apaga a luz da sala",
+  "manda um email pro joão dizendo que vou atrasar", "que horas são em tóquio", "pede uma pizza de calabresa",
+];
+const CHAVES = ["a", "b2"];
+const COR_TRECHO = ["var(--t1)", "var(--cor)", "var(--t3)"];
+const NOME_TRECHO = ["texto para ids", "rede (ONNX Runtime)", "Viterbi"];
+let fichas = null;
+const sessao = [];   // {texto, alunos, concordam, julgamento: {a, b2}}
+
+const $ = (id) => document.getElementById(id);
+const el = (tag, classe, texto) => { const e = document.createElement(tag); if (classe) e.className = classe; if (texto !== undefined) e.textContent = texto; return e; };
+const n = (v, casas = 1) => v.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
+const pct = (v, casas = 1) => n(v * 100, casas) + "%";
+const tamanho = (bytes) => bytes >= 1e9 ? n(bytes / 1e9, 1) + " GB" : n(bytes / 1e6, 2) + " MB";
+const mediana = (lista) => { const o = [...lista].sort((x, y) => x - y); const m = Math.floor(o.length / 2); return o.length % 2 ? o[m] : (o[m - 1] + o[m]) / 2; };
+
+function topo(chave) {
+  const f = fichas[chave], p = f.professor;
+  const topo = el("div", "topo");
+  topo.append(el("div", "nome", f.nome), el("div", "metodo", `Destilado do ${p.nome} · ${f.metodo}`));
+  const ficha = el("div", "ficha");
+  const item = (rotulo, valor, prof) => { const d = el("div"); d.append(el("b", "num", valor), document.createTextNode(rotulo)); if (prof) d.append(el("span", "prof", prof)); return d; };
+  ficha.append(
+    item("intenção no teste", pct(f.teste.intent_acc), `professor: ${pct(p.teste.intent_acc)}`),
+    item("F1 de entidades", pct(f.teste.slot_f1), `professor: ${pct(p.teste.slot_f1)}`),
+    item("pedido inteiro certo", pct(f.teste.exact_match), `professor: ${pct(p.teste.exact_match)}`),
+    item("em disco", tamanho(f.bytes), p.bytes ? `professor: ${tamanho(p.bytes)}` : "professor: não divulgado"),
+    item("parâmetros", n(f.parametros / 1e6, 2) + " mi", ""),
+    item("latência medida (Etapa 8)", n(f.latencia_p50_ms, 2) + " ms", `professor: ${n(p.latencia_p50_ms, 0)} ms`),
+  );
+  topo.append(ficha);
+  return topo;
+}
+
+function desenharCartao(chave, resposta, indice) {
+  const cartao = $("cartao-" + chave);
+  cartao.replaceChildren(topo(chave));
+  const corpo = el("div", "corpo");
+  cartao.append(corpo);
+  if (!resposta) { corpo.append(el("div", "vazio", "A resposta aparece aqui.")); return; }
+  const r = resposta.alunos[chave], f = fichas[chave];
+
+  corpo.append(el("div", "rotulo", "Intenção"));
+  const intencao = el("div", "intencao");
+  intencao.append(el("span", "valor mono", r.intent), el("span", "conf num", `confiança ${pct(r.confianca, 0)}`));
+  corpo.append(intencao);
+  for (const m of r.mais_provaveis) {
+    const linha = el("div", "barra-linha");
+    const trilho = el("div", "trilho"); const barra = el("i"); barra.style.width = (m.p * 100).toFixed(1) + "%"; trilho.append(barra);
+    const nome = el("span", "nome-int mono", m.intent); nome.title = m.intent;
+    linha.append(nome, trilho, el("span", "num", pct(m.p, 0)));
+    corpo.append(linha);
+  }
+
+  corpo.append(el("div", "rotulo", "Entidades"));
+  const frase = el("div", "frase");
+  let i = 0;
+  const palavra = (k) => el("span", "palavra" + (r.palavras_conhecidas[k] ? "" : " nova"), resposta.palavras[k]);
+  for (const s of r.slots) {
+    for (; i < s.inicio; i++) frase.append(palavra(i));
+    const bloco = el("span", "entidade");
+    const dentro = el("span");
+    for (; i < s.fim; i++) { dentro.append(palavra(i)); if (i < s.fim - 1) dentro.append(" "); }
+    bloco.append(dentro, el("small", "", s.tipo));
+    frase.append(bloco);
+  }
+  for (; i < resposta.palavras.length; i++) frase.append(palavra(i));
+  corpo.append(frase);
+  if (!r.slots.length) corpo.append(el("div", "sem", "Nenhuma entidade encontrada."));
+
+  corpo.append(el("div", "rotulo", "Tempo desta consulta"));
+  const tempo = el("div", "tempo");
+  tempo.append(el("span", "valor num", n(r.ms.total, 2) + " ms"));
+  if (r.ms_repetido) tempo.append(el("span", "extra num", `em ${resposta.repeticoes} repetições: mediana ${n(r.ms_repetido.p50, 2)} ms, p95 ${n(r.ms_repetido.p95, 2)} ms`));
+  corpo.append(tempo);
+  const partes = [r.ms.texto_para_ids, r.ms.rede, r.ms.viterbi];
+  const trechos = el("div", "trechos"), legenda = el("div", "legenda");
+  partes.forEach((ms, k) => {
+    const pedaco = el("i"); pedaco.style.width = (ms / r.ms.total * 100).toFixed(1) + "%"; pedaco.style.background = COR_TRECHO[k]; trechos.append(pedaco);
+    const item = el("span", "num", `${NOME_TRECHO[k]} ${n(ms, 2)} ms`); item.style.setProperty("--c", COR_TRECHO[k]); legenda.append(item);
+  });
+  corpo.append(trechos, legenda);
+  const referencia = r.ms_repetido ? r.ms_repetido.p50 : r.ms.total;
+  const contra = el("div", "contra");
+  contra.append("O professor (" + f.professor.nome + ") leva ", el("b", "num", n(f.professor.latencia_p50_ms, 0) + " ms"),
+    ` por pedido (${f.professor.onde}): cerca de `, el("b", "num", n(f.professor.latencia_p50_ms / referencia, 0) + " vezes"), " o tempo desta consulta.");
+  corpo.append(contra);
+
+  const julgar = el("div", "julgar");
+  julgar.append("A resposta está certa?");
+  for (const [valor, texto] of [["certo", "Certa"], ["errado", "Errada"]]) {
+    const botao = el("button", valor + (sessao[indice].julgamento[chave] === valor ? " marcado" : ""), texto);
+    botao.type = "button";
+    botao.onclick = () => { sessao[indice].julgamento[chave] = sessao[indice].julgamento[chave] === valor ? null : valor; desenharTudo(indice); };
+    julgar.append(botao);
+  }
+  corpo.append(julgar);
+}
+
+function iguais(x, y) {
+  const mesmaIntencao = x.intent === y.intent;
+  const mesmasEntidades = JSON.stringify(x.slots) === JSON.stringify(y.slots);
+  return { mesmaIntencao, mesmasEntidades, tudo: mesmaIntencao && mesmasEntidades };
+}
+
+function desenharVeredito(indice) {
+  const v = $("veredito");
+  if (indice === null) { v.style.display = "none"; return; }
+  const c = sessao[indice].concordam;
+  v.style.display = "block";
+  v.className = "veredito " + (c.tudo ? "sim" : "nao");
+  v.textContent = c.tudo ? "Os dois alunos deram a mesma resposta."
+    : !c.mesmaIntencao && !c.mesmasEntidades ? "Os dois alunos discordam na intenção e nas entidades."
+    : !c.mesmaIntencao ? "Os dois alunos discordam na intenção." : "Os dois alunos discordam nas entidades.";
+}
+
+function desenharSessao() {
+  const placar = $("placar");
+  const bloco = (valor, rotulo) => { const d = el("div"); d.append(el("b", "num", valor), rotulo); return d; };
+  const total = sessao.length;
+  const taxa = (chave) => {
+    const julgados = sessao.filter((s) => s.julgamento[chave]);
+    return julgados.length ? `${julgados.filter((s) => s.julgamento[chave] === "certo").length} de ${julgados.length}` : "—";
+  };
+  placar.replaceChildren(
+    bloco(String(total), "pedidos"),
+    bloco(total ? `${sessao.filter((s) => s.concordam.tudo).length} de ${total}` : "—", "respostas iguais nos dois"),
+    bloco(total ? n(mediana(sessao.map((s) => s.alunos.a.ms.total)), 2) + " ms" : "—", "tempo mediano, aluno A"),
+    bloco(total ? n(mediana(sessao.map((s) => s.alunos.b2.ms.total)), 2) + " ms" : "—", "tempo mediano, aluno B2"),
+    bloco(taxa("a"), "certas pelo seu julgamento, A"),
+    bloco(taxa("b2"), "certas pelo seu julgamento, B2"),
+  );
+  const corpo = $("historico");
+  if (!total) return;
+  corpo.replaceChildren();
+  const resumo = (r) => r.intent + (r.slots.length ? " · " + r.slots.map((s) => `${s.tipo}=${s.texto}`).join("; ") : "");
+  const marca = (j) => j === "certo" ? "certa" : j === "errado" ? "errada" : "—";
+  sessao.forEach((s, indice) => {
+    const linha = el("tr");
+    linha.style.cursor = "pointer";
+    linha.title = "Mostrar de novo esta resposta";
+    linha.onclick = () => desenharTudo(indice);
+    const concorda = el("td", s.concordam.tudo ? "ok" : "dif", s.concordam.tudo ? "sim" : !s.concordam.mesmaIntencao ? "não: intenção" : "não: entidades");
+    const julgamento = el("td");
+    for (const chave of CHAVES) {
+      const j = s.julgamento[chave];
+      julgamento.append(el("span", j === "certo" ? "ok" : j === "errado" ? "nok" : "", `${chave === "a" ? "A" : "B2"} ${marca(j)}`), chave === "a" ? " · " : "");
+    }
+    linha.append(el("td", "texto", s.texto), el("td", "mono", resumo(s.alunos.a)), el("td", "mono", resumo(s.alunos.b2)), concorda,
+      el("td", "num", n(s.alunos.a.ms.total, 2)), el("td", "num", n(s.alunos.b2.ms.total, 2)), julgamento);
+    corpo.prepend(linha);
+  });
+}
+
+function desenharTudo(indice) {
+  const resposta = indice === null ? null : sessao[indice];
+  for (const chave of CHAVES) desenharCartao(chave, resposta, indice);
+  desenharVeredito(indice);
+  desenharSessao();
+}
+
+async function perguntar(texto) {
+  texto = texto.trim();
+  if (!texto) return;
+  const erro = $("erro"); erro.style.display = "none";
+  $("enviar").disabled = true;
+  try {
+    const resposta = await fetch("/api/prever", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ texto, repeticoes: $("repetir").checked ? 200 : 1 }) });
+    const dados = await resposta.json();
+    if (!resposta.ok) throw new Error(dados.erro || "erro do servidor");
+    dados.concordam = iguais(dados.alunos.a, dados.alunos.b2);
+    dados.julgamento = { a: null, b2: null };
+    sessao.push(dados);
+    desenharTudo(sessao.length - 1);
+  } catch (e) {
+    erro.textContent = "Não deu para consultar os modelos: " + e.message + ". O servidor (python -m especialista.demo) está rodando?";
+    erro.style.display = "block";
+  } finally {
+    $("enviar").disabled = false;
+    $("pedido").select();
+  }
+}
+
+$("formulario").addEventListener("submit", (evento) => { evento.preventDefault(); perguntar($("pedido").value); });
+for (const exemplo of EXEMPLOS) {
+  const botao = el("button", "", exemplo); botao.type = "button";
+  botao.onclick = () => { $("pedido").value = exemplo; perguntar(exemplo); };
+  $("exemplos").append(botao);
+}
+fetch("/api/modelos").then((r) => r.json()).then((dados) => { fichas = dados; desenharTudo(null); })
+  .catch(() => { $("erro").textContent = "Não deu para ler a ficha dos modelos."; $("erro").style.display = "block"; });
+</script>
+</body>
+</html>

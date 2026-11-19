@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 1,
+  "nome": "calibracao_percentile",
+  "descricao": "calibração Percentile",
+  "metodo": "Percentile",
+  "operacoes": 76,
+  "bytes_da_rede": 278236953,
+  "slot_f1_dev": 46.91836076153598,
+  "segundos": 36.9476866920013
+}

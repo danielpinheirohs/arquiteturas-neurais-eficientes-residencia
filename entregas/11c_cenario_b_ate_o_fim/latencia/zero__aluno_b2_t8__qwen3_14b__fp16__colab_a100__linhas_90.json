@@ -1,0 +1,100 @@
+{
+  "modelo": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+  "variante": "linhas_90",
+  "semente": 0,
+  "threads": 1,
+  "rodadas": 5,
+  "consultas_por_rodada": 1024,
+  "p50_por_rodada_ms": {
+    "pytorch": [
+      1.0866605,
+      1.072058,
+      1.069096,
+      1.059979,
+      1.0862875
+    ],
+    "fp32": [
+      0.426394,
+      0.4054005,
+      0.4070875,
+      0.402949,
+      0.3983235
+    ],
+    "dinamica": [
+      0.2702055,
+      0.24577,
+      0.244228,
+      0.24314249999999998,
+      0.24379050000000002
+    ],
+    "estatica": [
+      0.28454199999999996,
+      0.267411,
+      0.27025,
+      0.2743175,
+      0.271924
+    ]
+  },
+  "resumo": {
+    "pytorch": {
+      "latencia_p50_ms": 1.0744725,
+      "latencia_p90_ms": 1.3536549000000004,
+      "latencia_p95_ms": 1.4636229500000002,
+      "latencia_p99_ms": 1.6883167400000023,
+      "latencia_media_ms": 1.0971761638671875
+    },
+    "fp32": {
+      "latencia_p50_ms": 0.40872549999999996,
+      "latencia_p90_ms": 0.6129734,
+      "latencia_p95_ms": 0.6700836,
+      "latencia_p99_ms": 0.824408540000001,
+      "latencia_media_ms": 0.41099194414062507
+    },
+    "dinamica": {
+      "latencia_p50_ms": 0.248976,
+      "latencia_p90_ms": 0.3799213,
+      "latencia_p95_ms": 0.4308920500000001,
+      "latencia_p99_ms": 0.5448567400000002,
+      "latencia_media_ms": 0.26276909316406255
+    },
+    "estatica": {
+      "latencia_p50_ms": 0.273318,
+      "latencia_p90_ms": 0.4086243000000001,
+      "latencia_p95_ms": 0.4555717500000001,
+      "latencia_p99_ms": 0.5840178800000012,
+      "latencia_media_ms": 0.28587751230468755
+    }
+  },
+  "tempo_por_trecho_ms": {
+    "fp32": {
+      "texto para ids": 0.013577130859375,
+      "rede (ONNX Runtime)": 0.306043958984375,
+      "Viterbi do CRF": 0.082454494140625,
+      "montar a resposta": 0.0051365888671875
+    },
+    "dinamica": {
+      "texto para ids": 0.0125663369140625,
+      "rede (ONNX Runtime)": 0.1625588720703125,
+      "Viterbi do CRF": 0.078821416015625,
+      "montar a resposta": 0.0047025029296875
+    },
+    "estatica": {
+      "texto para ids": 0.012609986328125,
+      "rede (ONNX Runtime)": 0.1871363818359375,
+      "Viterbi do CRF": 0.0796474345703125,
+      "montar a resposta": 0.0047337939453125
+    }
+  },
+  "nucleos_de_outros": 0.0289830459383047,
+  "carga_antes": 3.4208984375,
+  "carga_depois": 2.8837890625,
+  "medido_em": "2026-11-19T01:30:05",
+  "onnxruntime": "1.32.0",
+  "torch": "2.15.0+cu132",
+  "python": "3.12.13",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+  "cpus_logicas": 24,
+  "plataforma": "WSL2",
+  "instrucoes_da_cpu": "avx2 avx_vnni",
+  "tem_vnni": true
+}

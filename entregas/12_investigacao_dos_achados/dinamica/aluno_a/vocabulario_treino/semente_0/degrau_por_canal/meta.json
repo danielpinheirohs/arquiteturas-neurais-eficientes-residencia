@@ -1,0 +1,7 @@
+{
+  "alternativa": "degrau_por_canal",
+  "o_que_e": "a dinâmica, com um degrau por coluna em cada matriz (per_channel=True)",
+  "semente": 0,
+  "bytes_da_rede": 90594475,
+  "segundos": 12.625269234995358
+}

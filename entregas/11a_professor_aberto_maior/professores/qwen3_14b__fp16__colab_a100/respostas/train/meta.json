@@ -1,0 +1,10 @@
+{
+  "versao": "qwen3_14b__fp16__colab_a100",
+  "lote": 6,
+  "pedidos": 11514,
+  "segundos_de_gpu": 5558.8,
+  "trechos": 1,
+  "vram_de_pico_gb": 32.07,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "quando_utc": "2026-11-18 22:39:48"
+}

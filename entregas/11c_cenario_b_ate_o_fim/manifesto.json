@@ -1,0 +1,1835 @@
+{
+  "etapa": "11c_cenario_b_ate_o_fim",
+  "gerado_em": "2026-11-19 03:06:28 -0300",
+  "o_que_e": "O que a Etapa 11c leu (com a impressão digital de cada arquivo), as regras, a cadeia de execuções, o cálculo do comparativo e o que ela entrega.",
+  "professor": "qwen3_14b__fp16__colab_a100",
+  "regras": {
+    "arquivo": "entregas/11c_cenario_b_ate_o_fim/regras.json",
+    "escritas_em": "2026-11-19 00:40:09 -0300",
+    "do_comparativo": {
+      "arquivo": "regras_v4.json",
+      "versao": 4,
+      "gravado_em": "2026-11-19T02:46:28",
+      "sha256": "e2493f7221295599dddc9e3dd84bca4f8d3d6366f4c278675db430b8377638b7"
+    }
+  },
+  "cadeia": {
+    "pid": 830465,
+    "iniciada_em": "2026-11-19 00:45:53 -0300",
+    "terminada_em": "2026-11-19 02:01:35 -0300",
+    "minutos": 75.7,
+    "prontas": 33,
+    "erros": [],
+    "codigo_igual_do_inicio_ao_fim": true,
+    "codigo_alterado_durante_a_cadeia": [],
+    "ambiente": {
+      "python": "3.12.13",
+      "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "bibliotecas": {
+        "torch": "2.15.0+cu132",
+        "transformers": "5.23.0",
+        "numpy": "2.5.5",
+        "pandas": "3.1.1"
+      },
+      "placa": "NVIDIA GeForce RTX 3080",
+      "vram_gb": 10.0
+    },
+    "copia_do_codigo": "/home/danie/project/residencia/data/execucoes/11c_cenario_b_ate_o_fim/cadeias/codigo_20261119-004553"
+  },
+  "codigo_da_cadeia": {
+    "src/especialista/__init__.py": "c805e0c4ec196c6e7a63200c04eed0e88d29cb25819e84125e5a2e65dce13f01",
+    "src/especialista/avaliacao/__init__.py": "22937ba074911038be91d370dd75646de19782d46cc825fa4e5b59803a8b9ff8",
+    "src/especialista/avaliacao/confianca.py": "cd0349e03d4298aefbff91cca7cef001f25d4fb2f3098b03bdd1e25274fa9064",
+    "src/especialista/avaliacao/eficiencia.py": "a8d2b9993cd8393190321099162f0f96d1d5a0834188802d4c1cd2516cc4ee58",
+    "src/especialista/avaliacao/previsao.py": "16b38fbc6d67ce07899e75bb255e1abce952d04676d39a6248c70e7be7c3f484",
+    "src/especialista/avaliacao/qualidade.py": "96427986f3f5ebafa9c44296e9745c775dac28accc99786015ff2c1e05c4660c",
+    "src/especialista/avaliacao/referencia.py": "f3cbcf7ca7f00cf51403a60ffdb35bc19824869c81d17f58efb28a07b6b36642",
+    "src/especialista/avaliacao/resultados.py": "56425a4911d74782b1e12af05386c41fea16b592fff4a0440dcbf8e5b3c3c003",
+    "src/especialista/bio.py": "55475b7ffce5b27e1e41ebeec80f8668008341e2af776f97152e0d2d5ac47813",
+    "src/especialista/caminhos.py": "b3db6f814ac6b2ee0dd65d0089ca998ba97e3c1804a6f41385c5b64bd11eab8d",
+    "src/especialista/compressao/__init__.py": "d57969dec36836b2497845c35b0c4d32f448656ea11a7c72d32079779e49d403",
+    "src/especialista/compressao/exportacao.py": "4bd1de590de1ee1f29a5b2ce64d443521b9b117e4cc15044ec0af93bf38b7748",
+    "src/especialista/compressao/exportacao_encoder.py": "124a6ee3d08ddfed767cf1285bf6cc9c1908cb4a0b4e539ded8c5bb680c1e65e",
+    "src/especialista/compressao/poda.py": "8844344c672d6ef25cd5b9ed28af12c95bc4c753e7a8209b02fa366353b50d5f",
+    "src/especialista/compressao/poda_encoder.py": "f12c4c2c2bd6299a609afa417ee1ef6c48f208f1282610213ab931a98202ca34",
+    "src/especialista/compressao/quantizacao.py": "94cfc861411bc4a9cd01c620ebb36c89b42a5d0d4a434a048b6d3a32814978ad",
+    "src/especialista/compressao/sistema_encoder_onnx.py": "43c0288bdd263e87d167a46e78b00f4699aafb7c50b4821ed787bbb37715dc6f",
+    "src/especialista/compressao/sistema_onnx.py": "bdc037c62c5007484efdced1792d9822f85d37d550239b3d3b4933ea85cd6306",
+    "src/especialista/dados/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/especialista/dados/massive.py": "ee241cbe474fe7a49e203c006c7d89cbf843584f7e1f654d7efbd109c01cd760",
+    "src/especialista/demo/__init__.py": "6c9d520060cf915102e1e7b2d0ec9119faeed76dc089714219acca5d241b3721",
+    "src/especialista/demo/__main__.py": "20898cfaca64e28992a07bf71854942d5ec1bcad4cefaefa081ff717229f2040",
+    "src/especialista/experimentar.py": "d77c6414db37bf1977ffdbe033c3b96ad6f7790eb9614947fb58d59206f0996d",
+    "src/especialista/experimentos/__init__.py": "3b94d11b9a6839d5dcbbe22a580d4cc03d3c714c8a463012110447b365a9a5a3",
+    "src/especialista/experimentos/etapa10a.py": "d8978f7ab1b618ad1598941123951473409f281ea13d796aa07f21efbd347ff4",
+    "src/especialista/experimentos/etapa10b.py": "71a5eb04d2b0bdcc27044734a5519ede49c93c3ecab24b01f7fa0809306e7008",
+    "src/especialista/experimentos/etapa10c.py": "d8d6be01fc49110091369eff04693a677627b09da0cbaa789532b13c69f8efe1",
+    "src/especialista/experimentos/etapa10d.py": "de8f80888c640bf2a4434aabb6e406ad5148e390b620460fbccb1c56dcbf0080",
+    "src/especialista/experimentos/etapa11a.py": "b5cc7b40bfb11dd644b75dbf9b0abfff2611278558c64d90f0177b8eb26b0be0",
+    "src/especialista/experimentos/etapa11a_colab.py": "5724155911c6839c6ae6b223ee02dc3bb94672b731f3c249645338ff20db0684",
+    "src/especialista/experimentos/etapa11b.py": "64360e7f2ac5dfd24c5f8610467d78fff85731a94815ff87f2bec10090b6e2e3",
+    "src/especialista/experimentos/etapa11c.py": "f66012b466fa235024ad47ed2e6bfd7b2f03ec155467b8c70152e10db58435f5",
+    "src/especialista/experimentos/etapa4.py": "fbb634bb53e8d79b20f1da810d07c53530bda451bce1f104b295542344ce1ed7",
+    "src/especialista/experimentos/etapa4b.py": "bd92e7a50b4997fe831673f7abd8e611d66b80e5041284bacb06de2e2d8616e3",
+    "src/especialista/experimentos/etapa5a.py": "fcedc308e1bafdaf80420ba0fc70f9bc3af35899d3f98c2e4ec91308ada56334",
+    "src/especialista/experimentos/etapa5b.py": "8613c7fac2c30c582ca0a9d7aba8920e85900552efba4b99e7e846cc4e6a2051",
+    "src/especialista/experimentos/etapa6.py": "0e0a4cc23699cd023e9c7dd81260f07cc5904d8b13fc1fb5f0822e509981dd18",
+    "src/especialista/experimentos/etapa7.py": "f6e8933a55bcd587b01db9297f0d2f1c96f0dbfaa9462278cd0e71762686c2e0",
+    "src/especialista/experimentos/etapa8.py": "2f398b3a1cc3e51659d9ddb70d5978a8459b1f09e3fc7105b953705d24f2d79b",
+    "src/especialista/experimentos/etapa9.py": "f6243eea79b32c139196711e5fbee1d1b1c3789305a6b64589e50874eaf5e4ea",
+    "src/especialista/experimentos/execucao.py": "988ad6576dd0eb251220aab29e62f88164f94b6961bd8142e0bb30498c4e079b",
+    "src/especialista/modelos/__init__.py": "2bc2dbf25dd1078e3a0fa6db91c9095c6986b5a8b5855aa3a08555dc776cbefb",
+    "src/especialista/modelos/diet/__init__.py": "96f094a8388a1868edd936b9ec1096f43794fa09305989fa677d9a65bc893f53",
+    "src/especialista/modelos/diet/atencao.py": "e0cda321cdf717dd2ff164c7f9781714d45081006e8f91f32ea48fcfc01b36ca",
+    "src/especialista/modelos/diet/crf.py": "66292cf3b1f7a12c8c06d109baa20b69e4f4aa840abe61f113070210e7adf3ce",
+    "src/especialista/modelos/diet/diagrama.py": "52d2f9759907037299898b943b65ae780a39423162dceb6ad452abcdb57aa4dc",
+    "src/especialista/modelos/diet/features.py": "7928d12e99028678f183a388a706170c4a208f7fdb81a1b548b8dd4a44fbbbb0",
+    "src/especialista/modelos/diet/modelo.py": "d9546dab59f56689fdf361a51b354b57e3df33d23080b7e0d5b0a6227d16cf7e",
+    "src/especialista/modelos/diet/sistema.py": "aa541f0452378a1e97555b9a4fec12b6a91c3528680153373b044a9d17fc53dc",
+    "src/especialista/modelos/encoder/__init__.py": "15c7e66bbc84e7be6609d86b1b02375426d87e875eb5a48ca8082441b641f825",
+    "src/especialista/modelos/encoder/modelo.py": "76725fe8ec11e3355c59f93fed4f3652f28ea30155a24c64f8bf942bb0d31e0e",
+    "src/especialista/modelos/encoder/sistema.py": "4b368dd03e6da522ef9a0c0d20e4706b7b8be497de522d5dbaadbd72e0c9b70e",
+    "src/especialista/modelos/encoder/subtokens.py": "cac0db35765dfe027b368c4cacb19d16a3ce611b0e0d7b1a8297869aa0358bb3",
+    "src/especialista/modelos/linha_de_base.py": "df0306a539c29ec8ea7a894b120cdd9981b6f63c36ac63f4c7c9cbefbd38fc0f",
+    "src/especialista/modelos/vocabulario.py": "85ab90dd22a04f3686b74f5fec7b6519bec6caaf9b3eb62fce866f40320e89f7",
+    "src/especialista/professores/__init__.py": "4aaa347becf1bcd82be8f2e65ab7dc3bae80446aaa5d2c5cd1d785c408d0758b",
+    "src/especialista/professores/claude.py": "2dc103111f1e9525d5562a463471a1396fc80edf19b4ea767a3d3351859fa9ff",
+    "src/especialista/professores/demonstracoes.py": "fba4acd55814f5a6b26bddda421d8e192d62816c03d14ee307645ea36348994f",
+    "src/especialista/professores/local.py": "7d24c3a5b0cfabe63a49673e75968c5a07e6014fd6fb4836a082a1bf4b32c852",
+    "src/especialista/professores/prompt.py": "5ccdd19a8a4e7cbac96e4ae6d70c107a27fdba6184728afc990c9c0b4061156e",
+    "src/especialista/professores/resposta.py": "bcafa4302b69c60188016a5f5edd85c99933a290cacc54dfde4f36d4bc7d9ffa",
+    "src/especialista/professores/rotulagem.py": "a00a16b7206f5e5523dc793778dc24a91829a58b9e73106551ed90d5ab6afd52",
+    "src/especialista/treino.py": "8b565eb927011a500bf9b8383ca84aadfcef3cb48809ac6e14c4fd3783cd445c",
+    "src/especialista/treino_encoder.py": "e7b32a3fc1d457bf8c052061a6da4ef1a2be4f79d95a93ebed855cd14b6a5cab",
+    "src/especialista/visual.py": "0bd95689271da5a6153019304369a912681246dc6736d6d18192ba6ee370531b",
+    "uv.lock": "d564b152db7c3df6da4971198f4578b3afc6c4b10c1fe78a395bf74dc987e727",
+    "pyproject.toml": "c3a729cf2cca77e88f88c130f346907c979feea78168371ae714a3c6c3836f71"
+  },
+  "codigo_alterado_depois_da_cadeia": {
+    "arquivos": [
+      "src/especialista/experimentos/etapa11a.py",
+      "src/especialista/experimentos/etapa11c.py"
+    ],
+    "como_ler": "arquivos do pacote cuja impressão digital de hoje não é a do começo da cadeia. As execuções da cadeia rodaram com o código da cópia; as contas e o comparativo, com o de hoje (copiado em codigo/)"
+  },
+  "entradas": {
+    "entregas/11b_alunos_do_professor_maior/decisao.json": "93238e4598eaa8f484c4bbac6ad35b0d5b0a6fecc5524224462a1a12ae2f6d4c",
+    "entregas/07_poda/decisao.json": "b9db95d1701f61d4b4125abd47a9def3bd74738b2663e5188499a97a6585f43b",
+    "entregas/08_quantizacao/decisao.json": "ea4a698039f6eab1526432a70bfa43fe134b24d35d6ac0928e6a9ce2869520f1",
+    "entregas/10b_encoder_poda/decisao.json": "41361d8f66c428540e903706e420a4764dcd46922ea13fa41cd370f713118597",
+    "entregas/10c_encoder_quantizacao/decisao.json": "13aeb8c79e6cd2a9e115bb357118d4349e725c15ee12b2beaf5ccc0d4a559a2f",
+    "entregas/11a_professor_aberto_maior/sistemas.json": "b866c2c488ce2e24e9f329de18cde7a7678c8b690b014e60adb2cbe4ff74d1a8",
+    "entregas/11a_professor_aberto_maior/resultados.csv": "fe030d83e7c5486f74de7d9b82d397705c4505cd73b7b084fd619d571a0c13e6",
+    "entregas/11a_professor_aberto_maior/comparacoes.csv": "e348b250ababaeeaca34710dba37e75ff8807dfeace696910c221299379b4622",
+    "entregas/11b_alunos_do_professor_maior/sistemas.json": "07eeacc569487578efecead074e6b92c5eb0c53f9fcc60e143c2abaf1738c48e",
+    "entregas/11b_alunos_do_professor_maior/resultados.csv": "1188587828d66233fc168a571741d061329b6a8265db1541a8d5bb7c9dbc07d5",
+    "entregas/11b_alunos_do_professor_maior/comparacoes.csv": "4a29cdc639889f98dd9495f38b3c1b78f1b655995de024350e02fc36da282bca",
+    "entregas/10d_comparativo_dos_caminhos/tabela_final.csv": "010227a408e476a5094ea484656eb3d8b8610b81c16efdd0a3905aadd3d31f9f",
+    "entregas/10d_comparativo_dos_caminhos/comparacoes.csv": "beeca68dea2613ec7f2c30a65004bff4d12ba36820ea87060ddb134f7a8e85e9",
+    "entregas/10d_comparativo_dos_caminhos/regras_v2.json": "0ccab1c3e437dae575402f95a01bf81b1f3d8482d4ccc38a056b6fcabc35a60f",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/config.json": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/features.json": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/pesos.pt": "30071c0ea71cea0fdfa3db8a28577f1a1fd142d42e767010c060e327a95e4b1b",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/config.json": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/features.json": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/pesos.pt": "53d691b5b14b4cba804928a8d963dfbc3de7ef232beb2fd41a11e17d7af397a6",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/config.json": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/features.json": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+    "entregas/11b_alunos_do_professor_maior/modelos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/pesos.pt": "83f0f01cef37e8c0ada7bc965c8d7cb728d686313638db664aeb2aa597d233b1",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/cabecas.pt": "930f9132bde2e9b517e1479c6c94f8b874cbadc9525b9e27c024cb838184a558",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/config.json": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_0/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/cabecas.pt": "b33d053c642083f319f72809a0521dafec531aee9534671569bf391b4044d1dc",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/config.json": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_1/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/cabecas.pt": "ec17fdab8fa401c2fcc017b7f52c0b98cf9c433b1ab1a161875b080edbb14245",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/config.json": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/semente_2/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/cabecas.pt": "4ee766e462965ec7cf4f61c321be71e9bc29ed329ac6438e9e20e76dd6429a5f",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/config.json": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_0/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/cabecas.pt": "079748f1611077b72cdbc1c044702d04081e8220c8982604736c81a6221e8c1b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/config.json": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_1/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/cabecas.pt": "4323377fe2b5df6f065a1b9acc4e6489cea41f6ab941264ab91e902b1381f1e9",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/config.json": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/encoder/config.json": "05255ad0e2f6577acfc43b977c997a44d3db68c9b161c89a9935317b52a04e53",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/encoder/model.safetensors": "1109834544 bytes (acima de 64 MB: sem sha256)",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/encoder/tokenizer.json": "b7c3dd928f1e48cb67c2af5f9f7754e20704ed2ea20e7cb0b30ada3a4140532b",
+    "entregas/11b_alunos_do_professor_maior/modelos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/semente_2/encoder/tokenizer_config.json": "5d84c938d902dbd684af806ccc920e4c99812d897b0f271eebf856361a4337f6"
+  },
+  "respostas_lidas_pelo_comparativo": 332,
+  "saidas": {
+    "11c_cenario_b_ate_o_fim.html": {
+      "sha256": "7b6c6a8c55209082ff816a8e81f65ddf5fe1f512c6cbc8857ffc433c13badee8",
+      "bytes": 1341472,
+      "link_fisico": false
+    },
+    "RESUMO.md": {
+      "sha256": "d08c4cfeee6be9eb7551cb71658f87357d2784fb4c3767e25ffb8ffcae6dc1af",
+      "bytes": 49986,
+      "link_fisico": false
+    },
+    "cadeia/cadeia.log": {
+      "sha256": "3e1d30f855c5b10c1b799ddf05e4fa3e0860798f5de5f0618bfe9313efc23391",
+      "bytes": 7438,
+      "link_fisico": false
+    },
+    "cadeia/cadeia.sh": {
+      "sha256": "1cdd3cf0993596300915aea7a713b06902f935d4ea25f3836238bf059c27a562",
+      "bytes": 972,
+      "link_fisico": false
+    },
+    "cadeia/cadeia_20261119-004553.json": {
+      "sha256": "199a98a0af89eef699d9d80eab568905b8f2ac8ee546a1db6a3a87121b40adcd",
+      "bytes": 13303,
+      "link_fisico": false
+    },
+    "codigo/build_nb11c.py": {
+      "sha256": "a89def4980a7fa89a3d27656f9584a525a9ce72958391cebb190f7893e2f41bb",
+      "bytes": 72329,
+      "link_fisico": false
+    },
+    "codigo/etapa10d.py": {
+      "sha256": "de8f80888c640bf2a4434aabb6e406ad5148e390b620460fbccb1c56dcbf0080",
+      "bytes": 91270,
+      "link_fisico": false
+    },
+    "codigo/etapa11c.py": {
+      "sha256": "a692383dbfbd5ec9d65ae03788bd2f38c49a52cca63867dac34b9ea843c6e879",
+      "bytes": 99239,
+      "link_fisico": false
+    },
+    "codigo/test_etapa11c.py": {
+      "sha256": "a21eeeb4cc61bf5e844cf3c57713386bc470e640cf6150c6998f6baeeeca01c0",
+      "bytes": 20634,
+      "link_fisico": false
+    },
+    "comparacoes.csv": {
+      "sha256": "e1e2f903285ec8ba4da88d6c382749e5f84d9175ae7c3be45b3e8fca68108943",
+      "bytes": 100720,
+      "link_fisico": false
+    },
+    "comparativo/cadeias.csv": {
+      "sha256": "9bff04d651c4452a28e86f3c7bbf5a44c356299abbb6f92bc973029f4c3d5680",
+      "bytes": 58860,
+      "link_fisico": false
+    },
+    "comparativo/calculo.json": {
+      "sha256": "f2a47c106140750d326d565f0a6af93be5c48bf0d562059c145e16d626c7475a",
+      "bytes": 59359,
+      "link_fisico": false
+    },
+    "comparativo/comparacoes.csv": {
+      "sha256": "74a6fd2d920de2515c0dada0f9105f436b3b2b68c4dabdc1fdb20ec7f02325a8",
+      "bytes": 218727,
+      "link_fisico": false
+    },
+    "comparativo/conferencia.csv": {
+      "sha256": "c4bd3391324dd64b1d64e7b3191cb75b0ea2114f0d22e941344c5298dcdaa4c5",
+      "bytes": 55067,
+      "link_fisico": false
+    },
+    "comparativo/fronteira.csv": {
+      "sha256": "c61786dd526f51cea6ed4bfd92eff845b4a27446ef43e60ebdda2ab85fafd9ac",
+      "bytes": 34986,
+      "link_fisico": false
+    },
+    "comparativo/precos.csv": {
+      "sha256": "0d8851959eceded0f51899c8685c929bdf4ebdf3fb4ac4189167ac8bec3eccc9",
+      "bytes": 1035,
+      "link_fisico": false
+    },
+    "comparativo/regras_v3.json": {
+      "sha256": "b2d74e4da6752014fde3628552ea5458b65c6ea0e3ec05ec5d502a5227ac6fb1",
+      "bytes": 38608,
+      "link_fisico": false
+    },
+    "comparativo/regras_v4.json": {
+      "sha256": "e2493f7221295599dddc9e3dd84bca4f8d3d6366f4c278675db430b8377638b7",
+      "bytes": 39164,
+      "link_fisico": false
+    },
+    "comparativo/tabela_final.csv": {
+      "sha256": "19562ff58cb8375be7c9755290b250effe3156652a35c65246f4363bfe530e14",
+      "bytes": 59950,
+      "link_fisico": false
+    },
+    "conferencias.csv": {
+      "sha256": "85b5e14ef3cfbb4158b0552415225b5ecc8992ddedf37f7599f24b11c5a6f482",
+      "bytes": 4180,
+      "link_fisico": false
+    },
+    "contas.json": {
+      "sha256": "895f0b69ad0f4ae988362313a9944caad8d4ca79f0c292fa9733a4887a1e72b5",
+      "bytes": 1684,
+      "link_fisico": false
+    },
+    "decisao.json": {
+      "sha256": "ee7516a41a7554ab74deecd4374342cdd802dc66e1a513cf9cfd7a5059ca5b1d",
+      "bytes": 25385,
+      "link_fisico": false
+    },
+    "eficiencia.csv": {
+      "sha256": "e34d6c49d96c3a145e54dd3a11ef0f08b89b9d3adaa25c697922f8d20f54d654",
+      "bytes": 8977,
+      "link_fisico": false
+    },
+    "figuras/a_menos_b.png": {
+      "sha256": "7c23a04bd051e9475c00323d793f67fa62152be1bc55574ec45e3a070ecdb9ec",
+      "bytes": 124335,
+      "link_fisico": false
+    },
+    "figuras/cadeia_xlmr.png": {
+      "sha256": "e6465de778b074b604a8360a960ac411c9197c15a7bcc7a10f1ff75dbeeeb3c4",
+      "bytes": 66332,
+      "link_fisico": false
+    },
+    "figuras/cadeia_zero.png": {
+      "sha256": "78b1cbb2c4136d0cfa027627d7b4887b85f6c985a7da609ba28844468bcbb973",
+      "bytes": 66173,
+      "link_fisico": false
+    },
+    "figuras/conferencia_da_poda.png": {
+      "sha256": "0e847c4575054b4dbfdfab68b2685e77a9049bb77e2e8ad6327b03e539f224ab",
+      "bytes": 49894,
+      "link_fisico": false
+    },
+    "figuras/conferencia_dos_8_bits.png": {
+      "sha256": "d91d79daa69580f34230019a551b8bec2eadd95c779757ac137be4810d1aa815",
+      "bytes": 55080,
+      "link_fisico": false
+    },
+    "figuras/fronteira_latencia.png": {
+      "sha256": "b4898e28869b136473b2b04764b8e3b475b0138655011ca31f483bbd491216e3",
+      "bytes": 81021,
+      "link_fisico": false
+    },
+    "figuras/fronteira_tamanho.png": {
+      "sha256": "7abf0f5b999586d911882d1a0d1565c2e2c4caba46be18fbedbbdda359755718",
+      "bytes": 86266,
+      "link_fisico": false
+    },
+    "figuras/professores.png": {
+      "sha256": "3512bcb90a663e844a2998cd73e5722169034c33436d315288ac343e7d503cff",
+      "bytes": 56653,
+      "link_fisico": false
+    },
+    "figuras/troca_de_professor.png": {
+      "sha256": "48907ae2a01bc753c6aa92b014e27e6a3ea4eb416a3a595674512c8f546fff84",
+      "bytes": 70356,
+      "link_fisico": false
+    },
+    "fumaca/cadeia_20261119-004022.json": {
+      "sha256": "90dd67e470be421f07527d126ab2dfce64c0de2f0167813fda5aa1d413a845e1",
+      "bytes": 10687,
+      "link_fisico": false
+    },
+    "fumaca/comparacao_antes_e_depois.txt": {
+      "sha256": "2684351b4eb5b4b9801502b12cfc38a82cc530cc41288badf7093b0682ca8777",
+      "bytes": 4560,
+      "link_fisico": false
+    },
+    "fumaca/comparacao_no_fecho.json": {
+      "sha256": "83da96cc647afe85eb5c311ada59c8f965ef0f0c814c4d0e2f7362c8ed5c169f",
+      "bytes": 56140,
+      "link_fisico": false
+    },
+    "fumaca/conferencia_da_fumaca.json": {
+      "sha256": "72f8aa427ee336781375245f9fbf678860cf5153871fcd625f238ba109ac0e77",
+      "bytes": 9171,
+      "link_fisico": false
+    },
+    "fumaca/fumaca.log": {
+      "sha256": "154fc6565ed62d3c61d3f5bb6d67f0960997762007d8795356e2c386ac289ce7",
+      "bytes": 3196,
+      "link_fisico": false
+    },
+    "fumaca/impressoes.py": {
+      "sha256": "27f6f8ea4d4e98c1a35da896cf53eb72174cbcedfd2dfc75e87f448b7136f07a",
+      "bytes": 3605,
+      "link_fisico": false
+    },
+    "fumaca/impressoes_antes.json": {
+      "sha256": "5abdf4cb32b12befc6851e49e8bc16beca099173b217b7b908229427452723be",
+      "bytes": 1502382,
+      "link_fisico": false
+    },
+    "fumaca/impressoes_depois_da_fumaca.json": {
+      "sha256": "32e9f32529e9a8d6cdee1259d030860429b0e1016d6313e6eadac219b25f09db",
+      "bytes": 1502383,
+      "link_fisico": false
+    },
+    "fumaca/impressoes_no_fecho.json": {
+      "sha256": "03cee7993b5dbce8f709ff11550fee86856f6eea82ff16fa49daae915bd7a5a2",
+      "bytes": 1601878,
+      "link_fisico": false
+    },
+    "fumaca/prova_da_10d/prova.json": {
+      "sha256": "7573d25f1ce242442371fdcf39f626616d323697172b0a3b07cf1d84f94bbb5e",
+      "bytes": 1969,
+      "link_fisico": false
+    },
+    "fumaca/prova_da_10d/prova.py": {
+      "sha256": "b4875274be8ada9392b958ee0b16440eed12012ec048651eb883cfd3f39bf727",
+      "bytes": 3559,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0.csv": {
+      "sha256": "e41ac64a5ca272868dc6e8dee76d49549ad8fdb771e7c698d2e9d701c280867f",
+      "bytes": 2643,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1.csv": {
+      "sha256": "4ad20fe4b4dc4683a326887b737ab8cd430892c1472b6c72e90e333603154ceb",
+      "bytes": 2631,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2.csv": {
+      "sha256": "8adb45a9a38f12b360a724aea8b183d4e325e637dac09ab8cc78280e2c52a041",
+      "bytes": 2640,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0.csv": {
+      "sha256": "7e128dfb1e34af5bd8514c610bd47ec259eaff748ae6e05402c14e5b723cb158",
+      "bytes": 2611,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1.csv": {
+      "sha256": "1d7b1a40fba50a8b58edf224b699c96b440fb878902f747cb0359a5389bb66d7",
+      "bytes": 2610,
+      "link_fisico": false
+    },
+    "historicos/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2.csv": {
+      "sha256": "7cc11d293c5588d7d29e1d38023a5fbd5768ea1657b838877912d028cd3e5052",
+      "bytes": 2611,
+      "link_fisico": false
+    },
+    "historicos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_0.csv": {
+      "sha256": "368ddb264a0a63388b98307f6526d7cb69f7ecd33ae761876523db0b35143c59",
+      "bytes": 4591,
+      "link_fisico": false
+    },
+    "historicos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_1.csv": {
+      "sha256": "b8d15d9793b6c8ae9fd3f301b1576c5693f5856641339e0c80ff0d8b89cb6378",
+      "bytes": 4604,
+      "link_fisico": false
+    },
+    "historicos/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_2.csv": {
+      "sha256": "26a81c8027a8bbd80d396428b83531c18a876e7eaf70d1c96437aa3de8d502a1",
+      "bytes": 4589,
+      "link_fisico": false
+    },
+    "latencia/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda.json": {
+      "sha256": "20e002efc091cf54a0279b8d4ccc000ec518270334ca701dd1312c5e3e4453b2",
+      "bytes": 2496,
+      "link_fisico": false
+    },
+    "latencia/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino.json": {
+      "sha256": "e0fa9767228f291ebe1b7e952d07a8fe63914efadbc01c448bc03a8ca19014da",
+      "bytes": 2525,
+      "link_fisico": false
+    },
+    "latencia/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda.json": {
+      "sha256": "828613a4ac0f6cc6aa604728d6aa8ea701f564647c3f7463b60646822d20fa98",
+      "bytes": 2495,
+      "link_fisico": false
+    },
+    "latencia/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino.json": {
+      "sha256": "b440c59e22667510fe87ccc6c201628ae089dacd1b21c6bd4ebe823d9098c1ad",
+      "bytes": 2544,
+      "link_fisico": false
+    },
+    "latencia/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90.json": {
+      "sha256": "a4e64d1190e6207534ad28e6229c3ffd48faa3914a4775e3ca77ba6ec6f691be",
+      "bytes": 2636,
+      "link_fisico": false
+    },
+    "latencia/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda.json": {
+      "sha256": "0dcdc8e6ba082b8876927c922bbe0b5a823959e24de2660ccc69b5e9cbaa9bc8",
+      "bytes": 2653,
+      "link_fisico": false
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/sistema.json": {
+      "sha256": "4b5a4070e0c99d126fd94aaac0365cbfd21a06c99e7705ea7dc8a9372d16f564",
+      "bytes": 4491,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/sistema.json": {
+      "sha256": "6ba3dde6f9badc318a03d6b918d9d18a732f8e9a1d2556365f47f18fe3694ca5",
+      "bytes": 4491,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/sistema.json": {
+      "sha256": "bc951faedd389e3642471d6ec84292ef722e8d595d2546676ce84aaf4cf5ac65",
+      "bytes": 4491,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/sistema.json": {
+      "sha256": "f7986e8bf5e4617e43dab922f76eeea33ccaac4022d99e8e8c28b6cf3d1d7d2f",
+      "bytes": 4511,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/sistema.json": {
+      "sha256": "8457e1f871f238aa9ea10ce291ba17395cf8316b0a174fed6a90c753b05e9bf6",
+      "bytes": 4511,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/sistema.json": {
+      "sha256": "4415f6520153dd78e676739be7eb863c3b50c9d4e10d944ef035e83758b5c33f",
+      "bytes": 4511,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/sistema.json": {
+      "sha256": "01c4caf4edcce9a152663332d0121a487c3d795c370c5e29c505b2f9d6d59ee0",
+      "bytes": 4494,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/sistema.json": {
+      "sha256": "3fc0dce61a79ed21587465f308a2d79a573b8c3c430a59868bee35379b21bebd",
+      "bytes": 4494,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/rede.onnx": {
+      "sha256": null,
+      "bytes": 278189547,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/sistema.json": {
+      "sha256": "ce7544a6d24533c8c80fdc336d9bc73a427c4ed0b1769ecfc74ff13a7fa501d1",
+      "bytes": 4494,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/sistema.json": {
+      "sha256": "dac25b999e351d0e68782ce6b44c0e4158822c718353e3ccbbd0351c8438a7fc",
+      "bytes": 4514,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_0/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/sistema.json": {
+      "sha256": "3bdd0fea6463036b5a147e0d0476c4a82a2b5e0d95eebe7eec519dcf5af09f6c",
+      "bytes": 4514,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_1/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/rede.onnx": {
+      "sha256": null,
+      "bytes": 90178537,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/sistema.json": {
+      "sha256": "ef0902288ea114ff27169475ad8accea74e51729ac5f9c5c56f783abd3b31249",
+      "bytes": 4514,
+      "link_fisico": true
+    },
+    "modelos/int8/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/dinamica/semente_2/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_0/crf.npz": {
+      "sha256": "d05b5b9d083e72de5e59ada69f1a8296b7806a5651383800fe0a0185e3e8d273",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_0/features.json": {
+      "sha256": "4f6e21e7b116c67b1fa60ce542fec21b4a4deec9868a09da0057f25e5a6ffe7b",
+      "bytes": 24644,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_0/rede.onnx": {
+      "sha256": "82760eba0dc9da6616c92564a60d65a4c3d31e1bb595b27591cd8ab7288c4ef9",
+      "bytes": 2032944,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_0/sistema.json": {
+      "sha256": "40d772e4042a4ce034611e030d2c83d82002d9e3389d4301c932bcf15c334fa7",
+      "bytes": 4569,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_1/crf.npz": {
+      "sha256": "b09f2e412ed4074cc07ab1bcd984b3d2f3af27815fa7627e548c57ea3795e869",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_1/features.json": {
+      "sha256": "5fa37540cb43e51d6c6a16ab91a72828becedc9f0cbeeff2c5a4bd6288e8fe40",
+      "bytes": 24675,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_1/rede.onnx": {
+      "sha256": "8a9b171d411d2343af899e1a1213a39b9647cbb93225444bccc16e0d477dd001",
+      "bytes": 2032944,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_1/sistema.json": {
+      "sha256": "4a92ea3e46b120a2e112f595c3fd991d0b274fbe146cd652ee66d86e4aba09c3",
+      "bytes": 4569,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_2/crf.npz": {
+      "sha256": "ea3014541f6e67308adbe0fe70964405883ce6afafb3541b9f4d5c3e6d4cd69d",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_2/features.json": {
+      "sha256": "33f55285f16dad592e43e0008e57c6a8e6466d3416f0e3bb930096fb5764172d",
+      "bytes": 24711,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_2/rede.onnx": {
+      "sha256": "78605ae60f8e182c574e0b4b684078972f5ba2f545bb0e89d32fa4ec14176d86",
+      "bytes": 2032945,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/dinamica/semente_2/sistema.json": {
+      "sha256": "e7575f4e0e370a43820075c49fe42a4ddea24f1aaf63359b50b4d7c278514332",
+      "bytes": 4569,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/crf.npz": {
+      "sha256": "31e17e14e6a4143dde778a9d0772b6980fcb06d83d1948b6fc81da794cc04486",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/features.json": {
+      "sha256": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+      "bytes": 269060,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/rede.onnx": {
+      "sha256": "b5572d34c0472c63d1b1149536ab5171e2222f569d9ad9fd7fa8fd5587b6cc26",
+      "bytes": 4936244,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_0/sistema.json": {
+      "sha256": "b67fe3e4a6e14e04c44a23682542989626394794a5cfc45e056100df1ad6e132",
+      "bytes": 4556,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/crf.npz": {
+      "sha256": "a08f6d342f22806766ac7e037d52a9d2d708aa8c974e6716009a832ed3a698a8",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/features.json": {
+      "sha256": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+      "bytes": 269060,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/rede.onnx": {
+      "sha256": "9c96a71f8c7ec7a1b265c58239105c9f00457d434d2c9a6e5cfe5deabf4e9fae",
+      "bytes": 4936245,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_1/sistema.json": {
+      "sha256": "de36f11ab3e3bb164b476e014d9b36a8cf03d7a105a7dc53de8b355ee0b84210",
+      "bytes": 4556,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/crf.npz": {
+      "sha256": "d4c76572b3e2cae564ef177d26faf38e903a0d8718545cf00dfd06a10136aa43",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/features.json": {
+      "sha256": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+      "bytes": 269060,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/rede.onnx": {
+      "sha256": "f3297224e91b0d383ce234f61aa8f5b807d9f093e4afef908f2341f0cf9f59bb",
+      "bytes": 4936245,
+      "link_fisico": true
+    },
+    "modelos/int8/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/dinamica/semente_2/sistema.json": {
+      "sha256": "dc794e79c80078c200dea75f31ac39add1ae08ce814f26a4226a98db67641312",
+      "bytes": 4556,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 1110439130,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/sistema.json": {
+      "sha256": "f23a2c80778bcb4906b9935751843b191a85b3655158ed9d27d68fa52c54220e",
+      "bytes": 4358,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 358395095,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/sistema.json": {
+      "sha256": "fa3b4cc1d1d09e583b599a849326a222f635458fa8fe255afd76daf2bfa325fb",
+      "bytes": 4378,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 1110439130,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/sistema.json": {
+      "sha256": "af44f255c004fafde560cd9c9ff7da2e7b11ff35e2c394cbddf2ea41c6a9a5e8",
+      "bytes": 4361,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/tokenizador.json": {
+      "sha256": "4d8a79a67ac852eb6c52fb5e09bbf720f0e221ff242e8f83ebe4238c0a4c8a43",
+      "bytes": 9081404,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/rede.onnx": {
+      "sha256": null,
+      "bytes": 358395095,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/sistema.json": {
+      "sha256": "cc2334942d6fdb301f9e22a412f7d3d156fb2113a20377586ad42b5c1b4b4bdc",
+      "bytes": 4381,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/tokenizador.json": {
+      "sha256": "86b81026f515c646fedb8e0fd1ef7a866b0bc543cd75d9c4f411935b80556361",
+      "bytes": 483669,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/crf.npz": {
+      "sha256": "d05b5b9d083e72de5e59ada69f1a8296b7806a5651383800fe0a0185e3e8d273",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/features.json": {
+      "sha256": "4f6e21e7b116c67b1fa60ce542fec21b4a4deec9868a09da0057f25e5a6ffe7b",
+      "bytes": 24644,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/rede.onnx": {
+      "sha256": "710b5beb8c142a9d75955041ed90f364ccb311b7dbda2d74631a6fa472545bb1",
+      "bytes": 7903330,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/sistema.json": {
+      "sha256": "5f3ddc13f2b003f8986c03d392ed700089633c3c72b0c36dba6d4b8398adb9a7",
+      "bytes": 4436,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/crf.npz": {
+      "sha256": "31e17e14e6a4143dde778a9d0772b6980fcb06d83d1948b6fc81da794cc04486",
+      "bytes": 50926,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/features.json": {
+      "sha256": "53fbdd06364c1cea27f76864938ad2cab8a429e116f2b29e5937a8c2131b7d07",
+      "bytes": 269060,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/rede.onnx": {
+      "sha256": "c854456c48ce2c9fe3c6e4a0806b1df8ee56e67bbc9db66198cde6e208c22f1b",
+      "bytes": 19516517,
+      "link_fisico": true
+    },
+    "modelos/onnx_32_bits/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/sem_poda/semente_0/sistema.json": {
+      "sha256": "31f2b8502310fc044f67cb4457e25f3d717e29b4c81dd25a227284f4d705721b",
+      "bytes": 4423,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/cabecas.pt": {
+      "sha256": "9be948b4a29f62b895521be1c6b2d68416187df9e93cf8cc1e031a84cc659ed7",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/config.json": {
+      "sha256": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/cabecas.pt": {
+      "sha256": "2e51f845a7bbc29e0532ea9620e63f337e95c96e2fd22abcf700e8d218f730ce",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/config.json": {
+      "sha256": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/cabecas.pt": {
+      "sha256": "32e9baf929b7c403564422a47a629b38c26e67def885a19dbd3b3d663e20d128",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/config.json": {
+      "sha256": "3094415f145e2137e40178166df82619ed84a88fb75d307e88fde7459fe74fb4",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/cabecas.pt": {
+      "sha256": "4353b306bc2caff0573d82e6aed5967253bdef7a0926301b2ca4461b35b6586f",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/config.json": {
+      "sha256": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_0/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/cabecas.pt": {
+      "sha256": "079748f1611077b72cdbc1c044702d04081e8220c8982604736c81a6221e8c1b",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/config.json": {
+      "sha256": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_1/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/cabecas.pt": {
+      "sha256": "42898400766801d6b34aea4872bcb7a137c414d0b28c297138a829a8077a1369",
+      "bytes": 528221,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/config.json": {
+      "sha256": "49b047972a816267fccea7e070506e9e66d7954fc2d01f1d636a0845ebd59a02",
+      "bytes": 3977,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/config.json": {
+      "sha256": "4f940c76496ae055ad21a7acb5b8f4592beaca000fb054f0e6dd8075cd84da3c",
+      "bytes": 740,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/model.safetensors": {
+      "sha256": null,
+      "bytes": 357790296,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/tokenizer.json": {
+      "sha256": "d6a87be3234e98caab4ef972c4d8ead2b19e36633abc4e211bf66a168ba63710",
+      "bytes": 651461,
+      "link_fisico": true
+    },
+    "modelos/podados/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100/vocabulario_treino/semente_2/encoder/tokenizer_config.json": {
+      "sha256": "f427c8635ebc23123b55383ae8dfb74ecdd4ca9eb139f15b8e97f2de0e6c96ce",
+      "bytes": 371,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/config.json": {
+      "sha256": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+      "bytes": 4146,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/features.json": {
+      "sha256": "4f6e21e7b116c67b1fa60ce542fec21b4a4deec9868a09da0057f25e5a6ffe7b",
+      "bytes": 24644,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_0/pesos.pt": {
+      "sha256": "25a991a8a5b530b94caa8a8832cbd5173c03a4f6f42e19362f0cf37c18a09076",
+      "bytes": 8035524,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_1/config.json": {
+      "sha256": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+      "bytes": 4146,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_1/features.json": {
+      "sha256": "5fa37540cb43e51d6c6a16ab91a72828becedc9f0cbeeff2c5a4bd6288e8fe40",
+      "bytes": 24675,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_1/pesos.pt": {
+      "sha256": "012b74a6d1bb5404e2583f523e49146422d505242548d584196ead046b17c0ed",
+      "bytes": 8035524,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_2/config.json": {
+      "sha256": "1d4511daddfc07f2974188cd3dd9d1a2c63ef4abb2e06077af8805e336a9bf2a",
+      "bytes": 4146,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_2/features.json": {
+      "sha256": "33f55285f16dad592e43e0008e57c6a8e6466d3416f0e3bb930096fb5764172d",
+      "bytes": 24711,
+      "link_fisico": true
+    },
+    "modelos/podados/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100/linhas_90/semente_2/pesos.pt": {
+      "sha256": "e89f6fb34bf99407f62b249b12fb1832e59ced43d656d0dd9261837990f8187d",
+      "bytes": 8035524,
+      "link_fisico": true
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet": {
+      "sha256": "746311831cf14eb9984280b862f60c2cf7efbb9906bd4cbbb4ae0bbbd3bb5e4a",
+      "bytes": 24183,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet": {
+      "sha256": "4cc45589f849d72c4c123944b0e1962870e79dbe381240ed7b48262a05cabe40",
+      "bytes": 34082,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet": {
+      "sha256": "827dae086399932857b3a4b40d1fda6a66ff21fd02fca5f54b0648c04beef1db",
+      "bytes": 23940,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet": {
+      "sha256": "2489c35efc17dca9df613712683e7ca5bbda2e7e811c1d5c92a85ed36fa848a4",
+      "bytes": 34210,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet": {
+      "sha256": "ffc082fc3af9b90f27ae453106a03c0eb802d78797098463d322b88e1efef442",
+      "bytes": 24137,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet": {
+      "sha256": "1ad3260aa1bf25ed18620f24fbf4575e4a5ae95394c71f664cd5696f690202d4",
+      "bytes": 33790,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_dev.parquet": {
+      "sha256": "4a0a9f393a93d043e194f5576d0fa1396555f6701178beb76571f3207a14b884",
+      "bytes": 24366,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_test.parquet": {
+      "sha256": "a724d8dd85c78aea63a69b063f89d5fd33543d70f73eed8cb6d962bfe6bc9f86",
+      "bytes": 34237,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_dev.parquet": {
+      "sha256": "45c23bde802b3598b6f295e05b693c13733d4ba92bbad50c17a408538bdc5ffd",
+      "bytes": 24378,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_test.parquet": {
+      "sha256": "2baad1f30852d8a37610d97596139123de4017ec601d4244ec97873261fc5791",
+      "bytes": 33980,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_dev.parquet": {
+      "sha256": "da0dbd0b3722767e2ec0d94e04384110f135f2122cd6a285c566526eb69f51f8",
+      "bytes": 24284,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_test.parquet": {
+      "sha256": "7b27adf63a6b7a307f0d5ab781e6c8e5df63e6230e5ed62d82a7d62a8d52d47d",
+      "bytes": 34224,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_dev.parquet": {
+      "sha256": "4a0a9f393a93d043e194f5576d0fa1396555f6701178beb76571f3207a14b884",
+      "bytes": 24366,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_test.parquet": {
+      "sha256": "a724d8dd85c78aea63a69b063f89d5fd33543d70f73eed8cb6d962bfe6bc9f86",
+      "bytes": 34237,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_dev.parquet": {
+      "sha256": "45c23bde802b3598b6f295e05b693c13733d4ba92bbad50c17a408538bdc5ffd",
+      "bytes": 24378,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_test.parquet": {
+      "sha256": "2baad1f30852d8a37610d97596139123de4017ec601d4244ec97873261fc5791",
+      "bytes": 33980,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_dev.parquet": {
+      "sha256": "da0dbd0b3722767e2ec0d94e04384110f135f2122cd6a285c566526eb69f51f8",
+      "bytes": 24284,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_test.parquet": {
+      "sha256": "7b27adf63a6b7a307f0d5ab781e6c8e5df63e6230e5ed62d82a7d62a8d52d47d",
+      "bytes": 34224,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_0_dev.parquet": {
+      "sha256": "8badf5fec56f67ac80e1d1d19e4b1fb89f70f7488faddd817fc8267b7498b2d0",
+      "bytes": 24336,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_0_test.parquet": {
+      "sha256": "2ad6bd3b35230d275ccd50d7963d81bb41729225a8fbbec3dc511e8834d57655",
+      "bytes": 34260,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_1_dev.parquet": {
+      "sha256": "a9e44e5312169628e217be7feaaa7cb8ff73d6b80d6a7218fafb48e4850fc8bd",
+      "bytes": 24473,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_1_test.parquet": {
+      "sha256": "81fb55a3000590b325f6098235e5a67fa40886cc8adf439082515a869bd2e8e5",
+      "bytes": 34512,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_2_dev.parquet": {
+      "sha256": "b942c7b779f0d0cd0fdd02d738c7e681f1584ee03c4f4d4d88cc6877bfb67d8b",
+      "bytes": 24303,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_2_test.parquet": {
+      "sha256": "a27cb2d9324c6e945498e2b5818cecd064c9f225455f40e9af445dedfe5828f8",
+      "bytes": 34253,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_dev.parquet": {
+      "sha256": "8be8977434c7cb124ab54c85754bce66b5ee83c2db4f50bea41b07fdfeced092",
+      "bytes": 24259,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_test.parquet": {
+      "sha256": "f523eeeb0b518af9be275b5fb9803281bc055a97d9e55cee51a686375908b916",
+      "bytes": 33960,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_dev.parquet": {
+      "sha256": "316b40997a1f19f94f0e49ee267dd26632982274880b6a5bc6da54b08fb1b592",
+      "bytes": 24312,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_test.parquet": {
+      "sha256": "5a2638017fbf76b1671865b71903dd47ed49296671cd53566b6f625398089245",
+      "bytes": 34396,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_dev.parquet": {
+      "sha256": "4ab875e8c35dfe186ca101a8540ef8b34e3651c1141aa660326d1c02db2ed862",
+      "bytes": 24323,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_test.parquet": {
+      "sha256": "0d7d7296ef96d7ab432e0dc0ca962dc1408cd43ea289be1cad5f8b3e3c30566c",
+      "bytes": 34412,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_dev.parquet": {
+      "sha256": "5fdebfe8a9ff15361aeebbd598986d461165dd0a9423b6049053361e5f510d94",
+      "bytes": 24197,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_test.parquet": {
+      "sha256": "8c6e9c81bd9ee76b5b453b2b2757b186634338a39f9cf3e744f67b1a8d7ee5bc",
+      "bytes": 34302,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_dev.parquet": {
+      "sha256": "d01e0c39a43dabf16a37c10de9c246bae2b8fcdf400838918d2e80fa452acc94",
+      "bytes": 24476,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_test.parquet": {
+      "sha256": "16ae26f00426e849108ddeefd1535699776ebd744bb428077d95b7cb835b81c7",
+      "bytes": 34587,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_dev.parquet": {
+      "sha256": "8c0489dc05f924a6b90b9c69c8e8975df6cbe54ac9e46e9368c0892741f1b2e4",
+      "bytes": 24392,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_test.parquet": {
+      "sha256": "e54e06b61d9c9b3207d37129528316ad2a2fd9e153f0a3bad4ebcb992f0f3b72",
+      "bytes": 34359,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_0_dev.parquet": {
+      "sha256": "5fdebfe8a9ff15361aeebbd598986d461165dd0a9423b6049053361e5f510d94",
+      "bytes": 24197,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_0_test.parquet": {
+      "sha256": "8c6e9c81bd9ee76b5b453b2b2757b186634338a39f9cf3e744f67b1a8d7ee5bc",
+      "bytes": 34302,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_1_dev.parquet": {
+      "sha256": "d01e0c39a43dabf16a37c10de9c246bae2b8fcdf400838918d2e80fa452acc94",
+      "bytes": 24476,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_1_test.parquet": {
+      "sha256": "16ae26f00426e849108ddeefd1535699776ebd744bb428077d95b7cb835b81c7",
+      "bytes": 34587,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_2_dev.parquet": {
+      "sha256": "8c0489dc05f924a6b90b9c69c8e8975df6cbe54ac9e46e9368c0892741f1b2e4",
+      "bytes": 24392,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_2_test.parquet": {
+      "sha256": "e54e06b61d9c9b3207d37129528316ad2a2fd9e153f0a3bad4ebcb992f0f3b72",
+      "bytes": 34359,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_dev.parquet": {
+      "sha256": "5fdebfe8a9ff15361aeebbd598986d461165dd0a9423b6049053361e5f510d94",
+      "bytes": 24197,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_test.parquet": {
+      "sha256": "8c6e9c81bd9ee76b5b453b2b2757b186634338a39f9cf3e744f67b1a8d7ee5bc",
+      "bytes": 34302,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_dev.parquet": {
+      "sha256": "d01e0c39a43dabf16a37c10de9c246bae2b8fcdf400838918d2e80fa452acc94",
+      "bytes": 24476,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_test.parquet": {
+      "sha256": "16ae26f00426e849108ddeefd1535699776ebd744bb428077d95b7cb835b81c7",
+      "bytes": 34587,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_dev.parquet": {
+      "sha256": "8c0489dc05f924a6b90b9c69c8e8975df6cbe54ac9e46e9368c0892741f1b2e4",
+      "bytes": 24392,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_test.parquet": {
+      "sha256": "e54e06b61d9c9b3207d37129528316ad2a2fd9e153f0a3bad4ebcb992f0f3b72",
+      "bytes": 34359,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet": {
+      "sha256": "02ede41cc522b148364d385e97361594dd4be4ba07dc48ea4a5529647cc175ab",
+      "bytes": 24076,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet": {
+      "sha256": "fcb117926d7646fddc039779b7f949341eb6b06d24c484ec414ecd861785adef",
+      "bytes": 34055,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet": {
+      "sha256": "fc1e13085f4563c02f3556906344846e7282092c18609570410bb3fbada4c835",
+      "bytes": 24214,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet": {
+      "sha256": "663b18003b3809f684981114dd43ad9623e4d6b56d93fae05f015f074f4c4e08",
+      "bytes": 33733,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet": {
+      "sha256": "2450b721f44cb39013bdb97e9e05bf3cb3dc118cc88b10e46fa8ccae2f6cf03d",
+      "bytes": 24057,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet": {
+      "sha256": "cee52fd3adc00cc4b82ba6c75803288803ce5def93a43de1e0d5aabb8d3b2b3a",
+      "bytes": 33966,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_dev.parquet": {
+      "sha256": "c381be6ca79b2fcccabf7ed54e9b90b33305a7fbb1510c295e52f6eca7c66f2c",
+      "bytes": 24167,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_test.parquet": {
+      "sha256": "6509ea0a6dc51f0cd31f988f6c0a00393fe2e69cd09fbf72d355c3557f39410f",
+      "bytes": 34175,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_dev.parquet": {
+      "sha256": "bf446af5bb9c767ec863b33355476ad6c50d72bdcbf3ffba53d7a3d58302a683",
+      "bytes": 24326,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_test.parquet": {
+      "sha256": "ef289ca37b85f5480353a23482372f5d906715bb44d8381bae0ca2c9cb399f95",
+      "bytes": 34358,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_dev.parquet": {
+      "sha256": "21108fb3299afcb0562e7e5d43702b8698b89f9cfcb82610affaeaf84c64460d",
+      "bytes": 24233,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_test.parquet": {
+      "sha256": "892a162af8ca0378057ea762e6044fc1aa4db2e69a585fe055f7a2600bded4e4",
+      "bytes": 34208,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_dev.parquet": {
+      "sha256": "c381be6ca79b2fcccabf7ed54e9b90b33305a7fbb1510c295e52f6eca7c66f2c",
+      "bytes": 24167,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_test.parquet": {
+      "sha256": "6509ea0a6dc51f0cd31f988f6c0a00393fe2e69cd09fbf72d355c3557f39410f",
+      "bytes": 34175,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_dev.parquet": {
+      "sha256": "bf446af5bb9c767ec863b33355476ad6c50d72bdcbf3ffba53d7a3d58302a683",
+      "bytes": 24326,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_test.parquet": {
+      "sha256": "ef289ca37b85f5480353a23482372f5d906715bb44d8381bae0ca2c9cb399f95",
+      "bytes": 34358,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_dev.parquet": {
+      "sha256": "21108fb3299afcb0562e7e5d43702b8698b89f9cfcb82610affaeaf84c64460d",
+      "bytes": 24233,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_test.parquet": {
+      "sha256": "892a162af8ca0378057ea762e6044fc1aa4db2e69a585fe055f7a2600bded4e4",
+      "bytes": 34208,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_0_dev.parquet": {
+      "sha256": "5fb9b468b6ac3171f3b1152c1044de22ae98864a13de9ace452c985f028de1e4",
+      "bytes": 24209,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_0_test.parquet": {
+      "sha256": "2de32c576aea846fc98ce724b8b4874a8e2e5ab217b538c523aa537fdd11aeb8",
+      "bytes": 34284,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_1_dev.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_1_test.parquet": {
+      "sha256": "dd9888a4605323ce8b1ab583ac0a6ff31d0343f75079148651477e9ed0b2a2c7",
+      "bytes": 34450,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_2_dev.parquet": {
+      "sha256": "63071561382b6a1c601d4fa75a8474f85ed1894eafc8af76e88cd2dfab81c22d",
+      "bytes": 24232,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__antes_do_reajuste_semente_2_test.parquet": {
+      "sha256": "69a1f85343a3ecd849fbf981d03c07579112a9da9bc71cd6be6bce39457dca94",
+      "bytes": 34178,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_dev.parquet": {
+      "sha256": "0aecaa2992361d3eef938e9ee3ef03ce30af0845f024a2da6210e49469d7a713",
+      "bytes": 24387,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_0_test.parquet": {
+      "sha256": "d221813aa8dcce4bffe215d67d58a6ed9cbcf97db37ce0fda71a0173d25bb523",
+      "bytes": 34367,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_dev.parquet": {
+      "sha256": "1e6720e170a1f42a1663f9848449ae46944828cc64f38dd3fb9ef2a71e65226a",
+      "bytes": 24234,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_1_test.parquet": {
+      "sha256": "25ce7e74c1f1e4730ae36f12b0e44fa578f306f080baf66d2e0973528e4ceddc",
+      "bytes": 34138,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_dev.parquet": {
+      "sha256": "913d4dfe4ebd5f68c6e7e4cce336f8c12c985c41e5ad05f8e63ecf63c420f3e7",
+      "bytes": 24095,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__dinamica_semente_2_test.parquet": {
+      "sha256": "6c474d08938395cd7b88bf538789356643b87ac167434bd1021ec4ea8ec7cdd3",
+      "bytes": 34106,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_dev.parquet": {
+      "sha256": "909ab1676d0496fe4081d3dea627433c8ed3f652325aed04ada8d347f0eb49a6",
+      "bytes": 24465,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_0_test.parquet": {
+      "sha256": "957daf96edc1d10d6e5840dd510d6c2305c208700aa730945844b6f47c01cedb",
+      "bytes": 34394,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_dev.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_1_test.parquet": {
+      "sha256": "dd9888a4605323ce8b1ab583ac0a6ff31d0343f75079148651477e9ed0b2a2c7",
+      "bytes": 34450,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_dev.parquet": {
+      "sha256": "b7293135339f5d066b10551b180f4a781c4dc2a98567f107b2ae2977184e416b",
+      "bytes": 24275,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__fp32_semente_2_test.parquet": {
+      "sha256": "cb4471e2f3ec670f9158dd4eced4c72a8bfe9837cb2f30216a85fa15ecb22bb4",
+      "bytes": 34189,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_0_dev.parquet": {
+      "sha256": "909ab1676d0496fe4081d3dea627433c8ed3f652325aed04ada8d347f0eb49a6",
+      "bytes": 24465,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_0_test.parquet": {
+      "sha256": "957daf96edc1d10d6e5840dd510d6c2305c208700aa730945844b6f47c01cedb",
+      "bytes": 34394,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_1_dev.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_1_test.parquet": {
+      "sha256": "dd9888a4605323ce8b1ab583ac0a6ff31d0343f75079148651477e9ed0b2a2c7",
+      "bytes": 34450,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_2_dev.parquet": {
+      "sha256": "b7293135339f5d066b10551b180f4a781c4dc2a98567f107b2ae2977184e416b",
+      "bytes": 24275,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino__pytorch_semente_2_test.parquet": {
+      "sha256": "cb4471e2f3ec670f9158dd4eced4c72a8bfe9837cb2f30216a85fa15ecb22bb4",
+      "bytes": 34189,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_dev.parquet": {
+      "sha256": "909ab1676d0496fe4081d3dea627433c8ed3f652325aed04ada8d347f0eb49a6",
+      "bytes": 24465,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_0_test.parquet": {
+      "sha256": "957daf96edc1d10d6e5840dd510d6c2305c208700aa730945844b6f47c01cedb",
+      "bytes": 34394,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_dev.parquet": {
+      "sha256": "78c8a4e3effd01ebf40a617dda0f4524b270e245d5ab05d17f151f7319b54c0d",
+      "bytes": 24152,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_1_test.parquet": {
+      "sha256": "dd9888a4605323ce8b1ab583ac0a6ff31d0343f75079148651477e9ed0b2a2c7",
+      "bytes": 34450,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_dev.parquet": {
+      "sha256": "b7293135339f5d066b10551b180f4a781c4dc2a98567f107b2ae2977184e416b",
+      "bytes": 24275,
+      "link_fisico": false
+    },
+    "previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100__vocabulario_treino_semente_2_test.parquet": {
+      "sha256": "cb4471e2f3ec670f9158dd4eced4c72a8bfe9837cb2f30216a85fa15ecb22bb4",
+      "bytes": 34189,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_0_dev.parquet": {
+      "sha256": "9b379d32ede1aee95d787f1827400f63278689bb68ebaa942cbb867cf65e788b",
+      "bytes": 23341,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_0_test.parquet": {
+      "sha256": "a3a34809241969eb9d0e430d4d355e76808ca7b4bbb035a0a80627ffed85f891",
+      "bytes": 32911,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_1_dev.parquet": {
+      "sha256": "cacc19619154f39e69e8bf841e750ba5b368d90b48f01d83304749b25d4bb74c",
+      "bytes": 23364,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_1_test.parquet": {
+      "sha256": "d21fee0d2eeeff2c7e11d62c810e1bec50db48caf3864a42566c4a44fd86c4fb",
+      "bytes": 32941,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_2_dev.parquet": {
+      "sha256": "48aac58cd92e7bf89cc82cc8f3e4fe3537a39ae65eb3f75ee5802face540e463",
+      "bytes": 23408,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__antes_do_reajuste_semente_2_test.parquet": {
+      "sha256": "4fec449e64a668cce9b399d6936b22621e153175b1ff831b1ca5f2082b4ade60",
+      "bytes": 32793,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_0_dev.parquet": {
+      "sha256": "dc8f7e8e53c5c230f5f9bd9fdcab50daa57f22278a349310de46cfe92aa001d3",
+      "bytes": 23691,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_0_test.parquet": {
+      "sha256": "8cee42ce616d067ec0eecc4b9d5d011d365e12f0a7b58abb2c68afd4ef4528cd",
+      "bytes": 33478,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_1_dev.parquet": {
+      "sha256": "b23e384768abc3dea8a10868b064adf36933d6ac6f3393a8e67f374afdef3920",
+      "bytes": 23871,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_1_test.parquet": {
+      "sha256": "667e1bf666626cf94274ecb408d9a14aea05ad46839c8aa7022ed24d3dff374a",
+      "bytes": 33407,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_2_dev.parquet": {
+      "sha256": "c8c6af466cb3ba5582e286aeaa529f87a19e78e2b6881577fd79f3086ae7b8c5",
+      "bytes": 23781,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__dinamica_semente_2_test.parquet": {
+      "sha256": "975db1b5dcc0d7b9ddc63283372384f302ed4a88851a62226ed0a9494d234945",
+      "bytes": 33082,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_0_dev.parquet": {
+      "sha256": "fd7c5edbf77db92570775cbec41f22a5f37a9aae6a0415daddea1e3218f5368e",
+      "bytes": 23671,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_0_test.parquet": {
+      "sha256": "74c7371ef6796a57176c2f44901104a41dc0dc6b11aad376d8991b13f8a9827c",
+      "bytes": 33373,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_1_dev.parquet": {
+      "sha256": "1d3fd51ac5344b1f0bdc92a13d6e258df1dfbc73f04492bbc79372b96ae6a8fb",
+      "bytes": 23895,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_1_test.parquet": {
+      "sha256": "c74c075253cff48b17fcc55d8038ca2efde8d7f87d06c6bc30eafd01e8e3219c",
+      "bytes": 33434,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_2_dev.parquet": {
+      "sha256": "cccc2e550fda00d48d531f33a8be8e53804fc908d4ab687ee451c058aa637f98",
+      "bytes": 23775,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__fp32_semente_2_test.parquet": {
+      "sha256": "5c645661f8003c5ddec438d327a2bc61780d97db2cb3ba8560f819d05d9c4eb8",
+      "bytes": 33394,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_0_dev.parquet": {
+      "sha256": "fd7c5edbf77db92570775cbec41f22a5f37a9aae6a0415daddea1e3218f5368e",
+      "bytes": 23671,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_0_test.parquet": {
+      "sha256": "74c7371ef6796a57176c2f44901104a41dc0dc6b11aad376d8991b13f8a9827c",
+      "bytes": 33373,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_1_dev.parquet": {
+      "sha256": "1d3fd51ac5344b1f0bdc92a13d6e258df1dfbc73f04492bbc79372b96ae6a8fb",
+      "bytes": 23895,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_1_test.parquet": {
+      "sha256": "c74c075253cff48b17fcc55d8038ca2efde8d7f87d06c6bc30eafd01e8e3219c",
+      "bytes": 33434,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_2_dev.parquet": {
+      "sha256": "cccc2e550fda00d48d531f33a8be8e53804fc908d4ab687ee451c058aa637f98",
+      "bytes": 23775,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90__pytorch_semente_2_test.parquet": {
+      "sha256": "5c645661f8003c5ddec438d327a2bc61780d97db2cb3ba8560f819d05d9c4eb8",
+      "bytes": 33394,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_0_dev.parquet": {
+      "sha256": "fd7c5edbf77db92570775cbec41f22a5f37a9aae6a0415daddea1e3218f5368e",
+      "bytes": 23671,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_0_test.parquet": {
+      "sha256": "74c7371ef6796a57176c2f44901104a41dc0dc6b11aad376d8991b13f8a9827c",
+      "bytes": 33373,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_1_dev.parquet": {
+      "sha256": "1d3fd51ac5344b1f0bdc92a13d6e258df1dfbc73f04492bbc79372b96ae6a8fb",
+      "bytes": 23895,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_1_test.parquet": {
+      "sha256": "c74c075253cff48b17fcc55d8038ca2efde8d7f87d06c6bc30eafd01e8e3219c",
+      "bytes": 33434,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_2_dev.parquet": {
+      "sha256": "cccc2e550fda00d48d531f33a8be8e53804fc908d4ab687ee451c058aa637f98",
+      "bytes": 23775,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__linhas_90_semente_2_test.parquet": {
+      "sha256": "5c645661f8003c5ddec438d327a2bc61780d97db2cb3ba8560f819d05d9c4eb8",
+      "bytes": 33394,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_dev.parquet": {
+      "sha256": "9572fa9741282dde9444e82fbbe155988549096fff3bc0e577cde61cb074a054",
+      "bytes": 23884,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_0_test.parquet": {
+      "sha256": "232739ee3b3a9c620118a63b557a8bacf32fb131f4cdde0bad3a2dbe55a31b15",
+      "bytes": 33342,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_dev.parquet": {
+      "sha256": "ad42d7983bc3e7752412a70d226e8eb0c73ba5df35df384b720fc616e6a24e5d",
+      "bytes": 23947,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_1_test.parquet": {
+      "sha256": "386f1243e11285adec8af7110d865b816fc62909ce4ec3fff80caa1b1d102cb5",
+      "bytes": 33658,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_dev.parquet": {
+      "sha256": "f4b7a206ac8a3cc1b339a127690a13690854e38b1202fd1f64b4d81a5d2fa754",
+      "bytes": 23967,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__dinamica_semente_2_test.parquet": {
+      "sha256": "09edee78b4f0a9e0941cf964773803a930e3ddea5a8064b60a521b3b713f5d4c",
+      "bytes": 33604,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_dev.parquet": {
+      "sha256": "ea5405b3ede3450c13f52d86402c963c01d1343476f6edb589bc154e1b9acb65",
+      "bytes": 23976,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_0_test.parquet": {
+      "sha256": "54c555fbcd9cc30210123bfb5faa457205bdffd16ae35bec46b87c0e9940e040",
+      "bytes": 33487,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_dev.parquet": {
+      "sha256": "573a566ff1250160e81e6e5453d0ba291e652928a7bff2939f228c1f9cfc7c80",
+      "bytes": 23931,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_1_test.parquet": {
+      "sha256": "3602d5bd306aff2acf2bb162bd2149100979b85571b9c3c13af713865ba67223",
+      "bytes": 33619,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_dev.parquet": {
+      "sha256": "0650b9964bfeae51613d589da912fce1b7fb9ae7140bdf07834b17cdd57651c1",
+      "bytes": 23851,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__fp32_semente_2_test.parquet": {
+      "sha256": "afa51e9167a820f03f9dadfab3fa5d2409d6e10c8a4f1e08ab728f73a41cffa3",
+      "bytes": 33425,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_dev.parquet": {
+      "sha256": "ea5405b3ede3450c13f52d86402c963c01d1343476f6edb589bc154e1b9acb65",
+      "bytes": 23976,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_0_test.parquet": {
+      "sha256": "54c555fbcd9cc30210123bfb5faa457205bdffd16ae35bec46b87c0e9940e040",
+      "bytes": 33487,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_dev.parquet": {
+      "sha256": "573a566ff1250160e81e6e5453d0ba291e652928a7bff2939f228c1f9cfc7c80",
+      "bytes": 23931,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_1_test.parquet": {
+      "sha256": "3602d5bd306aff2acf2bb162bd2149100979b85571b9c3c13af713865ba67223",
+      "bytes": 33619,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_dev.parquet": {
+      "sha256": "0650b9964bfeae51613d589da912fce1b7fb9ae7140bdf07834b17cdd57651c1",
+      "bytes": 23851,
+      "link_fisico": false
+    },
+    "previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100__sem_poda__pytorch_semente_2_test.parquet": {
+      "sha256": "afa51e9167a820f03f9dadfab3fa5d2409d6e10c8a4f1e08ab728f73a41cffa3",
+      "bytes": 33425,
+      "link_fisico": false
+    },
+    "reajustes.csv": {
+      "sha256": "efabef5a526fcc3dd682092c0b6be8745ee905113dcc87518cf475f0073fa2b0",
+      "bytes": 3209,
+      "link_fisico": false
+    },
+    "regras.json": {
+      "sha256": "24027d21e7ee05f475e6290ec20fe19cdd22dac408d061ad3554ef38a4a99db3",
+      "bytes": 25194,
+      "link_fisico": false
+    },
+    "resultados.csv": {
+      "sha256": "4ceb874a1ef03b0196308c4c6edbaef38d8a015d0bdb58e6d0a59a8e13396813",
+      "bytes": 53976,
+      "link_fisico": false
+    },
+    "sistemas.json": {
+      "sha256": "787879255f83e199d935dd9f5862e6ac64b4717fc1cde2381c4cb515e847b688",
+      "bytes": 34052,
+      "link_fisico": false
+    }
+  },
+  "cache": "data/execucoes/11c_cenario_b_ate_o_fim/ (as 33 execuções, a forma estática e as de diagnóstico, as contas e a cópia do código da cadeia; os modelos da entrega são links físicos para lá)"
+}

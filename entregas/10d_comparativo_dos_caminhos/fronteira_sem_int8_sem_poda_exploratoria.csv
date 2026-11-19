@@ -1,0 +1,50 @@
+custo,chave,valor_do_custo,exact_match,na_fronteira,dominado_por,quantos_o_dominam,exploratoria
+latencia,claude,854.0606235,0.5403496973772697,True,,0,True
+latencia,qwen,1087.2108265000002,0.4324142568930733,False,claude; aluno_a; aluno_b1; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a; xlmr/aluno_b2; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/podado; xlmr/aluno_b2/onnx; xlmr/aluno_b2/int8; xlmr/aluno_b2/soltos,22,True
+latencia,piso,1.12054,0.20903384891279983,False,aluno_a; aluno_b1; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,11,True
+latencia,aluno_a,1.105486,0.512104909213181,False,aluno_a/podado; aluno_a/onnx; aluno_a/int8,3,True
+latencia,aluno_b1,1.125678,0.4363371441380856,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,10,True
+latencia,aluno_b2,1.1098789999999998,0.4597623851154449,False,aluno_a; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,9,True
+latencia,aluno_a/podado,1.100955,0.5125532391840394,False,aluno_a/onnx,1,True
+latencia,aluno_a/onnx,0.4256395,0.5125532391840394,True,,0,True
+latencia,aluno_a/int8,0.2610945,0.5122169917058955,True,,0,True
+latencia,aluno_a/soltos,0.2667165,0.5025778973324366,False,aluno_a/int8,1,True
+latencia,aluno_b2/podado,1.0994765000000002,0.4620040349697378,False,aluno_a; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/onnx; aluno_b2/int8,7,True
+latencia,aluno_b2/onnx,0.4249075,0.4620040349697378,False,aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/int8,4,True
+latencia,aluno_b2/int8,0.2606395,0.46211611746245235,False,aluno_a/int8; aluno_a/soltos,2,True
+latencia,aluno_b2/soltos,0.270848,0.4613315400134499,False,aluno_a/int8; aluno_a/soltos; aluno_b2/int8,3,True
+latencia,xlmr/aluno_a,35.816196500000004,0.5381080475229768,True,,0,True
+latencia,xlmr/aluno_b2,37.580111,0.4627886124187402,False,aluno_a; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; xlmr/aluno_a; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos,10,True
+latencia,xlmr/aluno_a/podado,36.103376,0.5372113875812597,False,xlmr/aluno_a; xlmr/aluno_a/onnx,2,True
+latencia,xlmr/aluno_a/onnx,25.0758705,0.5372113875812597,True,,0,True
+latencia,xlmr/aluno_a/int8,8.3504895,0.534969737726967,True,,0,True
+latencia,xlmr/aluno_a/soltos,8.369808500000001,0.5293656130912351,False,xlmr/aluno_a/int8,1,True
+latencia,xlmr/aluno_b2/podado,36.795307,0.45247702308899346,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a; xlmr/aluno_b2; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/onnx; xlmr/aluno_b2/soltos,18,True
+latencia,xlmr/aluno_b2/onnx,24.32903,0.45247702308899346,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/soltos,14,True
+latencia,xlmr/aluno_b2/int8,7.939712999999999,0.4520286931181349,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/soltos,13,True
+latencia,xlmr/aluno_b2/soltos,8.008744,0.45673615781214977,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/int8; xlmr/aluno_a/soltos,12,True
+tamanho,qwen,16397.431693,0.4324142568930733,False,aluno_a; aluno_b1; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a; xlmr/aluno_b1; xlmr/aluno_b2; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/podado; xlmr/aluno_b2/onnx; xlmr/aluno_b2/int8; xlmr/aluno_b2/soltos,22,True
+tamanho,piso,8.725737,0.20903384891279983,False,aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,8,True
+tamanho,aluno_a,19.921914,0.512104909213181,False,aluno_a/podado; aluno_a/onnx; aluno_a/int8,3,True
+tamanho,aluno_b1,19.921914,0.4363371441380856,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,10,True
+tamanho,aluno_b2,19.921914,0.4597623851154449,False,aluno_a; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos,9,True
+tamanho,aluno_a/podado,8.064482,0.5125532391840394,False,aluno_a/onnx,1,True
+tamanho,aluno_a/onnx,7.983439,0.5125532391840394,True,,0,True
+tamanho,aluno_a/int8,2.113186,0.5122169917058955,True,,0,True
+tamanho,aluno_a/soltos,0.917653,0.5025778973324366,True,,0,True
+tamanho,aluno_b2/podado,8.064298,0.4620040349697378,False,aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/onnx; aluno_b2/int8,5,True
+tamanho,aluno_b2/onnx,7.983259,0.4620040349697378,False,aluno_a/int8; aluno_a/soltos; aluno_b2/int8,3,True
+tamanho,aluno_b2/int8,2.113007,0.46211611746245235,False,aluno_a/soltos,1,True
+tamanho,aluno_b2/soltos,1.263782,0.4613315400134499,False,aluno_a/soltos,1,True
+tamanho,xlmr/piso,1127.466166,0.3263842187850257,False,aluno_a; aluno_b1; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a; xlmr/aluno_b1; xlmr/aluno_b2; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/podado; xlmr/aluno_b2/onnx; xlmr/aluno_b2/int8; xlmr/aluno_b2/soltos,22,True
+tamanho,xlmr/aluno_a,1127.466166,0.5381080475229768,True,,0,True
+tamanho,xlmr/aluno_b1,1127.466166,0.45707240529029364,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a; xlmr/aluno_b2; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos,16,True
+tamanho,xlmr/aluno_b2,1127.466166,0.4627886124187402,False,aluno_a; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; xlmr/aluno_a; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos,10,True
+tamanho,xlmr/aluno_a/podado,358.975066,0.5372113875812597,False,xlmr/aluno_a/onnx,1,True
+tamanho,xlmr/aluno_a/onnx,358.883089,0.5372113875812597,True,,0,True
+tamanho,xlmr/aluno_a/int8,90.666664,0.534969737726967,True,,0,True
+tamanho,xlmr/aluno_a/soltos,189.87012,0.5293656130912351,False,xlmr/aluno_a/int8,1,True
+tamanho,xlmr/aluno_b2/podado,358.975066,0.45247702308899346,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/podado; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/onnx; xlmr/aluno_b2/soltos,16,True
+tamanho,xlmr/aluno_b2/onnx,358.883093,0.45247702308899346,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/onnx; xlmr/aluno_a/int8; xlmr/aluno_a/soltos; xlmr/aluno_b2/soltos,14,True
+tamanho,xlmr/aluno_b2/int8,90.666668,0.4520286931181349,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/int8,11,True
+tamanho,xlmr/aluno_b2/soltos,189.80807,0.45673615781214977,False,aluno_a; aluno_b2; aluno_a/podado; aluno_a/onnx; aluno_a/int8; aluno_a/soltos; aluno_b2/podado; aluno_b2/onnx; aluno_b2/int8; aluno_b2/soltos; xlmr/aluno_a/int8,11,True

@@ -1,0 +1,12 @@
+{
+  "modelo": "aluno_a",
+  "variante": "vocabulario_treino",
+  "semente": 0,
+  "nome": "todas",
+  "descricao": "a estática da 10c, refeita",
+  "metodo": "MinMax",
+  "operacoes": 76,
+  "bytes_da_rede": 90225933,
+  "slot_f1_dev": 66.09714425189162,
+  "segundos": 18.511100961011834
+}

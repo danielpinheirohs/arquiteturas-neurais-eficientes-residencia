@@ -1,0 +1,69 @@
+{
+  "parametros": 277584555,
+  "parametros_por_parte": {
+    "A. Tabela de subtokens": 192001536,
+    "A. Posições e normalização da entrada": 397056,
+    "B. Corpo do Transformer": 85054464,
+    "C. Cabeça de intenção": 46140,
+    "D. Cabeça de entidades": 85359
+  },
+  "linhas_da_tabela": 250002,
+  "linhas_da_tabela_no_treino": 5196,
+  "bytes_em_disco": 1127466166,
+  "latencia": {
+    "sistemas": {
+      "xlmr": "data/execucoes/10a_encoder/aluno_a/semente_0",
+      "do_zero": "entregas/06_destilacao/modelos/aluno_a/semente_0"
+    },
+    "threads": 1,
+    "rodadas": 5,
+    "consultas_por_rodada": 1024,
+    "p50_por_rodada_ms": {
+      "xlmr": [
+        36.5012615,
+        35.985808500000005,
+        36.216548,
+        35.6652845,
+        36.139198
+      ],
+      "do_zero": [
+        1.246127,
+        1.12697,
+        1.1390205,
+        1.098913,
+        1.1477225
+      ]
+    },
+    "resumo": {
+      "xlmr": {
+        "latencia_p50_ms": 36.105286500000005,
+        "latencia_p90_ms": 44.6106957,
+        "latencia_p95_ms": 48.04107725,
+        "latencia_p99_ms": 53.308526060000034,
+        "latencia_media_ms": 37.14041802832031
+      },
+      "do_zero": {
+        "latencia_p50_ms": 1.151017,
+        "latencia_p90_ms": 1.5460028000000001,
+        "latencia_p95_ms": 1.7164822500000003,
+        "latencia_p99_ms": 2.09361124,
+        "latencia_media_ms": 1.2039039101562499
+      }
+    },
+    "nucleos_de_outros": 0.04640422276555842,
+    "carga_antes": 2.29150390625,
+    "carga_depois": 1.12060546875,
+    "medido_em": "2026-11-18T11:21:21",
+    "torch": "2.15.0+cu132",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "cpus_logicas": 24,
+    "plataforma": "WSL2",
+    "python": "3.12.13"
+  },
+  "maquina_quieta": true,
+  "treino": {
+    "segundos_por_epoca": 11.654717760757194,
+    "pico_de_vram_gb": 2.812350273132324,
+    "horas_de_treino": 1.2831913551316878
+  }
+}

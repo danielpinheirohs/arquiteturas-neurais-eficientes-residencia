@@ -1,0 +1,72 @@
+{
+  "feito_em": "2026-11-19 00:42:24 -0300",
+  "pasta_descartavel": "/tmp/claude-1000/-home-danie-project-residencia/c1dbcf82-9fd9-4bd9-8334-38545bedeb18/scratchpad/prova_10d/10d_comparativo_dos_caminhos",
+  "segundos": 102,
+  "sistemas_json_em_disco": [
+    "entregas/11a_professor_aberto_maior/sistemas.json",
+    "entregas/11b_alunos_do_professor_maior/sistemas.json"
+  ],
+  "registro": {
+    "sistemas": 44,
+    "entregue": 44,
+    "mesmas_chaves_na_mesma_ordem": true
+  },
+  "regras_iguais_as_entregues": true,
+  "comparacoes": {
+    "hoje": 43,
+    "entregue": 43
+  },
+  "cadeias_iguais": true,
+  "tabelas": [
+    {
+      "arquivo": "tabela_final.csv",
+      "linhas": 44,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "conferencia.csv",
+      "linhas": 191,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "cadeias.csv",
+      "linhas": 56,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "comparacoes.csv",
+      "linhas": 344,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "fronteira.csv",
+      "linhas": 114,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "precos.csv",
+      "linhas": 6,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    },
+    {
+      "arquivo": "latencia_ao_lado.csv",
+      "linhas": 6,
+      "identico_byte_a_byte": true,
+      "maior_diferenca_numerica": 0.0
+    }
+  ],
+  "tudo_identico": true,
+  "sem_a_lista_o_registro_teria": 50,
+  "respostas_lidas": {
+    "arquivos_hoje": 230,
+    "arquivos_na_entrega": 230,
+    "mesmos_arquivos_com_o_mesmo_sha256": true,
+    "como": "pelo caminho de cada arquivo; os que a 10d gerou (pasta previsoes/ dela) são comparados pelo nome, porque aqui moram na pasta descartável"
+  }
+}

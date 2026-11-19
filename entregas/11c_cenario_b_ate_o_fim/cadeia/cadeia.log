@@ -1,0 +1,41 @@
+[19/11 00:45:53] Etapa 11c, cadeia (pid 830465): regras de 2026-11-19 00:40:09 -0300; 33 execuções previstas; 0 já prontas; carga da máquina: 1.08
+[19/11 00:45:54] poda, Rede do zero: 3 execuções, 3 de cada vez (carga da máquina: 1.08)
+[19/11 00:48:09] poda zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 2 época 30 de 30; exact match no dev do professor antes 0.4024, depois 0.5298; 127s
+[19/11 00:48:10] poda zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 1 época 30 de 30; exact match no dev do professor antes 0.4053, depois 0.5307; 128s
+[19/11 00:48:13] poda zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 0 época 25 de 30; exact match no dev do professor antes 0.4215, depois 0.5445; 131s
+[19/11 00:48:14] poda, XLM-R: 6 execuções, 1 de cada vez (carga da máquina: 2.91)
+[19/11 00:50:23] poda xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 0 época 10 de 10; exact match no dev do professor antes 0.5986, depois 0.6021; 116s
+[19/11 00:52:31] poda xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 1 época 10 de 10; exact match no dev do professor antes 0.6030, depois 0.6035; 115s
+[19/11 00:54:39] poda xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 2 época 10 de 10; exact match no dev do professor antes 0.5991, depois 0.6080; 115s
+[19/11 00:56:47] poda xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 0 época 9 de 10; exact match no dev do professor antes 0.5996, depois 0.6119; 115s
+[19/11 00:58:55] poda xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 1 época 0 de 10; exact match no dev do professor antes 0.6094, depois 0.6094; 114s
+[19/11 01:01:05] poda xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 2 época 5 de 10; exact match no dev do professor antes 0.6001, depois 0.6094; 115s
+[19/11 01:01:05] quantizar, Rede do zero: 6 execuções, 3 de cada vez (carga da máquina: 1.39)
+[19/11 01:01:25] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 2.11 MB, 1988 iguais (8.06 MB em 32 bits); 15s
+[19/11 01:01:25] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 2.11 MB, 1997 iguais (8.06 MB em 32 bits); 16s
+[19/11 01:01:25] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 2.11 MB, 1995 iguais (8.06 MB em 32 bits); 16s
+[19/11 01:01:46] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 5.26 MB, 2005 iguais (19.92 MB em 32 bits); 16s
+[19/11 01:01:46] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 5.26 MB, 2010 iguais (19.92 MB em 32 bits); 16s
+[19/11 01:01:46] quantizar zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 5.26 MB, 2008 iguais (19.92 MB em 32 bits); 16s
+[19/11 01:01:47] quantizar, XLM-R: 12 execuções, 3 de cada vez (carga da máquina: 4.70)
+[19/11 01:07:52] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1704 iguais (358.98 MB em 32 bits); 361s
+[19/11 01:07:54] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1686 iguais (358.98 MB em 32 bits); 364s
+[19/11 01:07:56] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1691 iguais (358.98 MB em 32 bits); 365s
+[19/11 01:15:12] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1631 iguais (1127.47 MB em 32 bits); 433s
+[19/11 01:15:15] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 sem_poda 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1693 iguais (1127.47 MB em 32 bits); 437s
+[19/11 01:15:16] quantizar xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1682 iguais (1127.47 MB em 32 bits); 435s
+[19/11 01:21:25] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1699 iguais (358.98 MB em 32 bits); 367s
+[19/11 01:21:28] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1662 iguais (358.98 MB em 32 bits); 367s
+[19/11 01:21:28] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 90.67 MB, 1644 iguais (358.98 MB em 32 bits); 369s
+[19/11 01:28:46] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 1 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1658 iguais (1127.47 MB em 32 bits); 433s
+[19/11 01:28:46] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 2 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1653 iguais (1127.47 MB em 32 bits); 433s
+[19/11 01:28:48] quantizar xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda 0 ONNX igual ao PyTorch em 2033 de 2033 pedidos de dev; dinamica: 287.28 MB, 1711 iguais (1127.47 MB em 32 bits); 438s
+[19/11 01:29:49] latencia, Rede do zero: 2 execuções, 1 de cada vez (carga da máquina: 3.42)
+[19/11 01:30:05] latencia zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 linhas_90 p50 (ms): pytorch 1.074, fp32 0.409, dinamica 0.249, estatica 0.273 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 01:30:22] latencia zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda p50 (ms): pytorch 1.098, fp32 0.419, dinamica 0.261, estatica 0.283 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 01:30:22] latencia, XLM-R: 4 execuções, 1 de cada vez (carga da máquina: 2.47)
+[19/11 01:38:06] latencia xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 vocabulario_treino p50 (ms): pytorch 34.368, fp32 23.649, dinamica 7.690, estatica 7.989 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 01:45:51] latencia xlmr__aluno_b1__qwen3_14b__fp16__colab_a100 sem_poda p50 (ms): pytorch 34.421, fp32 23.459, dinamica 7.681, estatica 8.027 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 01:53:37] latencia xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 vocabulario_treino p50 (ms): pytorch 34.507, fp32 23.727, dinamica 7.654, estatica 7.967 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 02:01:35] latencia xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100 sem_poda p50 (ms): pytorch 36.848, fp32 23.507, dinamica 7.687, estatica 7.999 | outros processos: 0.03 núcleo(s) de CPU | quieta: True
+[19/11 02:01:35] FIM: 33 de 33 execuções prontas em 76 min; ONNX de 32 bits igual ao PyTorch em 90126 de 90126 respostas; outros processos durante a latência: no máximo 0.03 núcleo de CPU; registro em /home/danie/project/residencia/data/execucoes/11c_cenario_b_ate_o_fim/cadeias/cadeia_20261119-004553.json

@@ -1,0 +1,140 @@
+{
+  "sistemas": {
+    "aluno_b1@qwen3_14b__fp16__colab_a100": {
+      "nome": "Aluno B1 (rótulos do Qwen3-14B)",
+      "curto": "Aluno B1 · Qwen3-14B",
+      "bloco": "Alunos destilados",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "dev_humano": "nenhuma no treino (parada no dev rotulado pelo professor)",
+      "caminho": "zero",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "ponto": "destilado",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "papel": "aluno do cenário B com o professor aberto maior, Etapa 11b",
+      "variante": "zero__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "temperatura": null,
+      "resultado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "variante": "zero__aluno_b1__qwen3_14b__fp16__colab_a100"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_0_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_1_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_0_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_1_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b1__qwen3_14b__fp16__colab_a100_semente_2_test.parquet"
+        ]
+      }
+    },
+    "aluno_b2@qwen3_14b__fp16__colab_a100": {
+      "nome": "Aluno B2 (logits do Qwen3-14B, T = 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "bloco": "Alunos destilados",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b)",
+      "caminho": "zero",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "ponto": "destilado",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "papel": "aluno do cenário B com o professor aberto maior, Etapa 11b",
+      "variante": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "temperatura": 8,
+      "resultado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "variante": "zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_0_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_1_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_0_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_1_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/zero__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_2_test.parquet"
+        ]
+      }
+    },
+    "xlmr/aluno_b1@qwen3_14b__fp16__colab_a100": {
+      "nome": "Aluno B1 (rótulos do Qwen3-14B)",
+      "curto": "Aluno B1 · Qwen3-14B",
+      "bloco": "Alunos destilados",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "dev_humano": "nenhuma no treino (parada no dev rotulado pelo professor)",
+      "caminho": "xlmr",
+      "modelo": "aluno_b1@qwen3_14b__fp16__colab_a100",
+      "ponto": "destilado",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "papel": "aluno do cenário B com o professor aberto maior, Etapa 11b",
+      "variante": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100",
+      "temperatura": null,
+      "resultado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "variante": "xlmr__aluno_b1__qwen3_14b__fp16__colab_a100"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_0_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_1_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_0_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_1_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b1__qwen3_14b__fp16__colab_a100_semente_2_test.parquet"
+        ]
+      }
+    },
+    "xlmr/aluno_b2@qwen3_14b__fp16__colab_a100": {
+      "nome": "Aluno B2 (logits do Qwen3-14B, T = 8)",
+      "curto": "Aluno B2 · Qwen3-14B",
+      "bloco": "Alunos destilados",
+      "rotulos_humanos": 299,
+      "rotulos_como": "pelo professor",
+      "dev_humano": "temperatura T = 8 escolhida em dev (Etapa 11b)",
+      "caminho": "xlmr",
+      "modelo": "aluno_b2@qwen3_14b__fp16__colab_a100",
+      "ponto": "destilado",
+      "professor": "qwen3_14b__fp16__colab_a100",
+      "papel": "aluno do cenário B com o professor aberto maior, Etapa 11b",
+      "variante": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100",
+      "temperatura": 8,
+      "resultado": [
+        "11b_alunos_do_professor_maior",
+        {
+          "variante": "xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100"
+        }
+      ],
+      "previsoes": {
+        "dev": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_0_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_1_dev.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_2_dev.parquet"
+        ],
+        "test": [
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_0_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_1_test.parquet",
+          "entregas/11b_alunos_do_professor_maior/previsoes/xlmr__aluno_b2_t8__qwen3_14b__fp16__colab_a100_semente_2_test.parquet"
+        ]
+      }
+    }
+  },
+  "fora_do_formato": {
+    "zero__aluno_b1_sem_suavizacao__qwen3_14b__fp16__colab_a100": "é o controle do B2 na rede do zero: não tem par no XLM-R e não é um sistema do comparativo; está em resultados.csv",
+    "as outras temperaturas do B2": "só têm respostas em dev (a regra não as abre no teste)"
+  }
+}

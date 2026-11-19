@@ -1,0 +1,200 @@
+{
+  "id": "qwen3_8b__nf4__colab_l4",
+  "etapa": "11a_professor_aberto_maior",
+  "modelo": {
+    "repositorio": "Qwen/Qwen3-8B",
+    "nome": "Qwen3-8B",
+    "commit": "b968826d9c46dd6066d109eabc6255188de91218",
+    "parametros": 8190735360,
+    "de_onde": "cabeçalho dos arquivos de pesos no Hugging Face, no commit da versão"
+  },
+  "precisao": {
+    "id": "nf4",
+    "descricao": "4 bits (NF4, bitsandbytes, quantização dupla)",
+    "tipo_de_calculo": "float16",
+    "tipos_dos_parametros_carregados": {
+      "torch.bfloat16": 147,
+      "torch.uint8": 252
+    },
+    "tipo_das_contas_do_professor": "torch.bfloat16"
+  },
+  "prompt": {
+    "sha256_das_instrucoes": "8f25e16485386efb1e39e1cd734dd9842af9b1b3baa0b7375921c1d32fe3c7b8",
+    "sha256_das_demonstracoes": "93e827140fc497d439432d59711d3a3c66a0b5b3f744795bc03c8c90b9e8826b",
+    "demonstracoes": 299,
+    "por_intencao": 5,
+    "semente_das_demonstracoes": 0,
+    "k": 10,
+    "escolha_das_demonstracoes": "as k mais parecidas por TF-IDF de n-gramas de caracteres",
+    "sha256_dos_dados": {
+      "train.parquet": "d574d1117722716800042c1320ab400551ec6cedc87dad517e1858c5e16336e5",
+      "dev.parquet": "c3077b6273348cb00eed722c132987a9ca9c148242b2f1137b43816d36e0fb8e",
+      "test.parquet": "d0d3d7e2300e8811937be7db4fb6b5cfee5849662af59c468ca6c747d28238ed",
+      "rotulos.json": "974851bdf5bce38026c16f144779a1775012bff8b1266ff35f45e8bfa69508c3"
+    },
+    "igual_no_colab": true,
+    "tokens_das_instrucoes_em_memoria": 804,
+    "sha256_das_instrucoes_no_formato_do_modelo": "54ccb2fb6f67993f0eeeddecbe578611971dbce176b16f6506e11270b7cd7f38"
+  },
+  "geracao": {
+    "lote": 6,
+    "ordem": "prompts mais longos primeiro (ordenação estável), lotes consecutivos",
+    "intencao": "a mais provável das 60, pela soma dos logaritmos dos tokens do nome",
+    "entidades": "decodificação gulosa (o token mais provável), sem amostragem",
+    "max_tokens": 200,
+    "inicio_forcado": "{\"intent\": \"",
+    "depois_da_intencao": "\", \"slots\":",
+    "enable_thinking": false
+  },
+  "codigo": {
+    "pacote": "data/execucoes/11a_professor_aberto_maior/pacotes/pacote_5968bf3c0f8b.tar.gz",
+    "sha256_do_pacote": "5968bf3c0f8b5a7db44e887238c2c569dce7ae85a47d2857dee7ae50f4c50b3e",
+    "bytes": 1233841,
+    "arquivos": {
+      "pyproject.toml": "c3a729cf2cca77e88f88c130f346907c979feea78168371ae714a3c6c3836f71",
+      "uv.lock": "d564b152db7c3df6da4971198f4578b3afc6c4b10c1fe78a395bf74dc987e727",
+      "src/especialista/__init__.py": "c805e0c4ec196c6e7a63200c04eed0e88d29cb25819e84125e5a2e65dce13f01",
+      "src/especialista/caminhos.py": "b3db6f814ac6b2ee0dd65d0089ca998ba97e3c1804a6f41385c5b64bd11eab8d",
+      "src/especialista/bio.py": "55475b7ffce5b27e1e41ebeec80f8668008341e2af776f97152e0d2d5ac47813",
+      "src/especialista/dados/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/especialista/dados/massive.py": "ee241cbe474fe7a49e203c006c7d89cbf843584f7e1f654d7efbd109c01cd760",
+      "src/especialista/avaliacao/__init__.py": "22937ba074911038be91d370dd75646de19782d46cc825fa4e5b59803a8b9ff8",
+      "src/especialista/avaliacao/previsao.py": "16b38fbc6d67ce07899e75bb255e1abce952d04676d39a6248c70e7be7c3f484",
+      "src/especialista/professores/__init__.py": "4aaa347becf1bcd82be8f2e65ab7dc3bae80446aaa5d2c5cd1d785c408d0758b",
+      "src/especialista/professores/prompt.py": "5ccdd19a8a4e7cbac96e4ae6d70c107a27fdba6184728afc990c9c0b4061156e",
+      "src/especialista/professores/demonstracoes.py": "fba4acd55814f5a6b26bddda421d8e192d62816c03d14ee307645ea36348994f",
+      "src/especialista/professores/resposta.py": "bcafa4302b69c60188016a5f5edd85c99933a290cacc54dfde4f36d4bc7d9ffa",
+      "src/especialista/professores/local.py": "7d24c3a5b0cfabe63a49673e75968c5a07e6014fd6fb4836a082a1bf4b32c852",
+      "src/especialista/experimentos/__init__.py": "3b94d11b9a6839d5dcbbe22a580d4cc03d3c714c8a463012110447b365a9a5a3",
+      "src/especialista/experimentos/etapa11a.py": "603a61b251eceb293fe8c80fabf94f06d15e13f015c5be4e014f520a78469a6c",
+      "entregas/01_dados/train.parquet": "d574d1117722716800042c1320ab400551ec6cedc87dad517e1858c5e16336e5",
+      "entregas/01_dados/dev.parquet": "c3077b6273348cb00eed722c132987a9ca9c148242b2f1137b43816d36e0fb8e",
+      "entregas/01_dados/test.parquet": "d0d3d7e2300e8811937be7db4fb6b5cfee5849662af59c468ca6c747d28238ed",
+      "entregas/01_dados/rotulos.json": "974851bdf5bce38026c16f144779a1775012bff8b1266ff35f45e8bfa69508c3",
+      "data/execucoes/11a_professor_aberto_maior/lotes_da_conferencia.json": "790d602fa1f94eed8e3a76574ae81606f861488516f0e05072a8fbb4fa720572",
+      "data/execucoes/11a_professor_aberto_maior/regra.json": "c14f59972124354a405d054fa5bbe1f27c8498105609f120ab2b7802431280ff"
+    }
+  },
+  "ambiente": {
+    "maquina": "Colab, GPU pedida: L4",
+    "colab_cli": "google-colab-cli-0.8.0",
+    "python_pedido": "3.12.13",
+    "instalacao": "uv sync --frozen --no-dev (o uv.lock do projeto)",
+    "pacotes_instalados": "pacotes_instalados.txt",
+    "python": "3.12.13",
+    "sistema": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.15.0+cu132",
+    "torch_git": "d0f2af8b66b20da4baa50644c0cd3f887a2eae2e",
+    "cuda": "13.2",
+    "cudnn": 92600,
+    "transformers": "5.23.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.16.0",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "2.4.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "gpu": "NVIDIA L4",
+    "nvidia_smi": "NVIDIA L4, 23034 MiB, 580.82.07",
+    "vram_total_gb": 23.66,
+    "cpus": 12,
+    "ram": "55530568 kB",
+    "commit_do_modelo": "b968826d9c46dd6066d109eabc6255188de91218",
+    "vram_do_modelo_gb": 6.09,
+    "tokens_das_instrucoes_em_memoria": 804,
+    "sha256_das_instrucoes_no_formato_do_modelo": "54ccb2fb6f67993f0eeeddecbe578611971dbce176b16f6506e11270b7cd7f38",
+    "quando_utc": "2026-11-18 20:21:19"
+  },
+  "execucao": {
+    "pedidos": {
+      "conferencia": 300
+    },
+    "segundos_de_gpu": {
+      "conferencia": 248.2
+    },
+    "vram_de_pico_gb": {
+      "conferencia": 8.28
+    },
+    "trechos": {
+      "conferencia": 1
+    }
+  },
+  "conducoes": [
+    {
+      "inicio": "2026-11-18 17:19:03 -0300",
+      "fim": "2026-11-18 17:26:01 -0300",
+      "tarefas": [
+        "conferencia"
+      ],
+      "situacao": "concluída",
+      "sessao": "prof11a_l4",
+      "gpu_pedida": "L4",
+      "sessoes_criadas": 1,
+      "sha256_do_pacote": "5968bf3c0f8b5a7db44e887238c2c569dce7ae85a47d2857dee7ae50f4c50b3e",
+      "unidades": {
+        "saldo_antes": 599.97,
+        "saldo_depois": 599.26,
+        "taxa_por_hora": 8.67,
+        "gastas_pelo_saldo": 0.71,
+        "observacao": "o saldo é da conta inteira: se outra sessão rodou ao mesmo tempo, o gasto dela está aqui dentro"
+      }
+    }
+  ],
+  "saidas": {
+    "conferencia": {
+      "arquivo": "conferencia/respostas.jsonl",
+      "sha256": "98d8abf8f02626d2f3aaacaf7111a0ba5db9d58344c6d08f7f2dea47ef81ccc9",
+      "pedidos": 300
+    }
+  },
+  "papel": "Qwen3-8B em 4 bits (Colab, L4): conferência de ambiente",
+  "condutor": {
+    "arquivo": "data/execucoes/11a_professor_aberto_maior/pacotes/etapa11a_colab_506bad4134c4.py",
+    "sha256": "506bad4134c48ec621091d472e3e62b11954858b09a160660a6514764438d3f7",
+    "observacao": "cópia do condutor como estava quando os três condutores foram lançados (17h19 a 17h26 de 18/11); o arquivo em src/ ganhou depois o modo de só acompanhar uma sessão ocupada"
+  },
+  "gpu": {
+    "placa": "NVIDIA L4",
+    "nvidia_smi": "NVIDIA L4, 23034 MiB, 580.82.07",
+    "vram_total_gb": 23.66,
+    "vram_do_modelo_gb": 6.09,
+    "vram_de_pico_gb": 8.28
+  },
+  "tempos": {
+    "condutor": {
+      "inicio": "2026-11-18 17:19:03 -0300",
+      "fim": "2026-11-18 17:26:01 -0300"
+    },
+    "trabalho_remoto_s": 330,
+    "codigo_de_saida_do_trabalho": 0,
+    "segundos_de_gpu": {
+      "conferencia": 248.2
+    },
+    "segundos_por_pedido": {
+      "conferencia": 0.827
+    }
+  },
+  "custo": {
+    "como": "`unidades` = tempo de sessão ligada (horários dos registros dos condutores, de 18/11) vezes a taxa da placa; `unidades_fechadas_na_conta` = a mesma repartição multiplicada por gasto da conta ÷ soma, para as partes somarem o que a conta cobrou",
+    "partes": [
+      {
+        "o_que": "conferência de ambiente (4 bits na L4), do começo da sessão até o candidato 1 assumi-la",
+        "versao": "qwen3_8b__nf4__colab_l4",
+        "gpu": "L4",
+        "de": "17:19:09",
+        "ate": "17:26:24",
+        "horas": 0.1208,
+        "taxa_por_hora": 1.94,
+        "unidades": 0.23,
+        "unidades_fechadas_na_conta": 0.23
+      }
+    ],
+    "unidades": 0.23,
+    "unidades_fechadas_na_conta": 0.23,
+    "total_da_conta_na_etapa": 22.83,
+    "aviso": "o campo conducoes[].unidades.gastas_pelo_saldo inclui o gasto da outra sessão que rodava ao mesmo tempo; vale o número daqui"
+  },
+  "completado_em": "2026-11-18 21:41:22 -0300"
+}

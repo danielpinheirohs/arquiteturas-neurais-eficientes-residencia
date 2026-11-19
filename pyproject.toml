@@ -1,0 +1,38 @@
+[project]
+name = "especialista"
+version = "0.1.0"
+description = "De uma LLM a um especialista eficiente: destilação, poda e quantização para intenção + entidades."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow>=17",
+    "matplotlib>=3.9",
+    "scikit-learn>=1.5",
+    "seqeval>=1.2.2",
+    "numpy>=2",
+    "torch>=2.5",
+    "anthropic>=1.0",
+    "transformers>=4.57",
+    "accelerate>=1.0",
+    "bitsandbytes>=0.45",
+    "onnx>=1.23.2",
+    "onnxruntime>=1.32.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "jupyterlab>=4.2",
+    "nbconvert>=7.16",
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/especialista"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

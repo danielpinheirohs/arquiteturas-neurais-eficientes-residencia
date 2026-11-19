@@ -1,0 +1,134 @@
+{
+  "extensao_32b": {
+    "partes": [
+      {
+        "o_que": "extensão: Qwen3-32B, da sessão pronta até ser parada (precisão, dev, teste e treino)",
+        "versao": "qwen3_32b__fp16__colab_g4",
+        "gpu": "G4",
+        "de": "22:25:24",
+        "ate": "00:54:02",
+        "horas": 2.4772,
+        "taxa_por_hora": 10.05,
+        "unidades": 24.9,
+        "unidades_fechadas_na_conta": 24.15
+      }
+    ],
+    "soma_por_taxa_e_tempo": 24.9,
+    "conta": {
+      "saldo_antes": 577.17,
+      "saldo_depois": 553.02,
+      "de_onde": "`colab usage`: 577,17 antes da rodada do 32B; 553,02 lido pelo orquestrador depois do fim, com taxa 0 e nenhuma sessão ativa",
+      "gasto": 24.15
+    },
+    "diferenca_entre_a_soma_e_a_conta": 0.75,
+    "medido_pelo_condutor_pelo_saldo": 24.15,
+    "projecao_depois_de_dev": {
+      "quando": "2026-11-18 22:52:40 -0300",
+      "segundos_por_pedido_em_dev": 0.513,
+      "pedidos_restantes": 14218,
+      "taxa_por_hora": 10.05,
+      "horas_de_sessao_projetadas": 2.56,
+      "unidades_projetadas": 25.8,
+      "teto_de_unidades": 60.0,
+      "gasto_ate_aqui_pelo_saldo": 4.06
+    },
+    "alocacao": "a G4 respondeu 'Service Unavailable' três vezes antes de alocar; tentativa sem sessão não custa",
+    "previsto_na_autorizacao": "cerca de 40 unidades",
+    "teto_do_condutor": 60
+  },
+  "total_no_colab": {
+    "saldo_antes": 600.0,
+    "saldo_depois": 553.02,
+    "gasto": 46.98
+  },
+  "como": "`unidades` = tempo de sessão ligada (horários dos registros dos condutores, de 18/11) vezes a taxa da placa; `unidades_fechadas_na_conta` = a mesma repartição multiplicada por gasto da conta ÷ soma, para as partes somarem o que a conta cobrou",
+  "taxas_por_hora": {
+    "L4": 1.94,
+    "A100": 6.73,
+    "G4": 10.05
+  },
+  "partes": [
+    {
+      "o_que": "conferência de ambiente (4 bits na L4), do começo da sessão até o candidato 1 assumi-la",
+      "versao": "qwen3_8b__nf4__colab_l4",
+      "gpu": "L4",
+      "de": "17:19:09",
+      "ate": "17:26:24",
+      "horas": 0.1208,
+      "taxa_por_hora": 1.94,
+      "unidades": 0.23,
+      "unidades_fechadas_na_conta": 0.23
+    },
+    {
+      "o_que": "candidato 1: precisão, dev, teste e treino",
+      "versao": "qwen3_8b__fp16__colab_l4",
+      "gpu": "L4",
+      "de": "17:26:24",
+      "ate": "21:03:40",
+      "horas": 3.6211,
+      "taxa_por_hora": 1.94,
+      "unidades": 7.02,
+      "unidades_fechadas_na_conta": 6.87
+    },
+    {
+      "o_que": "candidato 2: precisão, dev, teste e treino",
+      "versao": "qwen3_14b__fp16__colab_a100",
+      "gpu": "A100",
+      "de": "17:23:29",
+      "ate": "19:40:41",
+      "horas": 2.2867,
+      "taxa_por_hora": 6.73,
+      "unidades": 15.39,
+      "unidades_fechadas_na_conta": 15.06
+    },
+    {
+      "o_que": "sonda da A100, até o condutor do candidato 2 assumir a sessão",
+      "versao": null,
+      "gpu": "A100",
+      "de": "17:19:01",
+      "ate": "17:23:29",
+      "horas": 0.0744,
+      "taxa_por_hora": 6.73,
+      "unidades": 0.5,
+      "unidades_fechadas_na_conta": 0.49
+    },
+    {
+      "o_que": "sonda da L4 (máquina, kernel que segue sem a ligação local, desligamento pela própria VM)",
+      "gpu": "L4",
+      "de": "17:08:43",
+      "ate": "17:10:35",
+      "versao": null,
+      "horas": 0.0311,
+      "taxa_por_hora": 1.94,
+      "unidades": 0.06,
+      "unidades_fechadas_na_conta": 0.06
+    },
+    {
+      "o_que": "sonda da G4 (placa e taxa)",
+      "gpu": "G4",
+      "de": "17:23:40",
+      "ate": "17:24:28",
+      "versao": null,
+      "horas": 0.0133,
+      "taxa_por_hora": 10.05,
+      "unidades": 0.13,
+      "unidades_fechadas_na_conta": 0.13
+    }
+  ],
+  "soma_por_taxa_e_tempo": 23.33,
+  "conta": {
+    "saldo_antes": 600.0,
+    "saldo_depois": 577.17,
+    "de_onde": "`colab usage`: 600,00 antes da etapa; 577,17 lido pelo orquestrador depois do fim das duas rodadas, com taxa 0 e nenhuma sessão ativa",
+    "gasto": 22.83
+  },
+  "diferenca_entre_a_soma_e_a_conta": 0.5,
+  "por_que_diferem": "a taxa tem duas casas, o saldo é cobrado em passos e os horários das sondas são de relógio de comando; a conta é o número que vale",
+  "o_que_os_condutores_mediram_pelo_saldo": {
+    "qwen3_8b__nf4__colab_l4": 0.71,
+    "qwen3_8b__fp16__colab_l4": 22.09,
+    "qwen3_14b__fp16__colab_a100": 20.22
+  },
+  "por_que_nao_servem": "o saldo é da conta inteira; com duas sessões ao mesmo tempo, cada condutor contou também o gasto da outra",
+  "teto_da_etapa": 150
+}

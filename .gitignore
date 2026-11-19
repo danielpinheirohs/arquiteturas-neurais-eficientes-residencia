@@ -1,0 +1,27 @@
+# Ambiente
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Cache: downloads (Etapa 1) e execuções de treino (Etapa 4 em diante).
+# É recriado rodando as etapas de novo.
+data/
+
+# Segredos: a chave de API fica aqui e nunca vai para o controle de versão
+.env
+
+# Pesos e tokenizadores de modelos: somam mais de 50 GB e não cabem no GitHub.
+# Os comandos de cada etapa (README) refazem tudo a partir dos dados.
+*.safetensors
+*.pt
+*.bin
+*.onnx
+*.gz
+tokenizer.json
+tokenizador.json
+
+# Exceção: os sistemas da rede do zero em ONNX (Etapa 8) são pequenos e rodam sem PyTorch.
+!entregas/08_quantizacao/modelos/**/*.onnx
+!entregas/08_quantizacao/modelos/**/*.gz

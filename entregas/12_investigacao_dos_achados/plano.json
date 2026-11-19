@@ -1,0 +1,84 @@
+{
+  "etapa": "12_investigacao_dos_achados",
+  "gravado_em": "2026-11-19, antes de qualquer execução nova e antes de qualquer conta nova sobre respostas gravadas (as impressões digitais de entregas/ e data/execucoes/ foram tiradas antes, em impressoes/impressoes_antes.json)",
+  "pergunta": "Por que acontecem os três efeitos que as etapas mediram e não explicaram, e o que cada um ensina para o artigo?",
+  "natureza": "Investigação depois dos resultados: tudo é diagnóstico e exploratório. Nenhuma decisão das etapas anteriores muda e os modelos finais continuam os mesmos. Se uma alternativa simples resolver um efeito, ela é relatada como achado e recomendação, sem trocar nada nas outras entregas.",
+  "metodo_comum": {
+    "particao_de_exploracao": "dev (2.033 pedidos), sempre com os rótulos humanos para medir qualidade",
+    "comparacao": "diferença pareada B − A da média de 3 sementes, bootstrap por enunciado com 2.000 reamostragens e semente 0 (qualidade.comparar_grupos), IC95; 'distinguível' = IC sem o zero",
+    "teste": "no máximo uma leitura por achado, a fixada abaixo em 'leitura_no_teste'; nenhuma outra conta no teste. Respostas no teste que os códigos de reajuste gravam por padrão ficam guardadas e não são lidas, fora a leitura fixada.",
+    "ordem_de_prioridade": ["achado_1", "achado_3", "achado_2"]
+  },
+  "achado_1": {
+    "efeito": "A poda 'vocabulário do treino' (corte da tabela para os 5.196 subtokens do treino + reajuste de 10 épocas com a receita e o sinal de quem treinou o modelo) perde cerca de 1 ponto de exact match nos alunos do cenário B do XLM-R (B1 e B2 do Qwen3-14B na 11c; B2 do Qwen3-8B na 10b) e não no Aluno A nem no teto.",
+    "modelos": "B1 e B2 (T=8) do Qwen3-14B (entregas/11b, 3 sementes) como casos; Aluno A (Claude Haiku 5.5) e teto como contraste (entregas/10a e 10b).",
+    "hipoteses": {
+      "a_rotulos_ruidosos": "O reajuste é treino a mais sobre os rótulos do professor aberto, que erram mais; o aluno passa a copiar os erros dele (memorização de rótulos ruidosos, Arpit et al. 2017).",
+      "b_recomeco_da_taxa": "O recomeço da taxa de aprendizado (aquecimento até 5e-5 de novo) tira o modelo do ponto em que estava e as 10 épocas não devolvem o que se perdeu.",
+      "c_corte": "O corte em si: pedidos de dev e teste com subtokens fora dos 5.196 passam a ler o subtoken desconhecido."
+    },
+    "testes": {
+      "T1_controle_sem_corte": "Reajuste de 10 épocas SEM cortar nada (variante 'sem_poda' da Etapa 10b: mesma função, mesma receita, mesmo sinal), B1 e B2 novos, 3 sementes. Comparar com o modelo de partida em dev (exact match, intenção, entidades). Para o Aluno A e o teto o controle já existe na 10b (data/execucoes/10b_encoder_poda/*/sem_poda) e é só lido.",
+      "T2_curva_por_epoca": "Refazer o reajuste da 11c (vocabulário do treino, receita igual) de B1 e B2 novos e o da 10b do Aluno A, 3 sementes, gravando as respostas em dev a cada época; medir por época o exact match contra os rótulos humanos e contra os do professor. Serve também para conferir se o reajuste se reproduz (respostas finais iguais às gravadas na 11c e na 10b).",
+      "T3_copia_do_professor": "Com os modelos já gravados (antes e depois do reajuste, sem treino novo): em dev, a fração de pedidos em que o aluno dá a mesma resposta errada do professor (exact match com o professor e não com o humano), antes e depois; no treino, o acerto do aluno contra o rótulo do professor separado em pedidos em que o professor acerta o humano ('limpos') e em que erra ('ruidosos'), antes e depois. Também a taxa de ruído de cada professor no treino (exact match professor × humano).",
+      "T4_taxa_menor": "Reajuste do corte com a taxa 10 vezes menor (5e-6, mesma agenda, 10 épocas), B1 e B2 novos, 3 sementes: alternativa simples e teste de (b).",
+      "T5_pedidos_afetados_pelo_corte": "Quantos pedidos de dev têm algum subtoken fora dos 5.196 (por tokenizador original × reduzido); diferença 'cortado sem reajuste − sem poda' em dev, separada em pedidos afetados e não afetados, nos 3 modelos B (antigo e novos) e no Aluno A."
+    },
+    "criterios": {
+      "a_confirmada": "T1: o reajuste sem corte perde em dev uma quantia parecida com a do corte+reajuste (a diferença 'corte+reajuste − sem corte+reajuste' tem IC com o zero) e a perda do controle é distinguível de zero em pelo menos um dos dois alunos B; E T3: depois do reajuste a cópia dos erros do professor em dev sobe e, no treino, o acerto contra o professor sobe mais nos pedidos ruidosos que nos limpos; E o mesmo controle no Aluno A não perde de forma distinguível. Explicação parcial se só parte disso valer.",
+      "a_refutada": "T1: o reajuste sem corte não perde (IC com o zero e ponto acima de −0,3) e a perda fica só com o corte.",
+      "b_confirmada_como_causa_unica": "o Aluno A e o teto também perderiam com o mesmo recomeço (os controles da 10b dizem o contrário se não perderem); com T4, a taxa menor elimina a perda. Se a taxa menor elimina a perda mas o Aluno A não perde com a taxa cheia, (b) fica como amplificador de (a), não causa própria.",
+      "c_confirmada": "T5: a mudança 'cortado sem reajuste − sem poda' em dev se concentra nos pedidos afetados e o reajuste não tem efeito diferente neles; refutada como causa da perda no teste se o corte sozinho não muda o teste (conta já registrada na 11c: +0,1 e −0,1) e o controle T1 perde o mesmo."
+    },
+    "leitura_no_teste": "Uma só, fixada aqui: se a variante de T4 (corte + reajuste com taxa 10× menor) passar em dev na regra da 10b (exact match não distinguivelmente menor que o modelo sem poda, média de 3 sementes) nos dois alunos novos, lê-se no teste 'T4 − sem poda' em exact match para B1 e B2. Se não passar, lê-se no teste 'T1 (reajuste sem corte) − sem poda' em exact match para B1 e B2, para confirmar o mecanismo."
+  },
+  "achado_3": {
+    "efeito": "Na 10c, a INT8 dinâmica tira −0,41 (−0,79 a −0,03) de acurácia de intenção em dev e −0,44 (−0,77 a −0,10) no teste do modelo final do XLM-R (Aluno A, vocabulário do treino), contra o mesmo modelo em 32 bits.",
+    "hipoteses": {
+      "h1_parte": "A queda vem de uma parte da rede: a tabela (Gather) ou as matrizes (MatMul).",
+      "h2_margem": "As trocas de resposta se concentram em pedidos com margem pequena entre a 1ª e a 2ª intenção no modelo de 32 bits (o arredondamento só vira as decisões quase empatadas).",
+      "h3_assimetria": "As trocas vão mais para o lado certo → errado do que para o outro (um viés), e não só ruído simétrico.",
+      "h4_generalidade": "O efeito não é próprio do modelo final: aparece, menor ou igual, nos 9 modelos da 10c (efeito pequeno e sistemático que o intervalo só pegou em um)."
+    },
+    "testes": {
+      "T1_partes": "As respostas gravadas em dev das formas de diagnóstico 'so_tabela' e 'so_matrizes' (10c) contra fp32: intenção, 3 sementes.",
+      "T2_trocas": "Em dev, por semente: pedidos com intenção certa no fp32 e errada no INT8 e o contrário; teste de sinal (binomial, p bilateral) nas trocas somadas das 3 sementes; quais intenções trocam.",
+      "T3_margem": "Rodar o ONNX de 32 bits em dev guardando a pontuação de intenção; margem = p1 − p2 (softmax); fração das trocas por faixa de margem e comparação com a distribuição da margem em todos os pedidos.",
+      "T4_alternativas": "Em dev, 3 sementes, contra fp32: (i) dinâmica com a cabeça de intenção em 32 bits; (ii) dinâmica com um degrau por canal nas matrizes; (iii) dinâmica com a tabela de subtokens com um degrau por linha (grafo editado à mão: linhas em 8 bits, um degrau e um ponto zero por linha); (iv) dinâmica com a tabela em 32 bits (= 'so_matrizes', já gravada). Tamanho de cada uma em bytes do arquivo da rede.",
+      "T5_nove_modelos": "Ler da 10c as diferenças de intenção da dinâmica nos 9 modelos em dev (já calculadas) e contar sinais."
+    },
+    "criterios": {
+      "h1": "confirmada se uma das formas de diagnóstico reproduz a queda (diferença com IC sem o zero ou ponto ≥ 70% da queda) e a outra não.",
+      "h2": "confirmada se a margem mediana dos pedidos que trocam está abaixo do 10º percentil da margem de todos os pedidos.",
+      "h3": "confirmada se o teste de sinal dá p < 0,05 para o lado certo → errado.",
+      "h4": "confirmada se a diferença de intenção em dev for negativa em pelo menos 8 dos 9 modelos.",
+      "alternativa_que_resolve": "uma alternativa 'resolve' se a diferença de intenção para o fp32 em dev ficar com IC contendo o zero e ponto ≥ −0,15, com F1 de entidades a no máximo 1 ponto do fp32."
+    },
+    "leitura_no_teste": "Uma só: entre as alternativas de T4 que resolvem em dev, a de menor arquivo (empate: a de maior acurácia de intenção em dev) é medida no teste: acurácia de intenção − fp32, Aluno A vocabulário do treino, 3 sementes. Se nenhuma resolver, nada vai ao teste."
+  },
+  "achado_2": {
+    "efeito": "Na 10c, a INT8 estática (calibração MinMax em 512 pedidos do treino, um degrau por tensor) não passa em nenhum dos 9 modelos, e a semente 1 desaba (teto sem poda: F1 de entidades em dev 41,9 contra 73,2 e 71,8 nas sementes 0 e 2 e 77,3 em 32 bits; Aluno A: 47,4 contra 66,1 e 60,3). Os modelos com poda gradual de 70% quase não sofrem (−1,7 no B2).",
+    "modelos": "Teto sem poda e Aluno A sem poda (entregas/10a), as 3 sementes; para contraste das faixas, Aluno A gradual 70% (entregas/10b). Se os números de 41,9 e 47,4 não forem dessas variantes nas respostas gravadas, usa-se a variante a que eles pertencem e isso é relatado.",
+    "hipoteses": {
+      "h1_extremos": "Poucas ativações (em poucos tensores ou poucas dimensões) têm valores extremos; com a faixa do menor ao maior valor e um degrau por tensor, o degrau fica grande demais para o resto (Bondarenko et al. 2021; Kovaleva et al. 2021). A semente 1 tem extremos maiores.",
+      "h2_poucos_tensores": "A perda vem de poucos tensores: deixá-los em 32 bits devolve a maior parte da qualidade.",
+      "h3_calibracao": "Uma calibração que ignora a cauda (percentil, entropia) resolve ou reduz a perda.",
+      "h4_poda_gradual": "A poda gradual de 70% diminui os extremos das ativações (hipótese para o contraste; só se mede a faixa)."
+    },
+    "testes": {
+      "T1_faixas": "No ONNX de 32 bits, expor como saídas as entradas de toda multiplicação por matriz gravada (as ativações que a estática quantiza) e rodar os 512 pedidos de calibração; por tensor: mínimo, máximo, percentil 99,99 do valor absoluto, razão máximo/percentil, e as dimensões de onde vem o máximo. Por semente e modelo.",
+      "T2_sensibilidade": "Teto semente 1 (e semente 0 para contraste): quantizar de forma estática um grupo de multiplicações por vez (o resto em 32 bits): por tipo (consulta/chave/valor, saída da atenção, entrada da rede densa, saída da rede densa, cabeças) e, se o tipo dominante aparecer, por camada; F1 de entidades em dev.",
+      "T3_calibracoes": "Estática com calibração por percentil (99,999, padrão do ONNX Runtime) e por entropia, nas 3 sementes dos dois modelos, F1 em dev.",
+      "T4_excluir_os_piores": "Estática MinMax deixando em 32 bits as multiplicações cujas entradas têm a maior razão máximo/percentil (as k piores, k escolhido em T1 pelo corte natural, sem olhar a qualidade em dev), 3 sementes dos dois modelos; F1 em dev e tamanho."
+    },
+    "criterios": {
+      "h1": "confirmada se a semente 1 tem, em algum grupo de tensores, faixa (máximo absoluto) pelo menos 2× maior que nas sementes 0 e 2, e se esse grupo é o que mais perde em T2.",
+      "h2": "confirmada se excluir no máximo 10% das multiplicações devolve pelo menos 2/3 da perda de F1 na semente 1 do teto.",
+      "h3": "confirmada se alguma calibração deixa a perda de F1 em dev (média de 3 sementes) abaixo de 1 ponto, ou reduz a perda à metade ou menos.",
+      "h4": "só descritiva: comparar a razão máximo/percentil do Aluno A sem poda e com gradual 70%."
+    },
+    "leitura_no_teste": "Uma só: a alternativa estática com menor perda média de F1 em dev nos dois modelos (empate: menor arquivo) é medida no teste: F1 de entidades − fp32, teto sem poda e Aluno A sem poda, 3 sementes."
+  },
+  "artigos_a_conferir": ["Arpit et al. 2017, arXiv 1706.05394", "Mosbach et al. 2021, arXiv 2006.04884", "Abdaoui et al. 2020, arXiv 2010.05609", "Ushio et al. 2023, arXiv 2305.15020", "Bondarenko et al. 2021, arXiv 2109.12948", "Kovaleva et al. 2021, arXiv 2105.06990"],
+  "custo_previsto": "Achado 1: cerca de 21 reajustes de 10 épocas do XLM-R (2 a 3 min cada, um por vez, na placa). Achado 3: poucas quantizações dinâmicas em CPU. Achado 2: cerca de 30 quantizações estáticas em CPU (cerca de 1 min cada)."
+}

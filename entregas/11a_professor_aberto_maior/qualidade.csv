@@ -1,0 +1,61 @@
+sistema,nome,particao,metrica,valor,ic_min,ic_max
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",dev,intent_acc,0.7742252828332513,0.7565174618789966,0.791945400885391
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",dev,intent_macro_f1,0.7826454318760424,0.758974772308642,0.8057766478519245
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",dev,slot_f1,0.5795166858457997,0.5590357276082076,0.6005846347224815
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",dev,exact_match,0.4318740777176586,0.4097393015248401,0.45302508607968517
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",test,intent_acc,0.7760591795561533,0.7612642905178211,0.7905262273032951
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",test,intent_macro_f1,0.766170021930593,0.7474777384728601,0.7918747949913129
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",test,slot_f1,0.5568999345977763,0.5389906040149438,0.5741001726646514
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",test,exact_match,0.4324142568930733,0.4152656355077337,0.45023537323470075
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",train,intent_acc,0.7784436338370679,0.7706270627062707,0.7863470557582074
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",train,intent_macro_f1,0.764718658346665,0.7549925667395634,0.7746571632346921
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",train,slot_f1,0.5720691341920756,0.5633665262190577,0.5805860907637411
+qwen3_8b__nf4__local_3080,"Qwen3-8B em 4 bits (RTX 3080 local, Etapa 5b)",train,exact_match,0.4359909675178044,0.4270431648428001,0.4447628973423658
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",dev,intent_acc,0.7791441219872111,0.7619281849483522,0.7968519429414658
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",dev,intent_macro_f1,0.7841610258987689,0.7602215600694647,0.8076797697346021
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",dev,slot_f1,0.5782638414217361,0.5573394495412844,0.6001386168320307
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",dev,exact_match,0.4318740777176586,0.4102311854402361,0.4545007378258731
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",test,intent_acc,0.7794216543375925,0.7646267652992602,0.7942249495628783
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",test,intent_macro_f1,0.7687270920422287,0.749287763245469,0.7952280985921362
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",test,slot_f1,0.5647819063004846,0.5475537554087107,0.5820495228529855
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",test,exact_match,0.43409549428379285,0.4159297242770679,0.45225285810356425
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",train,intent_acc,0.7846968907417058,0.7772277227722773,0.7924266110821608
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",train,intent_macro_f1,0.7652216768382477,0.7552063379607041,0.7755052745616502
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",train,slot_f1,0.5781066763718711,0.5694494324124145,0.5866677373147684
+qwen3_8b__fp16__colab_l4,"Qwen3-8B sem os 4 bits, em float16 (Colab, L4)",train,exact_match,0.4406809101962828,0.4314725551502519,0.4497155636616293
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",dev,intent_acc,0.8057058534185932,0.7899655681259223,0.8229340875553369
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",dev,intent_macro_f1,0.8158645394713039,0.7939715049259076,0.8388713892281258
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",dev,slot_f1,0.624215663490588,0.6036826016559538,0.6455373085892103
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",dev,exact_match,0.4913920314805706,0.47024102311854404,0.5145228726020659
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",test,intent_acc,0.8002689979825152,0.7858103564223269,0.8143913920645595
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",test,intent_macro_f1,0.7868575286134369,0.7676114420290775,0.8132670965858562
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",test,slot_f1,0.6143423661599471,0.5959337541728214,0.6310608784295184
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",test,exact_match,0.48957632817753866,0.4694014794889038,0.5067249495628783
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",train,intent_acc,0.7985061664061143,0.7909501476463435,0.8055410804238319
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",train,intent_macro_f1,0.7823397905512126,0.7720792562955361,0.7920587272189238
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",train,slot_f1,0.6139930612919213,0.60547277333279,0.6221328926040309
+qwen3_14b__fp16__colab_a100,"Qwen3-14B sem os 4 bits, em float16 (Colab, A100)",train,exact_match,0.48228243877019283,0.4732477853048463,0.49140394302588153
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",dev,intent_acc,0.8101328086571569,0.7939006394490901,0.8273610427939005
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",dev,intent_macro_f1,0.8082349307009808,0.7883529756163914,0.8324026562900847
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",dev,slot_f1,0.632940632940633,0.6128952298817856,0.6536317981538841
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",dev,exact_match,0.49090014756517464,0.47024102311854404,0.514018691588785
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",test,intent_acc,0.808675184936113,0.7942081371889711,0.8228059852051108
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",test,intent_macro_f1,0.8011956446150491,0.7821973025631225,0.8275257308076448
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",test,slot_f1,0.6254306808859721,0.6076484292246562,0.6428336159388437
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",test,exact_match,0.5,0.4818342299932751,0.5178211163416274
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",train,intent_acc,0.8114469341671009,0.8040646169880146,0.8184818481848185
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",train,intent_macro_f1,0.7946631555937056,0.7849059529857041,0.8041216441339
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",train,slot_f1,0.6233638340650773,0.6151244375770341,0.6314617369810193
+qwen3_32b__fp16__colab_g4,"Qwen3-32B sem os 4 bits, em float16 (Colab, G4)",train,exact_match,0.4871460830293556,0.47828513114469345,0.4965259683863123
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",dev,intent_acc,0.8411214953271028,0.825860796851943,0.8563698967043778
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",dev,intent_macro_f1,0.8444035641865882,0.8241006333586113,0.8642342467695974
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",dev,slot_f1,0.6845861084681256,0.664631618132397,0.7046221172860699
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",dev,exact_match,0.5474667978357107,0.5263157894736842,0.5700934579439252
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",test,intent_acc,0.8345662407531943,0.8214441829186281,0.8473436449226631
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",test,intent_macro_f1,0.8212467156427248,0.8033558607278098,0.8468611306048217
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",test,slot_f1,0.6606152294503278,0.6445139441756238,0.6770346158084346
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",test,exact_match,0.5403496973772697,0.5228648285137861,0.5574983187626092
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",train,intent_acc,0.8424526663192635,0.8357629841931562,0.8488796248045857
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",train,intent_macro_f1,0.8212153401360126,0.8117816333673562,0.8307557444638538
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",train,slot_f1,0.6754838980560104,0.6670633236671677,0.6834702297409612
+claude,"Claude Haiku 5.5 (professor fechado, Etapa 5a)",train,exact_match,0.5363904811533785,0.5278769324300852,0.5454229633489664

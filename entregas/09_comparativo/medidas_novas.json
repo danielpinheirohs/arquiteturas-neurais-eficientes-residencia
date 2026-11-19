@@ -1,0 +1,102 @@
+{
+  "etapa": "09_comparativo",
+  "gerado_em": "2026-11-18",
+  "particao": "test",
+  "pedidos": 2974,
+  "respostas_geradas": {
+    "base_299": {
+      "como": "linha_de_base",
+      "de": [
+        "entregas/05a_professor_fechado/demonstracoes.parquet"
+      ],
+      "arquivos": [
+        "base_299_test.parquet"
+      ]
+    },
+    "aluno_a/int8": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_0",
+        "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_1",
+        "entregas/08_quantizacao/modelos/aluno_a/linhas_90/semente_2"
+      ],
+      "arquivos": [
+        "aluno_a__linhas_90__dinamica_semente_0_test.parquet",
+        "aluno_a__linhas_90__dinamica_semente_1_test.parquet",
+        "aluno_a__linhas_90__dinamica_semente_2_test.parquet"
+      ]
+    },
+    "aluno_a/soltos": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_0",
+        "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_1",
+        "entregas/08_quantizacao/modelos/aluno_a/magnitude_95/semente_2"
+      ],
+      "arquivos": [
+        "aluno_a__magnitude_95__dinamica_semente_0_test.parquet",
+        "aluno_a__magnitude_95__dinamica_semente_1_test.parquet",
+        "aluno_a__magnitude_95__dinamica_semente_2_test.parquet"
+      ]
+    },
+    "aluno_b2/int8": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_0",
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_1",
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/linhas_90/semente_2"
+      ],
+      "arquivos": [
+        "aluno_b2_t8__linhas_90__dinamica_semente_0_test.parquet",
+        "aluno_b2_t8__linhas_90__dinamica_semente_1_test.parquet",
+        "aluno_b2_t8__linhas_90__dinamica_semente_2_test.parquet"
+      ]
+    },
+    "aluno_b2/soltos": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_0",
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_1",
+        "entregas/08_quantizacao/modelos/aluno_b2_t8/gradual_90/semente_2"
+      ],
+      "arquivos": [
+        "aluno_b2_t8__gradual_90__dinamica_semente_0_test.parquet",
+        "aluno_b2_t8__gradual_90__dinamica_semente_1_test.parquet",
+        "aluno_b2_t8__gradual_90__dinamica_semente_2_test.parquet"
+      ]
+    },
+    "teto/int8": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/teto/linhas_90/semente_0",
+        "entregas/08_quantizacao/modelos/teto/linhas_90/semente_1",
+        "entregas/08_quantizacao/modelos/teto/linhas_90/semente_2"
+      ],
+      "arquivos": [
+        "teto__linhas_90__dinamica_semente_0_test.parquet",
+        "teto__linhas_90__dinamica_semente_1_test.parquet",
+        "teto__linhas_90__dinamica_semente_2_test.parquet"
+      ]
+    },
+    "teto/soltos": {
+      "como": "onnx",
+      "de": [
+        "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_0",
+        "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_1",
+        "entregas/08_quantizacao/modelos/teto/magnitude_90/semente_2"
+      ],
+      "arquivos": [
+        "teto__magnitude_90__dinamica_semente_0_test.parquet",
+        "teto__magnitude_90__dinamica_semente_1_test.parquet",
+        "teto__magnitude_90__dinamica_semente_2_test.parquet"
+      ]
+    }
+  },
+  "professor_aberto": {
+    "modelo": "Qwen/Qwen3-8B",
+    "bytes_dos_pesos_baixados": 16397431693,
+    "arquivos": 12,
+    "o_que_e": "os arquivos do modelo como foram baixados (pesos de 16 bits, tokenizador e configuração); a Etapa 5b os carrega em 4 bits na placa",
+    "de_onde": "cache do Hugging Face desta máquina"
+  }
+}

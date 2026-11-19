@@ -1,0 +1,12 @@
+{
+  "modelo": "teto",
+  "variante": "sem_poda",
+  "semente": 0,
+  "nome": "sem_a_saida_da_rede_densa",
+  "descricao": "as 12 multiplicações da saída da rede densa em 32 bits",
+  "metodo": "MinMax",
+  "operacoes": 64,
+  "bytes_da_rede": 363146621,
+  "slot_f1_dev": 77.26939075116222,
+  "segundos": 43.969865088001825
+}
